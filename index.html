@@ -1374,6 +1374,24 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 </style>
 <style>
 /* ===== 分析タブ ===== */
+.wkata{font-size:10px;padding:0 6px;line-height:1.5;margin-top:2px}
+.et-popfin{text-align:center}
+.et-popfin .pop-lab{font-size:10px}
+.et-level{text-align:center}
+.et-level b{color:var(--ink)}
+.et-caution td{background:#fff8e6;color:#7a4d00;font-size:12px;line-height:1.55;padding:3px 8px;border-bottom:1px solid #b9c2cc}
+.et-caution-lab{font-weight:900;margin-right:6px}
+.conn-box{border:1px solid var(--line);border-radius:6px;background:var(--sub);padding:9px 11px;margin-bottom:10px}
+.conn-h{font-weight:900;font-size:13px;margin-bottom:4px}
+.conn-line{font-size:12.5px;line-height:1.65;margin:2px 0}
+.conn-use{font-size:12.5px;color:var(--ink2);margin:2px 0}
+.ana-zone{font-size:13px;font-weight:900;color:var(--ink2);margin:24px 0 2px;letter-spacing:.06em}
+.ana-sum{border:2px solid;border-radius:8px;padding:12px 14px;margin-top:10px;background:#fff}
+.ana-sum.good{border-color:#2456c8}
+.ana-sum.bad{border-color:#c0392b}
+.ana-sum h3{font-size:16px;font-weight:900;margin:0 0 6px}
+.ana-sum ul{margin:0;padding-left:18px}
+.ana-sum li{font-size:14px;line-height:1.7}
 .ana-note{margin-top:14px}
 .ana-gen{font-size:12px;color:var(--ink2);margin-top:6px}
 .ana-block{margin-top:26px}
@@ -1735,12 +1753,15 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
       <span class="ml-i"><span class="finp f3">3着</span> 赤色</span>
       <span class="ml-t">S〜D評価＝文字付きの色付きバッジで表示</span>
       <span class="ml-i"><span class="eg gS">S</span><span class="eg gA">A</span><span class="eg gB">B</span><span class="eg gC">C</span><span class="eg gD">D</span> 回顧の総合評価です。上の着順色とは別の情報で、混同しないようバッジの形で分けています</span>
-      <span class="ml-note">「注意：」タグは狙い・危険メモとは別の注意メモ（根拠は詳細に表示）。判定は直近最大3走の回顧から</span>
-      <span class="ml-t">「注意：」タグの意味</span>
+      <span class="ml-note">注意がある馬は、一覧の行の下に「注意」の文章（1行）が付きます。今回のレースへの留保で、狙い・危険メモとは別の注意喚起です</span>
+      <span class="ml-t">注意文の意味</span>
+      <span class="ml-note"><b>人気の条件</b>＝穴馬候補として記録された馬。狙う条件は人気に左右されるため、人気になるようなら割り引く（文面はその馬のメモの買条件から）</span>
       <span class="ml-note"><b>過剰人気注意</b>＝直近3走の中に危険メモがあり、内容以上に人気する可能性がある</span>
       <span class="ml-note"><b>展開依存</b>＝直近の好走が展開に恵まれた面が大きく、展開が変わると割り引く</span>
       <span class="ml-note"><b>距離不安</b>＝回顧の距離型（延長型・短縮型）と今回の距離が合っていない</span>
-      <span class="ml-note">タグは回顧データからの機械的な目安です。各馬の根拠は詳細に表示されます</span>
+      <span class="ml-t">型タグ（狙いメモの馬だけ・区分の下）</span>
+      <span class="ml-note"><b>本命型／対抗型／ヒモ型</b>＝その区分の馬が次走でどう来たか（1着の割合）から付けた「使い方」の目安。本命型＝勝ち切りが多め、対抗型＝勝ち負け両方、ヒモ型＝2・3着が中心。根拠は分析タブにあります</span>
+      <span class="ml-note">一覧の「回顧指数」は、そのレース内で勝ち馬を100とした指数（実績指数が基本、補正後と3点以上差がある時は補正後を（補正）付きで表示）。「レベル」は前走レースの勝ち馬のタイム指数（netkeiba）で、レース自体の速さの物差しです</span>
       <span class="ml-note">詳細の直近3走表の「未回顧」＝出走記録で確認できたが回顧のないレース／空欄＝出走歴なし（出走記録で確認済み）／表の「評価」＝そのレースの回顧の総合評価（S〜D）</span>
       <span class="ml-note">直近3走表のクラスは色分け：<b class="lg-g1">G1＝赤</b>・<b class="lg-g2">G2＝青</b>・<b class="lg-g3">G3＝緑</b>・<b class="lg-l">L＝紫</b>・<b class="lg-op">OP＝オレンジ</b>／勝クラスは slate の濃い順に 3勝＞2勝＞1勝／未勝利・新馬はグレー</span>
       </div>
@@ -1851,7 +1872,9 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
       <li><strong>直近3走の一覧表</strong>：詳細の先頭に、日付・コース（例：東京芝2400m）・クラス・頭数・着順・評価・展開評価を1走1行で並べた表を置いています。「評価」はそのレースの回顧の総合評価（S〜D）で、未回顧の行では空欄です。この表は実際の直近3走（出走記録ベース）です。出走歴は回顧データだけでなく、netkeibaの馬ページの戦績で回顧済み163頭全頭分を確認しています（取消・除外は出走数に数えていません）。各馬の詳細には「回顧済み◯走／未回顧◯走」を明記し、未回顧の走からは評価を推測しません。「未回顧」＝出走記録で確認できたが回顧のないレースで、日付・コース・クラス・頭数・着順の事実だけを表示し、展開評価の欄に「未回顧」と出します。表が3走に満たない行は空欄で、空欄＝出走歴なし（出走記録で確認済み）です。回顧のある走の詳しい内容は「詳細を見る」の中の各走ブロックで確認できます（回顧のある走が実際の直近3走の外にある馬では、表と各走ブロックの対象がずれる場合があります）。</li>
       <li><strong>事実と推測の区別</strong>：着順・着差・通過順位・上がり・馬場状態は「事実（公式記録）」として表示します。展開の解釈や狙える条件は分析上の推測で、「推定・仮説」と明記しています。映像や公式情報で確認できない不利は、あったものとして扱いません。</li>
       <li><strong>条件照合の項目別表示</strong>：距離／芝ダート／コース形態（コース・競馬場）／クラス／馬場状態に分けて、一致・不一致・判定材料不足をチップで表示します。判定理由は「詳細を見る」の中に置いています。馬場状態は推奨馬場状態の記録がないため、全頭「判定材料不足」です。条件が変わること自体を自動的にプラス評価はしていません。想定展開は予想要素のため項目に入れていません。</li>
-      <li><strong>注意メモ</strong>：「注意：過剰人気注意／展開依存／距離不安」のタグは、狙い・危険の回顧メモとは別の注意喚起です。根拠は詳細に表示します。狙い・危険は直近の回顧の内容に対する回顧メモであり、今回のレースの予想評価（本命候補など）はこのページでは付けていません。</li>
+      <li><strong>注意文</strong>：注意がある馬は、一覧の行の下に1行の文章で注意を表示します（今回のレースへの留保）。内容は、穴馬候補として記録された馬への人気の条件と、過剰人気注意／展開依存／距離不安の注意メモです。狙い・危険は直近の回顧の内容に対する回顧メモであり、今回のレースの予想評価（本命候補など）はこのページでは付けていません。</li>
+      <li><strong>型タグと「分析との接続」</strong>：狙いメモの馬には、区分の下に型タグ（本命型／対抗型／ヒモ型）を付けています。検証データ（分析タブ）で、その区分の馬が次走でどう来たか（3着内に占める1着の割合）から決めた「使い方」の目安です。詳細には「分析との接続」として、前走（事実）＝前走の人気・着順と当てはまる検証の層、今回（扱い）＝条件照合と注意文、を分けて表示します。</li>
+      <li><strong>評価と回顧指数の役割</strong>：検証では、総合評価（S〜D）の方が回顧指数より次走成績をよく分けました（評価S・Aは次走3着内43%・35%、回顧指数90以上は28%）。最終判断は評価で見て、回顧指数は「測った値」の確認用という位置づけです。一覧の「レベル」は前走レースの勝ち馬のタイム指数（netkeiba）で、レースレベルの物差しです（段階の判定はまだ検証中です）。</li>
       <li><strong>能力評価の2本立て</strong>：実績指数（直近の回顧の結果そのものの評価）と内容補正後能力評価（展開の有利不利を考慮した評価）を区別して併記しています。補正の理由は各走の展開評価と結果への影響に示します。根拠が弱い場合や判定材料不足の場合は、点数を機械的に加減していません。</li>
       <li><strong>並び順</strong>：既定は「枠番順」（枠番の昇順、同枠内は馬番の昇順）で、開いた直後は全レースが枠番順で表示されます。「馬番順」と「能力評価順（直近の回顧・補正後が高い順）」にも切り替えられます。能力評価順では評価のない馬は末尾に並びます。枠番順・馬番順では、馬番のない馬（ジャパンカップを除く全馬。馬番は金曜日に反映予定）はそのレースの末尾に並びます。</li>
       <li><strong>発走時刻</strong>：JRA公式の競馬番組（2026年11月28日・29日）に載っている予定時刻です。当日の天候などで変わることがあります。</li>
@@ -3092,19 +3115,7 @@ function horseRow(h,i,total){
   var hasRev=!!(hh&&hh.reviews&&hh.reviews.length);
   if(hasRev){
     var lr=hh.reviews[0];
-    if(hh.tags&&hh.tags.length){
-      /* 注意タグはタグ名末尾の「注意」を落として短縮表示（例：過剰人気注意→過剰人気）。
-         「注意：」はセグメント先頭に1回だけ、表示テキスト自体として含める（CSSの生成コンテンツは使わない）。
-         複数タグはその後ろにまとめる。正式名と根拠は詳細側にそのまま残す */
-      var tagNames=hh.tags.map(function(t){
-        var tl=t; if(tl.length>2&&tl.slice(-2)==="注意") tl=tl.slice(0,-2);
-        return tl;
-      });
-      var tagTitle=hh.tags.map(function(t){ return (hh.tagReasons&&hh.tagReasons[t])||""; }).filter(function(s){ return !!s; }).join("／");
-      var tagJoined=tagNames.map(function(n){ return escW(n); }).join("・");
-      line1Long=(3+tagNames.join("・").length)>=10;
-      line1Tags='<span class="wtagseg'+(line1Long?" long":"")+'" title="'+escW(tagTitle)+'"><span class="wtagseg-lab">注意：</span>'+tagJoined+'</span>';
-    }
+    /* 注意はタグでなく文章で出す（4行目の注意文）。line1Tagsは廃止し、5列目は空ける */
     /* レース番号には「11R スプリンターズステークス」のようにレース名が続く場合がある。
        回顧表ではレース名を略称で出す（abbrRaceName）。グレードへの置き換えはしない。
        正式なレース名は各走の詳しい記録（詳細ブロック）にそのまま残る。
@@ -3132,23 +3143,36 @@ function horseRow(h,i,total){
       if(!hasJ&&!hasA) return;
       var jn=parseFloat(rawJ), an=parseFloat(rawA);
       if(hasJ&&hasA&&!isNaN(jn)&&!isNaN(an)&&Math.abs(an-jn)>=(3-1e-9)){
-        idxHtml='<span class="rv-lab">指数</span> <span class="et-idx-corr">'+fmtIdx(rawA)+'</span><span class="et-idx-mark">（補正）</span>';
+        idxHtml='<span class="rv-lab">回顧指数</span> <span class="et-idx-corr">'+fmtIdx(rawA)+'</span><span class="et-idx-mark">（補正）</span>';
       }else if(hasJ){
-        idxHtml='<span class="rv-lab">指数</span> '+fmtIdx(rawJ);
+        idxHtml='<span class="rv-lab">回顧指数</span> '+fmtIdx(rawJ);
       }else{
-        idxHtml='<span class="rv-lab">指数</span> '+fmtIdx(rawA);
+        idxHtml='<span class="rv-lab">回顧指数</span> '+fmtIdx(rawA);
       }
     })();
     /* 2〜3行目は表本体の行として描く（入れ子表は使わない）。1列目は2行結合で上下中央・太字 */
+    /* 2行目＝日付／レース名／人気・着順（前走の事実）、3行目＝展開／評価／レベル／回顧指数（前走の評価系）。
+       レベルは前走レースの勝ち馬タイム指数（netkeiba）。注意がある馬だけ4行目に注意文を出す */
+    var popfinHtml="―";
+    (function(){
+      var dd=h.detail||{};
+      var pp=String(dd.popularity||"").trim(), ff=String(dd.finish||"").trim();
+      if(!ff) return;
+      var finPart=ff+(h.prevField?("/"+h.prevField):"");
+      popfinHtml=(pp?('<span class="pop-lab">'+escW(pp)+'人気</span> '):"")+'<b>'+escW(finPart)+'</b>';
+    })();
+    var levelHtml=(h.level!=null&&h.level!=="")?('<span class="rv-lab">レベル</span> <b>'+escW(h.level)+'</b>'):"―";
     subRows='<tr class="et-r2 et-part" data-wpart="'+i+'">'
       +'<td class="et-cnt'+wk+'" rowspan="2">回顧'+(hh.reviewCount||hh.reviews.length)+'走</td>'
       +'<td class="et-date">'+escW(dateTxt||"―")+'</td>'
-      +'<td class="et-race" colspan="3">'+raceHtml+'</td></tr>'
+      +'<td class="et-race" colspan="2">'+raceHtml+'</td>'
+      +'<td class="et-popfin'+finRv.c+'">'+popfinHtml+'</td></tr>'
       +'<tr class="et-r3 et-part" data-wpart="'+i+'">'
       +'<td class="et-flow">'+flowHtml+'</td>'
-      +'<td class="et-fin'+finRv.c+'">'+escW(finRv.t)+'</td>'
       +'<td class="et-grd'+grdCls+'">'+grdHtml+'</td>'
-      +'<td class="et-idx">'+idxHtml+'</td></tr>';
+      +'<td class="et-level">'+levelHtml+'</td>'
+      +'<td class="et-idx">'+idxHtml+'</td></tr>'
+      +(h.caution?'<tr class="et-caution et-part" data-wpart="'+i+'"><td colspan="5"><span class="et-caution-lab">注意</span>'+escW(h.caution)+'</td></tr>':"");
   }
   var det=histDetail(h,d);
   if(det==null){
@@ -3180,13 +3204,23 @@ function horseRow(h,i,total){
     }
     det=concl+(D2?'<details class="rev-more det-fold"><summary>詳細を見る</summary>'+D2+'</details>':"");
   }
+  if(h.connPrev||h.connNow){
+    var connHtml='<div class="conn-box"><div class="conn-h">分析との接続</div>'
+      +(h.connPrev?'<p class="conn-line"><b>前走（事実）</b>：'+escW(h.connPrev)+'</p>':"")
+      +(h.connNow?'<p class="conn-line"><b>今回（扱い）</b>：'+escW(h.connNow)+'</p>':"")
+      +(h.connUse?'<p class="conn-use">→ '+escW(h.connUse)+'</p>':"")
+      +'</div>';
+    det=connHtml+(det||"");
+  }
   /* 1行目＝馬番／馬名（126px列）／「条件」＋照合の印／回顧メモ区分／注意タグ（ある場合のみ・折り返しなし1行）。
      詳細は従来どおり、その馬の下に全列結合の行として開く */
+  var memoCell=(memo==="―"?'<span class="wl-memo-none">―</span>':memo)
+    +(h.kata?'<br><span class="ana-kata wkata '+(KATACLS[h.kata]||"k-taikou")+'">'+escW(h.kata)+'</span>':"");
   var row1='<tr class="wrow et-r1" data-wmark="'+escW(h.mark)+'" data-wname="'+escW(h.name)+'" data-wab="'+escW(h.ab||"")+'" data-hasdet="1" tabindex="0" aria-expanded="false"'+idxAttr+'>'
     +'<td class="c-num'+wk+'">'+numCell+'</td>'
     +'<td class="c-name et-name">'+wnameHtml(h.name)+'</td>'
     +'<td class="et-cond"><span class="et-cond-lab">条件</span><span class="et-mark '+(MARKCLS[h.mark]||"")+'" title="'+escW(MARKLBL[h.mark]||h.mark)+'">'+escW(h.mark)+'</span></td>'
-    +'<td class="et-memo">'+(memo==="―"?'<span class="wl-memo-none">―</span>':memo)+'</td>'
+    +'<td class="et-memo">'+memoCell+'</td>'
     +'<td class="et-tags">'+line1Tags+'</td></tr>';
   if(hasRev){
     return row1+subRows
@@ -3914,6 +3948,26 @@ function stackLegend(){
 }
 var CATORDER=["狙い","危険","対象外"];
 var CATCOLOR={"狙い":"#3f51b5","危険":"#c0392b","対象外":"#64748b"};
+function anaRow(d, opts){
+  opts=opts||{};
+  var ref=(Number(d.n)||0)<30;
+  var col=opts.color||"#64748b";
+  return '<div class="ana-row'+(ref?" is-ref":"")+(opts.muted?" ana-row--muted":"")+'">'
+    +'<div class="ana-row-top"><span class="ana-label">'
+    +(opts.dot?'<span class="ana-dot" style="background:'+col+'"></span>':"")
+    +escA(d.label||"")+'</span>'
+    +(d.def?'<span class="ana-def">'+escA(d.def)+'</span>':"")
+    +(opts.kata?kataTag(d.kata):"")
+    +'<span class="ana-n">n='+escA(d.n)+'</span>'+(ref?'<span class="ana-ref">参考値</span>':"")
+    +(opts.flag?'<span class="ana-flag">'+escA(opts.flag)+'</span>':"")
+    +'</div>'
+    +'<div class="ana-boardline"><span class="ana-rate">'+escA(d.board)+'%</span><span class="ana-rate-lab">3着内率</span>'
+    +(opts.p1?'<span class="ana-p1"><b>1着率</b>'+escA(d.p1)+'%</span>':"")
+    +'</div>'
+    +(opts.bar?'<div class="ana-bar"><span style="width:'+Math.max(0,Math.min(100,Number(d.board)||0))+'%;background:'+col+'"></span></div>':"")
+    +(opts.stack?stackBar(d)+breakLine(d):"")
+    +'</div>';
+}
 function renderAnalysis(data){
   var root=document.getElementById("analysis-root");
   var st=document.getElementById("analysis-status");
@@ -3924,75 +3978,66 @@ function renderAnalysis(data){
     +'<p>'+escA(data.note||"")+'</p>'
     +(data.generated?'<p class="ana-gen">集計日：'+escA(data.generated)+'</p>':"")
     +'</details>';
-  /* 1) 区分の検証 */
+  var cats=data.categories||{}, pops=data.sniping_by_pop||[], grades=data.grade_next||[], ibands=data.index_bands||[];
+  /* ゾーン1: まず結論 */
+  html+='<div class="ana-zone">まず結論</div>';
+  html+='<div class="ana-sum good"><h3>信じていいもの</h3><ul>'
+    +'<li>狙いメモの馬は次走3着内 '+(cats["狙い"]?cats["狙い"].board:"―")+'%（対象外は '+(cats["対象外"]?cats["対象外"].board:"―")+'%）</li>'
+    +(pops[0]?'<li>前走1〜3番人気の狙いは3着内 '+pops[0].board+'%</li>':"")
+    +(grades[0]&&grades[1]?'<li>回顧の評価がS・Aの馬は3着内 '+grades[0].board+'%・'+grades[1].board+'%</li>':"")
+    +(ibands[0]?'<li>回顧指数90以上は3着内 '+ibands[0].board+'%（80未満は '+(ibands[2]?ibands[2].board:"―")+'%）</li>':"")
+    +'</ul></div>';
+  var dnp=(data.danger_next_pop||[])[0];
+  html+='<div class="ana-sum bad"><h3>危険視するもの</h3><ul>'
+    +(pops[3]?'<li>前走10番人気以下の狙いは3着内 '+pops[3].board+'%で、対象外と同水準</li>':"")
+    +(dnp?'<li>危険メモの馬が次走で人気になると、3着を外す方が多い（'+(100-Number(dnp.board))+'%）</li>':"")
+    +(grades[4]?'<li>回顧の評価がDの馬は3着内 '+grades[4].board+'%</li>':"")
+    +(ibands[2]?'<li>回顧指数80未満は3着内 '+ibands[2].board+'%</li>':"")
+    +'</ul></div>';
+  /* ゾーン2: 根拠 */
+  html+='<div class="ana-zone">根拠</div>';
+  html+='<div class="ana-block"><h3 class="ana-block-h">評価の階段（回顧の総合評価 → 次走成績）</h3>'
+    +'<p class="ana-read">評価が高い馬ほど次走で好走している。最終判断は評価で見る</p>';
+  grades.forEach(function(d){ html+=anaRow(d,{color:"#3f51b5",p1:true,bar:true}); });
+  html+='</div>';
   html+='<div class="ana-block"><h3 class="ana-block-h">区分の検証（次走成績）</h3>'
     +'<p class="ana-read">狙いは対象外の約2倍、次走で好走している</p>';
-  var cats=data.categories||{};
   CATORDER.forEach(function(name){
     var d=cats[name]; if(!d) return;
-    var col=CATCOLOR[name]||"#64748b";
-    var ref=(Number(d.n)||0)<30;
-    html+='<div class="ana-row'+(ref?" is-ref":"")+'">'
-      +'<div class="ana-row-top"><span class="ana-label"><span class="ana-dot" style="background:'+col+'"></span>'+escA(name)+'</span>'
-      +'<span class="ana-n">n='+escA(d.n)+'</span>'+(ref?'<span class="ana-ref">参考値</span>':"")+'</div>'
-      +'<div class="ana-boardline"><span class="ana-rate">'+escA(d.board)+'%</span><span class="ana-rate-lab">3着内率</span>'
-      +'<span class="ana-p1"><b>1着率</b>'+escA(d.p1)+'%</span></div>'
-      +'<div class="ana-bar"><span style="width:'+Math.max(0,Math.min(100,Number(d.board)||0))+'%;background:'+col+'"></span></div>'
-      +'</div>';
+    html+=anaRow({label:name,n:d.n,board:d.board,p1:d.p1},{dot:true,color:CATCOLOR[name]||"#64748b",p1:true,bar:true});
   });
-  /* 他区分（想定外のキーがあれば末尾に） */
   Object.keys(cats).forEach(function(name){
     if(CATORDER.indexOf(name)>=0) return;
     var d=cats[name]; if(!d) return;
-    var ref=(Number(d.n)||0)<30;
-    html+='<div class="ana-row'+(ref?" is-ref":"")+'">'
-      +'<div class="ana-row-top"><span class="ana-label"><span class="ana-dot" style="background:#64748b"></span>'+escA(name)+'</span>'
-      +'<span class="ana-n">n='+escA(d.n)+'</span>'+(ref?'<span class="ana-ref">参考値</span>':"")+'</div>'
-      +'<div class="ana-boardline"><span class="ana-rate">'+escA(d.board)+'%</span><span class="ana-rate-lab">3着内率</span>'
-      +'<span class="ana-p1"><b>1着率</b>'+escA(d.p1)+'%</span></div>'
-      +'<div class="ana-bar"><span style="width:'+Math.max(0,Math.min(100,Number(d.board)||0))+'%;background:#64748b"></span></div>'
-      +'</div>';
+    html+=anaRow({label:name,n:d.n,board:d.board,p1:d.p1},{dot:true,color:"#64748b",p1:true,bar:true});
   });
   html+='</div>';
-  /* 2) 人気別の狙い */
   html+='<div class="ana-block"><h3 class="ana-block-h">人気別の狙い ─ 境目は10番人気</h3>'
     +stackLegend();
-  (data.sniping_by_pop||[]).forEach(function(d){
-    var ref=(Number(d.n)||0)<30;
-    var isLast=/10番人気以下/.test(d.label||"");
-    html+='<div class="ana-row'+(ref?" is-ref":"")+'">'
-      +'<div class="ana-row-top"><span class="ana-label">'+escA(d.label)+'</span>'
-      +(d.def?'<span class="ana-def">'+escA(d.def)+'</span>':"")
-      +kataTag(d.kata)
-      +'<span class="ana-n">n='+escA(d.n)+'</span>'+(ref?'<span class="ana-ref">参考値</span>':"")
-      +(isLast?'<span class="ana-flag">対象外と変わらない</span>':"")
-      +'</div>'
-      +'<div class="ana-boardline"><span class="ana-rate">'+escA(d.board)+'%</span><span class="ana-rate-lab">3着内率</span></div>'
-      +stackBar(d)
-      +breakLine(d)
-      +'</div>';
-  });
+  pops.forEach(function(d,i){ html+=anaRow(d,{kata:true,stack:true,flag:(i===3?"対象外と変わらない":"")}); });
   html+='</div>';
-  /* 3) 層別チェック */
+  html+='<div class="ana-block"><h3 class="ana-block-h">回顧指数の階段（補正後の能力評価 → 次走成績）</h3>'
+    +'<p class="ana-read-sub">回顧指数は「測った値」の確認用。階段は効いているが、評価ほどは分かれない</p>';
+  ibands.forEach(function(d){ html+=anaRow(d,{color:"#0f766e",p1:true,bar:true}); });
+  html+='</div>';
   html+='<div class="ana-block"><h3 class="ana-block-h">層別チェック</h3>'
     +'<p class="ana-read">大敗×人気薄の狙いはヒモ型</p>'
     +stackLegend();
   (data.layers||[]).forEach(function(d){
-    var ref=(Number(d.n)||0)<30;
     var isComp=/比較/.test(d.label||"")||/対象外の同層/.test(d.label||"");
-    html+='<div class="ana-row'+(ref?" is-ref":"")+(isComp?" ana-row--muted":"")+'">'
-      +'<div class="ana-row-top"><span class="ana-label">'+escA(d.label)+'</span>'
-      +(d.def?'<span class="ana-def">'+escA(d.def)+'</span>':"")
-      +(isComp?"":kataTag(d.kata))
-      +'<span class="ana-n">n='+escA(d.n)+'</span>'+(ref?'<span class="ana-ref">参考値</span>':"")
-      +'</div>'
-      +'<div class="ana-boardline"><span class="ana-rate">'+escA(d.board)+'%</span><span class="ana-rate-lab">3着内率</span></div>'
-      +stackBar(d)
-      +breakLine(d)
-      +'</div>';
+    html+=anaRow(d,{kata:!isComp,stack:true,muted:isComp});
   });
   html+='</div>';
-  /* 4) レースレベル分布 */
+  /* ゾーン3: まだ検証中 */
+  html+='<div class="ana-zone">まだ検証中</div>';
+  var lc=data.level_check||{};
+  html+='<div class="ana-block"><h3 class="ana-block-h">レースレベルの検証（タイム指数）</h3>'
+    +'<p class="ana-read">前走レースのレベルでは、次走成績に差が出なかった</p>'
+    +'<p class="ana-read-sub">前走レースの勝ち馬タイム指数（netkeiba）が、そのクラス帯の中央値以上だった馬と未満だった馬で、次走の3着内率を比べたものです。今の物差し（勝ち馬1頭の指数だけ）では、使い道はまだ検証段階です。</p>';
+  ["high","low","high_snipe","low_snipe"].forEach(function(k){
+    var d=lc[k]; if(d) html+=anaRow(d,{color:"#64748b",p1:true,bar:true});
+  });
+  html+='</div>';
   html+='<div class="ana-block"><h3 class="ana-block-h">レースレベル分布（勝ち馬指数）'
     +(data.level_obtained!=null?'<span class="ana-count">現在 '+escA(data.level_obtained)+'レース分</span>':"")
     +'</h3>'
