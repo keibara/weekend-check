@@ -1390,8 +1390,8 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 .et-caution td.cz3{font-size:8px;letter-spacing:-.02em}
 .et-caution td.cz4{font-size:7.5px;letter-spacing:-.02em}
 .et-caution td.cz5{font-size:9px;letter-spacing:-.02em;line-height:1.45;white-space:normal}
-.et-race.rz1{font-size:10.5px;letter-spacing:-.02em}
-.et-race.rz2{font-size:10px;letter-spacing:-.03em}
+.et-race.rz1{font-size:10px;letter-spacing:-.03em}
+.et-race.rz2{font-size:9px;letter-spacing:-.04em}
 .et-caution-lab{font-weight:900;margin-right:6px}
 .conn-box{border:1px solid var(--line);border-radius:6px;background:var(--sub);padding:9px 11px;margin-bottom:10px}
 .conn-h{font-weight:900;font-size:13px;margin-bottom:4px}
@@ -3141,7 +3141,7 @@ function horseRow(h,i,total){
     if(scTxt) raceHtml+='（<span class="wsub-cls '+l3ClassCls(scTxt,lr["クラス"]||"")+'">'+escW(scTxt)+'</span>）';
     /* 長いレース名は省略せず、文字サイズを段階的に下げて1行に収める（全角=1・半角=0.5で概算） */
     var raceUnits=0; (function(){ var s=raceTxt+(scTxt?("（"+scTxt+"）"):""); for(var ci=0;ci<s.length;ci++){ raceUnits+=(s.charCodeAt(ci)>255?1:0.5); } })();
-    var raceCls=raceUnits>15.5?" rz2":(raceUnits>14.5?" rz1":"");
+    var raceCls=raceUnits>14?" rz2":(raceUnits>12.5?" rz1":"");
     var dateTxt=fmtDSlash(lr["開催日"]||"");
     var flowVal=String(lr["展開との相性"]||"");
     var flowHtml=flowVal?('<span class="rv-lab">展開</span> <span'+(flowVal==="有利"?' class="fl-yu"':"")+'>'+escW(flowVal)+'</span>'):"―";
