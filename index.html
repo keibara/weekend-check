@@ -1804,8 +1804,8 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
       <table class="ml-table">
       <tr><td class="k"><span class="ana-kata k-honmei">本命型</span></td><td>勝ち切る型</td></tr>
       <tr><td class="k"><span class="ana-kata k-taikou">対抗型</span></td><td>軸・ヒモ両にらみ</td></tr>
-      <tr><td class="k"><span class="ana-kata k-himo">ヒモ型</span></td><td>2・3着が中心</td></tr>
-      <tr><td class="k"><span class="ana-kata k-ihen">ヒモ型・一変</span></td><td>前走の大敗から一変する型</td></tr>
+      <tr><td class="k"><span class="ana-kata k-himo">ヒモ型</span></td><td>2・3着が中心（薄い緑）</td></tr>
+      <tr><td class="k"><span class="ana-kata k-ihen">ヒモ型</span></td><td>ヒモ型・一変。前走の大敗から一変（濃い緑）</td></tr>
       </table>
       <div class="ml-foot">※ 型の根拠は分析タブにあります</div>
       <div class="ml-h">数字</div>
@@ -3309,7 +3309,7 @@ function horseRow(h,i,total){
      詳細は従来どおり、その馬の下に全列結合の行として開く */
   var memoCell=(memo==="―"?'<span class="wl-memo-none">―</span>':memo);
   /* 型は区分の横（6列目）に出す。1行目の縦伸びを避けるため、区分セルの中には入れない */
-  var kataCell=h.kata?('<span class="ana-kata wkata '+(h.kataSub==="一変"?"k-ihen":(KATACLS[h.kata]||"k-taikou"))+'">'+escW(h.kataSub==="一変"?"ヒモ型・一変":h.kata)+'</span>'):"";
+  var kataCell=h.kata?('<span class="ana-kata wkata '+(h.kataSub==="一変"?"k-ihen":(KATACLS[h.kata]||"k-taikou"))+'">'+escW(h.kata)+'</span>'):"";
   var row1='<tr class="wrow et-r1" data-wmark="'+escW(h.mark)+'" data-wname="'+escW(h.name)+'" data-wab="'+escW(h.ab||"")+'" data-hasdet="1" tabindex="0" aria-expanded="false"'+idxAttr+'>'
     +'<td class="c-num'+wk+'">'+numCell+'</td>'
     +'<td class="c-name et-name" colspan="2">'+wnameHtml(h.name)+'</td>'
@@ -4181,7 +4181,7 @@ function renderAnalysis(data){
     +'<li><b>n</b>：検証できた件数。30未満は参考値</li>'
     +'<li><b>狙い／危険／対象外</b>：回顧メモの区分</li>'
     +'<li><b>本命型／対抗型／ヒモ型</b>：3着内に占める1着の割合で分類（40%以上＝本命型、20〜40%＝対抗型、20%未満＝ヒモ型）</li>'
-    +'<li><b>ヒモ型・一変</b>：前走8着以下×7番人気以下で、狙いメモが付いた馬</li>'
+    +'<li><b>ヒモ型・一変</b>：前走8着以下×7番人気以下で、狙いメモが付いた馬。一覧では濃い緑の「ヒモ型」チップで表示</li>'
     +'<li><b>回顧指数</b>：回顧の内容補正後の能力評価</li>'
     +'<li><b>レースLV</b>：前走レースの勝ち馬のタイム指数（netkeiba）</li>'
     +'</ul>'
