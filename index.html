@@ -865,6 +865,7 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
   padding:2px 3px;border:1px solid var(--line);white-space:nowrap}
 .last3 td{padding:2px 3px;border:1px solid var(--line);vertical-align:top;overflow-wrap:anywhere}
 .last3 .l3-d,.last3 .l3-c,.last3 .l3-k,.last3 .l3-n,.last3 .l3-f,.last3 .l3-g,.last3 .l3-e{white-space:nowrap}
+.last3 .l3-lv{white-space:nowrap}
 .last3 .eg{min-width:0;padding:0 5px;font-size:11px;line-height:1.5;border-radius:3px}
 .l3f{font-weight:900}
 .l3f.yu{color:#b45309}.l3f.fu{color:#1d4ed8}.l3f.chu{color:#64748b}.l3f.ho{color:#64748b}
@@ -2993,12 +2994,13 @@ function last3Table(hh,horseName){
           +'<td class="l3-n">'+escW(it.fieldSize?it.fieldSize+"頭":"―")+'</td>'
           +'<td class="l3-f">'+finChipW(finV)+'</td>'
           +'<td class="l3-g">'+grCell+'</td>'
-          +'<td class="l3-e">'+evCell+'</td></tr>';
+          +'<td class="l3-e">'+evCell+'</td>'
+          +'<td class="l3-lv">'+(it.level!=null?escW(String(it.level).replace(/\.0$/,"")):"―")+'</td></tr>';
       }else{
-        rowsV+='<tr class="l3-empty"><td colspan="7"></td></tr>';
+        rowsV+='<tr class="l3-empty"><td colspan="8"></td></tr>';
       }
     }
-    var hv='<div class="last3-wrap"><table class="last3" aria-label="直近3走の一覧"><thead><tr><th>日付</th><th>コース</th><th>クラス</th><th>頭数</th><th>着順</th><th>評価</th><th>展開</th></tr></thead><tbody>'+rowsV+'</tbody></table></div>';
+    var hv='<div class="last3-wrap"><table class="last3" aria-label="直近3走の一覧"><thead><tr><th>日付</th><th>コース</th><th>クラス</th><th>頭数</th><th>着順</th><th>評価</th><th>展開</th><th>レースLV</th></tr></thead><tbody>'+rowsV+'</tbody></table></div>';
     if(hasUnrev) hv+='<p class="l3-note">未回顧＝出走記録で確認できたが回顧のないレース。空欄＝出走歴なし（出走記録で確認済み）</p>';
     return hv;
   }
@@ -3015,15 +3017,16 @@ function last3Table(hh,horseName){
         +'<td class="l3-n">'+escW(rv["出走頭数"]?rv["出走頭数"]+"頭":"―")+'</td>'
         +'<td class="l3-f">'+finChipW(rv["着順"])+'</td>'
         +'<td class="l3-g">'+gradeChip(rv["総合評価"]||"")+'</td>'
-        +'<td class="l3-e"><span class="l3f '+(L3FLOW[fl]||"ho")+'">'+escW(fl||"―")+'</span></td></tr>';
+        +'<td class="l3-e"><span class="l3f '+(L3FLOW[fl]||"ho")+'">'+escW(fl||"―")+'</span></td>'
+        +'<td class="l3-lv">―</td></tr>';
     }else if(isDebut){
-      rows+='<tr class="l3-empty"><td colspan="7"></td></tr>';
+      rows+='<tr class="l3-empty"><td colspan="8"></td></tr>';
     }else{
       hasNone=true;
-      rows+='<tr class="l3-none"><td colspan="7">未回顧</td></tr>';
+      rows+='<tr class="l3-none"><td colspan="8">未回顧</td></tr>';
     }
   }
-  var h='<div class="last3-wrap"><table class="last3" aria-label="直近3走の一覧"><thead><tr><th>日付</th><th>コース</th><th>クラス</th><th>頭数</th><th>着順</th><th>評価</th><th>展開</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
+  var h='<div class="last3-wrap"><table class="last3" aria-label="直近3走の一覧"><thead><tr><th>日付</th><th>コース</th><th>クラス</th><th>頭数</th><th>着順</th><th>評価</th><th>展開</th><th>レースLV</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
   if(hasNone) h+='<p class="l3-note">未回顧＝出走記録で確認できたが回顧のないレース。空欄＝出走歴なし（出走記録で確認済み）</p>';
   return h;
 }

@@ -69,10 +69,22 @@
   "tagReasons": {},
   "horseId": "2024102246",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-08",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1600,
+    "class": "2歳新馬",
+    "fieldSize": 16,
+    "finish": "3",
+    "status": "reviewed",
+    "level": 72.0
+   }
+  ]
  },
  "フォルミナンテ": {
   "entry": {
@@ -144,10 +156,33 @@
   "tagReasons": {},
   "horseId": "2024100060",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-15",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "2歳未勝利",
+    "fieldSize": 17,
+    "finish": "14",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-11-01",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳新馬",
+    "fieldSize": 13,
+    "finish": "12",
+    "status": "reviewed",
+    "level": 58.0
+   }
+  ]
  },
  "アンヴォルトワ": {
   "entry": {
@@ -219,10 +254,33 @@
   "tagReasons": {},
   "horseId": "2024101325",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-22",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1300,
+    "class": "2歳未勝利",
+    "fieldSize": 16,
+    "finish": "11",
+    "status": "reviewed",
+    "level": null
+   },
+   {
+    "date": "2026-11-07",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "2歳新馬",
+    "fieldSize": 18,
+    "finish": "15",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "イントゥーザブルー": {
   "entry": {
@@ -335,11 +393,22 @@
    "過剰人気注意": "直近3走に危険メモあり（20261123東京1R）"
   },
   "horseId": "2024102763",
-  "entryDate": "2026-11-23",
+  "entryDate": "2026-11-28",
   "verified": true,
   "verification": "netkeiba_result_page",
   "priorStarts": 5,
   "history3": [
+   {
+    "date": "2026-11-23",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1600,
+    "class": "2歳未勝利",
+    "fieldSize": 13,
+    "finish": "8",
+    "status": "reviewed",
+    "level": null
+   },
    {
     "date": "2026-10-31",
     "venue": "東京",
@@ -348,7 +417,8 @@
     "class": "2歳未勝利",
     "fieldSize": 16,
     "finish": "3",
-    "status": "unreviewed"
+    "status": "unreviewed",
+    "level": null
    },
    {
     "date": "2026-10-11",
@@ -358,17 +428,8 @@
     "class": "2歳未勝利",
     "fieldSize": 12,
     "finish": "8",
-    "status": "reviewed"
-   },
-   {
-    "date": "2026-09-12",
-    "venue": "中山",
-    "surface": "芝",
-    "distance": 1600,
-    "class": "2歳未勝利",
-    "fieldSize": 12,
-    "finish": "8",
-    "status": "unreviewed"
+    "status": "reviewed",
+    "level": 84.0
    }
   ]
  },
@@ -484,10 +545,33 @@
   },
   "horseId": "2024100686",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-14",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1600,
+    "class": "2歳未勝利",
+    "fieldSize": 14,
+    "finish": "2",
+    "status": "reviewed",
+    "level": 79.0
+   },
+   {
+    "date": "2026-07-04",
+    "venue": "福島",
+    "surface": "ダート",
+    "distance": 1700,
+    "class": "2歳新馬",
+    "fieldSize": 15,
+    "finish": "2",
+    "status": "reviewed",
+    "level": 75.0
+   }
+  ]
  },
  "コスモツクヨミ": {
   "entry": {
@@ -559,10 +643,33 @@
   "tagReasons": {},
   "horseId": "2024102587",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-15",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "2歳未勝利",
+    "fieldSize": 16,
+    "finish": "6",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-10-24",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "2歳新馬",
+    "fieldSize": 16,
+    "finish": "4",
+    "status": "reviewed",
+    "level": 80.0
+   }
+  ]
  },
  "シックスアワーズ": {
   "entry": {
@@ -634,10 +741,22 @@
   "tagReasons": {},
   "horseId": "2024104598",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-23",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "2歳新馬",
+    "fieldSize": 13,
+    "finish": "13",
+    "status": "reviewed",
+    "level": null
+   }
+  ]
  },
  "ナムラマシュー": {
   "entry": {
@@ -709,10 +828,33 @@
   "tagReasons": {},
   "horseId": "2024101624",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-24",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "2歳未勝利",
+    "fieldSize": 14,
+    "finish": "13",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-10-10",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳新馬",
+    "fieldSize": 14,
+    "finish": "13",
+    "status": "reviewed",
+    "level": 65.0
+   }
+  ]
  },
  "ウイニングレイ": {
   "entry": {
@@ -788,10 +930,44 @@
   },
   "horseId": "2024105882",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-25",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "2歳未勝利",
+    "fieldSize": 7,
+    "finish": "2",
+    "status": "reviewed",
+    "level": 78.0
+   },
+   {
+    "date": "2026-10-03",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "2歳未勝利",
+    "fieldSize": 11,
+    "finish": "3",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-08-30",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "2歳未勝利",
+    "fieldSize": 8,
+    "finish": "3",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "カーラベッリーナ": {
   "entry": {
@@ -863,10 +1039,22 @@
   "tagReasons": {},
   "horseId": "2024105817",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-10",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "2歳新馬",
+    "fieldSize": 12,
+    "finish": "3",
+    "status": "reviewed",
+    "level": 56.0
+   }
+  ]
  },
  "コールセレスト": {
   "entry": {
@@ -938,10 +1126,22 @@
   "tagReasons": {},
   "horseId": "2024106426",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-01",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳新馬",
+    "fieldSize": 13,
+    "finish": "4",
+    "status": "reviewed",
+    "level": 58.0
+   }
+  ]
  },
  "セイウンランウェイ": {
   "entry": {
@@ -1013,10 +1213,33 @@
   "tagReasons": {},
   "horseId": "2024102787",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-17",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "2歳未勝利",
+    "fieldSize": 10,
+    "finish": "9",
+    "status": "reviewed",
+    "level": 55.0
+   },
+   {
+    "date": "2026-09-19",
+    "venue": "中山",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "2歳新馬",
+    "fieldSize": 12,
+    "finish": "11",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ソフロニティス": {
   "entry": {
@@ -1088,10 +1311,22 @@
   "tagReasons": {},
   "horseId": "2024101647",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-14",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "2歳新馬",
+    "fieldSize": 10,
+    "finish": "9",
+    "status": "reviewed",
+    "level": 63.0
+   }
+  ]
  },
  "ダブルブロッサム": {
   "entry": {
@@ -1239,10 +1474,44 @@
   "tagReasons": {},
   "horseId": "2024104700",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-14",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "2歳未勝利",
+    "fieldSize": 14,
+    "finish": "14",
+    "status": "reviewed",
+    "level": 75.0
+   },
+   {
+    "date": "2026-10-24",
+    "venue": "新潟",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "2歳未勝利",
+    "fieldSize": 12,
+    "finish": "10",
+    "status": "reviewed",
+    "level": 58.0
+   },
+   {
+    "date": "2026-07-04",
+    "venue": "福島",
+    "surface": "ダート",
+    "distance": 1700,
+    "class": "2歳新馬",
+    "fieldSize": 15,
+    "finish": "9",
+    "status": "reviewed",
+    "level": 75.0
+   }
+  ]
  },
  "ファンタジーゲーム": {
   "entry": {
@@ -1314,10 +1583,22 @@
   "tagReasons": {},
   "horseId": "2024105940",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-09-20",
+    "venue": "中山",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳新馬",
+    "fieldSize": 16,
+    "finish": "11",
+    "status": "reviewed",
+    "level": 45.0
+   }
+  ]
  },
  "ランブリングガール": {
   "entry": {
@@ -1389,10 +1670,33 @@
   "tagReasons": {},
   "horseId": "2024106070",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-07",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "2歳未勝利",
+    "fieldSize": 10,
+    "finish": "5",
+    "status": "reviewed",
+    "level": 72.0
+   },
+   {
+    "date": "2026-08-23",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳新馬",
+    "fieldSize": 12,
+    "finish": "8",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ルビーアテナ": {
   "entry": {
@@ -1464,10 +1768,22 @@
   "tagReasons": {},
   "horseId": "2024103160",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-14",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳新馬",
+    "fieldSize": 15,
+    "finish": "7",
+    "status": "reviewed",
+    "level": 54.0
+   }
+  ]
  },
  "ロジヴィジョン": {
   "entry": {
@@ -1543,10 +1859,22 @@
   },
   "horseId": "2024103411",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-04",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "2歳新馬",
+    "fieldSize": 11,
+    "finish": "2",
+    "status": "reviewed",
+    "level": 58.0
+   }
+  ]
  },
  "ロックドダイアリー": {
   "entry": {
@@ -1618,10 +1946,22 @@
   "tagReasons": {},
   "horseId": "2024106920",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-09-22",
+    "venue": "中山",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳新馬",
+    "fieldSize": 15,
+    "finish": "4",
+    "status": "reviewed",
+    "level": 51.0
+   }
+  ]
  },
  "ワンコール": {
   "entry": {
@@ -1731,10 +2071,44 @@
   "tagReasons": {},
   "horseId": "2024106974",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-07",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "2歳未勝利",
+    "fieldSize": 16,
+    "finish": "10",
+    "status": "reviewed",
+    "level": 70.0
+   },
+   {
+    "date": "2026-10-24",
+    "venue": "新潟",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "2歳未勝利",
+    "fieldSize": 12,
+    "finish": "11",
+    "status": "reviewed",
+    "level": 58.0
+   },
+   {
+    "date": "2026-09-05",
+    "venue": "中山",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "2歳未勝利",
+    "fieldSize": 10,
+    "finish": "9",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ムーランブルー": {
   "entry": {
@@ -1806,10 +2180,44 @@
   "tagReasons": {},
   "horseId": "2020101341",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-23",
+    "venue": "福島",
+    "surface": "ダート",
+    "distance": 1700,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 15,
+    "finish": "8",
+    "status": "reviewed",
+    "level": null
+   },
+   {
+    "date": "2026-06-14",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 2100,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 15,
+    "finish": "9",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-05-23",
+    "venue": "新潟",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "4歳以上1勝クラス",
+    "fieldSize": 15,
+    "finish": "5",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "エールトゥヘヴン": {
   "entry": {
@@ -1881,10 +2289,44 @@
   "tagReasons": {},
   "horseId": "2019101416",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-22",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "3歳以上2勝クラス",
+    "fieldSize": 16,
+    "finish": "12",
+    "status": "reviewed",
+    "level": null
+   },
+   {
+    "date": "2026-10-24",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "精進湖特別(2勝クラス)",
+    "fieldSize": 13,
+    "finish": "9",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-01-10",
+    "venue": "中山",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "初凪賞(2勝クラス)",
+    "fieldSize": 16,
+    "finish": "13",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "アドマイヤクワッズ": {
   "entry": {
@@ -1998,10 +2440,44 @@
   },
   "horseId": "2023105311",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-04",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "毎日王冠(GII)",
+    "fieldSize": 17,
+    "finish": "17",
+    "status": "reviewed",
+    "level": 99.0
+   },
+   {
+    "date": "2026-05-10",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "NHKマイルC(GI)",
+    "fieldSize": 18,
+    "finish": "3",
+    "status": "reviewed",
+    "level": 107.0
+   },
+   {
+    "date": "2026-04-19",
+    "venue": "中山",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "皐月賞(GI)",
+    "fieldSize": 18,
+    "finish": "15",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ウイントワイライト": {
   "entry": {
@@ -2073,10 +2549,44 @@
   "tagReasons": {},
   "horseId": "2022106232",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-11",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "アイルランドT(GII)",
+    "fieldSize": 16,
+    "finish": "14",
+    "status": "reviewed",
+    "level": 110.0
+   },
+   {
+    "date": "2026-06-21",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "府中牝馬S(GIII)",
+    "fieldSize": 16,
+    "finish": "2",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-05-02",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "京王杯スプリングC(GII)",
+    "fieldSize": 18,
+    "finish": "16",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "エンペラーズソード": {
   "entry": {
@@ -2148,10 +2658,44 @@
   "tagReasons": {},
   "horseId": "2022106691",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-17",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "富士S(GII)",
+    "fieldSize": 14,
+    "finish": "14",
+    "status": "reviewed",
+    "level": 100.0
+   },
+   {
+    "date": "2026-04-04",
+    "venue": "中山",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "ダービー卿チャレンジ(GIII)",
+    "fieldSize": 15,
+    "finish": "8",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-03-15",
+    "venue": "中山",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "東風S(L)",
+    "fieldSize": 16,
+    "finish": "7",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "カヴァレリッツォ": {
   "entry": {
@@ -2227,10 +2771,44 @@
   },
   "horseId": "2023107153",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-05-10",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "NHKマイルC(GI)",
+    "fieldSize": 18,
+    "finish": "12",
+    "status": "reviewed",
+    "level": 107.0
+   },
+   {
+    "date": "2026-04-19",
+    "venue": "中山",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "皐月賞(GI)",
+    "fieldSize": 18,
+    "finish": "13",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2025-12-21",
+    "venue": "阪神",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "朝日フューチュリティ(GI)",
+    "fieldSize": 14,
+    "finish": "1",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ガロンヌ": {
   "entry": {
@@ -2340,10 +2918,44 @@
   "tagReasons": {},
   "horseId": "2021100494",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-01",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "まほろばS(L)",
+    "fieldSize": 13,
+    "finish": "4",
+    "status": "reviewed",
+    "level": 90.0
+   },
+   {
+    "date": "2026-08-22",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "朱鷺S(L)",
+    "fieldSize": 18,
+    "finish": "2",
+    "status": "reviewed",
+    "level": 99.0
+   },
+   {
+    "date": "2026-05-16",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 1200,
+    "class": "鞍馬S(OP)",
+    "fieldSize": 16,
+    "finish": "11",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "キョウエイブリッサ": {
   "entry": {
@@ -2453,10 +3065,44 @@
   "tagReasons": {},
   "horseId": "2020107001",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-01",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "まほろばS(L)",
+    "fieldSize": 13,
+    "finish": "3",
+    "status": "reviewed",
+    "level": 90.0
+   },
+   {
+    "date": "2026-07-12",
+    "venue": "函館",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "巴賞(OP)",
+    "fieldSize": 14,
+    "finish": "5",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-04-26",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "読売マイラーズC(GII)",
+    "fieldSize": 18,
+    "finish": "10",
+    "status": "reviewed",
+    "level": 107.0
+   }
+  ]
  },
  "クルゼイロドスル": {
   "entry": {
@@ -2604,10 +3250,44 @@
   "tagReasons": {},
   "horseId": "2020101813",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-04",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "毎日王冠(GII)",
+    "fieldSize": 17,
+    "finish": "12",
+    "status": "reviewed",
+    "level": 99.0
+   },
+   {
+    "date": "2026-09-05",
+    "venue": "中山",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "京成杯オータムH(GIII)",
+    "fieldSize": 16,
+    "finish": "10",
+    "status": "reviewed",
+    "level": 102.0
+   },
+   {
+    "date": "2026-08-22",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "朱鷺S(L)",
+    "fieldSize": 18,
+    "finish": "14",
+    "status": "reviewed",
+    "level": 99.0
+   }
+  ]
  },
  "シャンパンカラー": {
   "entry": {
@@ -2755,10 +3435,44 @@
   "tagReasons": {},
   "horseId": "2020103075",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-01",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "天皇賞(秋)(GI)",
+    "fieldSize": 17,
+    "finish": "13",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-10-04",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "毎日王冠(GII)",
+    "fieldSize": 17,
+    "finish": "13",
+    "status": "reviewed",
+    "level": 99.0
+   },
+   {
+    "date": "2026-06-07",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "安田記念(GI)",
+    "fieldSize": 17,
+    "finish": "12",
+    "status": "reviewed",
+    "level": 103.0
+   }
+  ]
  },
  "シンフォーエバー": {
   "entry": {
@@ -2868,10 +3582,44 @@
   "tagReasons": {},
   "horseId": "2022110114",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-17",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "富士S(GII)",
+    "fieldSize": 14,
+    "finish": "13",
+    "status": "reviewed",
+    "level": 100.0
+   },
+   {
+    "date": "2026-06-21",
+    "venue": "阪神",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "しらさぎS(GIII)",
+    "fieldSize": 18,
+    "finish": "17",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-05-31",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "安土城S(L)",
+    "fieldSize": 17,
+    "finish": "14",
+    "status": "reviewed",
+    "level": 101.0
+   }
+  ]
  },
  "ダノンセンチュリー": {
   "entry": {
@@ -2987,10 +3735,44 @@
   },
   "horseId": "2022104814",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-09-27",
+    "venue": "阪神",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "ポートアイランドS(L)",
+    "fieldSize": 16,
+    "finish": "1",
+    "status": "reviewed",
+    "level": 85.0
+   },
+   {
+    "date": "2026-07-26",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "関屋記念(GIII)",
+    "fieldSize": 14,
+    "finish": "11",
+    "status": "reviewed",
+    "level": 92.0
+   },
+   {
+    "date": "2026-05-02",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "京王杯スプリングC(GII)",
+    "fieldSize": 18,
+    "finish": "9",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ファインライン": {
   "entry": {
@@ -3100,10 +3882,44 @@
   "tagReasons": {},
   "horseId": "2021102419",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-09-27",
+    "venue": "阪神",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "ポートアイランドS(L)",
+    "fieldSize": 16,
+    "finish": "7",
+    "status": "reviewed",
+    "level": 85.0
+   },
+   {
+    "date": "2026-06-21",
+    "venue": "阪神",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "しらさぎS(GIII)",
+    "fieldSize": 18,
+    "finish": "11",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-04-26",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "読売マイラーズC(GII)",
+    "fieldSize": 18,
+    "finish": "15",
+    "status": "reviewed",
+    "level": 107.0
+   }
+  ]
  },
  "マジックサンズ": {
   "entry": {
@@ -3251,10 +4067,44 @@
   "tagReasons": {},
   "horseId": "2022104772",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-17",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "富士S(GII)",
+    "fieldSize": 14,
+    "finish": "4",
+    "status": "reviewed",
+    "level": 100.0
+   },
+   {
+    "date": "2026-08-16",
+    "venue": "札幌",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "札幌記念(GII)",
+    "fieldSize": 16,
+    "finish": "6",
+    "status": "reviewed",
+    "level": 108.0
+   },
+   {
+    "date": "2026-06-28",
+    "venue": "函館",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "函館記念(GIII)",
+    "fieldSize": 15,
+    "finish": "5",
+    "status": "reviewed",
+    "level": 107.0
+   }
+  ]
  },
  "レッドシュヴェルト": {
   "entry": {
@@ -3364,10 +4214,44 @@
   "tagReasons": {},
   "horseId": "2020103517",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-09-27",
+    "venue": "阪神",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "ポートアイランドS(L)",
+    "fieldSize": 16,
+    "finish": "3",
+    "status": "reviewed",
+    "level": 85.0
+   },
+   {
+    "date": "2026-08-22",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "朱鷺S(L)",
+    "fieldSize": 18,
+    "finish": "10",
+    "status": "reviewed",
+    "level": 99.0
+   },
+   {
+    "date": "2026-06-14",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "パラダイスS(L)",
+    "fieldSize": 13,
+    "finish": "6",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "レディマリオン": {
   "entry": {
@@ -3477,10 +4361,44 @@
   "tagReasons": {},
   "horseId": "2021105752",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-08-22",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "朱鷺S(L)",
+    "fieldSize": 18,
+    "finish": "9",
+    "status": "reviewed",
+    "level": 99.0
+   },
+   {
+    "date": "2026-07-26",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "関屋記念(GIII)",
+    "fieldSize": 14,
+    "finish": "8",
+    "status": "reviewed",
+    "level": 92.0
+   },
+   {
+    "date": "2026-04-19",
+    "venue": "福島",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "福島牝馬S(GIII)",
+    "fieldSize": 16,
+    "finish": "14",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "レディントン": {
   "entry": {
@@ -3552,10 +4470,44 @@
   "tagReasons": {},
   "horseId": "2021105926",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-09-27",
+    "venue": "阪神",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "ポートアイランドS(L)",
+    "fieldSize": 16,
+    "finish": "13",
+    "status": "reviewed",
+    "level": 85.0
+   },
+   {
+    "date": "2026-07-12",
+    "venue": "函館",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "巴賞(OP)",
+    "fieldSize": 14,
+    "finish": "11",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-05-30",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1600,
+    "class": "アハルテケS(OP)",
+    "fieldSize": 16,
+    "finish": "9",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "デリシュー": {
   "entry": {
@@ -3627,10 +4579,44 @@
   "tagReasons": {},
   "horseId": "2021103037",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-07",
+    "venue": "福島",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "三春駒特別(1勝クラス)",
+    "fieldSize": 16,
+    "finish": "7",
+    "status": "reviewed",
+    "level": 57.0
+   },
+   {
+    "date": "2026-09-05",
+    "venue": "札幌",
+    "surface": "ダート",
+    "distance": 1700,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 12,
+    "finish": "10",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-08-01",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 2200,
+    "class": "燕特別(1勝クラス)",
+    "fieldSize": 12,
+    "finish": "7",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ボンボンベイビー": {
   "entry": {
@@ -3705,11 +4691,22 @@
    "展開依存": "最新回顧（2026-11-07福島6R）で展開との相性=有利のまま2着"
   },
   "horseId": "2023105371",
-  "entryDate": "2026-11-23",
+  "entryDate": "2026-11-28",
   "verified": true,
   "verification": "netkeiba_result_page",
   "priorStarts": 13,
   "history3": [
+   {
+    "date": "2026-11-23",
+    "venue": "福島",
+    "surface": "芝",
+    "distance": 2600,
+    "class": "磐梯山特別(1勝クラス)",
+    "fieldSize": 16,
+    "finish": "2",
+    "status": "unreviewed",
+    "level": null
+   },
    {
     "date": "2026-11-07",
     "venue": "福島",
@@ -3718,7 +4715,8 @@
     "class": "3歳以上1勝クラス",
     "fieldSize": 16,
     "finish": "2",
-    "status": "reviewed"
+    "status": "reviewed",
+    "level": 64.0
    },
    {
     "date": "2026-10-11",
@@ -3728,17 +4726,8 @@
     "class": "3歳以上1勝クラス",
     "fieldSize": 17,
     "finish": "3",
-    "status": "unreviewed"
-   },
-   {
-    "date": "2026-09-26",
-    "venue": "阪神",
-    "surface": "芝",
-    "distance": 2200,
-    "class": "3歳以上1勝クラス",
-    "fieldSize": 11,
-    "finish": "7",
-    "status": "unreviewed"
+    "status": "unreviewed",
+    "level": null
    }
   ]
  },
@@ -3850,10 +4839,44 @@
   "tagReasons": {},
   "horseId": "2024102930",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-08",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "2歳未勝利",
+    "fieldSize": 13,
+    "finish": "2",
+    "status": "reviewed",
+    "level": 82.0
+   },
+   {
+    "date": "2026-10-17",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 1200,
+    "class": "2歳未勝利",
+    "fieldSize": 11,
+    "finish": "4",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-09-21",
+    "venue": "阪神",
+    "surface": "芝",
+    "distance": 1200,
+    "class": "2歳未勝利",
+    "fieldSize": 13,
+    "finish": "5",
+    "status": "reviewed",
+    "level": 90.0
+   }
+  ]
  },
  "カムトゥルー": {
   "entry": {
@@ -3963,10 +4986,44 @@
   "tagReasons": {},
   "horseId": "2024103480",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-08",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "2歳未勝利",
+    "fieldSize": 13,
+    "finish": "4",
+    "status": "reviewed",
+    "level": 82.0
+   },
+   {
+    "date": "2026-10-24",
+    "venue": "新潟",
+    "surface": "ダート",
+    "distance": 1200,
+    "class": "2歳未勝利",
+    "fieldSize": 14,
+    "finish": "6",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-10-10",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1200,
+    "class": "2歳新馬",
+    "fieldSize": 11,
+    "finish": "3",
+    "status": "reviewed",
+    "level": 78.0
+   }
+  ]
  },
  "キタノディレク": {
   "entry": {
@@ -4038,10 +5095,33 @@
   "tagReasons": {},
   "horseId": "2024104616",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-14",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "2歳未勝利",
+    "fieldSize": 13,
+    "finish": "11",
+    "status": "reviewed",
+    "level": 65.0
+   },
+   {
+    "date": "2026-11-01",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "2歳新馬",
+    "fieldSize": 16,
+    "finish": "10",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ソリドゥス": {
   "entry": {
@@ -4113,10 +5193,44 @@
   "tagReasons": {},
   "horseId": "2024104583",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-07",
+    "venue": "福島",
+    "surface": "ダート",
+    "distance": 1700,
+    "class": "2歳未勝利",
+    "fieldSize": 15,
+    "finish": "11",
+    "status": "reviewed",
+    "level": 77.0
+   },
+   {
+    "date": "2026-08-29",
+    "venue": "中京",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "2歳未勝利",
+    "fieldSize": 12,
+    "finish": "2",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-08-15",
+    "venue": "中京",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "2歳未勝利",
+    "fieldSize": 16,
+    "finish": "5",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ツイストリフト": {
   "entry": {
@@ -4188,10 +5302,33 @@
   "tagReasons": {},
   "horseId": "2024108364",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-18",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1200,
+    "class": "2歳未勝利",
+    "fieldSize": 13,
+    "finish": "10",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-10-10",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "2歳新馬",
+    "fieldSize": 16,
+    "finish": "15",
+    "status": "reviewed",
+    "level": 64.0
+   }
+  ]
  },
  "ドラゴンジョルノ": {
   "entry": {
@@ -4263,10 +5400,22 @@
   "tagReasons": {},
   "horseId": "2024108384",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-15",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "2歳新馬",
+    "fieldSize": 16,
+    "finish": "2",
+    "status": "reviewed",
+    "level": 73.0
+   }
+  ]
  },
  "ムーンパッセ": {
   "entry": {
@@ -4338,10 +5487,44 @@
   "tagReasons": {},
   "horseId": "2024100726",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-14",
+    "venue": "福島",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "2歳未勝利",
+    "fieldSize": 16,
+    "finish": "7",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-10-25",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "2歳未勝利",
+    "fieldSize": 18,
+    "finish": "4",
+    "status": "reviewed",
+    "level": 43.0
+   },
+   {
+    "date": "2026-08-02",
+    "venue": "中京",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳新馬",
+    "fieldSize": 10,
+    "finish": "7",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "レクリドジョワ": {
   "entry": {
@@ -4451,10 +5634,44 @@
   "tagReasons": {},
   "horseId": "2024108368",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-14",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "2歳未勝利",
+    "fieldSize": 14,
+    "finish": "4",
+    "status": "reviewed",
+    "level": 77.0
+   },
+   {
+    "date": "2026-10-12",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "2歳未勝利",
+    "fieldSize": 12,
+    "finish": "7",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-09-26",
+    "venue": "阪神",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳新馬",
+    "fieldSize": 15,
+    "finish": "5",
+    "status": "reviewed",
+    "level": 61.0
+   }
+  ]
  },
  "サウンドホープ": {
   "entry": {
@@ -4526,10 +5743,22 @@
   "tagReasons": {},
   "horseId": "2024101073",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-14",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "2歳新馬",
+    "fieldSize": 11,
+    "finish": "6",
+    "status": "reviewed",
+    "level": 90.0
+   }
+  ]
  },
  "ドリームアムニス": {
   "entry": {
@@ -4601,10 +5830,44 @@
   "tagReasons": {},
   "horseId": "2024104680",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-14",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "2歳未勝利",
+    "fieldSize": 13,
+    "finish": "8",
+    "status": "reviewed",
+    "level": 65.0
+   },
+   {
+    "date": "2026-10-24",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "2歳未勝利",
+    "fieldSize": 11,
+    "finish": "4",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-10-12",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "2歳新馬",
+    "fieldSize": 16,
+    "finish": "8",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ハルカカナタ": {
   "entry": {
@@ -4676,10 +5939,44 @@
   "tagReasons": {},
   "horseId": "2024106310",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-07",
+    "venue": "福島",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "2歳未勝利",
+    "fieldSize": 16,
+    "finish": "7",
+    "status": "reviewed",
+    "level": 60.0
+   },
+   {
+    "date": "2026-09-12",
+    "venue": "阪神",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "2歳未勝利",
+    "fieldSize": 7,
+    "finish": "3",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-08-29",
+    "venue": "中京",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "2歳未勝利",
+    "fieldSize": 11,
+    "finish": "3",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "リメンバーホープ": {
   "entry": {
@@ -4751,10 +6048,22 @@
   "tagReasons": {},
   "horseId": "2024102214",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-14",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "2歳新馬",
+    "fieldSize": 16,
+    "finish": "5",
+    "status": "reviewed",
+    "level": 57.0
+   }
+  ]
  },
  "アドマイヤキングス": {
   "entry": {
@@ -4830,10 +6139,22 @@
   },
   "horseId": "2024106469",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-01",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳新馬",
+    "fieldSize": 13,
+    "finish": "2",
+    "status": "reviewed",
+    "level": 58.0
+   }
+  ]
  },
  "ガヤーズランボー": {
   "entry": {
@@ -4909,10 +6230,44 @@
   },
   "horseId": "2024105526",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-14",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "2歳未勝利",
+    "fieldSize": 14,
+    "finish": "10",
+    "status": "reviewed",
+    "level": 77.0
+   },
+   {
+    "date": "2026-09-26",
+    "venue": "阪神",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "2歳未勝利",
+    "fieldSize": 11,
+    "finish": "3",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-09-05",
+    "venue": "阪神",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "2歳未勝利",
+    "fieldSize": 11,
+    "finish": "8",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ナジュム": {
   "entry": {
@@ -4988,10 +6343,22 @@
   },
   "horseId": "2024103440",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-15",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳新馬",
+    "fieldSize": 18,
+    "finish": "2",
+    "status": "reviewed",
+    "level": 70.0
+   }
+  ]
  },
  "ピースオーカー": {
   "entry": {
@@ -5063,10 +6430,22 @@
   "tagReasons": {},
   "horseId": "2024103330",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-14",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "2歳新馬",
+    "fieldSize": 11,
+    "finish": "4",
+    "status": "reviewed",
+    "level": 90.0
+   }
+  ]
  },
  "フクノブルースカイ": {
   "entry": {
@@ -5138,10 +6517,33 @@
   "tagReasons": {},
   "horseId": "2024100340",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-31",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳未勝利",
+    "fieldSize": 10,
+    "finish": "4",
+    "status": "reviewed",
+    "level": 72.0
+   },
+   {
+    "date": "2026-08-22",
+    "venue": "札幌",
+    "surface": "芝",
+    "distance": 1500,
+    "class": "2歳新馬",
+    "fieldSize": 14,
+    "finish": "3",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ランゲ": {
   "entry": {
@@ -5217,10 +6619,22 @@
   },
   "horseId": "2024102496",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-09-26",
+    "venue": "阪神",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳新馬",
+    "fieldSize": 15,
+    "finish": "3",
+    "status": "reviewed",
+    "level": 61.0
+   }
+  ]
  },
  "レイヨンラゼール": {
   "entry": {
@@ -5292,10 +6706,22 @@
   "tagReasons": {},
   "horseId": "2024107213",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-15",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳新馬",
+    "fieldSize": 18,
+    "finish": "4",
+    "status": "reviewed",
+    "level": 70.0
+   }
+  ]
  },
  "ブランドブラン": {
   "entry": {
@@ -5367,10 +6793,44 @@
   "tagReasons": {},
   "horseId": "2023105005",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-07",
+    "venue": "福島",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "三春駒特別(1勝クラス)",
+    "fieldSize": 16,
+    "finish": "13",
+    "status": "reviewed",
+    "level": 57.0
+   },
+   {
+    "date": "2026-08-29",
+    "venue": "札幌",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 12,
+    "finish": "8",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-08-16",
+    "venue": "札幌",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 14,
+    "finish": "8",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "リアルアルバ": {
   "entry": {
@@ -5446,10 +6906,44 @@
   },
   "horseId": "2023101065",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-15",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1200,
+    "class": "3歳以上2勝クラス",
+    "fieldSize": 9,
+    "finish": "2",
+    "status": "reviewed",
+    "level": 91.0
+   },
+   {
+    "date": "2026-10-24",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1200,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 12,
+    "finish": "1",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-10-10",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 16,
+    "finish": "9",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "アートレスマインド": {
   "entry": {
@@ -5521,10 +7015,44 @@
   "tagReasons": {},
   "horseId": "2022105987",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-15",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "花背特別(2勝クラス)",
+    "fieldSize": 9,
+    "finish": "取消",
+    "status": "reviewed",
+    "level": 98.0
+   },
+   {
+    "date": "2026-09-20",
+    "venue": "阪神",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "鳥取特別(2勝クラス)",
+    "fieldSize": 15,
+    "finish": "4",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2025-12-28",
+    "venue": "中山",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "ハッピーエンドC(2勝クラス)",
+    "fieldSize": 13,
+    "finish": "5",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ウナギノボリ": {
   "entry": {
@@ -5596,10 +7124,44 @@
   "tagReasons": {},
   "horseId": "2019107016",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-15",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "銀嶺S(3勝クラス)",
+    "fieldSize": 16,
+    "finish": "12",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-10-17",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 1200,
+    "class": "北陸S(3勝クラス)",
+    "fieldSize": 18,
+    "finish": "17",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-07-25",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "新潟日報賞(3勝クラス)",
+    "fieldSize": 17,
+    "finish": "除外",
+    "status": "reviewed",
+    "level": 101.0
+   }
+  ]
  },
  "キタサンダムール": {
   "entry": {
@@ -5671,10 +7233,44 @@
   "tagReasons": {},
   "horseId": "2020102310",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-03",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "白秋S(3勝クラス)",
+    "fieldSize": 18,
+    "finish": "11",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-07-25",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "新潟日報賞(3勝クラス)",
+    "fieldSize": 17,
+    "finish": "11",
+    "status": "reviewed",
+    "level": 101.0
+   },
+   {
+    "date": "2026-05-31",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "渡月橋S(3勝クラス)",
+    "fieldSize": 18,
+    "finish": "2",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "フライングブレード": {
   "entry": {
@@ -5746,10 +7342,44 @@
   "tagReasons": {},
   "horseId": "2020100906",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-08",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "清水S(3勝クラス)",
+    "fieldSize": 10,
+    "finish": "8",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-10-24",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "長岡京S(3勝クラス)",
+    "fieldSize": 15,
+    "finish": "6",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-08-29",
+    "venue": "中京",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "長篠S(3勝クラス)",
+    "fieldSize": 15,
+    "finish": "14",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ミストレス": {
   "entry": {
@@ -5821,10 +7451,44 @@
   "tagReasons": {},
   "horseId": "2022103754",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-03",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "白秋S(3勝クラス)",
+    "fieldSize": 18,
+    "finish": "15",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-08-01",
+    "venue": "中京",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "豊橋S(3勝クラス)",
+    "fieldSize": 11,
+    "finish": "10",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-07-25",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "新潟日報賞(3勝クラス)",
+    "fieldSize": 17,
+    "finish": "10",
+    "status": "reviewed",
+    "level": 101.0
+   }
+  ]
  },
  "サノノキセキ": {
   "entry": {
@@ -5934,10 +7598,44 @@
   "tagReasons": {},
   "horseId": "2024100178",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-24",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "2歳未勝利",
+    "fieldSize": 18,
+    "finish": "1",
+    "status": "reviewed",
+    "level": 75.0
+   },
+   {
+    "date": "2026-08-02",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳未勝利",
+    "fieldSize": 12,
+    "finish": "3",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-07-18",
+    "venue": "福島",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "2歳未勝利",
+    "fieldSize": 9,
+    "finish": "3",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ピアストイヤーズ": {
   "entry": {
@@ -6009,10 +7707,44 @@
   "tagReasons": {},
   "horseId": "2022103624",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-07",
+    "venue": "福島",
+    "surface": "芝",
+    "distance": 1200,
+    "class": "飯坂温泉特別(2勝クラス)",
+    "fieldSize": 16,
+    "finish": "4",
+    "status": "reviewed",
+    "level": 59.0
+   },
+   {
+    "date": "2026-07-19",
+    "venue": "小倉",
+    "surface": "芝",
+    "distance": 1200,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 16,
+    "finish": "1",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-06-27",
+    "venue": "小倉",
+    "surface": "芝",
+    "distance": 1200,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 8,
+    "finish": "2",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "フロムレイブン": {
   "entry": {
@@ -6088,10 +7820,44 @@
   },
   "horseId": "2023103836",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-07",
+    "venue": "福島",
+    "surface": "芝",
+    "distance": 1200,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 16,
+    "finish": "1",
+    "status": "reviewed",
+    "level": 66.0
+   },
+   {
+    "date": "2026-09-05",
+    "venue": "阪神",
+    "surface": "芝",
+    "distance": 1200,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 16,
+    "finish": "2",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-08-09",
+    "venue": "中京",
+    "surface": "芝",
+    "distance": 1200,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 17,
+    "finish": "2",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ラスティングスノー": {
   "entry": {
@@ -6163,10 +7929,44 @@
   "tagReasons": {},
   "horseId": "2023103293",
   "entryDate": "2026-11-28",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-07",
+    "venue": "福島",
+    "surface": "芝",
+    "distance": 1200,
+    "class": "飯坂温泉特別(2勝クラス)",
+    "fieldSize": 16,
+    "finish": "2",
+    "status": "reviewed",
+    "level": 59.0
+   },
+   {
+    "date": "2026-07-11",
+    "venue": "函館",
+    "surface": "芝",
+    "distance": 1200,
+    "class": "HTB杯(2勝クラス)",
+    "fieldSize": 14,
+    "finish": "10",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-07-05",
+    "venue": "函館",
+    "surface": "芝",
+    "distance": 1200,
+    "class": "立待岬特別(2勝クラス)",
+    "fieldSize": 16,
+    "finish": "11",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "アイデアルカット": {
   "entry": {
@@ -6276,10 +8076,44 @@
   "tagReasons": {},
   "horseId": "2024102830",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-01",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "2歳未勝利",
+    "fieldSize": 16,
+    "finish": "6",
+    "status": "reviewed",
+    "level": 78.0
+   },
+   {
+    "date": "2026-10-24",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "2歳未勝利",
+    "fieldSize": 18,
+    "finish": "7",
+    "status": "reviewed",
+    "level": 75.0
+   },
+   {
+    "date": "2026-08-23",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "新潟2歳S(GIII)",
+    "fieldSize": 10,
+    "finish": "8",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "アイファーエリース": {
   "entry": {
@@ -6351,10 +8185,44 @@
   "tagReasons": {},
   "horseId": "2024108140",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-07",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1600,
+    "class": "2歳未勝利",
+    "fieldSize": 11,
+    "finish": "5",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-10-11",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1600,
+    "class": "2歳未勝利",
+    "fieldSize": 15,
+    "finish": "4",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-09-22",
+    "venue": "中山",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳新馬",
+    "fieldSize": 15,
+    "finish": "9",
+    "status": "reviewed",
+    "level": 51.0
+   }
+  ]
  },
  "コペルニクス": {
   "entry": {
@@ -6502,10 +8370,44 @@
   "tagReasons": {},
   "horseId": "2024107382",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-14",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1600,
+    "class": "2歳未勝利",
+    "fieldSize": 14,
+    "finish": "4",
+    "status": "reviewed",
+    "level": 79.0
+   },
+   {
+    "date": "2026-10-25",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1600,
+    "class": "2歳未勝利",
+    "fieldSize": 16,
+    "finish": "4",
+    "status": "reviewed",
+    "level": 71.0
+   },
+   {
+    "date": "2026-10-10",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "2歳新馬",
+    "fieldSize": 16,
+    "finish": "9",
+    "status": "reviewed",
+    "level": 64.0
+   }
+  ]
  },
  "シュートザワークス": {
   "entry": {
@@ -6577,10 +8479,44 @@
   "tagReasons": {},
   "horseId": "2024107076",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-15",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "2歳未勝利",
+    "fieldSize": 17,
+    "finish": "2",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-09-13",
+    "venue": "中山",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "2歳未勝利",
+    "fieldSize": 10,
+    "finish": "3",
+    "status": "reviewed",
+    "level": 71.0
+   },
+   {
+    "date": "2026-08-15",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "2歳未勝利",
+    "fieldSize": 9,
+    "finish": "2",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "セイウンウェルス": {
   "entry": {
@@ -6652,10 +8588,33 @@
   "tagReasons": {},
   "horseId": "2024102104",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-11",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳未勝利",
+    "fieldSize": 12,
+    "finish": "7",
+    "status": "reviewed",
+    "level": 84.0
+   },
+   {
+    "date": "2026-10-03",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "2歳新馬",
+    "fieldSize": 11,
+    "finish": "10",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ダノンアイコニック": {
   "entry": {
@@ -6727,10 +8686,22 @@
   "tagReasons": {},
   "horseId": "2024108330",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-24",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "2歳新馬",
+    "fieldSize": 16,
+    "finish": "2",
+    "status": "reviewed",
+    "level": 80.0
+   }
+  ]
  },
  "デスタンドレ": {
   "entry": {
@@ -6840,10 +8811,33 @@
   "tagReasons": {},
   "horseId": "2024104142",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-14",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳未勝利",
+    "fieldSize": 18,
+    "finish": "15",
+    "status": "reviewed",
+    "level": 72.0
+   },
+   {
+    "date": "2026-10-24",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳新馬",
+    "fieldSize": 18,
+    "finish": "13",
+    "status": "reviewed",
+    "level": 58.0
+   }
+  ]
  },
  "フェスティヴガッツ": {
   "entry": {
@@ -6919,10 +8913,33 @@
   },
   "horseId": "2024101391",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-07",
+    "venue": "福島",
+    "surface": "ダート",
+    "distance": 1700,
+    "class": "2歳未勝利",
+    "fieldSize": 15,
+    "finish": "3",
+    "status": "reviewed",
+    "level": 77.0
+   },
+   {
+    "date": "2026-10-11",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1600,
+    "class": "2歳新馬",
+    "fieldSize": 16,
+    "finish": "5",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "クレイン": {
   "entry": {
@@ -6994,10 +9011,22 @@
   "tagReasons": {},
   "horseId": "2024103628",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-14",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳新馬",
+    "fieldSize": 15,
+    "finish": "8",
+    "status": "reviewed",
+    "level": 54.0
+   }
+  ]
  },
  "コスモシグナス": {
   "entry": {
@@ -7069,10 +9098,44 @@
   "tagReasons": {},
   "horseId": "2024103626",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-31",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳未勝利",
+    "fieldSize": 10,
+    "finish": "5",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-10-11",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳未勝利",
+    "fieldSize": 12,
+    "finish": "4",
+    "status": "reviewed",
+    "level": 84.0
+   },
+   {
+    "date": "2026-09-19",
+    "venue": "中山",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳未勝利",
+    "fieldSize": 12,
+    "finish": "6",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ジーティーストーム": {
   "entry": {
@@ -7144,10 +9207,22 @@
   "tagReasons": {},
   "horseId": "2024102397",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-10",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳新馬",
+    "fieldSize": 14,
+    "finish": "12",
+    "status": "reviewed",
+    "level": 65.0
+   }
+  ]
  },
  "チリチョウズ": {
   "entry": {
@@ -7257,10 +9332,33 @@
   "tagReasons": {},
   "horseId": "2024103611",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-14",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳未勝利",
+    "fieldSize": 18,
+    "finish": "17",
+    "status": "reviewed",
+    "level": 72.0
+   },
+   {
+    "date": "2026-10-10",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "2歳新馬",
+    "fieldSize": 12,
+    "finish": "12",
+    "status": "reviewed",
+    "level": 56.0
+   }
+  ]
  },
  "ブラスオルケスター": {
   "entry": {
@@ -7336,10 +9434,22 @@
   },
   "horseId": "2024106393",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-01",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳新馬",
+    "fieldSize": 13,
+    "finish": "2",
+    "status": "reviewed",
+    "level": 58.0
+   }
+  ]
  },
  "マルターズゴラッソ": {
   "entry": {
@@ -7411,10 +9521,22 @@
   "tagReasons": {},
   "horseId": "2024100040",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-24",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳新馬",
+    "fieldSize": 18,
+    "finish": "5",
+    "status": "reviewed",
+    "level": 58.0
+   }
+  ]
  },
  "ラフエルガ": {
   "entry": {
@@ -7486,10 +9608,44 @@
   "tagReasons": {},
   "horseId": "2024105946",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-10",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1300,
+    "class": "2歳未勝利",
+    "fieldSize": 16,
+    "finish": "9",
+    "status": "reviewed",
+    "level": 65.0
+   },
+   {
+    "date": "2026-09-13",
+    "venue": "中山",
+    "surface": "ダート",
+    "distance": 1200,
+    "class": "2歳未勝利",
+    "fieldSize": 16,
+    "finish": "3",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-08-01",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "2歳新馬",
+    "fieldSize": 18,
+    "finish": "3",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "イデアモッコス": {
   "entry": {
@@ -7561,10 +9717,33 @@
   "tagReasons": {},
   "horseId": "2024102094",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-23",
+    "venue": "福島",
+    "surface": "芝",
+    "distance": 1200,
+    "class": "2歳未勝利",
+    "fieldSize": 16,
+    "finish": "11",
+    "status": "reviewed",
+    "level": null
+   },
+   {
+    "date": "2026-08-29",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "2歳新馬",
+    "fieldSize": 18,
+    "finish": "8",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "エコロガルディア": {
   "entry": {
@@ -7672,21 +9851,33 @@
   },
   "tags": [],
   "tagReasons": {},
-  "horseId": null,
-  "entryDate": "2026-11-21",
+  "horseId": "2024100472",
+  "entryDate": "2026-11-29",
   "verified": true,
-  "verification": "debut_is_oldest_review",
+  "verification": "netkeiba_result_page",
   "priorStarts": 1,
   "history3": [
+   {
+    "date": "2026-11-21",
+    "venue": "福島",
+    "surface": "ダート",
+    "distance": 1700,
+    "class": "2歳未勝利",
+    "fieldSize": 15,
+    "finish": "3",
+    "status": "reviewed",
+    "level": null
+   },
    {
     "date": "2026-10-31",
     "venue": "東京",
     "surface": "ダート",
     "distance": 1400,
-    "class": "2歳新馬（指定・馬齢）",
+    "class": "2歳新馬",
     "fieldSize": 16,
     "finish": "4",
-    "status": "reviewed"
+    "status": "reviewed",
+    "level": 78.0
    }
   ]
  },
@@ -7760,10 +9951,22 @@
   "tagReasons": {},
   "horseId": "2024103738",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-08",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1600,
+    "class": "2歳新馬",
+    "fieldSize": 16,
+    "finish": "15",
+    "status": "reviewed",
+    "level": 72.0
+   }
+  ]
  },
  "クラウンサンダー": {
   "entry": {
@@ -7835,10 +10038,22 @@
   "tagReasons": {},
   "horseId": "2024100294",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-08",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1600,
+    "class": "2歳新馬",
+    "fieldSize": 16,
+    "finish": "12",
+    "status": "reviewed",
+    "level": 72.0
+   }
+  ]
  },
  "ソポティット": {
   "entry": {
@@ -7910,10 +10125,33 @@
   "tagReasons": {},
   "horseId": "2024102832",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-23",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1600,
+    "class": "2歳未勝利",
+    "fieldSize": 14,
+    "finish": "11",
+    "status": "reviewed",
+    "level": null
+   },
+   {
+    "date": "2026-11-08",
+    "venue": "福島",
+    "surface": "ダート",
+    "distance": 1700,
+    "class": "2歳新馬",
+    "fieldSize": 15,
+    "finish": "10",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ドッグズノーズ": {
   "entry": {
@@ -7985,10 +10223,44 @@
   "tagReasons": {},
   "horseId": "2024100125",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-18",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "2歳未勝利",
+    "fieldSize": 12,
+    "finish": "4",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-10-11",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳未勝利",
+    "fieldSize": 12,
+    "finish": "10",
+    "status": "reviewed",
+    "level": 84.0
+   },
+   {
+    "date": "2026-09-19",
+    "venue": "中山",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "2歳新馬",
+    "fieldSize": 12,
+    "finish": "8",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "トラストユウゼン": {
   "entry": {
@@ -8060,10 +10332,22 @@
   "tagReasons": {},
   "horseId": "2024103849",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-24",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1600,
+    "class": "2歳新馬",
+    "fieldSize": 16,
+    "finish": "6",
+    "status": "reviewed",
+    "level": 67.0
+   }
+  ]
  },
  "ナムラアラバイ": {
   "entry": {
@@ -8173,10 +10457,44 @@
   "tagReasons": {},
   "horseId": "2024100828",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-01",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "2歳未勝利",
+    "fieldSize": 16,
+    "finish": "2",
+    "status": "reviewed",
+    "level": 78.0
+   },
+   {
+    "date": "2026-10-10",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1600,
+    "class": "2歳未勝利",
+    "fieldSize": 16,
+    "finish": "4",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-09-27",
+    "venue": "中山",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "2歳未勝利",
+    "fieldSize": 9,
+    "finish": "7",
+    "status": "reviewed",
+    "level": 78.0
+   }
+  ]
  },
  "ネバースリープ": {
   "entry": {
@@ -8248,10 +10566,22 @@
   "tagReasons": {},
   "horseId": "2024103893",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-07",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1300,
+    "class": "2歳新馬",
+    "fieldSize": 16,
+    "finish": "3",
+    "status": "reviewed",
+    "level": 95.0
+   }
+  ]
  },
  "スウィートルミナス": {
   "entry": {
@@ -8323,10 +10653,22 @@
   "tagReasons": {},
   "horseId": "2024101106",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-07",
+    "venue": "福島",
+    "surface": "芝",
+    "distance": 1200,
+    "class": "2歳新馬",
+    "fieldSize": 16,
+    "finish": "8",
+    "status": "reviewed",
+    "level": 62.0
+   }
+  ]
  },
  "トーセンシントラ": {
   "entry": {
@@ -8440,10 +10782,44 @@
   },
   "horseId": "2024104757",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-18",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "2歳未勝利",
+    "fieldSize": 13,
+    "finish": "10",
+    "status": "reviewed",
+    "level": 75.0
+   },
+   {
+    "date": "2026-09-22",
+    "venue": "中山",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "2歳未勝利",
+    "fieldSize": 10,
+    "finish": "7",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-08-22",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳新馬",
+    "fieldSize": 12,
+    "finish": "6",
+    "status": "reviewed",
+    "level": 65.0
+   }
+  ]
  },
  "ビップラージャ": {
   "entry": {
@@ -8557,10 +10933,44 @@
   },
   "horseId": "2024102782",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-07",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "2歳未勝利",
+    "fieldSize": 16,
+    "finish": "3",
+    "status": "reviewed",
+    "level": 70.0
+   },
+   {
+    "date": "2026-10-12",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "2歳未勝利",
+    "fieldSize": 12,
+    "finish": "5",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-10-04",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "2歳未勝利",
+    "fieldSize": 16,
+    "finish": "14",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ピニドローマ": {
   "entry": {
@@ -8632,10 +11042,22 @@
   "tagReasons": {},
   "horseId": "2024108388",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-07",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1300,
+    "class": "2歳新馬",
+    "fieldSize": 16,
+    "finish": "4",
+    "status": "reviewed",
+    "level": 95.0
+   }
+  ]
  },
  "フェロックス": {
   "entry": {
@@ -8745,10 +11167,33 @@
   "tagReasons": {},
   "horseId": "2024103522",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-07",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "2歳未勝利",
+    "fieldSize": 16,
+    "finish": "4",
+    "status": "reviewed",
+    "level": 70.0
+   },
+   {
+    "date": "2026-10-10",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳新馬",
+    "fieldSize": 14,
+    "finish": "4",
+    "status": "reviewed",
+    "level": 65.0
+   }
+  ]
  },
  "ユリア": {
   "entry": {
@@ -8861,11 +11306,22 @@
    "過剰人気注意": "直近3走に危険メモあり（20261123福島6R）"
   },
   "horseId": "2024105183",
-  "entryDate": "2026-11-23",
+  "entryDate": "2026-11-29",
   "verified": true,
   "verification": "netkeiba_result_page",
   "priorStarts": 2,
   "history3": [
+   {
+    "date": "2026-11-23",
+    "venue": "福島",
+    "surface": "芝",
+    "distance": 1200,
+    "class": "2歳未勝利",
+    "fieldSize": 16,
+    "finish": "8",
+    "status": "reviewed",
+    "level": null
+   },
    {
     "date": "2026-11-01",
     "venue": "東京",
@@ -8874,7 +11330,8 @@
     "class": "2歳未勝利",
     "fieldSize": 15,
     "finish": "2",
-    "status": "reviewed"
+    "status": "reviewed",
+    "level": 78.0
    },
    {
     "date": "2026-06-20",
@@ -8884,7 +11341,8 @@
     "class": "2歳新馬",
     "fieldSize": 11,
     "finish": "3",
-    "status": "unreviewed"
+    "status": "unreviewed",
+    "level": null
    }
   ]
  },
@@ -8958,10 +11416,33 @@
   "tagReasons": {},
   "horseId": "2024103545",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-01",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "2歳未勝利",
+    "fieldSize": 15,
+    "finish": "13",
+    "status": "reviewed",
+    "level": 78.0
+   },
+   {
+    "date": "2026-10-17",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "2歳新馬",
+    "fieldSize": 18,
+    "finish": "13",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ザローズハーツ": {
   "entry": {
@@ -9037,10 +11518,44 @@
   },
   "horseId": "2022105993",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-23",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 16,
+    "finish": "8",
+    "status": "reviewed",
+    "level": null
+   },
+   {
+    "date": "2026-11-07",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1600,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 16,
+    "finish": "14",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-06-06",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1600,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 16,
+    "finish": "2",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ビッグデイメイク": {
   "entry": {
@@ -9112,10 +11627,44 @@
   "tagReasons": {},
   "horseId": "2022102532",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-14",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "3歳以上2勝クラス",
+    "fieldSize": 8,
+    "finish": "8",
+    "status": "reviewed",
+    "level": 91.0
+   },
+   {
+    "date": "2026-10-31",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "北野特別(2勝クラス)",
+    "fieldSize": 10,
+    "finish": "9",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-08-08",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "三面川特別(2勝クラス)",
+    "fieldSize": 10,
+    "finish": "8",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "アメリカンフレンズ": {
   "entry": {
@@ -9187,10 +11736,22 @@
   "tagReasons": {},
   "horseId": "2024108313",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-24",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "2歳新馬",
+    "fieldSize": 16,
+    "finish": "1",
+    "status": "reviewed",
+    "level": 80.0
+   }
+  ]
  },
  "アルティシモ": {
   "entry": {
@@ -9300,10 +11861,33 @@
   "tagReasons": {},
   "horseId": "2024101781",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-14",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1600,
+    "class": "2歳未勝利",
+    "fieldSize": 14,
+    "finish": "1",
+    "status": "reviewed",
+    "level": 79.0
+   },
+   {
+    "date": "2026-08-16",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳新馬",
+    "fieldSize": 13,
+    "finish": "8",
+    "status": "reviewed",
+    "level": 74.0
+   }
+  ]
  },
  "エコロヴォルグ": {
   "entry": {
@@ -9379,10 +11963,33 @@
   },
   "horseId": "2024108339",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-07",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1300,
+    "class": "2歳未勝利",
+    "fieldSize": 13,
+    "finish": "1",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-10-10",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "2歳新馬",
+    "fieldSize": 16,
+    "finish": "2",
+    "status": "reviewed",
+    "level": 64.0
+   }
+  ]
  },
  "サトノヘラクレス": {
   "entry": {
@@ -9454,10 +12061,22 @@
   "tagReasons": {},
   "horseId": "2024108280",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-07",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1300,
+    "class": "2歳新馬",
+    "fieldSize": 16,
+    "finish": "1",
+    "status": "reviewed",
+    "level": 95.0
+   }
+  ]
  },
  "ノシェリー": {
   "entry": {
@@ -9529,10 +12148,44 @@
   "tagReasons": {},
   "horseId": "2024106085",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-10",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1600,
+    "class": "2歳未勝利",
+    "fieldSize": 16,
+    "finish": "1",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-09-20",
+    "venue": "中山",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "2歳未勝利",
+    "fieldSize": 15,
+    "finish": "2",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-07-25",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "2歳未勝利",
+    "fieldSize": 10,
+    "finish": "3",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "アルカディアカフェ": {
   "entry": {
@@ -9610,10 +12263,44 @@
   },
   "horseId": "2023100061",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-14",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 16,
+    "finish": "1",
+    "status": "reviewed",
+    "level": 100.0
+   },
+   {
+    "date": "2026-02-22",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1600,
+    "class": "ヒヤシンスS(L)",
+    "fieldSize": 10,
+    "finish": "6",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2025-11-29",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1600,
+    "class": "カトレアS(OP)",
+    "fieldSize": 12,
+    "finish": "3",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "イサギ": {
   "entry": {
@@ -9685,10 +12372,44 @@
   "tagReasons": {},
   "horseId": "2023101713",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-07",
+    "venue": "福島",
+    "surface": "ダート",
+    "distance": 1700,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 15,
+    "finish": "1",
+    "status": "reviewed",
+    "level": 101.0
+   },
+   {
+    "date": "2026-08-30",
+    "venue": "札幌",
+    "surface": "ダート",
+    "distance": 1700,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 11,
+    "finish": "10",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-07-18",
+    "venue": "函館",
+    "surface": "ダート",
+    "distance": 1700,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 14,
+    "finish": "9",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "キーンセンス": {
   "entry": {
@@ -9764,10 +12485,44 @@
   },
   "horseId": "2023110036",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-14",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 16,
+    "finish": "1",
+    "status": "reviewed",
+    "level": 85.0
+   },
+   {
+    "date": "2026-10-18",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 15,
+    "finish": "4",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-08-15",
+    "venue": "中京",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 16,
+    "finish": "7",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "アスクコモンタレヴ": {
   "entry": {
@@ -9839,10 +12594,44 @@
   "tagReasons": {},
   "horseId": "2022102303",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-15",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "ドンカスターC(3勝クラス)",
+    "fieldSize": 16,
+    "finish": "4",
+    "status": "reviewed",
+    "level": 82.0
+   },
+   {
+    "date": "2026-06-13",
+    "venue": "阪神",
+    "surface": "芝",
+    "distance": 2200,
+    "class": "三田特別(2勝クラス)",
+    "fieldSize": 9,
+    "finish": "1",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-04-26",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 2200,
+    "class": "比良山特別(2勝クラス)",
+    "fieldSize": 11,
+    "finish": "2",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "カニキュル": {
   "entry": {
@@ -9914,10 +12703,44 @@
   "tagReasons": {},
   "horseId": "2021104865",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-18",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 2200,
+    "class": "新潟牝馬S(L)",
+    "fieldSize": 10,
+    "finish": "3",
+    "status": "reviewed",
+    "level": 98.0
+   },
+   {
+    "date": "2026-08-09",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "佐渡S(3勝クラス)",
+    "fieldSize": 13,
+    "finish": "2",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-04-19",
+    "venue": "福島",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "福島牝馬S(GIII)",
+    "fieldSize": 16,
+    "finish": "3",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "カリーニョ": {
   "entry": {
@@ -9989,10 +12812,44 @@
   "tagReasons": {},
   "horseId": "2021105585",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-04",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "大原S(3勝クラス)",
+    "fieldSize": 18,
+    "finish": "5",
+    "status": "reviewed",
+    "level": 105.0
+   },
+   {
+    "date": "2026-08-09",
+    "venue": "中京",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "浜名湖特別(2勝クラス)",
+    "fieldSize": 7,
+    "finish": "1",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-06-21",
+    "venue": "阪神",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "高砂特別(2勝クラス)",
+    "fieldSize": 7,
+    "finish": "3",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "スパークリシャール": {
   "entry": {
@@ -10106,10 +12963,44 @@
   },
   "horseId": "2021105609",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-15",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "ドンカスターC(3勝クラス)",
+    "fieldSize": 16,
+    "finish": "2",
+    "status": "reviewed",
+    "level": 82.0
+   },
+   {
+    "date": "2026-09-21",
+    "venue": "阪神",
+    "surface": "芝",
+    "distance": 2200,
+    "class": "Mキタサンブラック(3勝クラス)",
+    "fieldSize": 16,
+    "finish": "5",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-08-22",
+    "venue": "札幌",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "オールスターJ第2戦(3勝クラス)",
+    "fieldSize": 14,
+    "finish": "2",
+    "status": "reviewed",
+    "level": 98.0
+   }
+  ]
  },
  "マイネルフーガ": {
   "entry": {
@@ -10181,10 +13072,44 @@
   "tagReasons": {},
   "horseId": "2022106813",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-07",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "ノベンバーS(3勝クラス)",
+    "fieldSize": 11,
+    "finish": "2",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-10-24",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "魚沼S(3勝クラス)",
+    "fieldSize": 12,
+    "finish": "6",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-09-12",
+    "venue": "中山",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "レインボーS(3勝クラス)",
+    "fieldSize": 11,
+    "finish": "3",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ローベルクランツ": {
   "entry": {
@@ -10294,10 +13219,44 @@
   "tagReasons": {},
   "horseId": "2023107199",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-04",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "大原S(3勝クラス)",
+    "fieldSize": 18,
+    "finish": "4",
+    "status": "reviewed",
+    "level": 105.0
+   },
+   {
+    "date": "2026-06-28",
+    "venue": "福島",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "ラジオNIKKEI賞(GIII)",
+    "fieldSize": 16,
+    "finish": "11",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-05-10",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "NHKマイルC(GI)",
+    "fieldSize": 18,
+    "finish": "4",
+    "status": "reviewed",
+    "level": 107.0
+   }
+  ]
  },
  "ヘデントール": {
   "entry": {
@@ -10369,10 +13328,44 @@
   "tagReasons": {},
   "horseId": "2021105521",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-04",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 2400,
+    "class": "京都大賞典(GII)",
+    "fieldSize": 18,
+    "finish": "5",
+    "status": "reviewed",
+    "level": 101.0
+   },
+   {
+    "date": "2026-05-03",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 3200,
+    "class": "天皇賞(春)(GI)",
+    "fieldSize": 15,
+    "finish": "5",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-02-15",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 2200,
+    "class": "京都記念(GII)",
+    "fieldSize": 12,
+    "finish": "8",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "コスモキュランダ": {
   "entry": {
@@ -10520,10 +13513,44 @@
   "tagReasons": {},
   "horseId": "2021106787",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-01",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "天皇賞(秋)(GI)",
+    "fieldSize": 17,
+    "finish": "9",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-09-20",
+    "venue": "中山",
+    "surface": "芝",
+    "distance": 2200,
+    "class": "産経賞オールカマー(GII)",
+    "fieldSize": 13,
+    "finish": "11",
+    "status": "reviewed",
+    "level": 74.0
+   },
+   {
+    "date": "2026-06-14",
+    "venue": "阪神",
+    "surface": "芝",
+    "distance": 2200,
+    "class": "宝塚記念(GI)",
+    "fieldSize": 18,
+    "finish": "4",
+    "status": "reviewed",
+    "level": 99.0
+   }
+  ]
  },
  "メイショウタバル": {
   "entry": {
@@ -10639,10 +13666,44 @@
   },
   "horseId": "2021103272",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-04",
+    "venue": "パリロンシャン",
+    "surface": "芝",
+    "distance": 2400,
+    "class": "凱旋門賞(GI)",
+    "fieldSize": 16,
+    "finish": "14",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-06-14",
+    "venue": "阪神",
+    "surface": "芝",
+    "distance": 2200,
+    "class": "宝塚記念(GI)",
+    "fieldSize": 18,
+    "finish": "1",
+    "status": "reviewed",
+    "level": 99.0
+   },
+   {
+    "date": "2026-04-05",
+    "venue": "阪神",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "大阪杯(GI)",
+    "fieldSize": 15,
+    "finish": "2",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "クロワデュノール": {
   "entry": {
@@ -10714,10 +13775,44 @@
   "tagReasons": {},
   "horseId": "2022105102",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-01",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "天皇賞(秋)(GI)",
+    "fieldSize": 17,
+    "finish": "5",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-06-14",
+    "venue": "阪神",
+    "surface": "芝",
+    "distance": 2200,
+    "class": "宝塚記念(GI)",
+    "fieldSize": 18,
+    "finish": "2",
+    "status": "reviewed",
+    "level": 99.0
+   },
+   {
+    "date": "2026-05-03",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 3200,
+    "class": "天皇賞(春)(GI)",
+    "fieldSize": 15,
+    "finish": "1",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "シェイクユアハート": {
   "entry": {
@@ -10865,10 +13960,44 @@
   "tagReasons": {},
   "horseId": "2020103101",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-01",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "天皇賞(秋)(GI)",
+    "fieldSize": 17,
+    "finish": "6",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-08-16",
+    "venue": "札幌",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "札幌記念(GII)",
+    "fieldSize": 16,
+    "finish": "1",
+    "status": "reviewed",
+    "level": 108.0
+   },
+   {
+    "date": "2026-06-14",
+    "venue": "阪神",
+    "surface": "芝",
+    "distance": 2200,
+    "class": "宝塚記念(GI)",
+    "fieldSize": 18,
+    "finish": "14",
+    "status": "reviewed",
+    "level": 99.0
+   }
+  ]
  },
  "ファイアンクランツ": {
   "entry": {
@@ -10940,10 +14069,44 @@
   "tagReasons": {},
   "horseId": "2022104720",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-08",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 2500,
+    "class": "アルゼンチン共和国杯(GII)",
+    "fieldSize": 18,
+    "finish": "8",
+    "status": "reviewed",
+    "level": 91.0
+   },
+   {
+    "date": "2026-05-31",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 2500,
+    "class": "目黒記念(GII)",
+    "fieldSize": 14,
+    "finish": "1",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-02-21",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 3400,
+    "class": "ダイヤモンドS(GIII)",
+    "fieldSize": 15,
+    "finish": "2",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ヴェルテンベルク": {
   "entry": {
@@ -11015,10 +14178,44 @@
   "tagReasons": {},
   "horseId": "2020103060",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-04",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 2400,
+    "class": "京都大賞典(GII)",
+    "fieldSize": 18,
+    "finish": "7",
+    "status": "reviewed",
+    "level": 101.0
+   },
+   {
+    "date": "2026-07-25",
+    "venue": "アスコット",
+    "surface": "芝",
+    "distance": 2390,
+    "class": "キングジョージ(GI)",
+    "fieldSize": 9,
+    "finish": "9",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-05-03",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 3200,
+    "class": "天皇賞(春)(GI)",
+    "fieldSize": 15,
+    "finish": "2",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "アーバンシック": {
   "entry": {
@@ -11128,10 +14325,44 @@
   "tagReasons": {},
   "horseId": "2021105436",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-08-30",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "新潟記念(GIII)",
+    "fieldSize": 11,
+    "finish": "5",
+    "status": "reviewed",
+    "level": 95.0
+   },
+   {
+    "date": "2026-03-15",
+    "venue": "中京",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "東海テレビ杯金鯱賞(GII)",
+    "fieldSize": 14,
+    "finish": "14",
+    "status": "reviewed",
+    "level": 110.0
+   },
+   {
+    "date": "2025-12-14",
+    "venue": "シャティン",
+    "surface": "芝",
+    "distance": 2400,
+    "class": "香港ヴァーズ(GI)",
+    "fieldSize": 11,
+    "finish": "10",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "タガノデュード": {
   "entry": {
@@ -11241,10 +14472,44 @@
   "tagReasons": {},
   "horseId": "2021106548",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-01",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "天皇賞(秋)(GI)",
+    "fieldSize": 17,
+    "finish": "4",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-09-12",
+    "venue": "阪神",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "チャレンジC(GIII)",
+    "fieldSize": 16,
+    "finish": "11",
+    "status": "reviewed",
+    "level": 107.0
+   },
+   {
+    "date": "2026-06-14",
+    "venue": "阪神",
+    "surface": "芝",
+    "distance": 2200,
+    "class": "宝塚記念(GI)",
+    "fieldSize": 18,
+    "finish": "5",
+    "status": "reviewed",
+    "level": 99.0
+   }
+  ]
  },
  "エキサイトバイオ": {
   "entry": {
@@ -11354,10 +14619,44 @@
   "tagReasons": {},
   "horseId": "2022104614",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2025-12-28",
+    "venue": "中山",
+    "surface": "芝",
+    "distance": 2500,
+    "class": "有馬記念(GI)",
+    "fieldSize": 16,
+    "finish": "8",
+    "status": "reviewed",
+    "level": 109.0
+   },
+   {
+    "date": "2025-10-26",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 3000,
+    "class": "菊花賞(GI)",
+    "fieldSize": 18,
+    "finish": "3",
+    "status": "reviewed",
+    "level": 113.0
+   },
+   {
+    "date": "2025-06-29",
+    "venue": "福島",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "ラジオNIKKEI賞(GIII)",
+    "fieldSize": 14,
+    "finish": "1",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ダノンデサイル": {
   "entry": {
@@ -11467,10 +14766,44 @@
   "tagReasons": {},
   "horseId": "2021105143",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-01",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "天皇賞(秋)(GI)",
+    "fieldSize": 17,
+    "finish": "1",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-06-14",
+    "venue": "阪神",
+    "surface": "芝",
+    "distance": 2200,
+    "class": "宝塚記念(GI)",
+    "fieldSize": 18,
+    "finish": "3",
+    "status": "reviewed",
+    "level": 99.0
+   },
+   {
+    "date": "2026-04-05",
+    "venue": "阪神",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "大阪杯(GI)",
+    "fieldSize": 15,
+    "finish": "3",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "エコロルーク": {
   "entry": {
@@ -11546,10 +14879,22 @@
   },
   "horseId": "2024104678",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-07-19",
+    "venue": "函館",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "2歳新馬",
+    "fieldSize": 14,
+    "finish": "14",
+    "status": "reviewed",
+    "level": 67.0
+   }
+  ]
  },
  "サンフォルティス": {
   "entry": {
@@ -11621,10 +14966,33 @@
   "tagReasons": {},
   "horseId": "2024100341",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-14",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "2歳未勝利",
+    "fieldSize": 13,
+    "finish": "7",
+    "status": "reviewed",
+    "level": 65.0
+   },
+   {
+    "date": "2026-10-24",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "2歳新馬",
+    "fieldSize": 16,
+    "finish": "15",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "スマートプルーフ": {
   "entry": {
@@ -11696,10 +15064,22 @@
   "tagReasons": {},
   "horseId": "2024104509",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-15",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳新馬",
+    "fieldSize": 18,
+    "finish": "13",
+    "status": "reviewed",
+    "level": 70.0
+   }
+  ]
  },
  "ハイウェイワン": {
   "entry": {
@@ -11771,10 +15151,33 @@
   "tagReasons": {},
   "horseId": "2024106362",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-14",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "2歳未勝利",
+    "fieldSize": 13,
+    "finish": "2",
+    "status": "reviewed",
+    "level": 65.0
+   },
+   {
+    "date": "2026-08-02",
+    "venue": "中京",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "2歳新馬",
+    "fieldSize": 8,
+    "finish": "5",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ハレムスビ": {
   "entry": {
@@ -11850,10 +15253,33 @@
   },
   "horseId": "2024101736",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-15",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "2歳未勝利",
+    "fieldSize": 9,
+    "finish": "2",
+    "status": "reviewed",
+    "level": 61.0
+   },
+   {
+    "date": "2026-09-27",
+    "venue": "阪神",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "2歳新馬",
+    "fieldSize": 16,
+    "finish": "4",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "リアルメッセージ": {
   "entry": {
@@ -11925,10 +15351,44 @@
   "tagReasons": {},
   "horseId": "2024106077",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-14",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "2歳未勝利",
+    "fieldSize": 14,
+    "finish": "5",
+    "status": "reviewed",
+    "level": 77.0
+   },
+   {
+    "date": "2026-09-26",
+    "venue": "阪神",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "2歳未勝利",
+    "fieldSize": 11,
+    "finish": "5",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-09-05",
+    "venue": "阪神",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "2歳未勝利",
+    "fieldSize": 11,
+    "finish": "3",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "アルファマロン": {
   "entry": {
@@ -12000,10 +15460,33 @@
   "tagReasons": {},
   "horseId": "2024103729",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-23",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1600,
+    "class": "2歳未勝利",
+    "fieldSize": 13,
+    "finish": "13",
+    "status": "reviewed",
+    "level": null
+   },
+   {
+    "date": "2026-10-18",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳新馬",
+    "fieldSize": 14,
+    "finish": "8",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ケーリュケイオン": {
   "entry": {
@@ -12075,10 +15558,33 @@
   "tagReasons": {},
   "horseId": "2024100483",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-15",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "2歳未勝利",
+    "fieldSize": 9,
+    "finish": "3",
+    "status": "reviewed",
+    "level": 61.0
+   },
+   {
+    "date": "2026-10-24",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "2歳新馬",
+    "fieldSize": 16,
+    "finish": "3",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "サウンドファイト": {
   "entry": {
@@ -12154,10 +15660,44 @@
   },
   "horseId": "2024101071",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-14",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "2歳未勝利",
+    "fieldSize": 13,
+    "finish": "2",
+    "status": "reviewed",
+    "level": 86.0
+   },
+   {
+    "date": "2026-08-22",
+    "venue": "中京",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳未勝利",
+    "fieldSize": 9,
+    "finish": "3",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-08-02",
+    "venue": "中京",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳新馬",
+    "fieldSize": 10,
+    "finish": "8",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ナムラサフラン": {
   "entry": {
@@ -12305,10 +15845,44 @@
   "tagReasons": {},
   "horseId": "2024104848",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-14",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "2歳未勝利",
+    "fieldSize": 13,
+    "finish": "8",
+    "status": "reviewed",
+    "level": 86.0
+   },
+   {
+    "date": "2026-10-31",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "2歳未勝利",
+    "fieldSize": 10,
+    "finish": "6",
+    "status": "reviewed",
+    "level": 72.0
+   },
+   {
+    "date": "2026-10-17",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 1200,
+    "class": "2歳未勝利",
+    "fieldSize": 11,
+    "finish": "10",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "イッタレイッタレ": {
   "entry": {
@@ -12380,10 +15954,44 @@
   "tagReasons": {},
   "horseId": "2023105058",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-14",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 16,
+    "finish": "13",
+    "status": "reviewed",
+    "level": 85.0
+   },
+   {
+    "date": "2026-09-12",
+    "venue": "阪神",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "3歳未勝利",
+    "fieldSize": 16,
+    "finish": "1",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-08-23",
+    "venue": "中京",
+    "surface": "ダート",
+    "distance": 1200,
+    "class": "3歳未勝利",
+    "fieldSize": 16,
+    "finish": "4",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "エブリデイ": {
   "entry": {
@@ -12455,10 +16063,44 @@
   "tagReasons": {},
   "horseId": "2023102902",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-14",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 16,
+    "finish": "3",
+    "status": "reviewed",
+    "level": 85.0
+   },
+   {
+    "date": "2026-08-15",
+    "venue": "中京",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 16,
+    "finish": "2",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-06-21",
+    "venue": "阪神",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 16,
+    "finish": "7",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "バンダムソレール": {
   "entry": {
@@ -12530,10 +16172,44 @@
   "tagReasons": {},
   "horseId": "2023102317",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-14",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 16,
+    "finish": "12",
+    "status": "reviewed",
+    "level": 85.0
+   },
+   {
+    "date": "2026-08-09",
+    "venue": "札幌",
+    "surface": "ダート",
+    "distance": 1700,
+    "class": "3歳未勝利",
+    "fieldSize": 14,
+    "finish": "1",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-08-01",
+    "venue": "札幌",
+    "surface": "ダート",
+    "distance": 1700,
+    "class": "3歳未勝利",
+    "fieldSize": 11,
+    "finish": "2",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "フレイムスター": {
   "entry": {
@@ -12609,10 +16285,44 @@
   },
   "horseId": "2023101577",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-22",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1200,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 16,
+    "finish": "15",
+    "status": "reviewed",
+    "level": null
+   },
+   {
+    "date": "2026-10-03",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 16,
+    "finish": "16",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-09-13",
+    "venue": "阪神",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 16,
+    "finish": "2",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ホウオウバローロ": {
   "entry": {
@@ -12684,10 +16394,44 @@
   "tagReasons": {},
   "horseId": "2021105772",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-14",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 16,
+    "finish": "8",
+    "status": "reviewed",
+    "level": 85.0
+   },
+   {
+    "date": "2026-09-06",
+    "venue": "札幌",
+    "surface": "ダート",
+    "distance": 1700,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 12,
+    "finish": "6",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-08-30",
+    "venue": "札幌",
+    "surface": "ダート",
+    "distance": 1700,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 11,
+    "finish": "3",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ルーポ": {
   "entry": {
@@ -12759,10 +16503,44 @@
   "tagReasons": {},
   "horseId": "2023110099",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-14",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 16,
+    "finish": "11",
+    "status": "reviewed",
+    "level": 85.0
+   },
+   {
+    "date": "2026-06-16",
+    "venue": "川崎",
+    "surface": "ダート",
+    "distance": 1500,
+    "class": "ジューンフラワー賞(3歳)",
+    "fieldSize": 11,
+    "finish": "1",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-05-10",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1200,
+    "class": "3歳未勝利",
+    "fieldSize": 16,
+    "finish": "8",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ノーブルスカイ": {
   "entry": {
@@ -12834,10 +16612,44 @@
   "tagReasons": {},
   "horseId": "2021102256",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-11",
+    "venue": "京都",
+    "surface": "障害",
+    "distance": 2910,
+    "class": "障害3歳以上未勝利",
+    "fieldSize": 9,
+    "finish": "4",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-08-15",
+    "venue": "札幌",
+    "surface": "ダート",
+    "distance": 1700,
+    "class": "報知杯大雪H(3勝クラス)",
+    "fieldSize": 14,
+    "finish": "11",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-07-11",
+    "venue": "函館",
+    "surface": "芝",
+    "distance": 1800,
+    "class": "五稜郭S(3勝クラス)",
+    "fieldSize": 13,
+    "finish": "11",
+    "status": "reviewed",
+    "level": 81.0
+   }
+  ]
  },
  "アーディアイリ": {
   "entry": {
@@ -12909,10 +16721,44 @@
   "tagReasons": {},
   "horseId": "2023102460",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-07",
+    "venue": "福島",
+    "surface": "ダート",
+    "distance": 1700,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 15,
+    "finish": "7",
+    "status": "reviewed",
+    "level": 101.0
+   },
+   {
+    "date": "2026-09-05",
+    "venue": "阪神",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 12,
+    "finish": "9",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-08-15",
+    "venue": "中京",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 16,
+    "finish": "11",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "エイシンティザー": {
   "entry": {
@@ -12984,10 +16830,44 @@
   "tagReasons": {},
   "horseId": "2023105516",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-14",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 16,
+    "finish": "4",
+    "status": "reviewed",
+    "level": 85.0
+   },
+   {
+    "date": "2026-09-21",
+    "venue": "阪神",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 15,
+    "finish": "2",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-09-05",
+    "venue": "阪神",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 12,
+    "finish": "2",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "シーリュウシー": {
   "entry": {
@@ -13059,10 +16939,44 @@
   "tagReasons": {},
   "horseId": "2021106180",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-21",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 16,
+    "finish": "11",
+    "status": "reviewed",
+    "level": null
+   },
+   {
+    "date": "2026-09-26",
+    "venue": "阪神",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 16,
+    "finish": "7",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-08-23",
+    "venue": "札幌",
+    "surface": "ダート",
+    "distance": 2400,
+    "class": "3歳以上1勝クラス",
+    "fieldSize": 11,
+    "finish": "11",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "チカバリエンテ": {
   "entry": {
@@ -13134,10 +17048,44 @@
   "tagReasons": {},
   "horseId": "2024104976",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-15",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 2000,
+    "class": "黄菊賞(1勝クラス)",
+    "fieldSize": 9,
+    "finish": "8",
+    "status": "reviewed",
+    "level": 60.0
+   },
+   {
+    "date": "2026-08-22",
+    "venue": "札幌",
+    "surface": "芝",
+    "distance": 1500,
+    "class": "クローバー賞(OP)",
+    "fieldSize": 14,
+    "finish": "9",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-08-08",
+    "venue": "札幌",
+    "surface": "芝",
+    "distance": 1500,
+    "class": "2歳未勝利",
+    "fieldSize": 13,
+    "finish": "1",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "モンサンラパージュ": {
   "entry": {
@@ -13288,11 +17236,22 @@
    "過剰人気注意": "直近3走に危険メモあり（20260926阪神4R）"
   },
   "horseId": "2024100477",
-  "entryDate": "2026-11-22",
+  "entryDate": "2026-11-29",
   "verified": true,
   "verification": "netkeiba_result_page",
   "priorStarts": 2,
   "history3": [
+   {
+    "date": "2026-11-22",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "赤松賞(1勝クラス)",
+    "fieldSize": 8,
+    "finish": "除外",
+    "status": "reviewed",
+    "level": null
+   },
    {
     "date": "2026-10-12",
     "venue": "東京",
@@ -13301,7 +17260,8 @@
     "class": "2歳未勝利",
     "fieldSize": 11,
     "finish": "1",
-    "status": "reviewed"
+    "status": "reviewed",
+    "level": 72.0
    },
    {
     "date": "2026-09-26",
@@ -13311,7 +17271,8 @@
     "class": "2歳新馬",
     "fieldSize": 15,
     "finish": "6",
-    "status": "reviewed"
+    "status": "reviewed",
+    "level": 61.0
    }
   ]
  },
@@ -13385,10 +17346,44 @@
   "tagReasons": {},
   "horseId": "2021104176",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-14",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "天橋立S(3勝クラス)",
+    "fieldSize": 10,
+    "finish": "9",
+    "status": "reviewed",
+    "level": 88.0
+   },
+   {
+    "date": "2026-05-30",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "桃山S(3勝クラス)",
+    "fieldSize": 16,
+    "finish": "11",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-02-01",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "衣笠特別(2勝クラス)",
+    "fieldSize": 11,
+    "finish": "1",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ゲキザル": {
   "entry": {
@@ -13460,10 +17455,44 @@
   "tagReasons": {},
   "horseId": "2019102102",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-22",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "西陣S(3勝クラス)",
+    "fieldSize": 14,
+    "finish": "11",
+    "status": "reviewed",
+    "level": null
+   },
+   {
+    "date": "2026-10-10",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "御陵S(3勝クラス)",
+    "fieldSize": 13,
+    "finish": "6",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-09-22",
+    "venue": "中山",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "JRAアニバーサリー(3勝クラス)",
+    "fieldSize": 16,
+    "finish": "5",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ハリウッドブルース": {
   "entry": {
@@ -13535,10 +17564,44 @@
   "tagReasons": {},
   "horseId": "2021104514",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-23",
+    "venue": "福島",
+    "surface": "ダート",
+    "distance": 1700,
+    "class": "奥羽S(3勝クラス)",
+    "fieldSize": 15,
+    "finish": "8",
+    "status": "reviewed",
+    "level": null
+   },
+   {
+    "date": "2026-07-29",
+    "venue": "川崎",
+    "surface": "ダート",
+    "distance": 1600,
+    "class": "スパーキングナイトチ(A2B1)",
+    "fieldSize": 10,
+    "finish": "1",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-06-07",
+    "venue": "阪神",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "洲本特別(2勝クラス)",
+    "fieldSize": 16,
+    "finish": "9",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "マンオブザマッチ": {
   "entry": {
@@ -13610,10 +17673,44 @@
   "tagReasons": {},
   "horseId": "2022101677",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-23",
+    "venue": "福島",
+    "surface": "ダート",
+    "distance": 1700,
+    "class": "奥羽S(3勝クラス)",
+    "fieldSize": 15,
+    "finish": "7",
+    "status": "reviewed",
+    "level": null
+   },
+   {
+    "date": "2026-09-27",
+    "venue": "阪神",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "堺S(3勝クラス)",
+    "fieldSize": 12,
+    "finish": "11",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-08-15",
+    "venue": "札幌",
+    "surface": "ダート",
+    "distance": 1700,
+    "class": "報知杯大雪H(3勝クラス)",
+    "fieldSize": 14,
+    "finish": "10",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "メイショウソウタ": {
   "entry": {
@@ -13685,10 +17782,44 @@
   "tagReasons": {},
   "horseId": "2021103263",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-14",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "天橋立S(3勝クラス)",
+    "fieldSize": 10,
+    "finish": "8",
+    "status": "reviewed",
+    "level": 88.0
+   },
+   {
+    "date": "2026-07-25",
+    "venue": "中京",
+    "surface": "芝",
+    "distance": 2200,
+    "class": "関ケ原S(3勝クラス)",
+    "fieldSize": 11,
+    "finish": "11",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-06-20",
+    "venue": "阪神",
+    "surface": "芝",
+    "distance": 2200,
+    "class": "ストークS(3勝クラス)",
+    "fieldSize": 18,
+    "finish": "15",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "アスクアイルビゼア": {
   "entry": {
@@ -13760,10 +17891,44 @@
   "tagReasons": {},
   "horseId": "2021102154",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-22",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "霜月S(OP)",
+    "fieldSize": 16,
+    "finish": "11",
+    "status": "reviewed",
+    "level": null
+   },
+   {
+    "date": "2026-10-18",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "桂川S(3勝クラス)",
+    "fieldSize": 12,
+    "finish": "1",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-10-11",
+    "venue": "東京",
+    "surface": "ダート",
+    "distance": 1400,
+    "class": "テレビ静岡賞(3勝クラス)",
+    "fieldSize": 16,
+    "finish": "15",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "シゲルショウグン": {
   "entry": {
@@ -13835,10 +18000,44 @@
   "tagReasons": {},
   "horseId": "2020101694",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-08",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "みやこS(GIII)",
+    "fieldSize": 16,
+    "finish": "13",
+    "status": "reviewed",
+    "level": 115.0
+   },
+   {
+    "date": "2026-10-25",
+    "venue": "京都",
+    "surface": "ダート",
+    "distance": 1800,
+    "class": "カノープスS(OP)",
+    "fieldSize": 15,
+    "finish": "14",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-07-05",
+    "venue": "福島",
+    "surface": "ダート",
+    "distance": 1700,
+    "class": "ジュライS(OP)",
+    "fieldSize": 15,
+    "finish": "4",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "スリールミニョン": {
   "entry": {
@@ -13948,10 +18147,44 @@
   "tagReasons": {},
   "horseId": "2022105755",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-08-22",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "朱鷺S(L)",
+    "fieldSize": 18,
+    "finish": "15",
+    "status": "reviewed",
+    "level": 99.0
+   },
+   {
+    "date": "2026-06-21",
+    "venue": "阪神",
+    "surface": "芝",
+    "distance": 1600,
+    "class": "しらさぎS(GIII)",
+    "fieldSize": 18,
+    "finish": "13",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-05-31",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "安土城S(L)",
+    "fieldSize": 17,
+    "finish": "3",
+    "status": "reviewed",
+    "level": 101.0
+   }
+  ]
  },
  "エーティーマクフィ": {
   "entry": {
@@ -14023,10 +18256,44 @@
   "tagReasons": {},
   "horseId": "2019105859",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-09-27",
+    "venue": "中山",
+    "surface": "芝",
+    "distance": 1200,
+    "class": "スプリンターズS(GI)",
+    "fieldSize": 16,
+    "finish": "7",
+    "status": "reviewed",
+    "level": 82.0
+   },
+   {
+    "date": "2026-08-23",
+    "venue": "札幌",
+    "surface": "芝",
+    "distance": 1200,
+    "class": "キーンランドC(GIII)",
+    "fieldSize": 16,
+    "finish": "4",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-06-13",
+    "venue": "函館",
+    "surface": "芝",
+    "distance": 1200,
+    "class": "函館スプリントS(GIII)",
+    "fieldSize": 12,
+    "finish": "2",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ビッグシーザー": {
   "entry": {
@@ -14098,10 +18365,44 @@
   "tagReasons": {},
   "horseId": "2020100896",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-12",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "MBS賞スワンS(GII)",
+    "fieldSize": 18,
+    "finish": "7",
+    "status": "reviewed",
+    "level": 106.0
+   },
+   {
+    "date": "2026-09-06",
+    "venue": "阪神",
+    "surface": "芝",
+    "distance": 1200,
+    "class": "産経賞セントウルS(GII)",
+    "fieldSize": 16,
+    "finish": "13",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-08-02",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 1000,
+    "class": "アイビスサマーD(GIII)",
+    "fieldSize": 17,
+    "finish": "4",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ヤブサメ": {
   "entry": {
@@ -14211,10 +18512,44 @@
   "tagReasons": {},
   "horseId": "2021103116",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-09-06",
+    "venue": "阪神",
+    "surface": "芝",
+    "distance": 1200,
+    "class": "産経賞セントウルS(GII)",
+    "fieldSize": 16,
+    "finish": "9",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-08-22",
+    "venue": "新潟",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "朱鷺S(L)",
+    "fieldSize": 18,
+    "finish": "12",
+    "status": "reviewed",
+    "level": 99.0
+   },
+   {
+    "date": "2026-05-31",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "安土城S(L)",
+    "fieldSize": 17,
+    "finish": "8",
+    "status": "reviewed",
+    "level": 101.0
+   }
+  ]
  },
  "ヨシノイースター": {
   "entry": {
@@ -14286,10 +18621,44 @@
   "tagReasons": {},
   "horseId": "2018106055",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-10-03",
+    "venue": "京都",
+    "surface": "芝",
+    "distance": 1200,
+    "class": "オパールS(L)",
+    "fieldSize": 18,
+    "finish": "7",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-09-06",
+    "venue": "阪神",
+    "surface": "芝",
+    "distance": 1200,
+    "class": "産経賞セントウルS(GII)",
+    "fieldSize": 16,
+    "finish": "11",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-07-05",
+    "venue": "小倉",
+    "surface": "芝",
+    "distance": 1200,
+    "class": "TV西日本北九州記念(GIII)",
+    "fieldSize": 13,
+    "finish": "3",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "ルシード": {
   "entry": {
@@ -14361,10 +18730,44 @@
   "tagReasons": {},
   "horseId": "2022103592",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-11-15",
+    "venue": "東京",
+    "surface": "芝",
+    "distance": 1400,
+    "class": "オーロC(L)",
+    "fieldSize": 18,
+    "finish": "13",
+    "status": "reviewed",
+    "level": 101.0
+   },
+   {
+    "date": "2026-08-23",
+    "venue": "札幌",
+    "surface": "芝",
+    "distance": 1200,
+    "class": "キーンランドC(GIII)",
+    "fieldSize": 16,
+    "finish": "11",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-08-09",
+    "venue": "札幌",
+    "surface": "芝",
+    "distance": 1200,
+    "class": "UHB賞(OP)",
+    "fieldSize": 16,
+    "finish": "2",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  },
  "レイピア": {
   "entry": {
@@ -14436,9 +18839,43 @@
   "tagReasons": {},
   "horseId": "2022103066",
   "entryDate": "2026-11-29",
-  "verified": false,
-  "verification": "未確認",
+  "verified": true,
+  "verification": "netkeiba_result_page",
   "priorStarts": null,
-  "history3": []
+  "history3": [
+   {
+    "date": "2026-09-27",
+    "venue": "中山",
+    "surface": "芝",
+    "distance": 1200,
+    "class": "スプリンターズS(GI)",
+    "fieldSize": 16,
+    "finish": "13",
+    "status": "reviewed",
+    "level": 82.0
+   },
+   {
+    "date": "2026-08-09",
+    "venue": "中京",
+    "surface": "芝",
+    "distance": 1200,
+    "class": "CBC賞(GIII)",
+    "fieldSize": 18,
+    "finish": "2",
+    "status": "unreviewed",
+    "level": null
+   },
+   {
+    "date": "2026-06-13",
+    "venue": "函館",
+    "surface": "芝",
+    "distance": 1200,
+    "class": "函館スプリントS(GIII)",
+    "fieldSize": 12,
+    "finish": "3",
+    "status": "unreviewed",
+    "level": null
+   }
+  ]
  }
 }
