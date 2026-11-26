@@ -1486,6 +1486,14 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 .ana-lsub{font-size:11px;color:var(--ink2);margin-top:3px}
 .ana-terms{margin:6px 0;padding-left:18px}
 .ana-terms li{font-size:13px;line-height:1.65;margin-bottom:2px}
+.mark-legend.tbl{display:block}
+.ml-h{font-size:13px;font-weight:900;margin:12px 0 4px;color:var(--ink)}
+.ml-h:first-child{margin-top:2px}
+.ml-table{width:100%;border-collapse:collapse;font-size:12.5px;margin:0 0 6px}
+.ml-table td{padding:4px 6px;border-bottom:1px solid var(--line);vertical-align:middle;line-height:1.45}
+.ml-table tr:last-child td{border-bottom:none}
+.ml-table td.k{white-space:nowrap;width:1%;font-weight:700}
+.ml-foot{font-size:11.5px;color:var(--ink2);margin:2px 0 8px}
 .ana-legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:11.5px;color:var(--ink2);margin:2px 0 10px}
 .ana-legend .lg-sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:-1px}
 .ana-table{width:100%;border-collapse:collapse;font-size:13.5px;background:#fff}
@@ -1776,42 +1784,62 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
     </div>
     <details class="mark-legend-fold">
       <summary>印と表示の説明</summary>
-      <div class="mark-legend" role="note" aria-label="印の意味">
-      <span class="ml-t">印＝今回の条件との照合</span>
-      <span class="ml-i m1"><b>◎</b>条件一致</span>
-      <span class="ml-i m2"><b>○</b>一部一致（不一致なし・保留あり）</span>
-      <span class="ml-i m3"><b>△</b>条件不一致</span>
-      <span class="ml-i m4"><b>？</b>判定保留・データ不足（回顧がない馬は「不明（回顧なし）」と表示）</span>
-      <span class="ml-note">評価・数字は照合に使った直近の回顧のもの／不明＝回顧なし</span>
-      <span class="ml-note">一覧の各行は「1行目＝今回の条件照合・回顧メモ区分・注意」と、その下の回顧表でできています。回顧表は照合に使った直近の回顧で、前走とは限りません</span>
-      <span class="ml-note">メモ欄の「狙い・保留・危険」は<strong>回顧メモ区分</strong>で、購入推奨ではなく、上の照合印とも別の表示です（該当した条件と根拠は詳細で確認できます）。直近3走の内容も詳細の中で照合結果と分けて表示します</span>
-      <span class="ml-t">回顧表の展開評価（バッジは使わず、文字の太さと色だけで表示）</span>
-      <span class="ml-i"><span class="wflow f-yu">有利</span> 太字・標準色＝展開に恵まれた</span>
-      <span class="ml-i"><span class="wflow f-chu">中立</span> 通常の太さ・標準色＝どちらでもない</span>
-      <span class="ml-i"><span class="wflow f-fu">不利</span> 通常の太さ・グレー＝展開が向かなかった</span>
-      <span class="ml-note">展開評価のグレーは、スマートフォンでも読みやすい濃さにしています。文字は必ず表示し、色だけで意味を伝えることはしません</span>
-      <span class="ml-t">レース一覧の「結果」「回顧」バッジ＝文字色で状態を表示</span>
-      <span class="ml-i"><span class="lg-bdg ok">結果</span> 青文字＝結果反映済み</span>
-      <span class="ml-i"><span class="lg-bdg">結果</span> 黒文字＝未反映</span>
-      <span class="ml-i"><span class="lg-bdg ok">回顧</span> 青文字＝回顧済み</span>
-      <span class="ml-i"><span class="lg-bdg">回顧</span> 黒文字＝未回顧</span>
-      <span class="ml-t">着順の色（結果の表示）</span>
-      <span class="ml-i"><span class="finp f1">1着</span> 黄色</span>
-      <span class="ml-i"><span class="finp f2">2着</span> 青色</span>
-      <span class="ml-i"><span class="finp f3">3着</span> 赤色</span>
-      <span class="ml-t">S〜D評価＝文字付きの色付きバッジで表示</span>
-      <span class="ml-i"><span class="eg gS">S</span><span class="eg gA">A</span><span class="eg gB">B</span><span class="eg gC">C</span><span class="eg gD">D</span> 回顧の総合評価です。上の着順色とは別の情報で、混同しないようバッジの形で分けています</span>
-      <span class="ml-note">注意がある馬は、一覧の行の下に「注意」の文章（1行）が付きます。今回のレースへの留保で、狙い・危険メモとは別の注意喚起です</span>
-      <span class="ml-t">注意文の意味</span>
-      <span class="ml-note"><b>人気の条件</b>＝穴馬候補として記録された馬。狙う条件は人気に左右されるため、人気になるようなら割り引く（文面はその馬のメモの買条件から）</span>
-      <span class="ml-note"><b>過剰人気注意</b>＝直近3走の中に危険メモがあり、内容以上に人気する可能性がある</span>
-      <span class="ml-note"><b>展開依存</b>＝直近の好走が展開に恵まれた面が大きく、展開が変わると割り引く</span>
-      <span class="ml-note"><b>距離不安</b>＝回顧の距離型（延長型・短縮型）と今回の距離が合っていない</span>
-      <span class="ml-t">型タグ（狙いメモの馬だけ・区分の下）</span>
-      <span class="ml-note"><b>本命型／対抗型／ヒモ型</b>＝その区分の馬が次走でどう来たか（1着の割合）から付けた「使い方」の目安。本命型＝勝ち切りが多め、対抗型＝勝ち負け両方、ヒモ型＝2・3着が中心。根拠は分析タブにあります</span>
-      <span class="ml-note">一覧の「回顧指数」は、そのレース内で勝ち馬を100とした指数（実績指数が基本、補正後と3点以上差がある時は補正後を（補正）付きで表示）。「レースLV」は前走レース全体のレベルを示す物差し（勝ち馬のタイム指数、netkeiba）です</span>
-      <span class="ml-note">詳細の直近3走表の「未回顧」＝出走記録で確認できたが回顧のないレース／空欄＝出走歴なし（出走記録で確認済み）／表の「評価」＝そのレースの回顧の総合評価（S〜D）</span>
-      <span class="ml-note">直近3走表のクラスは色分け：<b class="lg-g1">G1＝赤</b>・<b class="lg-g2">G2＝青</b>・<b class="lg-g3">G3＝緑</b>・<b class="lg-l">L＝紫</b>・<b class="lg-op">OP＝オレンジ</b>／勝クラスは slate の濃い順に 3勝＞2勝＞1勝／未勝利・新馬はグレー</span>
+      <div class="mark-legend tbl" role="note" aria-label="印の意味">
+      <div class="ml-h">条件の印（今回の条件との照合）</div>
+      <table class="ml-table">
+      <tr><td class="k">◎</td><td>条件一致</td></tr>
+      <tr><td class="k">○</td><td>一部一致（不一致なし・保留あり）</td></tr>
+      <tr><td class="k">△</td><td>条件不一致</td></tr>
+      <tr><td class="k">？</td><td>判定保留・データ不足</td></tr>
+      <tr><td class="k">不明</td><td>回顧データなし</td></tr>
+      </table>
+      <div class="ml-foot">※ 一覧の回顧は直近の回顧です（前走とは限りません）</div>
+      <div class="ml-h">回顧メモ区分（購入推奨ではありません）</div>
+      <table class="ml-table">
+      <tr><td class="k">狙い</td><td>着順以上の内容があった</td></tr>
+      <tr><td class="k">危険</td><td>着順ほど中身がなく、次走は割引</td></tr>
+      <tr><td class="k">保留</td><td>材料不足などで保留</td></tr>
+      </table>
+      <div class="ml-h">型（狙いの馬だけ・1行目の右端）</div>
+      <table class="ml-table">
+      <tr><td class="k"><span class="ana-kata k-honmei">本命型</span></td><td>勝ち切る型</td></tr>
+      <tr><td class="k"><span class="ana-kata k-taikou">対抗型</span></td><td>軸・ヒモ両にらみ</td></tr>
+      <tr><td class="k"><span class="ana-kata k-himo">ヒモ型</span></td><td>2・3着が中心</td></tr>
+      <tr><td class="k"><span class="ana-kata k-ihen">ヒモ型・一変</span></td><td>前走の大敗から一変する型</td></tr>
+      </table>
+      <div class="ml-foot">※ 型の根拠は分析タブにあります</div>
+      <div class="ml-h">数字</div>
+      <table class="ml-table">
+      <tr><td class="k">回顧指数</td><td>勝ち馬を100とした指数</td></tr>
+      <tr><td class="k">（補正）</td><td>補正後の値で表示した印</td></tr>
+      <tr><td class="k">レースLV</td><td>前走レースのレベル（勝ち馬のタイム指数）</td></tr>
+      </table>
+      <div class="ml-h">注意文（行の下に1行）</div>
+      <table class="ml-table">
+      <tr><td class="k">人気の条件</td><td>人気になるようなら割引く</td></tr>
+      <tr><td class="k">過剰人気注意</td><td>危険メモあり。人気しすぎなら割引く</td></tr>
+      <tr><td class="k">展開依存</td><td>前走は展開に恵まれた。変われば割引く</td></tr>
+      <tr><td class="k">距離不安</td><td>今回の距離が推奨と合わない</td></tr>
+      </table>
+      <div class="ml-h">展開評価</div>
+      <table class="ml-table">
+      <tr><td class="k"><span class="wflow f-yu">有利</span></td><td>展開に恵まれた</td></tr>
+      <tr><td class="k"><span class="wflow f-chu">中立</span></td><td>どちらでもない</td></tr>
+      <tr><td class="k"><span class="wflow f-fu">不利</span></td><td>展開が向かなかった</td></tr>
+      </table>
+      <div class="ml-h">結果の表示</div>
+      <table class="ml-table">
+      <tr><td class="k"><span class="finp f1">1着</span> <span class="finp f2">2着</span> <span class="finp f3">3着</span></td><td>着順の色</td></tr>
+      <tr><td class="k"><span class="lg-bdg ok">結果</span></td><td>青字＝反映済み／黒字＝未反映</td></tr>
+      <tr><td class="k"><span class="lg-bdg ok">回顧</span></td><td>青字＝回顧済み／黒字＝未回顧</td></tr>
+      <tr><td class="k"><span class="eg gS">S</span><span class="eg gA">A</span><span class="eg gB">B</span><span class="eg gC">C</span><span class="eg gD">D</span></td><td>回顧の総合評価</td></tr>
+      </table>
+      <div class="ml-h">詳細の直近3走表</div>
+      <table class="ml-table">
+      <tr><td class="k">未回顧</td><td>出走したが回顧なし</td></tr>
+      <tr><td class="k">空欄</td><td>出走歴なし</td></tr>
+      <tr><td class="k">クラス色</td><td><b class="lg-g1">G1</b>・<b class="lg-g2">G2</b>・<b class="lg-g3">G3</b>・<b class="lg-l">L</b>・<b class="lg-op">OP</b>／未勝利・新馬はグレー</td></tr>
+      </table>
       </div>
     </details>
     <div id="weekend-list"><p class="sec-note">一覧データを読み込んでいます…</p></div>
@@ -4044,6 +4072,7 @@ function anaRank(d, opts){
     +'<span class="ana-n">n='+escA(d.n)+(ref?'・参考値':"")+'</span>'
     +'<span class="ana-lnum"><b>'+escA(d.board)+'%</b><span>1着 '+escA(d.p1)+'%</span></span></div>'
     +'<div class="ana-lbar"><span class="b-board" style="width:'+Math.max(0,Math.min(100,Number(d.board)||0))+'%;background:'+col+'"></span><span class="b-p1" style="width:'+Math.max(0,Math.min(100,Number(d.p1)||0))+'%;background:'+col+'"></span></div>'
+    +(opts.sub?'<div class="ana-lsub">'+escA(opts.sub)+'</div>':"")
     +'</div>';
 }
 function anaDanger(d){
@@ -4079,9 +4108,9 @@ function renderAnalysis(data){
   html+='<div class="ana-sec sell">買えない</div><div class="ana-list">';
   var dnp=(data.danger_next_pop||[])[0];
   if(dnp) html+=anaDanger(dnp);
-  if(pops[3]) html+=anaRank({label:"狙い × 前走10番人気以下",n:pops[3].n,board:pops[3].board,p1:pops[3].p1},{color:"#d92b2b"});
-  if(grades[4]) html+=anaRank({label:"評価D",n:grades[4].n,board:grades[4].board,p1:grades[4].p1},{color:"#d92b2b"});
-  if(ibands[2]) html+=anaRank({label:"回顧指数 80未満",n:ibands[2].n,board:ibands[2].board,p1:ibands[2].p1},{color:"#d92b2b"});
+  if(pops[3]) html+=anaRank({label:"狙い × 前走10番人気以下",n:pops[3].n,board:pops[3].board,p1:pops[3].p1},{color:"#d92b2b",sub:"対象外（"+(cats["対象外"]?cats["対象外"].board:"―")+"%）と変わらない"});
+  if(grades[4]) html+=anaRank({label:"評価D",n:grades[4].n,board:grades[4].board,p1:grades[4].p1},{color:"#d92b2b",sub:"回顧の評価が最低。3着内は1割未満"});
+  if(ibands[2]) html+=anaRank({label:"回顧指数 80未満",n:ibands[2].n,board:ibands[2].board,p1:ibands[2].p1},{color:"#d92b2b",sub:"指数が低い馬は次走も苦戦する"});
   html+='</div>';
   /* 内訳（折りたたみ） */
   html+='<details class="ana-details"><summary>内訳（区分・人気・評価・指数・層別）</summary>';
