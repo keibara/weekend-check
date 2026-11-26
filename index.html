@@ -1538,7 +1538,7 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
     </div>
   </header>
   <p id="last-updated">最終更新：2026年11月26日 18:33</p>
-  <p style="font-size:12px;color:var(--ink2);margin:2px 2px 0">※ジャパンカップを除き、馬番はまだ確定していません（11月26日夕方時点のJRA出馬表では枠・馬番欄が空欄）。馬番は金曜日に反映予定です。</p>
+  <p style="font-size:12px;color:var(--ink2);margin:2px 2px 0">※馬番は金曜日に反映予定です（ジャパンカップを除く）</p>
   <h1 class="sr-only">週末出走馬・回顧条件チェック</h1>
 
   <div id="panel-news" class="tabpanel" role="tabpanel" aria-labelledby="tab-news" tabindex="0">
@@ -1561,7 +1561,7 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
   <!-- ============ 競馬ニュース（次の週末の重賞3鞍・火曜枠） ============ -->
   <section aria-labelledby="h-news">
     <h2 class="sec" id="h-news">競馬ニュース・調教・厩舎コメント</h2>
-    <p class="sec-note">次の週末（2026年11月28日・29日）の重賞3鞍について、見出し・出典リンクを掲載しています。11月26日に最終追い切り・厩舎コメント・枠順確定の記事8件を追加しました（見出し＋出典リンクのみ）。既存の記事には短い抜粋が付いています。11月30日（月）は東京で再編競馬がありますが、重賞はないため、ニュース枠はこの3レースのみです。</p>
+    <p class="sec-note">週末（11月28日・29日）の重賞3鞍について、見出しと出典リンクを掲載しています。</p>
     <details class="note-box foldbox guide-fold">
       <summary>掲載の範囲・読み方（タップで開く）</summary>
       <p>掲載しているのは、出典記事の見出し・出典リンクだけです。11月26日に追加した最終追い切り・厩舎コメント・枠順確定の記事は見出し＋出典リンクのみで、抜粋はありません。既存の記事には短い抜粋（1〜2行）が付いています。本文は各記事へのリンクから確認してください。このページは自動更新されません。最終追い切り・厩舎コメントは11月26日に追記済みです。各カードは見出しだけの表示で、タップすると抜粋（ある場合）と出典が開きます。カード右下の日付は記事の日付です。</p>
@@ -1570,8 +1570,7 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 
     <div class="news-meta">
       <span class="sum">掲載：15件（3レース）</span>
-      <span class="sum">対象：11月28日（土）・29日（日）の重賞3鞍</span>
-      <span class="sum">ニュース更新：2026-11-26 18:33</span>
+      <span class="sum">対象：11/28・29の重賞3鞍</span>
     </div>
     <div class="filters" role="group" aria-label="レースでニュースを絞り込み">
       <button class="fbtn" type="button" data-news-filter="all" aria-pressed="true">すべて</button>
@@ -4083,7 +4082,7 @@ function anaDanger(d){
     +'<span class="ana-n">n='+escA(d.n)+(ref?'・参考値':"")+'</span>'
     +'<span class="ana-lnum"><b style="color:#b91c1c">'+off+'%</b><span>3着を外す率</span></span></div>'
     +'<div class="ana-lbar"><span class="b-board" style="width:'+off+'%;background:#d92b2b"></span></div>'
-    +'<div class="ana-lsub">3着内 '+escA(d.board)+'%・1着 '+escA(d.p1)+'%（人気の割に低い）</div>'
+    +'<div class="ana-lsub">3着内 '+escA(d.board)+'%・1着 '+escA(d.p1)+'%（人気の割に低く、オッズ妙味が薄い）</div>'
     +'</div>';
 }
 function renderAnalysis(data){
