@@ -167,6 +167,11 @@
   .rules{font-size:13.5px}
   .rules li{margin:5px 0}
   footer{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;font-size:12.5px;color:var(--ink2)}
+  #last-updated{font-size:12px;color:var(--ink2);margin:10px 2px 0}
+  .data-about{margin-top:30px}
+  .data-about .da-line{display:flex;flex-wrap:wrap;gap:2px 10px;align-items:baseline;padding:4px 0;font-size:13.5px;border-bottom:1px solid var(--line)}
+  .data-about .da-line b{flex:0 0 158px;font-size:12.5px;color:var(--ink2)}
+  @media (max-width:560px){ .data-about .da-line b{flex-basis:100%} }
   .hidden{display:none!important}
   .empty{border:1px dashed var(--line);border-radius:6px;padding:22px;text-align:center;color:var(--ink2);font-size:14px;background:#fff}
   /* ---------- news list ---------- */
@@ -416,7 +421,7 @@
   .foldsum{min-height:46px}
   .tabpanel>section:first-child{margin-top:16px}
   footer{margin-top:28px;padding-top:10px}
-  #h-news,#h-auto,#h-kyoto1r,#h-weekend,#h-search,#h-races,#h-match,#h-results,#h-master,#h-feature{scroll-margin-top:132px}
+  #h-news,#h-auto,#h-kyoto1r,#h-weekend,#h-search,#h-races,#h-match,#h-results,#h-feature{scroll-margin-top:132px}
   .to-top{position:fixed;right:14px;bottom:14px;z-index:60;width:44px;height:44px;border-radius:50%;
     border:1px solid var(--blue);background:var(--blue);color:#fff;font-size:18px;font-weight:900;
     cursor:pointer;opacity:.92;box-shadow:0 2px 8px rgba(15,23,42,.22)}
@@ -771,7 +776,6 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
   .mu-actions .btn{flex:1 1 100%}
   .mu-jump .btn{margin-left:0;flex:1 1 100%}
 }
-#master-update{scroll-margin-top:calc(var(--stickh,104px) + 8px)}
 /* ===== 現在の反映状況（データセット別） ===== */
 .rs-wrap{margin-top:12px;background:#fff;border:1px solid var(--line);border-radius:6px;overflow:hidden}
 .rs-wrap>h4{margin:0;font-size:13.5px;font-weight:900;padding:9px 12px 7px;border-bottom:2px solid var(--ink)}
@@ -950,20 +954,6 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 .mark-legend-fold>summary:focus-visible{outline:2px solid var(--blue);outline-offset:-2px}
 .mark-legend-fold .mark-legend{border:none;background:transparent;margin:0;border-top:1px solid #bfdbfe;border-radius:0}
 .mark-legend .ml-note b{color:var(--ink)}
-/* データ更新ボックスも位置づけ・凡例と同じ開閉式にし、初期状態は閉じる（見出し行だけ表示） */
-.data-update-fold{background:#fff;border:1px solid var(--line);border-radius:6px;margin:0 0 10px;overflow:hidden;padding:0;display:block}
-.data-update-fold>summary{cursor:pointer;font-weight:900;font-size:13.5px;color:var(--ink);min-height:40px;display:flex;align-items:center;gap:4px 10px;padding:7px 12px;list-style:none;flex-wrap:wrap}
-.data-update-fold>summary::-webkit-details-marker{display:none}
-.data-update-fold>summary::after{content:"＋ 開く";margin-left:auto;font-size:12px;font-weight:700;color:var(--blue);border:1px solid var(--blue);border-radius:999px;padding:2px 10px;white-space:nowrap;background:#fff;flex:0 0 auto}
-.data-update-fold[open ]>summary::after{content:"－ 閉じる"}
-.data-update-fold>summary:focus-visible{outline:2px solid var(--blue);outline-offset:-2px}
-.data-update-fold .du-title{font-size:14px;font-weight:900;color:var(--ink);white-space:nowrap}
-.data-update-fold .du-sum{font-size:12px;font-weight:600;color:var(--ink2);white-space:nowrap}
-.data-update-fold .du-body{padding:6px 12px 10px;border-top:1px solid var(--line)}
-.data-update-fold .mj-line{display:flex;flex-wrap:wrap;gap:2px 8px;align-items:baseline;padding:1px 0;font-size:12.5px}
-.data-update-fold .mj-line b{font-size:12px;color:var(--ink2);flex:0 0 112px}
-.data-update-fold .btn{margin-top:6px;min-height:38px;padding:6px 14px;font-size:13px}
-@media (max-width:560px){ .data-update-fold .du-sum{white-space:normal} }
 </style>
 <style>
 /* ===== 直近3走表：クラス列の折り返し防止（幅配分の見直し）と色分け ===== */
@@ -1363,6 +1353,7 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
       </nav>
     </div>
   </header>
+  <p id="last-updated">最終更新：2026年11月26日 17:40</p>
   <h1 class="sr-only">週末出走馬・回顧条件チェック</h1>
 
   <div id="panel-news" class="tabpanel" role="tabpanel" aria-labelledby="tab-news" tabindex="0">
@@ -1576,22 +1567,6 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
   <!-- ============ 今週の全レース一覧（全72レース・全頭照合 2026-11-20） ============ -->
   <section aria-labelledby="h-weekend">
     <h2 class="sec" id="h-weekend">今週の全レース（全72レース・全1,043頭）</h2>
-    <details class="data-update-fold" aria-label="データ更新の状況">
-      <summary><span class="du-title">データ更新</span><span class="du-sum">対象 11/21〜23・全72レース／回顧マスター 2026-11-23統合版（3,399行・245レース）／結果照合は全72レース完了（11/23 17時時点）</span></summary>
-      <div class="du-body">
-      <div class="mj-line"><b>回顧マスター版</b><span>2026-11-23統合版・3,399行・245レース（確認日 2026-11-23）。今回の回顧データはこの版の統合マスターから再生成しています。発走前の条件照合・印（◎○△？）は従来の照合結果を凍結したままで、この版では再照合していません（結果・今回の回顧は、判定とは別の記録として追加表示します）</span></div>
-      <div class="mj-line"><b>結果照合データ</b><span>2026年11月21・22・23日の全72レース・1,043頭分の確定着順・着差（取消・除外・中止を含む）。2026-11-23 17時時点で、月曜（11月23日）の東京12R・福島12Rの全24レース分を含め、全72レースの結果照合が完了しています。該当レースに「結果と照合」ボタンを表示します</span></div>
-      <div class="mj-line"><b>今回の回顧データ</b><span>2026年11月21・22・23日の72レースのうち、2026-11-23 20時時点で回顧が統合済みの61レース・871頭分（2026-11-23統合版マスターから抽出）。土日40レースに加え、月曜（11月23日）は東京12レース全部と福島9レース（1R〜6R・10R〜12R）が回顧済みです。「結果と照合」の中で、発走前の判定・確定結果とは別の記録として馬ごとに「今回の回顧」を表示します。残り11レース・172頭（福島11月23日の7R・8R・9Rと、福島11月21日の4R〜10R・12R）の馬は「今回の回顧：未回顧」と表示します</span></div>
-      <div class="mj-line"><b>対象レース</b><span id="mu-jump-target">2026年11月21日（土）〜23日（月・祝）・全72レース・全1,043頭</span></div>
-      <div class="mj-line"><b>馬場状態（11月23日）</b><span>JRA公式の確認値（2026-11-23 17時時点）：東京＝晴・芝良・ダート良／福島＝晴・芝良・ダート稍重。正午から変更はありません</span></div>
-      <div class="mj-line"><b>出走馬データ</b><span id="mu-jump-w">確認中…</span></div>
-      <div class="mj-line"><b>照合・回顧メモ該当データ</b><span id="mu-jump-p">確認中…</span></div>
-      <div class="mj-line"><b>回顧履歴データ</b><span id="mu-jump-h">確認中…</span></div>
-      <div class="mj-line"><b>出走歴確認データ</b><span id="mu-jump-hv">確認中…</span></div>
-      <button class="btn" type="button" id="btn-goto-master-update">データ更新・反映状況へ ↓</button>
-      </div>
-    </details>
-    
     <div class="wtools">
       <div class="filters datetabs" role="group" aria-label="日付でレースを切り替え">
       <button class="fbtn" type="button" data-wday="2026-11-21" aria-pressed="true">11月21日（土）</button>
@@ -1672,130 +1647,6 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
     <div id="weekend-list"><p class="sec-note">一覧データを読み込んでいます…</p></div>
   </section>
 
-  <!-- ============ マスター読込状況 ============ -->
-  <section aria-labelledby="h-master">
-    <h2 class="sec" id="h-master">データの読み込み状況と更新</h2>
-    <p class="sec-note">ファイルを実際に読めたかどうかを、ここに正直に表示します。読めていないものを「読み込み済み・同期済み・最新」とは表示しません。数字はすべて、実際に読み込んだデータからその場で数えたものだけを表示します。</p>
-    <!-- ============ データ更新（マスター・出走馬・注目馬） ============ -->
-    <div class="mu-card" id="master-update">
-      <div class="mu-head"><h3>データ更新（マスター・出走馬・回顧メモ該当）</h3><span class="mu-badge" id="mu-badge">確認中…</span></div>
-      <p class="mu-desc">このスペースの表示は、土台になるデータでできています。「全データを再読み込み」で、ファイルから読む3つ（回顧マスター索引／出走馬データ／回顧詳細データ）をまとめて読み直し、各一覧へ反映します。回顧マスター索引は2026-11-22統合版（3,088行・224レース）から再生成したもので、出走馬データ・条件照合と同じ版です。回顧メモ該当レースの索引（64頭分）だけは照合結果をページに内蔵したもので、ファイルの読み直しでは変わりません。差し替える場合は「回顧メモJSONで更新」から照合結果ファイルを選んでください（下の反映状況に、いま何が・いつ・何件で入っているかをデータごとに表示します）。</p>
-      <div class="rs-wrap" aria-label="現在の反映状況">
-        <h4>現在の反映状況（実際に読み込んだ内容から表示）</h4>
-        <div class="rs-row">
-          <div><span class="rs-name">回顧マスター索引</span><br /><span class="rs-state" id="rs-master-state">確認中…</span></div>
-          <div>
-            <div class="rs-meta" id="rs-master-meta">読み込んでいます…</div>
-            <div class="rs-to">反映先：馬名検索・出馬表との手動照合・各馬の詳細（推奨条件）</div>
-          </div>
-        </div>
-        <div class="rs-row">
-          <div><span class="rs-name">出走馬データ</span><br /><span class="rs-state" id="rs-weekend-state">確認中…</span></div>
-          <div>
-            <div class="rs-meta" id="rs-weekend-meta">読み込んでいます…</div>
-            <div class="rs-to">反映先：「レース」タブの今週の全レース一覧（印・回顧評価・補正後）</div>
-          </div>
-        </div>
-        <div class="rs-row">
-          <div><span class="rs-name">回顧詳細データ</span><br /><span class="rs-state" id="rs-detail-state">確認中…</span></div>
-          <div>
-            <div class="rs-meta" id="rs-detail-meta">読み込んでいます…</div>
-            <div class="rs-to">反映先：全レース一覧の行タップで開く直近の回顧の記録・評価理由・メモ全文</div>
-          </div>
-        </div>
-        <div class="rs-row">
-          <div><span class="rs-name">回顧メモ該当データ</span><br /><span class="rs-state" id="rs-picks-state">確認中…</span></div>
-          <div>
-            <div class="rs-meta" id="rs-picks-meta">数えています…</div>
-            <div class="rs-to">反映先：「回顧メモ該当レース」タブの索引。マスターCSVや出走馬データの更新だけでは自動で変わりません（再照合した結果ファイルが必要です）</div>
-          </div>
-        </div>
-        <div class="rs-row">
-          <div><span class="rs-name">結果照合データ</span><br /><span class="rs-state baked">ページ内蔵ファイルから読込</span></div>
-          <div>
-            <div class="rs-meta">反映元：assets/race-results.json｜件数：実測 72レース・1,043頭分（2026年11月21・22・23日分。2026-11-23 17時時点で月曜の全24レース分まで照合完了）｜内容：確定着順・着差・出走取消・除外・競走中止。発走前の表示データは凍結したままで、結果に合わせて書き換えません</div>
-            <div class="rs-to">反映先：「レース」タブの該当レース欄の「結果と照合」</div>
-          </div>
-        </div>
-        <div class="rs-row">
-          <div><span class="rs-name">今回の回顧データ</span><br /><span class="rs-state baked">ページ内蔵ファイルから読込</span></div>
-          <div>
-            <div class="rs-meta">反映元：assets/race-current-reviews.json｜件数：実測 61レース・871頭分（2026年11月21・22・23日分）｜内容：今回のレース自体の回顧（総合評価・実績指数・内容補正後能力評価・展開との相性・回顧メモ区分・馬メモ用テキスト・評価理由・次走評価と狙える条件）。出典は2026-11-23統合版マスター。発走前の判定・根拠や過去の回顧とは別の記録として追加表示し、発走前の表示は書き換えません。残り11レース・172頭の馬は「今回の回顧：未回顧」と表示します</div>
-            <div class="rs-to">反映先：「レース」タブの該当レース欄の「結果と照合」内の「今回の回顧」</div>
-          </div>
-        </div>
-        <div class="rs-row">
-          <div><span class="rs-name">回顧詳細データの時点</span><br /><span class="rs-state baked">補助データ（旧時点を含む）</span></div>
-          <div>
-            <div class="rs-meta">回顧詳細データ（assets/prev-detail.json）は、京都1R分など2026-11-20作成の前走評価まとめ由来の分を含む補助データです。回顧の正データは2026-11-22統合版マスターと回顧履歴データ（235頭・309走）で、一覧の印・詳細はこちらを優先しています</div>
-            <div class="rs-to">反映先：全レース一覧の詳細のうち、回顧履歴で補えない回顧の記録部分</div>
-          </div>
-        </div>
-        <div class="rs-row">
-          <div><span class="rs-name">ニュース</span><br /><span class="rs-state baked">ページ内蔵</span></div>
-          <div>
-            <div class="rs-meta">更新日時：2026-11-25 18:11｜対象：2026年11月28日（土）・29日（日）の重賞3鞍（ラジオNIKKEI杯京都2歳ステークス・ジャパンカップ・京阪杯）｜内容：記事15件（見出し・出典リンク・短い抜粋のみ）。追い切り・厩舎コメントは水曜・木曜に追記予定</div>
-            <div class="rs-to">反映先：「総合（ニュース）」タブのニュース枠</div>
-          </div>
-        </div>
-      </div>
-      <div class="mu-current" aria-label="現在使っているマスター">
-        <b>現在使っているマスター（索引）</b>
-        <span class="mu-cur-v" id="mu-current-v">確認中…</span><br />
-        <span class="mu-cur-d" id="mu-current-d">索引データを読み込んでいます。</span>
-      </div>
-      <div class="mu-actions">
-        <button class="btn" type="button" id="btn-update-all">↻ 全データを再読み込みして更新</button>
-        <button class="btn sub" type="button" id="btn-master-reload">マスター索引だけ再読み込み</button>
-        <button class="btn sub" type="button" id="btn-master-weekend">出走馬＋回顧詳細だけ再読み込み</button>
-      </div>
-      <div class="mu-actions" aria-label="ファイルを選んで差し替える">
-        <label class="btn sub mu-filebtn">マスターCSVで更新（マスターのみ）
-          <input type="file" id="file-master" accept=".csv,text/csv" />
-        </label>
-        <label class="btn sub mu-filebtn">マスター索引JSONで更新
-          <input type="file" id="file-master-json" accept=".json,application/json" />
-        </label>
-        <label class="btn sub mu-filebtn">出走馬JSONで更新
-          <input type="file" id="file-weekend-json" accept=".json,application/json" />
-        </label>
-        <label class="btn sub mu-filebtn">回顧詳細JSONで更新
-          <input type="file" id="file-detail-json" accept=".json,application/json" />
-        </label>
-        <label class="btn sub mu-filebtn">回顧メモJSONで更新
-          <input type="file" id="file-picks-json" accept=".json,application/json" />
-        </label>
-        <button class="btn sub" type="button" id="btn-master-reset" hidden>内蔵マスターに戻す</button>
-      </div>
-      <p class="mu-status" id="master-update-status" role="status" aria-live="polite"></p>
-      <ul class="mu-log" id="master-update-log" aria-label="この画面での更新履歴"></ul>
-      <p class="mu-note">ファイル形式：マスターCSV＝統合マスター形式（詳細マスター・馬名とJRA馬IDの列があるもの）／マスター索引JSON＝meta＋horses形式／出走馬JSON＝weekend-view形式（generated＋races）／回顧詳細JSON＝prev-detail形式（byPrev＋kyoto1r）／回顧メモJSON＝照合結果の配列（各要素に d・v・r・name・vd・kind）または {picks:[…]} 形式。更新はこの画面を開いている間だけ有効で、ページを再読み込みすると内蔵データに戻ります。このページは元ファイルを書き換えたり保存したりしません。読めなかったデータは理由を表示し、そのデータだけ今のままにします。</p>
-    </div>
-    <div class="status-grid">
-      <div class="stat"><b>指定ファイル</b><div class="v" id="st-file">確認中…</div>
-        <div class="d">MUSE_v2_master_review_updated.csv（2026-11-22統合版）</div></div>
-      <div class="stat"><b>読み込み結果</b><div class="v" id="st-load">確認中…</div>
-        <div class="d" id="st-load-d">索引データを読み込んでいます。</div></div>
-      <div class="stat"><b>収録内容</b><div class="v" id="st-count">—</div>
-        <div class="d" id="st-count-d">—</div></div>
-      <div class="stat"><b>JRA馬IDが空欄の行</b><div class="v" id="st-blank">—</div>
-        <div class="d">推測で埋めず、未確認のまま残しています。この馬は馬名で照合し、結果に明示します。</div></div>
-    </div>
-    <details class="note-box foldbox">
-      <summary>読み込みと使い方の注意（タップで開く）</summary>
-      <p><strong>読み込んだ場所について：</strong>このページが読み込んだのは、Museのワークスペース内にある同名ファイルです。ChatGPT Libraryなど外部の保管場所には直接アクセスしていません。別の場所に最新版がある場合は、上の「データ更新」からそのファイルを選んでください。</p>
-      <p><strong>マスターは読み取り専用です：</strong>このページはマスターを書き換えたり保存したりしません。追加で読み込んだCSVは、この画面を開いている間だけ照合に使われ、閉じると消えます。</p>
-      <p><strong>定期チェック・通知について：</strong>このページ（静的なページ）では、木曜・金曜の定期チェックや通知は<strong>設定できません（未設定）</strong>。設定済みとは表示しません。定期的な確認が必要な場合は、チャットで依頼してください。</p>
-      <p><strong>JRA出馬表の自動取得について：</strong>このページからJRA公式サイトへ自動で取得する連携は使えません。有料サービス・有料APIも使いません。今週末の照合結果は「今週の全レース」と「回顧メモ該当レース」タブに掲載しています。</p>
-    </details>
-    <p class="sec-note" id="file-status" role="status"></p>
-  </section>
-
-
-
-
-
-
   </div><!-- /panel-races -->
 
   <div id="panel-picks" class="tabpanel hidden" role="tabpanel" aria-labelledby="tab-picks" tabindex="0">
@@ -1862,6 +1713,16 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
     <p>照合の出典：出馬表は2026年11月20日に取得した今週末分（72レース・1,043頭）です。判定は、各馬の直近最大3走の回顧を使う照合エンジン（2026年11月22日に2026-11-22統合版マスター＝3,088行・224レースで再照合）の結果で、回顧済み235頭の内訳は◎48・○70・△117です（当初11月20日時点の前走のみの判定では205頭・◎35・○71・△99でした。その後、統合された回顧の追加と直近3走での見直しで内訳が変わっています）。</p>なお、東京1R（11月22日）は当初の名簿が公式出馬表と食い違っていたため、公式の16頭に差し替えて再照合しています。福島記念（11/21福島11R）は16頭全頭が回顧済み、マイルCS（11/22京都11R）は18頭中17頭が回顧済み（エルデナリは海外レースのみで回顧なし＝不明）、東スポ杯2歳S（11/23東京11R）は12頭全頭が回顧済みです。出走取消・除外については、11月23日分で馬番が付く前に出走取消となった3頭（東京1R レッドシュヴァルツ・東京4R トーアレオン・東京6R ラポニア）を確認済みで、馬番なし（―）で表示しています。そのほかの出走取消・除外は未確認です。評価表の総合評価・実績指数・内容補正後能力評価は、詳細マスター（MUSE_v2_master_review_updated.csv）の回顧記録を、レースIDと馬名で照合して転記したものです（回顧済み235頭全頭分を確認済み）。</p>
     <p>結果との照合：2026年11月21・22・23日の全72レースについては、確定着順・着差（出走取消・除外・競走中止を含む）を「レース」タブの各レース欄で、発走前の状態（回顧メモ区分・条件照合・該当条件・根拠＝発走前に表示していたデータの凍結）と並べて表示します（2026-11-23 17時時点で月曜の全24レース分まで照合完了）。結果は「結果の内訳」として示し、予想的中率・購入推奨・収支としては扱いません。買い目・購入金額・購入有無は入力も表示もしません。結果照合後に新しい回顧ができても、発走前の表示・確定結果・新しい回顧は別の記録として保持し、発走前の状態は書き換えません。今回のレース自体の回顧が統合された61レース・871頭分は「今回の回顧」として馬ごとに追加表示し、判定の根拠になった過去の回顧（直近最大3走）とあわせて、各馬の「根拠・詳細を見る」から確認できます。未回顧の馬は「今回の回顧：未回顧」と明示します。</p>
   </details>
+
+  <section class="data-about" aria-labelledby="h-about">
+    <h2 class="sec" id="h-about">データについて</h2>
+    <div class="da-line"><b>対象レース</b><span>2026年11月21日（土）〜23日（月・祝）・全72レース・全1,043頭</span></div>
+    <div class="da-line"><b>回顧データ</b><span>統合マスター2026-11-23統合版・3,399件・245レース（メモ1,088件＝狙い755件・危険333件）</span></div>
+    <div class="da-line"><b>今回の回顧</b><span>61レース・871頭が回顧済み（未回顧11レース）</span></div>
+    <div class="da-line"><b>結果照合</b><span>全72レース完了（2026-11-23 17時時点）</span></div>
+    <div class="da-line"><b>馬場状態（11月23日）</b><span>JRA公式の確認値。東京＝晴・芝良・ダート良／福島＝晴・芝良・ダート稍重</span></div>
+    <div class="da-line"><b>更新について</b><span>このサイトは週次の定期更新でデータを再構築して公開しています</span></div>
+  </section>
 
   <footer>
     <p>データ：回顧マスター MUSE_v2_master_review_updated.csv（2026-11-22統合版：3,088行・224レース。読み取り専用・このページ内蔵の索引スナップショットは同版から再生成した2,357頭分で、旧版（2026-11-20確認・2,318行・168レース）は使用していません。CSV上の馬名は2,357種類で、同名の別馬2組を索引では分けて数えています）。「今週の全レース」一覧は、2026年11月20日に取得した今週末72レース・全1,043頭の出馬表と同マスターを照合した結果で、判定は直近最大3走の回顧による再照合（2026年11月22日）に基づきます（回顧済み235頭＝◎48・○70・△117／不明808頭）。京都1Rの前走評価は、2026-11-20作成の前走評価まとめ（新規回顧9レース・117頭分＋既存マスター収録3頭）に基づきます。「回顧メモ該当レース（64頭・22レース）」は、2026年11月20日夜に取得した確定出馬表と、最新マスター（2026-11-22統合版：3,088行・224レース）のウォッチリストを2026年11月22日に再照合し、回顧メモのある64頭（◎16・○9・△39）を抽出したものです（11月21日実施分の回顧は各馬自身の前走にはならないため、照合には含めていません）。結果との照合には2026年11月21・22・23日の全72レース・1,043頭分の確定結果を使い、発走前の表示は凍結したまま並べています。今回の回顧は61レース・871頭分（2026-11-23統合版マスターから抽出）を、発走前の表示・確定結果とは別の記録として追加表示しています。記録の正本はJRA公式、取得はnetkeibaを優先するという研究方針に沿い、各馬に出典と確認日を表示しています。有料サービス・有料API・追加課金は使用していません。</p>
@@ -1936,7 +1797,9 @@ function buildIndex(horses){
   });
 }
 function setStatus(meta, note){
-  $("st-file").innerHTML='<span class="ok">実在を確認し、読み込みました</span>';
+  /* 「データの読み込み状況と更新」セクションは削除済みのため、表示先がなければ何もしない */
+  var sf=$("st-file"); if(!sf) return;
+  sf.innerHTML='<span class="ok">実在を確認し、読み込みました</span>';
   $("st-load").innerHTML='<span class="ok">読み込み済み</span>'+(note?' <span style="font-size:12.5px;color:var(--ink2)">'+esc(note)+"</span>":"");
   $("st-load-d").textContent="確認日："+(meta.checked||"未確認")+"／ファイル名："+(meta.file||"未確認");
   $("st-count").textContent=(meta.rows||0).toLocaleString()+"行 ・ "+(meta.races||0)+"レース ・ "+(meta.horses||0).toLocaleString()+"頭";
@@ -1988,10 +1851,10 @@ function refreshMuCurrent(){
   if(!MASTER||!MASTER.meta){
     if(badge){ badge.textContent="未読み込み"; badge.className="mu-badge"; }
     if(cv) cv.textContent="未読み込み";
-    if(cd) cd.textContent="索引データを読み込めませんでした。下の更新ボタンからCSV／JSONを選んでください。";
+    if(cd) cd.textContent="索引データを読み込めませんでした。";
     if(jv) jv.textContent="未読み込み";
     if(jd) jd.textContent="索引データを読み込めませんでした。";
-    setReflect("master","err","読み込めず","索引データを読み込めませんでした。更新ボタンからCSV／JSONを選ぶと、この画面内だけで差し替えできます。");
+    setReflect("master","err","読み込めず","索引データを読み込めませんでした。");
     return;
   }
   var m=MASTER.meta;
@@ -2061,33 +1924,11 @@ function loadBuiltinMaster(bust,isUpdate,partOfAll){
       logUpdate("マスター索引の再読み込みに失敗 ― "+e.message);
     }else{
       renderPicks(); refreshMuCurrent();
-      $("st-file").innerHTML='<span class="bad">索引データを読み込めませんでした</span>';
-      $("st-load").innerHTML='<span class="bad">未読み込み</span>';
-      $("st-load-d").textContent="「データ更新」から、統合マスターCSVまたは索引JSONを選んでください。";
-      setMuStatus("索引データを読み込めませんでした。「データ更新」からCSV／JSONを選んでください。","err");
+      setMuStatus("索引データを読み込めませんでした。","err");
     }
   });
 }
 loadBuiltinMaster(false,false,false);
-var allEl=$("btn-update-all");
-if(allEl) allEl.addEventListener("click",function(){
-  if(masterBusy||updateAll) return;
-  updateAll={pending:2,total:2,okCount:0,results:[]};
-  setMuStatus("全データを再読み込みしています…（マスター索引／出走馬データ／回顧詳細データ）","busy");
-  logUpdate("全データの再読み込みを開始");
-  loadBuiltinMaster(true,true,true);
-  window.dispatchEvent(new CustomEvent("reload-weekend-data"));
-});
-var rbEl=$("btn-master-reload");
-if(rbEl) rbEl.addEventListener("click",function(){ if(!masterBusy) loadBuiltinMaster(true,true,false); });
-var rstEl=$("btn-master-reset");
-if(rstEl) rstEl.addEventListener("click",function(){ if(!masterBusy) loadBuiltinMaster(true,true,false); });
-var wkEl=$("btn-master-weekend");
-if(wkEl) wkEl.addEventListener("click",function(){
-  if(masterBusy) return;
-  setMuStatus("出走馬データと回顧詳細データを再読み込みしています…","busy");
-  window.dispatchEvent(new CustomEvent("reload-weekend-data"));
-});
 window.addEventListener("weekend-reloaded",function(ev){
   var d=(ev&&ev.detail)||{};
   if(updateAll){ finishUpdateAllPart("出走馬 "+(d.races||0)+"レース・"+(d.horses||0)+"頭＋回顧詳細 "+(d.detailKeys||0)+"件",!!d.ok); return; }
@@ -2128,68 +1969,6 @@ window.addEventListener("data-status",function(ev){
       "反映元："+(d.source||"assets/prev-detail.json")+"｜件数：実測 回顧詳細 "+(d.byPrev||0)+"件・京都1R分 "+(d.kyoto1r||0)+"頭分｜この画面への読込："+(d.loadedAt||"初回表示時"));
   }
 });
-/* ファイルを選んで出走馬／回顧詳細を差し替える：形式を確認してから週末一覧の処理へ渡す */
-function readJsonFile(file,cb){
-  var rd=new FileReader();
-  rd.onload=function(){ try{ cb(null,JSON.parse(rd.result)); }catch(e){ cb(e); } };
-  rd.onerror=function(){ cb(new Error("ファイルを読み取れませんでした")); };
-  rd.readAsText(file,"UTF-8");
-}
-var wkFileEl=$("file-weekend-json");
-if(wkFileEl) wkFileEl.addEventListener("change",function(ev){
-  var f=ev.target.files[0]; if(!f) return;
-  setMuStatus("出走馬JSON「"+f.name+"」を確認しています…","busy");
-  readJsonFile(f,function(err,data){
-    if(err||!data||!data.races||!data.races.length||!data.races[0].horses){ setMuStatus("出走馬JSONを読み込めませんでした："+(err?err.message:"weekend-view形式（races）ではありません")+"。今の一覧のまま使えます。","err"); logUpdate("出走馬JSONの読み込みに失敗 ― "+f.name); ev.target.value=""; return; }
-    window.dispatchEvent(new CustomEvent("apply-weekend-data",{detail:{weekend:data,source:"ファイル「"+f.name+"」",fromFile:true}}));
-    var tot=0; data.races.forEach(function(r){ tot+=(r.horses||[]).length; });
-    setMuStatus("更新しました：出走馬JSON「"+f.name+"」― "+data.races.length+"レース・"+tot+"頭を全レース一覧に反映しました。","ok");
-    logUpdate("出走馬JSONで更新 ― "+f.name+"／"+data.races.length+"レース・"+tot+"頭");
-    ev.target.value="";
-  });
-});
-var dtFileEl=$("file-detail-json");
-if(dtFileEl) dtFileEl.addEventListener("change",function(ev){
-  var f=ev.target.files[0]; if(!f) return;
-  setMuStatus("回顧詳細JSON「"+f.name+"」を確認しています…","busy");
-  readJsonFile(f,function(err,data){
-    if(err||!data||!data.byPrev){ setMuStatus("回顧詳細JSONを読み込めませんでした："+(err?err.message:"prev-detail形式（byPrev）がありません")+"。今の詳細のまま使えます。","err"); logUpdate("回顧詳細JSONの読み込みに失敗 ― "+f.name); ev.target.value=""; return; }
-    window.dispatchEvent(new CustomEvent("apply-weekend-data",{detail:{prevDetail:data,source:"ファイル「"+f.name+"」",fromFile:true}}));
-    var msg="更新しました：回顧詳細JSON「"+f.name+"」― 回顧詳細 "+Object.keys(data.byPrev).length+"件を全レース一覧の詳細に反映しました。";
-    setMuStatus(msg,"ok"); logUpdate("回顧詳細JSONで更新 ― "+f.name+"／"+Object.keys(data.byPrev).length+"件");
-    ev.target.value="";
-  });
-});
-var jumpEl=$("btn-goto-master-update");
-if(jumpEl) jumpEl.addEventListener("click",function(){
-  var t=$("master-update"); if(t) t.scrollIntoView({behavior:"smooth",block:"start"});
-});
-/* 索引JSONで更新：meta＋horses形式をそのまま差し替える */
-var jsonInput=$("file-master-json");
-if(jsonInput) jsonInput.addEventListener("change",function(ev){
-  var f=ev.target.files[0]; if(!f) return;
-  setMuStatus("索引JSON「"+f.name+"」を読み込んでいます…","busy");
-  var rd=new FileReader();
-  rd.onload=function(){
-    try{
-      var data=JSON.parse(rd.result);
-      if(!data||!data.meta||!data.horses||!data.horses.length) throw new Error("meta／horsesが見つかりません");
-      if(!data.horses[0].name) throw new Error("馬の記録の形式が違います（nameがありません）");
-      if(!data.meta.file) data.meta.file=f.name;
-      data.meta.checked="画面内で読込（保存されません）";
-      var diff=applyMaster(data,"json","（索引JSON・この画面内のみ）");
-      var msg="更新しました：索引JSON「"+f.name+"」― "+metaSummary(data.meta)+" "+diff+"。マスター自体は変更していません。";
-      setMuStatus(msg,"ok"); logUpdate("索引JSONで更新 ― "+f.name+"／"+metaSummary(data.meta));
-    }catch(err){
-      setMuStatus("索引JSONを読み込めませんでした："+err.message+"。今のマスターのまま使えます。","err");
-      logUpdate("索引JSONの読み込みに失敗 ― "+err.message);
-    }
-    ev.target.value="";
-  };
-  rd.onerror=function(){ setMuStatus("索引JSONを読み込めませんでした。今のマスターのまま使えます。","err"); };
-  rd.readAsText(f,"UTF-8");
-});
-
 /* ---------- 注目馬データ：件数は内蔵／差し替え後の配列からその場で数える ---------- */
 function picksStats(){
   var s={total:PICKS.length,g:0,m:0,b:0,nerai:0,kiken:0,races:{},days:{}};
@@ -2222,94 +2001,6 @@ function updatePicksSummary(){
   var jp=$("mu-jump-p");
   if(jp) jp.textContent=s.total+"頭（◎"+s.g+"・○"+s.m+"・△"+s.b+"）・"+(picksSource==="file"?("ファイル「"+picksFileName+"」で差し替え中"):("ページ内蔵・照合日 2026-11-22"));
 }
-var pkFileEl=$("file-picks-json");
-if(pkFileEl) pkFileEl.addEventListener("change",function(ev){
-  var f=ev.target.files[0]; if(!f) return;
-  setMuStatus("回顧メモJSON「"+f.name+"」を確認しています…","busy");
-  readJsonFile(f,function(err,data){
-    var arr=null;
-    if(!err&&data){ arr=Array.isArray(data)?data:(data.picks||null); }
-    if(err||!arr||!arr.length||!arr[0].name||!arr[0].d||!arr[0].vd){
-      setMuStatus("回顧メモJSONを読み込めませんでした："+(err?err.message:"照合結果の配列（d・name・vdを含む形式）ではありません")+"。今の索引のまま使えます。","err");
-      logUpdate("回顧メモJSONの読み込みに失敗 ― "+f.name); ev.target.value=""; return;
-    }
-    PICKS=arr; picksSource="file"; picksFileName=f.name;
-    renderPicks(); updatePicksSummary();
-    var s=picksStats();
-    setMuStatus("更新しました：回顧メモJSON「"+f.name+"」― "+s.total+"頭（◎"+s.g+"・○"+s.m+"・△"+s.b+"）を回顧メモ該当レースタブに反映しました。","ok");
-    logUpdate("回顧メモJSONで更新 ― "+f.name+"／"+s.total+"頭");
-    ev.target.value="";
-  });
-});
-
-/* master CSV upload: rebuild index in-memory from the 87-col CSV */
-$("file-master").addEventListener("change",function(ev){
-  var f=ev.target.files[0]; if(!f) return;
-  var beforeMeta=MASTER?MASTER.meta:null;
-  setMuStatus("マスターCSV「"+f.name+"」を読み込んでいます…","busy");
-  var rd=new FileReader();
-  rd.onload=function(){
-    try{
-      var objs=rowsToObjects(parseCSV(rd.result));
-      if(!objs.length||objs[0]["馬名"]===undefined||objs[0]["JRA馬ID"]===undefined) throw new Error("列が見つかりません");
-      var map={}, order=[];
-      objs.forEach(function(r){
-        var hid=(r["JRA馬ID"]||"").trim(), name=(r["馬名"]||"").trim();
-        var key=hid||("NAME:"+name+"|"+(r["性齢"]||"").trim());
-        if(!map[key]){ map[key]={id:hid,name:name,sa:(r["性齢"]||"").trim(),revs:[]}; order.push(map[key]); }
-        map[key].revs.push(r);
-      });
-      var horses=order.map(function(h){
-        h.revs.sort(function(a,b){ return normDate(b["開催日"]).localeCompare(normDate(a["開催日"])); });
-        function rev(r,full){
-          var o={d:normDate(r["開催日"]),vn:(r["競馬場"]||"").trim(),rn:(r["レース"]||"").trim(),
-            cls:(r["クラス"]||"").trim().slice(0,56),sf:(r["コース"]||"").trim(),dist:numOrNull(r["距離"]),
-            fin:(r["着順"]||"").trim(),mg:(r["着差"]||"").trim(),ps:(r["通過順位"]||"").trim(),
-            ag:(r["推定上り"]||"").trim(),agr:(r["上がり順位"]||"").trim(),pop:(r["人気"]||"").trim()};
-          if(full){
-            o.ev=(r["総合評価"]||"").trim(); o.idx=(r["実績指数（勝ち馬100)"]||"").trim(); o.ab=(r["内容補正後能力評価"]||"").trim();
-            o.trust=(r["評価の信頼度"]||"").trim(); o.watch=(r["次走注目度"]||"").trim();
-            o.nc=(r["次走推奨クラス"]||"").trim().slice(0,56); o.nsf=(r["次走推奨芝ダート"]||"").trim();
-            o.dlo=numOrNull(r["次走推奨距離下限"]); o.dhi=numOrNull(r["次走推奨距離上限"]); o.dopt=numOrNull(r["次走最適距離"]);
-            o.dtype=(r["次走推奨距離型"]||"").trim().slice(0,90); o.cf=(r["次走推奨コース形態"]||"").trim();
-            o.pace=(r["次走推奨ペース"]||"").trim(); o.pos=(r["次走理想位置取り"]||"").trim();
-            o.good=(r["次走で狙える条件（詳細）"]||"").trim().slice(0,220); o.disc=(r["次走で割引となる条件"]||"").trim().slice(0,220);
-            o.down=(r["次走で評価を下げる条件"]||"").trim().slice(0,220); o.basis=(r["条件を推奨する根拠"]||"").trim().slice(0,180);
-            o.btype=(r["条件の根拠区分"]||"").trim(); o.ctrust=(r["条件の信頼度"]||"").trim();
-            o.danger=(r["危険人気馬候補"]||"").trim(); o.dreason=(r["危険と判断した理由"]||"").trim().slice(0,140);
-            o.vid=videoLabel(r["映像確認状況"]); o.src=(r["情報取得元"]||"").trim();
-            o.jra=jraLabel(r["JRA照合状況"]); o.url=(r["出典URL"]||"").trim(); o.cfm=normDate(r["確認日"]);
-          }
-          Object.keys(o).forEach(function(k){ if(o[k]===""||o[k]===null) delete o[k]; });
-          return o;
-        }
-        var e={id:h.id,name:h.name,sa:h.sa,n:h.revs.length,last:rev(h.revs[0],true)};
-        var past=h.revs.slice(1,4).map(function(r){return rev(r,false)});
-        if(past.length) e.past=past;
-        return e;
-      });
-      var races={}; objs.forEach(function(r){ if(r["レースID"]) races[r["レースID"]]=1; });
-      MASTER={meta:{file:f.name,checked:"画面内で読込（保存されません）",rows:objs.length,
-        races:Object.keys(races).length,horses:horses.length,
-        blankIdRows:objs.filter(function(r){return !(r["JRA馬ID"]||"").trim()}).length,
-        blankIdHorses:0},horses:horses};
-      var bs={}; objs.forEach(function(r){ if(!(r["JRA馬ID"]||"").trim()) bs[(r["馬名"]||"")+"|"+(r["性齢"]||"")]=1; });
-      MASTER.meta.blankIdHorses=Object.keys(bs).length;
-      buildIndex(horses); setStatus(MASTER.meta,"（追加読込・この画面内のみ）");
-      masterSource="csv"; masterLoadedAt=fmtNow(); refreshMuCurrent(); renderPicks();
-      var diff=diffText(beforeMeta,MASTER.meta);
-      setMuStatus("更新しました：マスターCSV「"+f.name+"」― "+metaSummary(MASTER.meta)+" "+diff+"。この画面内の索引だけを差し替えました（「内蔵マスターに戻す」か再読み込みで戻せます）。出走馬・回顧メモ該当レースの内蔵データは変わりません。","ok");
-      logUpdate("マスターCSVで更新 ― "+f.name+"／"+metaSummary(MASTER.meta)+" "+diff);
-    }catch(err){
-      setMuStatus("マスターCSVを読み込めませんでした："+err.message+"。統合マスター形式（馬名とJRA馬IDの列があるCSV）を選んでください。今のマスターのまま使えます。","err");
-      logUpdate("マスターCSVの読み込みに失敗 ― "+err.message);
-    }
-    ev.target.value="";
-  };
-  rd.onerror=function(){ setMuStatus("マスターCSVを読み込めませんでした。今のマスターのまま使えます。","err"); ev.target.value=""; };
-  rd.readAsText(f,"UTF-8");
-});
-
 /* ---------- entry parsing ---------- */
 function parseEntries(text){
   var out=[];
