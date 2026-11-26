@@ -1438,6 +1438,7 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 .ana-kata.k-honmei{color:#92400e;background:#fffbeb;border-color:#f59e0b}
 .ana-kata.k-taikou{color:#1e40af;background:#eff6ff;border-color:#93c5fd}
 .ana-kata.k-himo{color:#065f46;background:#ecfdf5;border-color:#6ee7b7}
+.ana-kata.k-ihen{color:#fff;background:#047857;border-color:#047857}
 .ana-row.is-ref .ana-kata{opacity:.55}
 .ana-boardline{display:flex;align-items:baseline;gap:8px;margin-top:7px}
 .ana-rate{font-size:24px;font-weight:900;line-height:1.15;font-variant-numeric:tabular-nums;color:var(--ink)}
@@ -3264,7 +3265,7 @@ function horseRow(h,i,total){
      詳細は従来どおり、その馬の下に全列結合の行として開く */
   var memoCell=(memo==="―"?'<span class="wl-memo-none">―</span>':memo);
   /* 型は区分の横（6列目）に出す。1行目の縦伸びを避けるため、区分セルの中には入れない */
-  var kataCell=h.kata?('<span class="ana-kata wkata '+(KATACLS[h.kata]||"k-taikou")+'">'+escW(h.kata)+'</span>'):"";
+  var kataCell=h.kata?('<span class="ana-kata wkata '+(h.kataSub==="一変"?"k-ihen":(KATACLS[h.kata]||"k-taikou"))+'">'+escW(h.kataSub==="一変"?"ヒモ型・一変":h.kata)+'</span>'):"";
   var row1='<tr class="wrow et-r1" data-wmark="'+escW(h.mark)+'" data-wname="'+escW(h.name)+'" data-wab="'+escW(h.ab||"")+'" data-hasdet="1" tabindex="0" aria-expanded="false"'+idxAttr+'>'
     +'<td class="c-num'+wk+'">'+numCell+'</td>'
     +'<td class="c-name et-name" colspan="2">'+wnameHtml(h.name)+'</td>'
@@ -4051,7 +4052,7 @@ function renderAnalysis(data){
     +'<p class="ana-sub">回顧の材料別、次走で効いた順。バーは濃い部分が1着率。</p>';
   /* 買える */
   html+='<div class="ana-sec buy">買える</div>';
-  if(layers[0]) html+=anaRank({label:"大敗×人気薄の狙い",n:layers[0].n,board:layers[0].board,p1:layers[0].p1,kata:layers[0].kata},{color:"#2456c8",himoTag:true});
+  if(layers[0]) html+=anaRank({label:"ヒモ型・一変",n:layers[0].n,board:layers[0].board,p1:layers[0].p1,kata:layers[0].kata},{color:"#2456c8",himoTag:true});
   if(pops[0]) html+=anaRank({label:"狙い × 前走1〜3番人気",n:pops[0].n,board:pops[0].board,p1:pops[0].p1},{color:"#2456c8"});
   if(grades[0]) html+=anaRank({label:"評価S",n:grades[0].n,board:grades[0].board,p1:grades[0].p1,kata:grades[0].kata},{color:"#3f51b5",himoTag:true});
   if(grades[1]) html+=anaRank({label:"評価A",n:grades[1].n,board:grades[1].board,p1:grades[1].p1},{color:"#2456c8"});
@@ -4093,7 +4094,7 @@ function renderAnalysis(data){
   ibands.forEach(function(d){ html+=anaRow(d,{color:"#0f766e",p1:true,bar:true}); });
   html+='</div>';
   html+='<div class="ana-block"><h3 class="ana-block-h">層別</h3>'
-    +'<p class="ana-read-sub">大敗×人気薄の狙いはヒモで来る</p>'
+    +'<p class="ana-read-sub">ヒモ型・一変はヒモで来る</p>'
     +stackLegend();
   layers.forEach(function(d){
     var isComp=/比較/.test(d.label||"")||/対象外の同層/.test(d.label||"");
