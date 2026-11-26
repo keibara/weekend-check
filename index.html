@@ -4106,7 +4106,7 @@ function renderAnalysis(data){
   /* 買えない */
   html+='<div class="ana-sec sell">買えない</div><div class="ana-list">';
   var dnp=(data.danger_next_pop||[])[0];
-  if(dnp) html+=anaDanger(dnp);
+  if(dnp && dnp.length && Number(dnp[0].n)>=50) html+=anaDanger(dnp);
   if(pops[3]) html+=anaRank({label:"狙い × 前走10番人気以下",n:pops[3].n,board:pops[3].board,p1:pops[3].p1},{color:"#d92b2b",sub:"対象外（"+(cats["対象外"]?cats["対象外"].board:"―")+"%）と変わらない"});
   if(grades[4]) html+=anaRank({label:"評価D",n:grades[4].n,board:grades[4].board,p1:grades[4].p1},{color:"#d92b2b",sub:"回顧の評価が最低。3着内は1割未満"});
   if(ibands[2]) html+=anaRank({label:"回顧指数 80未満",n:ibands[2].n,board:ibands[2].board,p1:ibands[2].p1},{color:"#d92b2b",sub:"指数が低い馬は次走も苦戦する"});
