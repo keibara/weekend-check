@@ -1372,6 +1372,79 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 .hist-rev .hr-memo{background:var(--sub);border-radius:6px;padding:7px 9px;white-space:pre-line}
 #search-results .horse{margin-top:10px}
 </style>
+<style>
+/* ===== 分析タブ ===== */
+.ana-note{margin-top:14px}
+.ana-gen{font-size:12px;color:var(--ink2);margin-top:6px}
+.ana-block{margin-top:26px}
+.ana-block:first-child{margin-top:18px}
+.ana-block-h{font-size:17.5px;font-weight:900;margin:0 0 2px;padding-bottom:6px;border-bottom:2px solid var(--ink);line-height:1.45;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px}
+.ana-block-h .ana-count{font-size:12.5px;font-weight:700;color:var(--ink2);margin-left:auto;white-space:nowrap}
+.ana-read{font-size:15px;font-weight:900;color:var(--nk);margin:8px 0 12px;line-height:1.55}
+.ana-read-sub{font-size:12.5px;color:var(--ink2);margin:6px 0 10px;line-height:1.6}
+.ana-row{border:1px solid var(--line);border-radius:6px;background:#fff;padding:11px 13px;margin-bottom:8px}
+.ana-row.is-ref{color:#8a94a3}
+.ana-row.is-ref .ana-rate{color:#8a94a3}
+.ana-row.is-ref .ana-label{color:#8a94a3}
+.ana-row--muted{background:var(--sub)}
+.ana-row--muted .ana-label{font-weight:700;color:var(--ink2)}
+.ana-row-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px}
+.ana-label{font-size:15px;font-weight:900;line-height:1.4}
+.ana-dot{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:7px;vertical-align:0}
+.ana-def{font-size:12px;color:var(--ink2);font-weight:400}
+.ana-row.is-ref .ana-def{color:#a8b0bc}
+.ana-n{font-size:12px;color:var(--ink2);font-weight:700;white-space:nowrap}
+.ana-row.is-ref .ana-n{color:#a8b0bc}
+.ana-ref{font-size:10.5px;font-weight:700;color:#94a3b8;border:1px solid var(--line);border-radius:999px;padding:0 7px;white-space:nowrap}
+.ana-kata{display:inline-block;font-size:11.5px;font-weight:900;border-radius:999px;padding:1px 9px;line-height:1.6;white-space:nowrap;border:1px solid transparent}
+.ana-kata.k-honmei{color:#92400e;background:#fffbeb;border-color:#f59e0b}
+.ana-kata.k-taikou{color:#1e40af;background:#eff6ff;border-color:#93c5fd}
+.ana-kata.k-himo{color:#065f46;background:#ecfdf5;border-color:#6ee7b7}
+.ana-row.is-ref .ana-kata{opacity:.55}
+.ana-boardline{display:flex;align-items:baseline;gap:8px;margin-top:7px}
+.ana-rate{font-size:24px;font-weight:900;line-height:1.15;font-variant-numeric:tabular-nums;color:var(--ink)}
+.ana-rate-lab{font-size:12px;font-weight:700;color:var(--ink2)}
+.ana-p1{margin-left:auto;font-size:13px;font-weight:700;color:var(--ink);white-space:nowrap;font-variant-numeric:tabular-nums}
+.ana-p1 b{font-size:12px;color:var(--ink2);font-weight:700;margin-right:3px}
+.ana-row.is-ref .ana-p1{color:#8a94a3}
+.ana-bar{height:10px;border-radius:999px;background:#eef1f5;overflow:hidden;margin-top:7px}
+.ana-bar>span{display:block;height:100%;border-radius:999px}
+.ana-row.is-ref .ana-bar>span{opacity:.5}
+.ana-stack{display:flex;height:14px;border-radius:4px;overflow:hidden;margin-top:8px;background:#e5e7eb}
+.ana-stack>span{display:block;height:100%;min-width:0}
+.ana-stack .s1{background:#c9a400}.ana-stack .s2{background:#2456c8}.ana-stack .s3{background:#e57373}.ana-stack .s4{background:#e5e7eb}
+.ana-row.is-ref .ana-stack{opacity:.55}
+.ana-break{font-size:12.5px;color:#475569;margin-top:6px;font-variant-numeric:tabular-nums;line-height:1.6}
+.ana-row.is-ref .ana-break{color:#a8b0bc}
+.ana-break b{font-weight:900}
+.ana-break .b1{color:#a88400}.ana-break .b2{color:#2456c8}.ana-break .b3{color:#c2504f}
+.ana-row.is-ref .ana-break .b1,.ana-row.is-ref .ana-break .b2,.ana-row.is-ref .ana-break .b3{color:#a8b0bc}
+.ana-flag{display:inline-block;font-size:12px;font-weight:900;color:#c0392b;background:#fef2f2;border:1px solid #fecaca;border-radius:999px;padding:1px 9px;white-space:nowrap}
+.ana-legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:11.5px;color:var(--ink2);margin:2px 0 10px}
+.ana-legend .lg-sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:-1px}
+.ana-table{width:100%;border-collapse:collapse;font-size:13.5px;background:#fff}
+.ana-table th{background:#eef1f5;color:var(--ink2);font-size:11.5px;font-weight:700;padding:6px;border-bottom:2px solid var(--ink);text-align:left;line-height:1.4}
+.ana-table td{padding:6px;border-bottom:1px solid var(--line);vertical-align:top;font-variant-numeric:tabular-nums}
+.ana-table tbody tr:last-child td{border-bottom:none}
+.ana-table .a-num{text-align:right;white-space:nowrap}
+.ana-table th.a-num{text-align:right}
+.ana-table .a-med{font-weight:900;font-size:15px}
+.ana-table tr.is-ref{color:#8a94a3}
+.ana-table tr.is-ref .a-med{color:#8a94a3}
+.ana-table-wrap{border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.ana-surf{font-size:11.5px;font-weight:900;border-radius:999px;padding:1px 8px;white-space:nowrap}
+.ana-surf.shiba{background:#e2f2e4;color:#2e7d32}
+.ana-surf.da{background:#fdeeda;color:#a05a00}
+@media (max-width:560px){
+  .ana-block-h{font-size:16px}
+  .ana-read{font-size:14px}
+  .ana-rate{font-size:21px}
+  .ana-table{font-size:12.5px}
+  .ana-table th,.ana-table td{padding:5px 4px}
+  .ana-table .a-med{font-size:14px}
+  .ana-p1{font-size:12.5px}
+}
+</style>
 </head>
 <body>
 <div class="wrap">
@@ -1382,10 +1455,11 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
         <div class="logo"><small>WEEKEND KEIBA NEWS</small>週末出走馬<span>チェック</span></div>
         <div class="hdr-date">11/28(土)・29(日) ― 2日間開催</div>
       </div>
-      <nav class="tabbar catnav" role="tablist" aria-label="ニュース・レース・回顧データの切り替え">
+      <nav class="tabbar catnav" role="tablist" aria-label="ニュース・レース・回顧データ・分析の切り替え">
         <button class="tabbtn" type="button" role="tab" id="tab-news" data-tab="news" aria-selected="true" aria-controls="panel-news">ニュース</button>
         <button class="tabbtn" type="button" role="tab" id="tab-races" data-tab="races" aria-selected="false" aria-controls="panel-races" tabindex="-1">レース</button>
         <button class="tabbtn" type="button" role="tab" id="tab-data" data-tab="data" aria-selected="false" aria-controls="panel-data" tabindex="-1">回顧データ</button>
+        <button class="tabbtn" type="button" role="tab" id="tab-analysis" data-tab="analysis" aria-selected="false" aria-controls="panel-analysis" tabindex="-1">分析</button>
       </nav>
     </div>
   </header>
@@ -1752,6 +1826,14 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
   </section>
 
   </div><!-- /panel-data -->
+
+  <div id="panel-analysis" class="tabpanel hidden" role="tabpanel" aria-labelledby="tab-analysis" tabindex="0">
+  <section aria-labelledby="h-analysis">
+    <h2 class="sec" id="h-analysis">データ分析</h2>
+    <p class="sec-note" id="analysis-status" role="status">このタブを開くと、分析データ（assets/analysis.json）を読み込んで表示します。</p>
+    <div id="analysis-root"></div>
+  </section>
+  </div><!-- /panel-analysis -->
 
   <details class="note-box foldbox guide-fold">
     <summary>見方・出典・注意（タップで開く）</summary>
@@ -2415,7 +2497,7 @@ btns.forEach(function(b){
 (function(){
 "use strict";
 var tabs=document.querySelectorAll("[data-tab]");
-var panels={news:document.getElementById("panel-news"),races:document.getElementById("panel-races"),data:document.getElementById("panel-data")};
+var panels={news:document.getElementById("panel-news"),races:document.getElementById("panel-races"),data:document.getElementById("panel-data"),analysis:document.getElementById("panel-analysis")};
 function activate(name,focus){
   tabs.forEach(function(t){
     var on=t.getAttribute("data-tab")===name;
@@ -3796,6 +3878,164 @@ function loadHistory(){
 }
 var dt=document.querySelector('[data-tab="data"]');
 if(dt) dt.addEventListener("click",loadHistory);
+})();
+</script>
+<script>
+(function(){
+"use strict";
+/* 分析タブ：「分析」タブを初めて開いた時にだけ assets/analysis.json を読み込む（遅延読み込み） */
+function escA(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function fmtNum(v){
+  if(v==null||v==="") return "―";
+  var n=Number(v);
+  if(isNaN(n)) return escA(v);
+  return (n%1===0)?String(n):String(n);
+}
+var KATACLS={"本命型":"k-honmei","対抗型":"k-taikou","ヒモ型":"k-himo"};
+function kataTag(kata){
+  if(!kata) return "";
+  return '<span class="ana-kata '+(KATACLS[kata]||"k-taikou")+'">'+escA(kata)+'</span>';
+}
+function stackBar(d){
+  var p1=Math.max(0,Number(d.p1)||0), p2=Math.max(0,Number(d.p2)||0), p3=Math.max(0,Number(d.p3)||0);
+  var p4=(d.p4over!=null)?Math.max(0,Number(d.p4over)||0):Math.max(0,100-p1-p2-p3);
+  return '<div class="ana-stack" role="img" aria-label="着順内訳 1着'+p1+'% 2着'+p2+'% 3着'+p3+'% 4着以下'+p4+'%">'
+    +'<span class="s1" style="width:'+p1+'%"></span>'
+    +'<span class="s2" style="width:'+p2+'%"></span>'
+    +'<span class="s3" style="width:'+p3+'%"></span>'
+    +'<span class="s4" style="width:'+p4+'%"></span></div>';
+}
+function breakLine(d){
+  var p4=(d.p4over!=null)?d.p4over:Math.max(0,100-(Number(d.p1)||0)-(Number(d.p2)||0)-(Number(d.p3)||0));
+  return '<div class="ana-break"><b class="b1">1着 '+escA(d.p1)+'%</b> ・ <b class="b2">2着 '+escA(d.p2)+'%</b> ・ <b class="b3">3着 '+escA(d.p3)+'%</b> ・ 4着以下 '+escA(p4)+'%</div>';
+}
+function stackLegend(){
+  return '<div class="ana-legend" aria-hidden="true"><span><span class="lg-sw" style="background:#c9a400"></span>1着</span><span><span class="lg-sw" style="background:#2456c8"></span>2着</span><span><span class="lg-sw" style="background:#e57373"></span>3着</span><span><span class="lg-sw" style="background:#e5e7eb"></span>4着以下</span><span>nが30未満の行はグレーで参考値</span></div>';
+}
+var CATORDER=["狙い","危険","対象外"];
+var CATCOLOR={"狙い":"#3f51b5","危険":"#c0392b","対象外":"#64748b"};
+function renderAnalysis(data){
+  var root=document.getElementById("analysis-root");
+  var st=document.getElementById("analysis-status");
+  if(!root) return;
+  var html="";
+  /* 定義・型の決め方（開閉式・初期は閉） */
+  html+='<details class="note-box foldbox guide-fold ana-note"><summary>分析の定義・型の決め方（タップで開く）</summary>'
+    +'<p>'+escA(data.note||"")+'</p>'
+    +(data.generated?'<p class="ana-gen">集計日：'+escA(data.generated)+'</p>':"")
+    +'</details>';
+  /* 1) 区分の検証 */
+  html+='<div class="ana-block"><h3 class="ana-block-h">区分の検証（次走成績）</h3>'
+    +'<p class="ana-read">狙いは対象外の約2倍、次走で好走している</p>';
+  var cats=data.categories||{};
+  CATORDER.forEach(function(name){
+    var d=cats[name]; if(!d) return;
+    var col=CATCOLOR[name]||"#64748b";
+    var ref=(Number(d.n)||0)<30;
+    html+='<div class="ana-row'+(ref?" is-ref":"")+'">'
+      +'<div class="ana-row-top"><span class="ana-label"><span class="ana-dot" style="background:'+col+'"></span>'+escA(name)+'</span>'
+      +'<span class="ana-n">n='+escA(d.n)+'</span>'+(ref?'<span class="ana-ref">参考値</span>':"")+'</div>'
+      +'<div class="ana-boardline"><span class="ana-rate">'+escA(d.board)+'%</span><span class="ana-rate-lab">3着内率</span>'
+      +'<span class="ana-p1"><b>1着率</b>'+escA(d.p1)+'%</span></div>'
+      +'<div class="ana-bar"><span style="width:'+Math.max(0,Math.min(100,Number(d.board)||0))+'%;background:'+col+'"></span></div>'
+      +'</div>';
+  });
+  /* 他区分（想定外のキーがあれば末尾に） */
+  Object.keys(cats).forEach(function(name){
+    if(CATORDER.indexOf(name)>=0) return;
+    var d=cats[name]; if(!d) return;
+    var ref=(Number(d.n)||0)<30;
+    html+='<div class="ana-row'+(ref?" is-ref":"")+'">'
+      +'<div class="ana-row-top"><span class="ana-label"><span class="ana-dot" style="background:#64748b"></span>'+escA(name)+'</span>'
+      +'<span class="ana-n">n='+escA(d.n)+'</span>'+(ref?'<span class="ana-ref">参考値</span>':"")+'</div>'
+      +'<div class="ana-boardline"><span class="ana-rate">'+escA(d.board)+'%</span><span class="ana-rate-lab">3着内率</span>'
+      +'<span class="ana-p1"><b>1着率</b>'+escA(d.p1)+'%</span></div>'
+      +'<div class="ana-bar"><span style="width:'+Math.max(0,Math.min(100,Number(d.board)||0))+'%;background:#64748b"></span></div>'
+      +'</div>';
+  });
+  html+='</div>';
+  /* 2) 人気別の狙い */
+  html+='<div class="ana-block"><h3 class="ana-block-h">人気別の狙い ─ 境目は10番人気</h3>'
+    +stackLegend();
+  (data.sniping_by_pop||[]).forEach(function(d){
+    var ref=(Number(d.n)||0)<30;
+    var isLast=/10番人気以下/.test(d.label||"");
+    html+='<div class="ana-row'+(ref?" is-ref":"")+'">'
+      +'<div class="ana-row-top"><span class="ana-label">'+escA(d.label)+'</span>'
+      +(d.def?'<span class="ana-def">'+escA(d.def)+'</span>':"")
+      +kataTag(d.kata)
+      +'<span class="ana-n">n='+escA(d.n)+'</span>'+(ref?'<span class="ana-ref">参考値</span>':"")
+      +(isLast?'<span class="ana-flag">対象外と変わらない</span>':"")
+      +'</div>'
+      +'<div class="ana-boardline"><span class="ana-rate">'+escA(d.board)+'%</span><span class="ana-rate-lab">3着内率</span></div>'
+      +stackBar(d)
+      +breakLine(d)
+      +'</div>';
+  });
+  html+='</div>';
+  /* 3) 層別チェック */
+  html+='<div class="ana-block"><h3 class="ana-block-h">層別チェック</h3>'
+    +'<p class="ana-read">大敗×人気薄の狙いはヒモ型</p>'
+    +stackLegend();
+  (data.layers||[]).forEach(function(d){
+    var ref=(Number(d.n)||0)<30;
+    var isComp=/比較/.test(d.label||"")||/対象外の同層/.test(d.label||"");
+    html+='<div class="ana-row'+(ref?" is-ref":"")+(isComp?" ana-row--muted":"")+'">'
+      +'<div class="ana-row-top"><span class="ana-label">'+escA(d.label)+'</span>'
+      +(d.def?'<span class="ana-def">'+escA(d.def)+'</span>':"")
+      +(isComp?"":kataTag(d.kata))
+      +'<span class="ana-n">n='+escA(d.n)+'</span>'+(ref?'<span class="ana-ref">参考値</span>':"")
+      +'</div>'
+      +'<div class="ana-boardline"><span class="ana-rate">'+escA(d.board)+'%</span><span class="ana-rate-lab">3着内率</span></div>'
+      +stackBar(d)
+      +breakLine(d)
+      +'</div>';
+  });
+  html+='</div>';
+  /* 4) レースレベル分布 */
+  html+='<div class="ana-block"><h3 class="ana-block-h">レースレベル分布（勝ち馬指数）'
+    +(data.level_obtained!=null?'<span class="ana-count">現在 '+escA(data.level_obtained)+'レース分</span>':"")
+    +'</h3>'
+    +'<p class="ana-read-sub">勝ち馬のタイム指数（netkeiba）で見た、クラス帯×芝／ダート別の分布です。中央値と範囲（最小〜最大）で帯の位置を見ます。nが30未満の行はグレーで参考値です。</p>'
+    +'<div class="ana-table-wrap"><table class="ana-table"><thead><tr><th scope="col">クラス帯</th><th scope="col">芝／ダート</th><th scope="col" class="a-num">n</th><th scope="col" class="a-num">中央値</th><th scope="col" class="a-num">範囲</th></tr></thead><tbody>';
+  (data.level_dist||[]).forEach(function(d){
+    var ref=(Number(d.n)||0)<30;
+    var surfCls=(d.surface==="芝")?"shiba":"da";
+    html+='<tr'+(ref?' class="is-ref"':"")+'>'
+      +'<td><strong>'+escA(d.bucket)+'</strong></td>'
+      +'<td><span class="ana-surf '+surfCls+'">'+escA(d.surface)+'</span></td>'
+      +'<td class="a-num">'+escA(d.n)+'</td>'
+      +'<td class="a-num a-med">'+fmtNum(d.median)+'</td>'
+      +'<td class="a-num">'+fmtNum(d.min)+'〜'+fmtNum(d.max)+'</td>'
+      +'</tr>';
+  });
+  html+='</tbody></table></div></div>';
+  root.innerHTML=html;
+  if(st) st.textContent="分析データを表示しています（assets/analysis.json・集計日："+(data.generated||"未確認")+"）。率は検証用です。";
+}
+var anaLoaded=false, anaLoading=false;
+function loadAnalysis(){
+  if(anaLoaded||anaLoading) return;
+  anaLoading=true;
+  var st=document.getElementById("analysis-status");
+  if(st) st.textContent="分析データを読み込んでいます…";
+  fetch("assets/analysis.json").then(function(r){ if(!r.ok) throw new Error("http "+r.status); return r.json(); })
+  .then(function(data){ anaLoaded=true; anaLoading=false; renderAnalysis(data); })
+  .catch(function(e){
+    anaLoading=false;
+    if(st) st.textContent="分析データ（assets/analysis.json）を読み込めませんでした："+e.message;
+  });
+}
+var at=document.querySelector('[data-tab="analysis"]');
+if(at) at.addEventListener("click",loadAnalysis);
+/* 矢印キーでのタブ移動でも開かれるよう、パネルの表示切替を監視して初回だけ読み込む */
+var ap=document.getElementById("panel-analysis");
+if(ap&&window.MutationObserver){
+  var mo=new MutationObserver(function(){
+    if(!ap.classList.contains("hidden")) loadAnalysis();
+  });
+  mo.observe(ap,{attributes:true,attributeFilter:["class"]});
+}
 })();
 </script>
 </body>
