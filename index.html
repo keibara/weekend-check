@@ -1928,7 +1928,19 @@ function loadBuiltinMaster(bust,isUpdate,partOfAll){
     }
   });
 }
-loadBuiltinMaster(false,false,false);
+/* マスター索引（assets/master-index.json）は初期表示では読み込まない。
+   索引を使う画面（回顧メモ該当レース＝馬名索引タブ）を初めて開いた時と、
+   索引が必要な詳細表示から呼ばれた時にだけ、初回のみ読み込む（遅延読み込み） */
+var masterPromise=null;
+function ensureMasterIndex(){
+  if(MASTER) return Promise.resolve(MASTER);
+  if(!masterPromise) masterPromise=loadBuiltinMaster(false,false,false);
+  return masterPromise;
+}
+window.__ensureMasterIndex=ensureMasterIndex;
+document.querySelectorAll('[data-tab="picks"]').forEach(function(t){
+  t.addEventListener("click",function(){ ensureMasterIndex(); });
+});
 window.addEventListener("weekend-reloaded",function(ev){
   var d=(ev&&ev.detail)||{};
   if(updateAll){ finishUpdateAllPart("出走馬 "+(d.races||0)+"レース・"+(d.horses||0)+"頭＋回顧詳細 "+(d.detailKeys||0)+"件",!!d.ok); return; }
@@ -1964,9 +1976,9 @@ window.addEventListener("data-status",function(ev){
     if(jhv) jhv.textContent=(d.horses||0)+"頭・直近3走"+(d.rows||0)+"走分を確認（回顧あり"+(d.reviewed||0)+"走・未回顧"+(d.unreviewed||0)+"走／2026年11月22日反映）";
   }
   if(d.key==="detail"){
-    if(!d.ok){ setReflect("detail","err","読み込めず","回顧詳細データ（assets/prev-detail.json）を読み込めませんでした："+(d.error||"不明なエラー")); return; }
+    if(!d.ok){ setReflect("detail","err","読み込めず","回顧詳細データ（assets/weekend-view.json）を読み込めませんでした："+(d.error||"不明なエラー")); return; }
     setReflect("detail",d.fromFile?"file":"ok",d.fromFile?"ファイルで差し替え中":"内蔵ファイルから読込済み",
-      "反映元："+(d.source||"assets/prev-detail.json")+"｜件数：実測 回顧詳細 "+(d.byPrev||0)+"件・京都1R分 "+(d.kyoto1r||0)+"頭分｜この画面への読込："+(d.loadedAt||"初回表示時"));
+      "反映元："+(d.source||"assets/weekend-view.json")+"｜件数：実測 回顧詳細 "+(d.byPrev||0)+"件・京都1R分 "+(d.kyoto1r||0)+"頭分｜この画面への読込："+(d.loadedAt||"初回表示時"));
   }
 });
 /* ---------- 注目馬データ：件数は内蔵／差し替え後の配列からその場で数える ---------- */
@@ -2645,7 +2657,7 @@ function l3ClassCell(orig){
   return '<td class="'+cls+'" title="'+escW(o)+'">'+escW(s)+'</td>';
 }
 var L3FLOW={"有利":"yu","不利":"fu","中立":"chu","判定保留":"ho"};
-/* 直近3走を1走1行で示す要約表。並びと出走の有無は、出走記録で確認した実際の直近3走（assets/history-verified.json）を使う。
+/* 直近3走を1走1行で示す要約表。並びと出走の有無は、出走記録で確認した実際の直近3走（統合履歴 assets/history-detail.json の確認済み記録）を使う。
    回顧のある走は展開評価（回顧の4値）を出し、回顧のない走は事実だけを並べて展開評価の欄に「未回顧」と出す。
    実際の出走が3走に満たない行は空欄（出走歴なし＝出走記録で確認済み）。
    確認データが読み込めなかった場合だけ、従来の回顧ベース表示にフォールバックする */
@@ -3338,7 +3350,7 @@ if(wlistEl){
 /* 出走馬データ＋回顧詳細データの読み込み（初回／再読み込み／ファイル差し替え共通）。
    読み込めた内容から実測した件数だけを「現在の反映状況」へ報告する */
 var wData=null, wDetFull=null;
-var wSrc="assets/weekend-view.json", dSrc="assets/prev-detail.json", wFromFile=false, dFromFile=false;
+var wSrc="assets/weekend-view.json", dSrc="assets/weekend-view.json", wFromFile=false, dFromFile=false;
 function fmtNowW(){
   var d=new Date(), p=function(n){return (n<10?"0":"")+n};
   return d.getFullYear()+"-"+p(d.getMonth()+1)+"-"+p(d.getDate())+" "+p(d.getHours())+":"+p(d.getMinutes())+":"+p(d.getSeconds());
@@ -3364,7 +3376,7 @@ function reportDataStatus(loadedAt,wErr,dErr){
   }else{
     window.dispatchEvent(new CustomEvent("data-status",{detail:{key:"history",ok:false}}));
   }
-  /* 出走歴確認データ（history-verified.json）：直近3走の確認済み行数を実測して報告する */
+  /* 出走歴確認データ（統合履歴 history-detail.json 内の確認済み記録）：直近3走の確認済み行数を実測して報告する */
   var vKeys=(wVerified?Object.keys(wVerified):[]);
   if(vKeys.length){
     var vr=0,vrv=0,vuv=0;
@@ -3378,21 +3390,21 @@ function loadWeekend(bust){
   var sfx=bust?("?v="+Date.now()):"";
   var opts=bust?{cache:"no-store"}:undefined;
   var wMainP=fetch("assets/weekend-view.json"+sfx,opts).then(function(r){ if(!r.ok) throw new Error("http "+r.status); return r.json(); });
-  var wDetP=fetch("assets/prev-detail.json"+sfx,opts).then(function(r){ if(!r.ok) throw new Error("http "+r.status); return r.json(); }).catch(function(e){ return {__err:(e&&e.message)||"http error"}; });
   var wHistP=fetch("assets/history-detail.json"+sfx,opts).then(function(r){ if(!r.ok) throw new Error("http "+r.status); return r.json(); }).catch(function(){ return null; });
-  var wVerP=fetch("assets/history-verified.json"+sfx,opts).then(function(r){ if(!r.ok) throw new Error("http "+r.status); return r.json(); }).catch(function(){ return null; });
   var wResP=fetch("assets/race-results.json"+sfx,opts).then(function(r){ if(!r.ok) throw new Error("http "+r.status); return r.json(); }).catch(function(){ return null; });
   var wCurP=fetch("assets/race-current-reviews.json"+sfx,opts).then(function(r){ if(!r.ok) throw new Error("http "+r.status); return r.json(); }).catch(function(){ return null; });
-  Promise.all([wMainP,wDetP,wHistP,wVerP,wResP,wCurP]).then(function(res){
+  Promise.all([wMainP,wHistP,wResP,wCurP]).then(function(res){
     var detErr=null;
-    if(res[2]) wHist=res[2];
-    if(res[3]) wVerified=res[3];
-    if(res[4]&&res[4].races) wResults=res[4];
-    if(res[5]&&res[5].races) wCurRev=res[5];
-    if(res[1]&&res[1].byPrev){ wDetFull=res[1]; wDet=res[1].byPrev; }
-    else { detErr=(res[1]&&res[1].__err)||"形式が違います"; }
+    /* 回顧履歴は統合ファイル（history-detail.json）だけを読む。
+       出走歴の確認記録（直近3走）も同じ統合ファイルの各馬レコードに含まれている */
+    if(res[1]){ wHist=res[1]; wVerified=res[1]; }
+    if(res[2]&&res[2].races) wResults=res[2];
+    if(res[3]&&res[3].races) wCurRev=res[3];
+    /* 前走の詳細は weekend-view 側のデータ（prevDetail／kyoto1rDetail）で完結させる */
+    if(res[0]&&res[0].prevDetail){ wDetFull={byPrev:res[0].prevDetail,kyoto1r:res[0].kyoto1rDetail||{}}; wDet=res[0].prevDetail; }
+    else { detErr="形式が違います"; }
     wData=res[0]; wSrc="assets/weekend-view.json"; wFromFile=false;
-    if(!detErr){ dSrc="assets/prev-detail.json"; dFromFile=false; }
+    if(!detErr){ dSrc="assets/weekend-view.json"; dFromFile=false; }
     renderWeekend(res[0]);
     var loadedAt=fmtNowW();
     reportDataStatus(loadedAt,null,detErr);
@@ -3433,8 +3445,8 @@ loadWeekend(false);
 window.addEventListener("reload-weekend-data",function(){ loadWeekend(true); });
 window.addEventListener("apply-weekend-data",function(ev){
   var d=(ev&&ev.detail)||{};
-  if(d.weekend){ wData=d.weekend; wSrc=d.source||"ファイル"; wFromFile=true; }
-  if(d.prevDetail){ wDetFull=d.prevDetail; wDet=d.prevDetail.byPrev||{}; dSrc=d.source||"ファイル"; dFromFile=true; }
+  if(d.weekend){ wData=d.weekend; wSrc=d.source||"ファイル"; wFromFile=true;
+    if(d.weekend.prevDetail){ wDetFull={byPrev:d.weekend.prevDetail,kyoto1r:d.weekend.kyoto1rDetail||{}}; wDet=d.weekend.prevDetail; dSrc=d.source||"ファイル"; dFromFile=true; } }
   if(wData) renderWeekend(wData);
   reportDataStatus(fmtNowW(),null,null);
 });
@@ -3543,8 +3555,8 @@ if(kl){
       if(tr){ e.preventDefault(); toggleK(tr); }
     });
     /* 京都1Rの各馬にも、前走の詳細（記録・評価の理由・信頼度・展開と不利・条件と根拠・メモ全文）を回顧記録から補う */
-    fetch("assets/prev-detail.json").then(function(r){ if(!r.ok) throw new Error("http "+r.status); return r.json(); }).then(function(PD){
-      var km=PD&&PD.kyoto1r; if(!km) return;
+    fetch("assets/weekend-view.json").then(function(r){ if(!r.ok) throw new Error("http "+r.status); return r.json(); }).then(function(PD){
+      var km=PD&&PD.kyoto1rDetail; if(!km) return;
       kl.querySelectorAll("tr.krow").forEach(function(row){
         var nm=row.querySelector(".wname"); if(!nm) return;
         var d=km[nm.textContent]; if(!d) return;
