@@ -1231,11 +1231,12 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
    4列目4.6em（回顧メモ区分／評価）／5列目 残り（注意タグ／指数）。表はコンテナ幅いっぱい・横スクロールなし。
    罫線：セル内はかなり薄く（#e6e9ec）、馬ごとの境目は少しだけ分かる濃さ（#b9c2cc） */
 .etable{table-layout:fixed;width:100%;border-collapse:collapse}
-.etable col.et-col1{width:4.2em}
-.etable col.et-col2{width:126px}
-.etable col.et-col3{width:4.6em}
-.etable col.et-col4{width:4.6em}
-.etable col.et-col5{width:auto}
+.etable col.et-col1{width:3.9em}
+.etable col.et-col2{width:84px}
+.etable col.et-col3{width:40px}
+.etable col.et-col4{width:60px}
+.etable col.et-col5{width:60px}
+.etable col.et-col6{width:auto}
 .etable td{border:1px solid #e6e9ec;padding:0 3px;vertical-align:middle}
 .etable tr.et-r1{height:36px}
 .etable tr.et-r1>td{border-top:1px solid #b9c2cc}
@@ -3098,10 +3099,10 @@ function horseRow(h,i,total){
        残りの列を結合して「回顧データなし」。意味のない「―」の並びは出さない */
     return '<tr class="wrow unknown et-r1" data-wmark="不明" data-wname="'+escW(h.name)+'" data-wab=""'+idxAttr+'>'
       +'<td class="c-num'+wk+'">'+numCell+'</td>'
-      +'<td class="c-name et-name">'+wnameHtml(h.name)+'</td>'
+      +'<td class="c-name et-name" colspan="2">'+wnameHtml(h.name)+'</td>'
       +'<td class="et-unk" colspan="3"><span class="eg none">不明</span></td></tr>'
       +'<tr class="et-r2 et-part unknown" data-wpart="'+i+'"><td class="et-cnt'+wk+'" rowspan="2">回顧なし</td>'
-      +'<td class="et-nodata" colspan="4" rowspan="2">回顧データなし</td></tr>'
+      +'<td class="et-nodata" colspan="5" rowspan="2">回顧データなし</td></tr>'
       +'<tr class="et-r3 et-part unknown" data-wpart="'+i+'"></tr>';
   }
   var memo="―";
@@ -3110,17 +3111,17 @@ function horseRow(h,i,total){
   else if(h.memo==="判定保留") memo='<span class="wmemo-hold">保留</span>';
   var d=wDet[(h.prevRaceId||"")+"|"+h.name];
   var hh=wHist[h.name];
-  /* 出馬表は1レースを1つの表（5列共通）にし、各馬は3行で統一する（36px＋18px＋18px＝72px）。
-     列構成：1列目（4.2em）＝馬番／回顧ラベル、2列目（126px固定）＝馬名／日付／展開、
-     3列目（4.6em）＝条件の印／着順、4列目（4.6em）＝回顧メモ区分／評価、5列目（残り）＝注意タグ／指数。
-     1行目（36px・標準色）＝馬番／馬名／「条件」＋照合の印／回顧メモ区分／注意タグ（ある場合のみ・1行）。
-     2行目（18px・グレー）＝回顧◯走（2行結合・上下中央・太字）／日付（中央）／3〜5列結合でレース名。
-     3行目（18px・グレー）＝展開／着順（中央）／評価（中央）／指数。値は従来と同じ最新の回顧から取る */
+  /* 出馬表は1レースを1つの表（6列グリッド）にし、各馬は3行で統一する（36px＋18px＋18px＝72px）。
+     列構成：1列目（3.9em）＝馬番／回顧ラベル、2列目（84px）＝日付／展開、
+     3列目（40px）・4列目（60px）・5列目（60px）・6列目（残り）は行ごとに結合を変えて使う。
+     1行目（36px・標準色）＝馬番／馬名（2〜3列結合）／「条件」＋照合の印（4列目）／回顧メモ区分（5列目）／型（6列目・狙いのみ）。
+     2行目（18px・グレー）＝回顧◯走（2行結合・上下中央・太字）／日付（2列目）／レース名（3〜5列結合）／人気・着順（6列目）。
+     3行目（18px・グレー）＝展開（2列目）／評価（3〜4列結合）／レベル（5列目）／回顧指数（6列目）。値は従来と同じ最新の回顧から取る */
   var subRows="", line1Tags="", line1Long=false;
   var hasRev=!!(hh&&hh.reviews&&hh.reviews.length);
   if(hasRev){
     var lr=hh.reviews[0];
-    /* 注意はタグでなく文章で出す（4行目の注意文）。line1Tagsは廃止し、5列目は空ける */
+    /* 注意はタグでなく文章で出す（4行目の注意文）。1行目6列目は型チップ専用（kataCell） */
     /* レース番号には「11R スプリンターズステークス」のようにレース名が続く場合がある。
        回顧表ではレース名を略称で出す（abbrRaceName）。グレードへの置き換えはしない。
        正式なレース名は各走の詳しい記録（詳細ブロック）にそのまま残る。
@@ -3169,14 +3170,14 @@ function horseRow(h,i,total){
     subRows='<tr class="et-r2 et-part" data-wpart="'+i+'">'
       +'<td class="et-cnt'+wk+'" rowspan="2">回顧'+(hh.reviewCount||hh.reviews.length)+'走</td>'
       +'<td class="et-date">'+escW(dateTxt||"―")+'</td>'
-      +'<td class="et-race" colspan="2">'+raceHtml+'</td>'
+      +'<td class="et-race" colspan="3">'+raceHtml+'</td>'
       +'<td class="et-popfin'+finRv.c+'">'+popfinHtml+'</td></tr>'
       +'<tr class="et-r3 et-part" data-wpart="'+i+'">'
       +'<td class="et-flow">'+flowHtml+'</td>'
-      +'<td class="et-grd'+grdCls+'">'+grdHtml+'</td>'
+      +'<td class="et-grd'+grdCls+'" colspan="2">'+grdHtml+'</td>'
       +'<td class="et-level">'+levelHtml+'</td>'
       +'<td class="et-idx">'+idxHtml+'</td></tr>'
-      +(h.caution?'<tr class="et-caution et-part" data-wpart="'+i+'"><td colspan="5"><span class="et-caution-lab">注意</span>'+escW(h.caution)+'</td></tr>':"");
+      +(h.caution?'<tr class="et-caution et-part" data-wpart="'+i+'"><td colspan="6"><span class="et-caution-lab">注意</span>'+escW(h.caution)+'</td></tr>':"");
   }
   var det=histDetail(h,d);
   if(det==null){
@@ -3218,24 +3219,25 @@ function horseRow(h,i,total){
   }
   /* 1行目＝馬番／馬名（126px列）／「条件」＋照合の印／回顧メモ区分／注意タグ（ある場合のみ・折り返しなし1行）。
      詳細は従来どおり、その馬の下に全列結合の行として開く */
-  var memoCell=(memo==="―"?'<span class="wl-memo-none">―</span>':memo)
-    +(h.kata?'<br><span class="ana-kata wkata '+(KATACLS[h.kata]||"k-taikou")+'">'+escW(h.kata)+'</span>':"");
+  var memoCell=(memo==="―"?'<span class="wl-memo-none">―</span>':memo);
+  /* 型は区分の横（6列目）に出す。1行目の縦伸びを避けるため、区分セルの中には入れない */
+  var kataCell=h.kata?('<span class="ana-kata wkata '+(KATACLS[h.kata]||"k-taikou")+'">'+escW(h.kata)+'</span>'):"";
   var row1='<tr class="wrow et-r1" data-wmark="'+escW(h.mark)+'" data-wname="'+escW(h.name)+'" data-wab="'+escW(h.ab||"")+'" data-hasdet="1" tabindex="0" aria-expanded="false"'+idxAttr+'>'
     +'<td class="c-num'+wk+'">'+numCell+'</td>'
-    +'<td class="c-name et-name">'+wnameHtml(h.name)+'</td>'
+    +'<td class="c-name et-name" colspan="2">'+wnameHtml(h.name)+'</td>'
     +'<td class="et-cond"><span class="et-cond-lab">条件</span><span class="et-mark '+(MARKCLS[h.mark]||"")+'" title="'+escW(MARKLBL[h.mark]||h.mark)+'">'+escW(h.mark)+'</span></td>'
     +'<td class="et-memo">'+memoCell+'</td>'
-    +'<td class="et-tags">'+line1Tags+'</td></tr>';
+    +'<td class="et-tags">'+kataCell+'</td></tr>';
   if(hasRev){
     return row1+subRows
-      +'<tr class="wdet" data-wdet="'+i+'" style="display:none"><td colspan="5">'+det+'</td></tr>';
+      +'<tr class="wdet" data-wdet="'+i+'" style="display:none"><td colspan="6">'+det+'</td></tr>';
   }
   /* 回顧履歴の詳細が引けない馬（印だけある馬）は、2〜3行目を「回顧データなし」の結合セルにする */
   return row1
     +'<tr class="et-r2 et-part" data-wpart="'+i+'"><td class="et-cnt'+wk+'" rowspan="2">回顧なし</td>'
-    +'<td class="et-nodata" colspan="4" rowspan="2">回顧データなし</td></tr>'
+    +'<td class="et-nodata" colspan="5" rowspan="2">回顧データなし</td></tr>'
     +'<tr class="et-r3 et-part" data-wpart="'+i+'"></tr>'
-    +'<tr class="wdet" data-wdet="'+i+'" style="display:none"><td colspan="5">'+det+'</td></tr>';
+    +'<tr class="wdet" data-wdet="'+i+'" style="display:none"><td colspan="6">'+det+'</td></tr>';
 }
 function sortRaceRows(){
   document.querySelectorAll("[data-wrace] tbody").forEach(function(tb){
@@ -3456,7 +3458,7 @@ function renderWeekend(data){
       +'<span class="wr-line2"><span class="wr-dist'+(surfCls?" "+surfCls:"")+'">'+escW(surfShort)+escW(r.distance)+'m</span><span class="wr-heads">'+r.horses.length+'頭</span>'
       +'<span class="wr-counts"><span class="wc m1">◎'+cm["◎"]+'</span><span class="wc m2">○'+cm["○"]+'</span><span class="wc m3">△'+cm["△"]+'</span><span class="wc unk">不明'+(r.horses.length-known)+'</span></span></span>'
       +raceStatusHtml(r)+'</span><span class="wr-toggle"></span></summary>'
-      +'<div class="wlist"><table class="wtable etable"><colgroup><col class="et-col1" /><col class="et-col2" /><col class="et-col3" /><col class="et-col4" /><col class="et-col5" /></colgroup><tbody>'
+      +'<div class="wlist"><table class="wtable etable"><colgroup><col class="et-col1" /><col class="et-col2" /><col class="et-col3" /><col class="et-col4" /><col class="et-col5" /><col class="et-col6" /></colgroup><tbody>'
       +r.horses.map(function(h,i){return horseRow(h,i,raceFrameTotal(r))}).join("")
       +'</tbody></table></div>'
       +resultBlock(r)
