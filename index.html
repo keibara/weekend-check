@@ -1332,6 +1332,46 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 .news-race-note{font-size:12.5px;color:var(--ink2);background:var(--sub);border-radius:6px;padding:8px 10px;margin:10px 0 0}
 @media (max-width:560px){ .news-race-h{font-size:15.5px} }
 </style>
+<style>
+/* ===== 回顧データタブ：回顧メモ該当（馬中心の一覧＋その場で開く詳細）／回顧履歴 ===== */
+.phorse{border:1px solid var(--line);border-radius:6px;background:#fff;margin-bottom:8px;overflow:hidden}
+.phorse-head{display:flex;gap:10px;width:100%;text-align:left;background:none;border:none;padding:10px 12px;cursor:pointer;font:inherit;align-items:center;min-height:52px}
+.phorse-head:hover{background:var(--sub)}
+.phorse-head:focus-visible{outline:2px solid var(--blue);outline-offset:-2px}
+.phorse-main{display:flex;flex-direction:column;min-width:0;flex:1}
+.phorse-name{font-size:15.5px;font-weight:900;line-height:1.4}
+.phorse-name .watchflag{margin-left:6px;vertical-align:2px}
+.phorse-meta{font-size:12.5px;color:var(--ink2)}
+.phorse-toggle{font-size:12px;font-weight:700;color:var(--blue);white-space:nowrap;flex:0 0 auto}
+.phorse-det{border-top:1px solid var(--line);padding:10px 12px 12px;background:#fff}
+.phorse-det .pd-sec{margin:0 0 10px}
+.phorse-det .pd-sec:last-child{margin-bottom:0}
+.phorse-det h4{margin:0 0 4px;font-size:12.5px;color:var(--blue);letter-spacing:.05em}
+.phorse-det p{margin:2px 0;font-size:13.5px}
+.phorse-det .pd-line b{color:var(--ink2);font-size:12px}
+.pd-items{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 6px}
+.pd-item{border:1px solid var(--line);border-radius:999px;padding:2px 10px;font-size:12px;font-weight:700;color:var(--ink2);background:#fff}
+.pd-item b{font-weight:900}
+.pd-item.ok b{color:var(--c1)} .pd-item.ng b{color:var(--c3)} .pd-item.hold b{color:var(--c2)}
+.phorse-det .btn{min-height:40px;padding:6px 14px;font-size:13.5px}
+.hist-horse{border:1px solid var(--line);border-radius:6px;background:#fff;margin-bottom:8px;overflow:hidden}
+.hist-horse>summary{cursor:pointer;list-style:none;display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 10px;padding:10px 12px;min-height:48px}
+.hist-horse>summary::-webkit-details-marker{display:none}
+.hist-horse>summary:hover{background:var(--sub)}
+.hist-horse>summary:focus-visible{outline:2px solid var(--blue);outline-offset:-2px}
+.hist-horse .hh-name{font-size:15.5px;font-weight:900}
+.hist-horse .hh-meta{font-size:12.5px;color:var(--ink2)}
+.hist-horse .hh-count{margin-left:auto;font-size:12px;font-weight:900;color:var(--nk);white-space:nowrap}
+.hist-horse .hh-body{border-top:1px solid var(--line);padding:10px 12px 12px}
+.hist-rev{padding:8px 0;border-bottom:1px dotted var(--line)}
+.hist-rev:first-child{padding-top:0}
+.hist-rev:last-child{border-bottom:none;padding-bottom:0}
+.hist-rev .hr-head{font-size:13.5px;font-weight:900}
+.hist-rev p{margin:2px 0;font-size:13px}
+.hist-rev p b{color:var(--ink2);font-size:12px}
+.hist-rev .hr-memo{background:var(--sub);border-radius:6px;padding:7px 9px;white-space:pre-line}
+#search-results .horse{margin-top:10px}
+</style>
 </head>
 <body>
 <div class="wrap">
@@ -1342,14 +1382,10 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
         <div class="logo"><small>WEEKEND KEIBA NEWS</small>週末出走馬<span>チェック</span></div>
         <div class="hdr-date">11/21(土)・22(日)・23(月・祝) ― 3日間開催</div>
       </div>
-      <nav class="tabbar catnav" role="tablist" aria-label="ニュース・レース・回顧メモ該当レースの切り替え">
-        <button class="tabbtn" type="button" role="tab" id="tab-news" data-tab="news" aria-selected="true" aria-controls="panel-news">総合（ニュース）</button>
+      <nav class="tabbar catnav" role="tablist" aria-label="ニュース・レース・回顧データの切り替え">
+        <button class="tabbtn" type="button" role="tab" id="tab-news" data-tab="news" aria-selected="true" aria-controls="panel-news">ニュース</button>
         <button class="tabbtn" type="button" role="tab" id="tab-races" data-tab="races" aria-selected="false" aria-controls="panel-races" tabindex="-1">レース</button>
-        <button class="tabbtn" type="button" role="tab" id="tab-picks" data-tab="picks" aria-selected="false" aria-controls="panel-picks" tabindex="-1">回顧メモ該当レース</button>
-        <button class="navlink" type="button" data-navrace="kyoto2s">京都2歳S</button>
-        <button class="navlink" type="button" data-navrace="japancup">ジャパンカップ</button>
-        <button class="navlink" type="button" data-navrace="keihan">京阪杯</button>
-        <button class="navlink" type="button" data-navweekend="1">今週の全レース</button>
+        <button class="tabbtn" type="button" role="tab" id="tab-data" data-tab="data" aria-selected="false" aria-controls="panel-data" tabindex="-1">回顧データ</button>
       </nav>
     </div>
   </header>
@@ -1544,9 +1580,9 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 
   <aside class="side-col" aria-label="サイドバー">
     <div class="side-box check-box">
-      <h3>回顧メモ該当レースをまとめて確認</h3>
-      <p>確定出馬表と最新マスター（2026年11月22日統合版）の照合で、回顧メモのある馬は64頭（条件照合の内訳 ◎16・○9・△39）・22レースです。条件照合の印は順位・推奨順位ではありません。各馬の回顧内容・回顧メモの次走条件・照合の根拠は「レース」タブの各馬詳細にあり、このタブはレースへの索引です。</p>
-      <button class="btn" type="button" data-goto-focus>回顧メモ該当レースを見る</button>
+      <h3>回顧メモ該当の馬をまとめて確認</h3>
+      <p>確定出馬表と最新マスター（2026年11月22日統合版）の照合で、回顧メモのある馬は64頭（条件照合の内訳 ◎16・○9・△39）・22レースです。条件照合の印は順位・推奨順位ではありません。各馬の回顧メモと照合結果は「回顧データ」タブで馬ごとに確認できます。</p>
+      <button class="btn" type="button" data-goto-focus>回顧メモ該当の馬を見る</button>
     </div>
     <div class="side-box tags-box">
       <h3>注目キーワード</h3>
@@ -1649,16 +1685,19 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 
   </div><!-- /panel-races -->
 
-  <div id="panel-picks" class="tabpanel hidden" role="tabpanel" aria-labelledby="tab-picks" tabindex="0">
-  <!-- ============ 回顧メモ該当レース（索引）：馬ごとの詳細は載せず、レースタブの該当レースへ誘導する ============ -->
+  <div id="panel-data" class="tabpanel hidden" role="tabpanel" aria-labelledby="tab-data" tabindex="0">
+  <!-- ============ 回顧メモ該当：メモのある馬を中心にした一覧。各馬の詳細（回顧メモ・照合結果）はその場で開いて見られる ============ -->
   <section aria-labelledby="h-auto">
-    <h2 class="sec" id="h-auto">回顧メモ該当レース ― レースへの索引</h2>
-    <p class="sec-note">回顧メモのある馬（回顧メモ区分が「狙い」「危険」の馬）がいるレースだけの索引です。馬ごとの回顧内容・照合理由・メモはここには載せていません。レース行をタップすると「レース」タブの該当レースを開き、該当馬の位置へ移動します。</p>
-    <p class="sec-note"><strong>回顧メモ区分について：</strong>「狙い・保留・危険」は回顧メモに記録された区分で、<strong>今回の購入推奨ではありません</strong>。条件照合の印（◎条件一致／○一部一致（不一致なし・保留あり）／△条件不一致／？判定保留・データ不足）とも別のものです。印は順位・推奨順位でもありません。</p>
-    <p class="sec-note" id="picks-live-status" role="status">この一覧のデータ元を確認しています…</p>
+    <h2 class="sec" id="h-auto">回顧メモ該当 ― 馬の一覧</h2>
+    <details class="note-box foldbox guide-fold">
+      <summary>回顧メモ該当について（タップで開く）</summary>
+      <p>回顧メモのある馬（回顧メモ区分が「狙い」「危険」の馬）の一覧です。馬をタップすると、その馬の回顧メモと今回条件との照合結果の詳細がその場で開きます。レース全体の出馬表は「レース」タブにあります。</p>
+      <p><strong>回顧メモ区分について：</strong>「狙い・保留・危険」は回顧メモに記録された区分で、<strong>今回の購入推奨ではありません</strong>。条件照合の印（◎条件一致／○一部一致（不一致なし・保留あり）／△条件不一致／？判定保留・データ不足）とも別のものです。印は順位・推奨順位でもありません。</p>
+      <p id="picks-live-status" role="status">この一覧のデータ元を確認しています…</p>
+    </details>
     <details class="note-box foldbox guide-fold">
       <summary>照合の対象と見方（タップで開く）</summary>
-      <p>2026年11月20日夜に取得した確定出馬表（11月21〜23日・72レース・全1,043頭）と、回顧マスター（2026-11-22統合版：3,088行・224レース）の次走ウォッチリストを、2026年11月22日に再照合した結果です。回顧メモのある馬（メモ対象区分が「狙い」「危険」の馬）のうち今週末に出走する<strong>64頭</strong>がいる<strong>22レース</strong>を、日・レースごとに並べています。各レース行には該当頭数と条件照合の内訳だけを表示し、各馬の総合判定・根拠・回顧メモの次走条件は「レース」タブの各馬詳細で確認してください。なお、11月21日に実施したレース（京都1〜4R・福島3Rなど）の回顧も同日マスターへ統合されていますが、そのレース自身の「前走」にはならないため、この照合には使っていません（各馬の次回出走時の照合対象です）。記録された次走条件は過去の回顧に基づく<strong>仮説</strong>です。</p>
+      <p>2026年11月20日夜に取得した確定出馬表（11月21〜23日・72レース・全1,043頭）と、回顧マスター（2026-11-22統合版：3,088行・224レース）の次走ウォッチリストを、2026年11月22日に再照合した結果です。回顧メモのある馬（メモ対象区分が「狙い」「危険」の馬）のうち今週末に出走する<strong>64頭</strong>がいる<strong>22レース</strong>分を、馬ごとに並べています。各馬の総合判定・根拠・回顧メモの次走条件は、この一覧の各馬の詳細で確認できます（レース全体の出馬表と各馬のさらに詳しい記録は「レース」タブにあります）。なお、11月21日に実施したレース（京都1〜4R・福島3Rなど）の回顧も同日マスターへ統合されていますが、そのレース自身の「前走」にはならないため、この照合には使っていません（各馬の次回出走時の照合対象です）。記録された次走条件は過去の回顧に基づく<strong>仮説</strong>です。</p>
     </details>
 
     <div class="summary">
@@ -1680,6 +1719,12 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
       <button class="fbtn" type="button" data-pvenue="京都" aria-pressed="false">京都</button>
       <button class="fbtn" type="button" data-pvenue="福島" aria-pressed="false">福島</button>
     </div>
+    <div class="filters" role="group" aria-label="条件照合の印で馬を絞り込み">
+      <button class="fbtn" type="button" data-pmark="all" aria-pressed="true">印すべて</button>
+      <button class="fbtn" type="button" data-pmark="◎" aria-pressed="false">◎ 条件一致のみ</button>
+      <button class="fbtn" type="button" data-pmark="○" aria-pressed="false">○ 一部一致のみ</button>
+      <button class="fbtn" type="button" data-pmark="△" aria-pressed="false">△ 条件不一致のみ</button>
+    </div>
     <div id="picks-list"></div>
     <details class="note-box foldbox">
       <summary>照合の経緯・注意（タップで開く）</summary>
@@ -1687,7 +1732,37 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
     </details>
   
   </section>
-  </div><!-- /panel-picks -->
+
+  <!-- ============ 馬名検索：回顧マスター索引（assets/master-index.json）を遅延読み込みして馬名で検索 ============ -->
+  <section aria-labelledby="h-search">
+    <h2 class="sec" id="h-search">馬名検索（回顧マスター）</h2>
+    <p class="sec-note">回顧マスターの索引から、馬名（部分一致）で回顧のある馬を探します。索引データは、このタブを開いた時に初めて読み込みます（遅延読み込み）。</p>
+    <form class="searchrow" id="search-form">
+      <input type="search" id="in-search" placeholder="馬名を入力（例：ガイアフォース）" aria-label="馬名で回顧マスターを検索" autocomplete="off" />
+      <button class="btn" type="submit" id="btn-search">検索</button>
+    </form>
+    <p class="sec-note" id="search-status" role="status"></p>
+    <div id="search-results"></div>
+  </section>
+
+  <!-- ============ 回顧履歴：統合済み履歴データ（assets/history-detail.json）の表示 ============ -->
+  <section aria-labelledby="h-history">
+    <h2 class="sec" id="h-history">回顧履歴（統合済み）</h2>
+    <p class="sec-note" id="history-status" role="status">このタブを開くと、統合済みの回顧履歴データを読み込んで表示します。</p>
+    <div id="history-list"></div>
+  </section>
+
+  <section class="data-about" aria-labelledby="h-about">
+    <h2 class="sec" id="h-about">データについて</h2>
+    <div class="da-line"><b>対象レース</b><span>2026年11月21日（土）〜23日（月・祝）・全72レース・全1,043頭</span></div>
+    <div class="da-line"><b>回顧データ</b><span>統合マスター2026-11-23統合版・3,399件・245レース（メモ1,088件＝狙い755件・危険333件）</span></div>
+    <div class="da-line"><b>今回の回顧</b><span>61レース・871頭が回顧済み（未回顧11レース）</span></div>
+    <div class="da-line"><b>結果照合</b><span>全72レース完了（2026-11-23 17時時点）</span></div>
+    <div class="da-line"><b>馬場状態（11月23日）</b><span>JRA公式の確認値。東京＝晴・芝良・ダート良／福島＝晴・芝良・ダート稍重</span></div>
+    <div class="da-line"><b>更新について</b><span>このサイトは週次の定期更新でデータを再構築して公開しています</span></div>
+  </section>
+
+  </div><!-- /panel-data -->
 
   <details class="note-box foldbox guide-fold">
     <summary>見方・出典・注意（タップで開く）</summary>
@@ -1713,16 +1788,6 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
     <p>照合の出典：出馬表は2026年11月20日に取得した今週末分（72レース・1,043頭）です。判定は、各馬の直近最大3走の回顧を使う照合エンジン（2026年11月22日に2026-11-22統合版マスター＝3,088行・224レースで再照合）の結果で、回顧済み235頭の内訳は◎48・○70・△117です（当初11月20日時点の前走のみの判定では205頭・◎35・○71・△99でした。その後、統合された回顧の追加と直近3走での見直しで内訳が変わっています）。</p>なお、東京1R（11月22日）は当初の名簿が公式出馬表と食い違っていたため、公式の16頭に差し替えて再照合しています。福島記念（11/21福島11R）は16頭全頭が回顧済み、マイルCS（11/22京都11R）は18頭中17頭が回顧済み（エルデナリは海外レースのみで回顧なし＝不明）、東スポ杯2歳S（11/23東京11R）は12頭全頭が回顧済みです。出走取消・除外については、11月23日分で馬番が付く前に出走取消となった3頭（東京1R レッドシュヴァルツ・東京4R トーアレオン・東京6R ラポニア）を確認済みで、馬番なし（―）で表示しています。そのほかの出走取消・除外は未確認です。評価表の総合評価・実績指数・内容補正後能力評価は、詳細マスター（MUSE_v2_master_review_updated.csv）の回顧記録を、レースIDと馬名で照合して転記したものです（回顧済み235頭全頭分を確認済み）。</p>
     <p>結果との照合：2026年11月21・22・23日の全72レースについては、確定着順・着差（出走取消・除外・競走中止を含む）を「レース」タブの各レース欄で、発走前の状態（回顧メモ区分・条件照合・該当条件・根拠＝発走前に表示していたデータの凍結）と並べて表示します（2026-11-23 17時時点で月曜の全24レース分まで照合完了）。結果は「結果の内訳」として示し、予想的中率・購入推奨・収支としては扱いません。買い目・購入金額・購入有無は入力も表示もしません。結果照合後に新しい回顧ができても、発走前の表示・確定結果・新しい回顧は別の記録として保持し、発走前の状態は書き換えません。今回のレース自体の回顧が統合された61レース・871頭分は「今回の回顧」として馬ごとに追加表示し、判定の根拠になった過去の回顧（直近最大3走）とあわせて、各馬の「根拠・詳細を見る」から確認できます。未回顧の馬は「今回の回顧：未回顧」と明示します。</p>
   </details>
-
-  <section class="data-about" aria-labelledby="h-about">
-    <h2 class="sec" id="h-about">データについて</h2>
-    <div class="da-line"><b>対象レース</b><span>2026年11月21日（土）〜23日（月・祝）・全72レース・全1,043頭</span></div>
-    <div class="da-line"><b>回顧データ</b><span>統合マスター2026-11-23統合版・3,399件・245レース（メモ1,088件＝狙い755件・危険333件）</span></div>
-    <div class="da-line"><b>今回の回顧</b><span>61レース・871頭が回顧済み（未回顧11レース）</span></div>
-    <div class="da-line"><b>結果照合</b><span>全72レース完了（2026-11-23 17時時点）</span></div>
-    <div class="da-line"><b>馬場状態（11月23日）</b><span>JRA公式の確認値。東京＝晴・芝良・ダート良／福島＝晴・芝良・ダート稍重</span></div>
-    <div class="da-line"><b>更新について</b><span>このサイトは週次の定期更新でデータを再構築して公開しています</span></div>
-  </section>
 
   <footer>
     <p>データ：回顧マスター MUSE_v2_master_review_updated.csv（2026-11-22統合版：3,088行・224レース。読み取り専用・このページ内蔵の索引スナップショットは同版から再生成した2,357頭分で、旧版（2026-11-20確認・2,318行・168レース）は使用していません。CSV上の馬名は2,357種類で、同名の別馬2組を索引では分けて数えています）。「今週の全レース」一覧は、2026年11月20日に取得した今週末72レース・全1,043頭の出馬表と同マスターを照合した結果で、判定は直近最大3走の回顧による再照合（2026年11月22日）に基づきます（回顧済み235頭＝◎48・○70・△117／不明808頭）。京都1Rの前走評価は、2026-11-20作成の前走評価まとめ（新規回顧9レース・117頭分＋既存マスター収録3頭）に基づきます。「回顧メモ該当レース（64頭・22レース）」は、2026年11月20日夜に取得した確定出馬表と、最新マスター（2026-11-22統合版：3,088行・224レース）のウォッチリストを2026年11月22日に再照合し、回顧メモのある64頭（◎16・○9・△39）を抽出したものです（11月21日実施分の回顧は各馬自身の前走にはならないため、照合には含めていません）。結果との照合には2026年11月21・22・23日の全72レース・1,043頭分の確定結果を使い、発走前の表示は凍結したまま並べています。今回の回顧は61レース・871頭分（2026-11-23統合版マスターから抽出）を、発走前の表示・確定結果とは別の記録として追加表示しています。記録の正本はJRA公式、取得はnetkeibaを優先するという研究方針に沿い、各馬に出典と確認日を表示しています。有料サービス・有料API・追加課金は使用していません。</p>
@@ -1929,7 +1994,7 @@ function loadBuiltinMaster(bust,isUpdate,partOfAll){
   });
 }
 /* マスター索引（assets/master-index.json）は初期表示では読み込まない。
-   索引を使う画面（回顧メモ該当レース＝馬名索引タブ）を初めて開いた時と、
+   索引を使う画面（回顧データタブ）を初めて開いた時と、
    索引が必要な詳細表示から呼ばれた時にだけ、初回のみ読み込む（遅延読み込み） */
 var masterPromise=null;
 function ensureMasterIndex(){
@@ -1938,7 +2003,7 @@ function ensureMasterIndex(){
   return masterPromise;
 }
 window.__ensureMasterIndex=ensureMasterIndex;
-document.querySelectorAll('[data-tab="picks"]').forEach(function(t){
+document.querySelectorAll('[data-tab="data"]').forEach(function(t){
   t.addEventListener("click",function(){ ensureMasterIndex(); });
 });
 window.addEventListener("weekend-reloaded",function(ev){
@@ -2007,7 +2072,7 @@ function updatePicksSummary(){
     if(v!=="all"&&dayLbl[v]) b.textContent=dayLbl[v]+(s.days[v]||0)+"頭";
   });
   var srcTxt=(picksSource==="file"?("ファイル「"+picksFileName+"」で差し替え中（この画面内のみ）"):("ページ内蔵の照合結果（2026年11月22日・確定出馬表×マスター2026-11-22統合版（3,088行）の再照合）"));
-  set("picks-live-status","この索引のデータ："+srcTxt+" ― 実測 "+s.total+"頭（◎"+s.g+"・○"+s.m+"・△"+s.b+"／回顧メモ区分 狙い "+s.nerai+"・危険 "+s.kiken+"）・"+s.raceCount+"レース分。各馬の詳細は「レース」タブにあります。マスターや出走馬データを更新しても、この索引は自動では変わりません。");
+  set("picks-live-status","この一覧のデータ："+srcTxt+" ― 実測 "+s.total+"頭（◎"+s.g+"・○"+s.m+"・△"+s.b+"／回顧メモ区分 狙い "+s.nerai+"・危険 "+s.kiken+"）・"+s.raceCount+"レース分。各馬の回顧メモと照合結果は、この一覧の各馬の詳細で確認できます。マスターや出走馬データを更新しても、この一覧は自動では変わりません。");
   setReflect("picks",picksSource==="file"?"file":"baked",picksSource==="file"?"ファイルで差し替え中":"ページ内蔵（ファイル読込ではない）",
     "反映元："+srcTxt+"｜件数：実測 "+s.total+"頭（◎"+s.g+"・○"+s.m+"・△"+s.b+"／回顧メモ区分 狙い "+s.nerai+"頭・危険 "+s.kiken+"頭）・対象 "+s.raceCount+"レース");
   var jp=$("mu-jump-p");
@@ -2214,50 +2279,88 @@ function pickRaceGroups(){
   });
   return groups;
 }
+var VDLBL={"◎":"◎ 条件一致","○":"○ 一部一致（不一致なし・保留あり）","△":"△ 条件不一致","？":"？ 判定保留・データ不足"};
+var pickMark="all";
+function pickDetailHtml(p){
+  var h="";
+  h+='<div class="pd-sec"><h4>今回条件との照合結果</h4>';
+  h+='<p class="pd-line"><b>総合判定：</b>'+esc(VDLBL[p.vd]||p.vd)+'</p>';
+  if(p.items){
+    h+='<div class="pd-items">'+Object.keys(p.items).map(function(k){
+      var v=p.items[k];
+      var cls=v==="一致"?"ok":v==="不一致"?"ng":"hold";
+      return '<span class="pd-item">'+esc(k)+'：<b>'+esc(v)+'</b></span>';
+    }).join("")+'</div>';
+  }
+  if(p.ok) h+='<p class="pd-line"><b>一致した条件：</b>'+esc(p.ok)+'</p>';
+  if(p.ng) h+='<p class="pd-line"><b>不一致の条件：</b>'+esc(p.ng)+'</p>';
+  h+='</div>';
+  h+='<div class="pd-sec"><h4>回顧メモ（回顧メモ区分：'+esc(p.kind)+'）</h4>';
+  h+='<p class="pd-line"><b>記録された次走条件：</b>'+esc(p.cond||"なし")+'</p>';
+  if(p.basis) h+='<p class="pd-line"><b>根拠：</b>'+esc(p.basis)+'</p>';
+  if(p.prev) h+='<p class="pd-line"><b>根拠になった回顧：</b>'+esc(p.prev)+'</p>';
+  h+='</div>';
+  h+='<button type="button" class="btn sub" data-gorace-one="'+esc(p.d+"|"+p.v+"|"+p.r+"|"+p.name)+'">「レース」タブでこのレースを開く</button>';
+  return h;
+}
 function renderPicks(){
   var box=$("picks-list"); if(!box) return;
-  var days={"2026-11-21":"11\u670821\u65e5\uff08\u571f\uff09","2026-11-22":"11\u670822\u65e5\uff08\u65e5\uff09","2026-11-23":"11\u670823\u65e5\uff08\u6708\u30fb\u795d\uff09"};
-  var groups=pickRaceGroups();
+  var days={"2026-11-21":"11月21日（土）","2026-11-22":"11月22日（日）","2026-11-23":"11月23日（月・祝）"};
+  var dayCount={};
+  PICKS.forEach(function(p){ dayCount[p.d]=(dayCount[p.d]||0)+1; });
   var html="", curDay="";
-  groups.forEach(function(g){
-    if(g.d!==curDay){
+  PICKS.forEach(function(p){
+    if(p.d!==curDay){
       if(curDay) html+="</div>";
-      curDay=g.d;
-      var dn=groups.filter(function(x){return x.d===g.d}).length;
-      html+='<div class="pick-day" data-day="'+g.d+'"><h3 class="pick-day-h">'+(days[g.d]||g.d)+" \u2015 \u8a72\u5f53 "+dn+"\u30ec\u30fc\u30b9</h3>";
+      curDay=p.d;
+      html+='<div class="pick-day" data-day="'+p.d+'"><h3 class="pick-day-h">'+(days[p.d]||p.d)+" ― 該当 "+(dayCount[p.d]||0)+"頭</h3>";
     }
-    var marksTxt=["\u25ce","\u25cb","\u25b3","\uff1f"].filter(function(m){return g.marks[m]>0}).map(function(m){return m+g.marks[m]}).join("\u30fb");
-    html+='<button type="button" class="pindex-row" data-pindex data-pvenue="'+esc(g.v)+'" data-gorace="'+esc(g.d+"|"+g.v+"|"+g.r)+'">'
-      +'<span class="pindex-main"><span class="pindex-title">'+esc(g.v)+" "+g.r+"R "+esc(g.rn)+'</span>'
-      +'<span class="pindex-meta">'+esc(g.v)+" "+esc(g.sf)+esc(g.dist)+"m \u30fb "+esc(g.cls)+'</span></span>'
-      +'<span class="pindex-side"><span class="pindex-count">\u8a72\u5f53 '+g.horses.length+'\u982d</span>'
-      +'<span class="pindex-marks">\u6761\u4ef6\u7167\u5408 '+marksTxt+'</span>'
-      +'<span class="pindex-kinds">\u56de\u9867\u30e1\u30e2\u533a\u5206 \u72d9\u3044'+g.kinds["\u72d9\u3044"]+"\u30fb\u5371\u967a"+g.kinds["\u5371\u967a"]+'</span></span>'
-      +'<span class="pindex-arrow" aria-hidden="true">\u203a</span></button>';
+    var vc=VDCLS[p.vd]||"4";
+    html+='<div class="phorse" data-pindex data-pvenue="'+esc(p.v)+'" data-pmark="'+esc(p.vd)+'">'
+      +'<button type="button" class="phorse-head" aria-expanded="false">'
+      +'<span class="vmark v'+vc+'">'+esc(p.vd)+'</span>'
+      +'<span class="phorse-main"><span class="phorse-name">'+esc(p.name)
+      +'<span class="watchflag '+(p.kind==="狙い"?"hi":p.kind==="危険"?"danger":"")+'">'+esc(p.kind)+'</span></span>'
+      +'<span class="phorse-meta">'+esc(p.v)+" "+p.r+"R "+esc(p.rn)+" ・ "+esc(p.sf)+esc(p.dist)+"m ・ "+esc(p.num||"―")+'番</span></span>'
+      +'<span class="phorse-toggle">詳細 ＋</span></button>'
+      +'<div class="phorse-det" hidden>'+pickDetailHtml(p)+'</div></div>';
   });
   if(curDay) html+="</div>";
-  box.innerHTML=html||'<p class="sec-note">\u8a72\u5f53\u3059\u308b\u30ec\u30fc\u30b9\u304c\u3042\u308a\u307e\u305b\u3093\u3002</p>';
-  box.querySelectorAll("[data-gorace]").forEach(function(b){
+  box.innerHTML=html||'<p class="sec-note">該当する馬がありません。</p>';
+  box.querySelectorAll(".phorse-head").forEach(function(b){
     b.addEventListener("click",function(){
-      var parts=b.getAttribute("data-gorace").split("|");
-      var names=PICKS.filter(function(p){return p.d===parts[0]&&p.v===parts[1]&&String(p.r)===parts[2]}).map(function(p){return p.name});
-      window.dispatchEvent(new CustomEvent("goto-weekend-race",{detail:{date:parts[0],venue:parts[1],raceNo:parts[2],names:names}}));
+      var det=b.parentNode.querySelector(".phorse-det");
+      if(!det) return;
+      var open=det.hidden;
+      det.hidden=!open;
+      b.setAttribute("aria-expanded",open?"true":"false");
+      var tg=b.querySelector(".phorse-toggle");
+      if(tg) tg.textContent=open?"詳細 －":"詳細 ＋";
+    });
+  });
+  box.querySelectorAll("[data-gorace-one]").forEach(function(b){
+    b.addEventListener("click",function(){
+      var parts=b.getAttribute("data-gorace-one").split("|");
+      window.dispatchEvent(new CustomEvent("goto-weekend-race",{detail:{date:parts[0],venue:parts[1],raceNo:parts[2],names:[parts[3]]}}));
     });
   });
   applyPickFilters();
 }
 function applyPickFilters(){
-  document.querySelectorAll("[data-dayfilter]").forEach(function(b){
+  document.querySelectorAll("button[data-dayfilter]").forEach(function(b){
     b.setAttribute("aria-pressed", b.getAttribute("data-dayfilter")===pickDay?"true":"false");
   });
-  document.querySelectorAll("[data-pvenue]").forEach(function(b){
+  document.querySelectorAll("button[data-pvenue]").forEach(function(b){
     b.setAttribute("aria-pressed", b.getAttribute("data-pvenue")===pickVenue?"true":"false");
+  });
+  document.querySelectorAll("button[data-pmark]").forEach(function(b){
+    b.setAttribute("aria-pressed", b.getAttribute("data-pmark")===pickMark?"true":"false");
   });
   document.querySelectorAll(".pick-day").forEach(function(day){
     var dayOn=(pickDay==="all"||day.getAttribute("data-day")===pickDay);
     var any=false;
     day.querySelectorAll("[data-pindex]").forEach(function(row){
-      var on=dayOn&&(pickVenue==="all"||row.getAttribute("data-pvenue")===pickVenue);
+      var on=dayOn&&(pickVenue==="all"||row.getAttribute("data-pvenue")===pickVenue)&&(pickMark==="all"||row.getAttribute("data-pmark")===pickMark);
       row.style.display=on?"":"none";
       if(on) any=true;
     });
@@ -2270,8 +2373,35 @@ document.querySelectorAll("[data-dayfilter]").forEach(function(b){
 document.querySelectorAll("[data-pvenue]").forEach(function(b){
   b.addEventListener("click",function(){ pickVenue=b.getAttribute("data-pvenue"); applyPickFilters(); });
 });
+document.querySelectorAll("[data-pmark]").forEach(function(b){
+  b.addEventListener("click",function(){ pickMark=b.getAttribute("data-pmark"); applyPickFilters(); });
+});
 renderPicks();
 updatePicksSummary();
+/* ---------- 馬名検索（回顧データタブ）：マスター索引は遅延読み込みのまま ---------- */
+var sForm=$("search-form");
+if(sForm){
+  sForm.addEventListener("submit",function(e){
+    e.preventDefault();
+    var inp=$("in-search");
+    var q=((inp&&inp.value)||"").trim();
+    var box=$("search-results"), st=$("search-status");
+    if(!q){ if(st) st.textContent="馬名を入力してください。"; return; }
+    if(st) st.textContent="索引を読み込んでいます…";
+    ensureMasterIndex().then(function(){
+      if(!MASTER||!MASTER.horses){ if(st) st.textContent="索引データを読み込めませんでした。"; if(box) box.innerHTML=""; return; }
+      var hits=MASTER.horses.filter(function(h){ return h.name&&h.name.indexOf(q)>=0; });
+      hits.sort(function(a,b){
+        var ea=a.name===q?0:1, eb=b.name===q?0:1;
+        if(ea!==eb) return ea-eb;
+        return (b.n||0)-(a.n||0);
+      });
+      if(st) st.textContent="「"+q+"」の検索結果："+hits.length+"頭"+(hits.length>20?"（回顧の多い順に上位20頭を表示）":"");
+      if(!hits.length){ if(box) box.innerHTML='<p class="sec-note">回顧マスターに「'+esc(q)+'」を含む馬名の記録はありません。</p>'; return; }
+      if(box) box.innerHTML=hits.slice(0,20).map(function(h){ return summaryCard(h); }).join("");
+    });
+  });
+}
 /* 回顧履歴（assets/history-detail.json）は週末一覧側で読み込む。索引は内蔵データだけで描画する */
 })();
 </script>
@@ -2296,7 +2426,7 @@ btns.forEach(function(b){
 (function(){
 "use strict";
 var tabs=document.querySelectorAll("[data-tab]");
-var panels={news:document.getElementById("panel-news"),races:document.getElementById("panel-races"),picks:document.getElementById("panel-picks")};
+var panels={news:document.getElementById("panel-news"),races:document.getElementById("panel-races"),data:document.getElementById("panel-data")};
 function activate(name,focus){
   tabs.forEach(function(t){
     var on=t.getAttribute("data-tab")===name;
@@ -2390,7 +2520,7 @@ function gotoTab(name){
   if(t) t.click();
 }
 function gotoFocusTop(){
-  gotoTab("picks");
+  gotoTab("data");
   var h=document.getElementById("h-auto");
   if(h) setTimeout(function(){ h.scrollIntoView({behavior:"smooth",block:"start"}); },60);
 }
@@ -3419,7 +3549,7 @@ function loadWeekend(bust){
       window.dispatchEvent(new CustomEvent("weekend-reloaded",{detail:{ok:false,error:(e&&e.message)||"読み込めませんでした"}}));
     }else{
       var box=document.getElementById("weekend-list");
-      if(box) box.innerHTML='<p class="sec-note">一覧データ（assets/weekend-view.json）を読み込めませんでした。回顧済みの馬は「回顧メモ該当レース」タブの索引で確認してください。</p>';
+      if(box) box.innerHTML='<p class="sec-note">一覧データ（assets/weekend-view.json）を読み込めませんでした。回顧済みの馬は「回顧データ」タブの回顧メモ該当一覧で確認してください。</p>';
     }
   });
 }
@@ -3616,6 +3746,67 @@ if(wl) wl.addEventListener("click",function(e){
   b.setAttribute("aria-expanded",open?"false":"true");
   b.textContent=open?"結果と照合 ＋":"結果と照合 －";
 });
+})();
+</script>
+<script>
+(function(){
+"use strict";
+/* 回顧履歴（統合済み）：「回顧データ」タブを初めて開いた時にだけ assets/history-detail.json を読み込む（遅延読み込み） */
+function escH(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function fmtHistDate(s){
+  s=String(s||"").trim();
+  if(/^\d{8}$/.test(s)) return s.slice(0,4)+"年"+Number(s.slice(4,6))+"月"+Number(s.slice(6,8))+"日";
+  var m=s.match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if(m) return m[1]+"年"+Number(m[2])+"月"+Number(m[3])+"日";
+  return s||"日付未確認";
+}
+var histLoaded=false, histLoading=false;
+function renderHistory(data){
+  var box=document.getElementById("history-list");
+  var st=document.getElementById("history-status");
+  var names=Object.keys(data||{});
+  var totalRev=0;
+  var html="";
+  names.forEach(function(name){
+    var hd=data[name]||{};
+    var revs=hd.reviews||[];
+    totalRev+=revs.length;
+    var e=hd.entry||{};
+    var lr=revs[0]||{};
+    html+='<details class="hist-horse"><summary>'
+      +'<span class="hh-name">'+escH(name)+'</span>'
+      +(revs.length?'<span class="hh-meta">最新の回顧：'+escH(fmtHistDate(lr["開催日"]))+" "+escH(lr["競馬場"]||"")+escH(lr["レース番号"]||"")+" "+escH(lr["クラス"]||"")+" ― "+escH(lr["着順"]?lr["着順"]+"着":"着順未確認")+" ・ 評価 "+escH(lr["総合評価"]||"―")+" ・ 展開 "+escH(lr["展開との相性"]||"―")+'</span>':'<span class="hh-meta">回顧の記録がありません</span>')
+      +'<span class="hh-count">回顧 '+(hd.reviewCount!=null?hd.reviewCount:revs.length)+'走分</span></summary>'
+      +'<div class="hh-body">'
+      +(e["出走日"]?'<p class="hh-meta" style="margin:0 0 6px">今週末の出走：'+escH(fmtHistDate(String(e["出走日"]).split("-").join("")))+" "+escH(e["競馬場"]||"")+escH(e["レース番号"]||"")+"R "+escH(e["レース名"]||"")+"（"+escH(e["今回芝ダート"]||"")+escH(e["今回距離"]||"")+"m）</p>":"");
+    revs.forEach(function(rv){
+      html+='<div class="hist-rev">'
+        +'<div class="hr-head">'+escH(fmtHistDate(rv["開催日"]))+" "+escH(rv["競馬場"]||"")+escH(rv["レース番号"]||"")+" "+escH(rv["クラス"]||"")+"（"+escH(rv["コース表記"]||"")+(rv["馬場状態"]?"・"+escH(rv["馬場状態"]):"")+"） ― "+escH(rv["着順"]?rv["着順"]+"着":"着順未確認")+'</div>'
+        +'<p><b>着差／通過／上り：</b>'+escH(rv["着差"]||"未確認")+" ／ "+escH(rv["通過順位"]||"未確認")+" ／ "+escH(rv["推定上り"]||"未確認")+(rv["上がり順位"]?"（"+escH(rv["上がり順位"])+"番目）":"")+'</p>'
+        +'<p><b>評価：</b>'+escH(rv["総合評価"]||"―")+" ・ 実績指数 "+escH(rv["実績指数"]||"―")+" ・ 補正後 "+escH(rv["内容補正後能力評価"]||"―")+(rv["信頼度"]?" ・ 信頼度 "+escH(rv["信頼度"]):"")+'</p>'
+        +(rv["展開との相性"]?'<p><b>展開評価：</b>'+escH(rv["展開との相性"])+(rv["展開との相性の理由"]?" ― "+escH(rv["展開との相性の理由"]):"")+'</p>':"")
+        +(rv["メモ対象区分"]&&rv["馬メモ用テキスト"]?'<p class="hr-memo"><b>回顧メモ（'+escH(rv["メモ対象区分"])+'）</b>'+escH(String(rv["馬メモ用テキスト"]).replace(/買条件/g,"記録された次走条件"))+'</p>':"")
+        +'</div>';
+    });
+    html+='</div></details>';
+  });
+  if(box) box.innerHTML=html||'<p class="sec-note">回顧履歴データがありません。</p>';
+  if(st) st.textContent="統合済みの回顧履歴 "+names.length+"頭・"+totalRev+"走分を表示しています（assets/history-detail.json）。馬名をタップすると各走の回顧が開きます。";
+}
+function loadHistory(){
+  if(histLoaded||histLoading) return;
+  histLoading=true;
+  var st=document.getElementById("history-status");
+  if(st) st.textContent="回顧履歴データを読み込んでいます…";
+  fetch("assets/history-detail.json").then(function(r){ if(!r.ok) throw new Error("http "+r.status); return r.json(); })
+  .then(function(data){ histLoaded=true; histLoading=false; renderHistory(data); })
+  .catch(function(e){
+    histLoading=false;
+    if(st) st.textContent="回顧履歴データ（assets/history-detail.json）を読み込めませんでした："+e.message;
+  });
+}
+var dt=document.querySelector('[data-tab="data"]');
+if(dt) dt.addEventListener("click",loadHistory);
 })();
 </script>
 </body>
