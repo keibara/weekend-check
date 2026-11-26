@@ -1403,9 +1403,14 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 .et-race.rz2{font-size:9px;letter-spacing:-.04em}
 .et-caution-lab{font-weight:900;margin-right:6px}
 .conn-box{border:1px solid var(--line);border-radius:6px;background:var(--sub);padding:9px 11px;margin-bottom:10px}
-.conn-h{font-weight:900;font-size:13px;margin-bottom:4px}
-.conn-line{font-size:12.5px;line-height:1.65;margin:2px 0}
-.conn-use{font-size:12.5px;color:var(--ink2);margin:2px 0}
+.conn-head{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:3px}
+.conn-h{font-weight:900;font-size:13px}
+.conn-use-chip{font-size:12px;font-weight:900;border:1.5px solid;border-radius:999px;padding:3px 10px;white-space:nowrap}
+.conn-use-chip.cu-go{color:#2456c8;border-color:#2456c8}
+.conn-use-chip.cu-stop{color:#d92b2b;border-color:#d92b2b}
+.conn-line{font-size:12.5px;line-height:1.6;margin:2px 0}
+.conn-chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:7px}
+.conn-chip{font-size:12px;border:1px solid var(--line);border-radius:8px;padding:4px 8px;background:var(--card,#fff)}
 .ana-zone{font-size:13px;font-weight:900;color:var(--ink2);margin:24px 0 2px;letter-spacing:.06em}
 .ana-sum{border:2px solid;border-radius:8px;padding:12px 14px;margin-top:10px;background:#fff}
 .ana-sum.good{border-color:#2456c8}
@@ -3299,12 +3304,16 @@ function horseRow(h,i,total){
     }
     det=concl+(D2?'<details class="rev-more det-fold"><summary>詳細を見る</summary>'+D2+'</details>':"");
   }
-  if(h.connPrev||h.connNow){
-    var connHtml='<div class="conn-box"><div class="conn-h">分析との接続</div>'
-      +(h.connPrev?'<p class="conn-line"><b>前走（事実）</b>：'+escW(h.connPrev)+'</p>':"")
-      +(h.connNow?'<p class="conn-line"><b>今回（扱い）</b>：'+escW(h.connNow)+'</p>':"")
-      +(h.connUse?'<p class="conn-use">→ '+escW(h.connUse)+'</p>':"")
-      +'</div>';
+  if(h.connFact||h.connReview||h.connChips||h.connUse){
+    var useChip=h.connUse?'<span class="conn-use-chip '+(h.connTone==="stop"?"cu-stop":"cu-go")+'">→ '+escW(h.connUse)+'</span>':"";
+    var chipsHtml="";
+    if(h.connChips&&h.connChips.length){
+      chipsHtml='<div class="conn-chips">'+h.connChips.map(function(c){return '<span class="conn-chip">'+escW(c.label)+' 次走3着内 <b>'+c.board+'%</b>（n='+c.n+(c.ref?'・参考値':"")+'）</span>';}).join("")+'</div>';
+    }
+    var connHtml='<div class="conn-box"><div class="conn-head"><span class="conn-h">分析との接続</span>'+useChip+'</div>'
+      +(h.connFact?'<p class="conn-line"><b>前走</b>：'+escW(h.connFact)+'</p>':"")
+      +(h.connReview?'<p class="conn-line"><b>回顧</b>：'+escW(h.connReview)+'</p>':"")
+      +chipsHtml+'</div>';
     det=connHtml+(det||"");
   }
   /* 1行目＝馬番／馬名（126px列）／「条件」＋照合の印／回顧メモ区分／注意タグ（ある場合のみ・折り返しなし1行）。
