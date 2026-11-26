@@ -1470,6 +1470,22 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 .ana-bar.dual{position:relative}
 .ana-bar.dual>span{position:absolute;left:0;top:0}
 .ana-bar.dual .b-board{opacity:.30}
+.ana-list{border:1px solid var(--line);border-radius:10px;background:#fff;padding:2px 12px}
+.ana-lrow{padding:7px 0;border-bottom:1px solid var(--line)}
+.ana-lrow:last-child{border-bottom:none}
+.ana-lrow-top{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+.ana-lrow .ana-label{font-size:13.5px}
+.ana-lrow .ana-n{font-size:11px}
+.ana-lrow .ana-kata{font-size:10.5px;padding:0 7px}
+.ana-lnum{margin-left:auto;white-space:nowrap;display:flex;align-items:baseline;gap:6px}
+.ana-lnum b{font-size:17px;font-weight:900;font-variant-numeric:tabular-nums}
+.ana-lnum span{font-size:11px;color:var(--ink2);font-weight:700}
+.ana-lbar{position:relative;height:6px;border-radius:3px;background:#eef1f5;margin-top:4px;overflow:hidden}
+.ana-lbar>span{position:absolute;left:0;top:0;height:100%;border-radius:3px}
+.ana-lbar .b-board{opacity:.30}
+.ana-lsub{font-size:11px;color:var(--ink2);margin-top:3px}
+.ana-terms{margin:6px 0;padding-left:18px}
+.ana-terms li{font-size:13px;line-height:1.65;margin-bottom:2px}
 .ana-legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:11.5px;color:var(--ink2);margin:2px 0 10px}
 .ana-legend .lg-sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:-1px}
 .ana-table{width:100%;border-collapse:collapse;font-size:13.5px;background:#fff}
@@ -4023,23 +4039,22 @@ function anaRank(d, opts){
   var ref=(Number(d.n)||0)<30;
   var col=opts.color||"#2456c8";
   var himo=(opts.himoTag&&d.kata==="ヒモ型")?'<span class="ana-kata k-himo">ヒモで買える</span>':"";
-  return '<div class="ana-row">'
-    +'<div class="ana-row-top"><span class="ana-label">'+escA(d.label||"")+'</span>'+himo
-    +'<span class="ana-n">n='+escA(d.n)+'</span>'+(ref?'<span class="ana-ref">参考値</span>':"")+'</div>'
-    +'<div class="ana-boardline"><span class="ana-rate">'+escA(d.board)+'%</span><span class="ana-rate-lab">3着内率</span>'
-    +'<span class="ana-p1"><b>1着率</b>'+escA(d.p1)+'%</span></div>'
-    +'<div class="ana-bar dual"><span class="b-board" style="width:'+Math.max(0,Math.min(100,Number(d.board)||0))+'%;background:'+col+'"></span><span class="b-p1" style="width:'+Math.max(0,Math.min(100,Number(d.p1)||0))+'%;background:'+col+'"></span></div>'
+  return '<div class="ana-lrow">'
+    +'<div class="ana-lrow-top"><span class="ana-label">'+escA(d.label||"")+'</span>'+himo
+    +'<span class="ana-n">n='+escA(d.n)+(ref?'・参考値':"")+'</span>'
+    +'<span class="ana-lnum"><b>'+escA(d.board)+'%</b><span>1着 '+escA(d.p1)+'%</span></span></div>'
+    +'<div class="ana-lbar"><span class="b-board" style="width:'+Math.max(0,Math.min(100,Number(d.board)||0))+'%;background:'+col+'"></span><span class="b-p1" style="width:'+Math.max(0,Math.min(100,Number(d.p1)||0))+'%;background:'+col+'"></span></div>'
     +'</div>';
 }
 function anaDanger(d){
   var off=100-Number(d.board);
   var ref=(Number(d.n)||0)<30;
-  return '<div class="ana-row">'
-    +'<div class="ana-row-top"><span class="ana-label">危険 × 次走で人気</span>'
-    +'<span class="ana-n">n='+escA(d.n)+'</span>'+(ref?'<span class="ana-ref">参考値</span>':"")+'</div>'
-    +'<div class="ana-boardline"><span class="ana-rate" style="color:#b91c1c">'+off+'%</span><span class="ana-rate-lab">3着を外す率</span>'
-    +'<span class="ana-p1"><b>3着内</b>'+escA(d.board)+'%・<b>1着</b>'+escA(d.p1)+'%</span></div>'
-    +'<div class="ana-bar dual"><span class="b-board" style="width:'+off+'%;background:#d92b2b"></span></div>'
+  return '<div class="ana-lrow">'
+    +'<div class="ana-lrow-top"><span class="ana-label">危険 × 次走で人気</span>'
+    +'<span class="ana-n">n='+escA(d.n)+(ref?'・参考値':"")+'</span>'
+    +'<span class="ana-lnum"><b style="color:#b91c1c">'+off+'%</b><span>3着を外す率</span></span></div>'
+    +'<div class="ana-lbar"><span class="b-board" style="width:'+off+'%;background:#d92b2b"></span></div>'
+    +'<div class="ana-lsub">3着内 '+escA(d.board)+'%・1着 '+escA(d.p1)+'%（人気の割に低い）</div>'
     +'</div>';
 }
 function renderAnalysis(data){
@@ -4051,21 +4066,23 @@ function renderAnalysis(data){
   html+='<h2 class="ana-title">買えるか、買えないか</h2>'
     +'<p class="ana-sub">回顧の材料別、次走で効いた順。バーは濃い部分が1着率。</p>';
   /* 買える */
-  html+='<div class="ana-sec buy">買える</div>';
+  html+='<div class="ana-sec buy">買える</div><div class="ana-list">';
   if(layers[0]) html+=anaRank({label:"ヒモ型・一変",n:layers[0].n,board:layers[0].board,p1:layers[0].p1,kata:layers[0].kata},{color:"#2456c8",himoTag:true});
   if(pops[0]) html+=anaRank({label:"狙い × 前走1〜3番人気",n:pops[0].n,board:pops[0].board,p1:pops[0].p1},{color:"#2456c8"});
-  if(grades[0]) html+=anaRank({label:"評価S",n:grades[0].n,board:grades[0].board,p1:grades[0].p1,kata:grades[0].kata},{color:"#3f51b5",himoTag:true});
+  if(grades[0]) html+=anaRank({label:"評価S",n:grades[0].n,board:grades[0].board,p1:grades[0].p1,kata:grades[0].kata},{color:"#2456c8",himoTag:true});
   if(grades[1]) html+=anaRank({label:"評価A",n:grades[1].n,board:grades[1].board,p1:grades[1].p1},{color:"#2456c8"});
   if(cats["狙い"]) html+=anaRank({label:"狙い 全体",n:cats["狙い"].n,board:cats["狙い"].board,p1:cats["狙い"].p1},{color:"#2456c8"});
-  if(ibands[0]) html+=anaRank({label:"回顧指数 90以上",n:ibands[0].n,board:ibands[0].board,p1:ibands[0].p1},{color:"#0f766e"});
+  if(ibands[0]) html+=anaRank({label:"回顧指数 90以上",n:ibands[0].n,board:ibands[0].board,p1:ibands[0].p1},{color:"#2456c8"});
+  html+='</div>';
   if(cats["対象外"]) html+='<div class="ana-base">基準：メモなし（対象外）　3着内 '+escA(cats["対象外"].board)+'%・1着 '+escA(cats["対象外"].p1)+'%（n='+escA(cats["対象外"].n)+'）</div>';
   /* 買えない */
-  html+='<div class="ana-sec sell">買えない</div>';
+  html+='<div class="ana-sec sell">買えない</div><div class="ana-list">';
   var dnp=(data.danger_next_pop||[])[0];
   if(dnp) html+=anaDanger(dnp);
   if(pops[3]) html+=anaRank({label:"狙い × 前走10番人気以下",n:pops[3].n,board:pops[3].board,p1:pops[3].p1},{color:"#d92b2b"});
   if(grades[4]) html+=anaRank({label:"評価D",n:grades[4].n,board:grades[4].board,p1:grades[4].p1},{color:"#d92b2b"});
   if(ibands[2]) html+=anaRank({label:"回顧指数 80未満",n:ibands[2].n,board:ibands[2].board,p1:ibands[2].p1},{color:"#d92b2b"});
+  html+='</div>';
   /* 内訳（折りたたみ） */
   html+='<details class="ana-details"><summary>内訳（区分・人気・評価・指数・層別）</summary>';
   html+='<div class="ana-block"><h3 class="ana-block-h">評価</h3>'
@@ -4128,8 +4145,17 @@ function renderAnalysis(data){
   });
   html+='</tbody></table></div></div></details>';
   /* 定義（折りたたみ・末尾） */
-  html+='<details class="note-box foldbox guide-fold ana-note"><summary>分析の定義・型の決め方（タップで開く）</summary>'
-    +'<p>'+escA(data.note||"")+'</p>'
+  html+='<details class="note-box foldbox guide-fold ana-note"><summary>用語の説明（タップで開く）</summary>'
+    +'<ul class="ana-terms">'
+    +'<li><b>次走</b>：次に回顧対象になったレース（全出走ではない）</li>'
+    +'<li><b>3着内率・1着率</b>：次走での割合。率は検証用</li>'
+    +'<li><b>n</b>：検証できた件数。30未満は参考値</li>'
+    +'<li><b>狙い／危険／対象外</b>：回顧メモの区分</li>'
+    +'<li><b>本命型／対抗型／ヒモ型</b>：3着内に占める1着の割合で分類（40%以上＝本命型、20〜40%＝対抗型、20%未満＝ヒモ型）</li>'
+    +'<li><b>ヒモ型・一変</b>：前走8着以下×7番人気以下で、狙いメモが付いた馬</li>'
+    +'<li><b>回顧指数</b>：回顧の内容補正後の能力評価</li>'
+    +'<li><b>レースLV</b>：前走レースの勝ち馬のタイム指数（netkeiba）</li>'
+    +'</ul>'
     +(data.generated?'<p class="ana-gen">集計日：'+escA(data.generated)+'</p>':"")
     +'</details>';
   root.innerHTML=html;
