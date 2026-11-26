@@ -1377,6 +1377,10 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 .wkata{font-size:10px;padding:0 6px;line-height:1.5;margin-top:2px}
 .et-popfin{text-align:center}
 .et-popfin .pop-lab{font-size:10px}
+.et-popfin.f1 b{color:#c9a400}
+.et-popfin.f2 b{color:#2456c8}
+.et-popfin.f3 b{color:#d92b2b}
+.et-popfin .pop-field{font-size:10px;color:#8f979e}
 .et-level{text-align:center}
 .et-level b{color:var(--ink)}
 .et-caution td{background:#fff8e6;color:#7a4d00;font-size:12px;line-height:1.55;padding:3px 8px;border-bottom:1px solid #b9c2cc}
@@ -3082,6 +3086,7 @@ function raceFrameTotal(r){
   (r.horses||[]).forEach(function(h){ var n=parseInt(h.num,10); if(!isNaN(n)&&n>t) t=n; });
   return t||null;
 }
+var KATACLS={"本命型":"k-honmei","対抗型":"k-taikou","ヒモ型":"k-himo"};
 function horseRow(h,i,total){
   var numCell=h.num?escW(h.num):"―";
   var fr=frameNo(h.num,total);
@@ -3158,8 +3163,7 @@ function horseRow(h,i,total){
       var dd=h.detail||{};
       var pp=String(dd.popularity||"").trim(), ff=String(dd.finish||"").trim();
       if(!ff) return;
-      var finPart=ff+(h.prevField?("/"+h.prevField):"");
-      popfinHtml=(pp?('<span class="pop-lab">'+escW(pp)+'人気</span> '):"")+'<b>'+escW(finPart)+'</b>';
+      popfinHtml=(pp?('<span class="pop-lab">'+escW(pp)+'人気</span> '):"")+'<b>'+escW(ff)+'</b>'+(h.prevField?('<span class="pop-field">/'+escW(String(h.prevField))+'</span>'):"");
     })();
     var levelHtml=(h.level!=null&&h.level!=="")?('<span class="rv-lab">レベル</span> <b>'+escW(h.level)+'</b>'):"―";
     subRows='<tr class="et-r2 et-part" data-wpart="'+i+'">'
@@ -3676,7 +3680,7 @@ window.addEventListener("goto-weekend-race",function(ev){
   };
   setTimeout(findRace,90);
 });
-loadWeekend(false);
+loadWeekend(true);
 window.addEventListener("reload-weekend-data",function(){ loadWeekend(true); });
 window.addEventListener("apply-weekend-data",function(ev){
   var d=(ev&&ev.detail)||{};
