@@ -1233,9 +1233,9 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 .etable{table-layout:fixed;width:100%;border-collapse:collapse}
 .etable col.et-col1{width:3.9em}
 .etable col.et-col2{width:84px}
-.etable col.et-col3{width:40px}
-.etable col.et-col4{width:60px}
-.etable col.et-col5{width:60px}
+.etable col.et-col3{width:30px}
+.etable col.et-col4{width:54px}
+.etable col.et-col5{width:76px}
 .etable col.et-col6{width:auto}
 .etable td{border:1px solid #e6e9ec;padding:0 3px;vertical-align:middle}
 .etable tr.et-r1{height:36px}
@@ -3115,8 +3115,8 @@ function horseRow(h,i,total){
      列構成：1列目（3.9em）＝馬番／回顧ラベル、2列目（84px）＝日付／展開、
      3列目（40px）・4列目（60px）・5列目（60px）・6列目（残り）は行ごとに結合を変えて使う。
      1行目（36px・標準色）＝馬番／馬名（2〜3列結合）／「条件」＋照合の印（4列目）／回顧メモ区分（5列目）／型（6列目・狙いのみ）。
-     2行目（18px・グレー）＝回顧◯走（2行結合・上下中央・太字）／日付（2列目）／レース名（3〜5列結合）／人気・着順（6列目）。
-     3行目（18px・グレー）＝展開（2列目）／評価（3〜4列結合）／レベル（5列目）／回顧指数（6列目）。値は従来と同じ最新の回顧から取る */
+     2行目（18px・グレー）＝回顧◯走（2行結合・上下中央・太字）／日付（2列目）／レース名（3〜5列結合）／レベル（6列目）。
+     3行目（18px・グレー）＝人気・着順（2列目）／展開（3〜4列結合）／回顧指数（5列目）／評価（6列目）。値は従来と同じ最新の回顧から取る */
   var subRows="", line1Tags="", line1Long=false;
   var hasRev=!!(hh&&hh.reviews&&hh.reviews.length);
   if(hasRev){
@@ -3171,12 +3171,12 @@ function horseRow(h,i,total){
       +'<td class="et-cnt'+wk+'" rowspan="2">回顧'+(hh.reviewCount||hh.reviews.length)+'走</td>'
       +'<td class="et-date">'+escW(dateTxt||"―")+'</td>'
       +'<td class="et-race" colspan="3">'+raceHtml+'</td>'
-      +'<td class="et-popfin'+finRv.c+'">'+popfinHtml+'</td></tr>'
+      +'<td class="et-level">'+levelHtml+'</td></tr>'
       +'<tr class="et-r3 et-part" data-wpart="'+i+'">'
-      +'<td class="et-flow">'+flowHtml+'</td>'
-      +'<td class="et-grd'+grdCls+'" colspan="2">'+grdHtml+'</td>'
-      +'<td class="et-level">'+levelHtml+'</td>'
-      +'<td class="et-idx">'+idxHtml+'</td></tr>'
+      +'<td class="et-popfin'+finRv.c+'">'+popfinHtml+'</td>'
+      +'<td class="et-flow" colspan="2">'+flowHtml+'</td>'
+      +'<td class="et-idx">'+idxHtml+'</td>'
+      +'<td class="et-grd'+grdCls+'">'+grdHtml+'</td></tr>'
       +(h.caution?'<tr class="et-caution et-part" data-wpart="'+i+'"><td colspan="6"><span class="et-caution-lab">注意</span>'+escW(h.caution)+'</td></tr>':"");
   }
   var det=histDetail(h,d);
