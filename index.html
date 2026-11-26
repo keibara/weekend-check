@@ -1384,7 +1384,14 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 .et-popfin .pop-field{font-size:10px;color:#8f979e}
 .et-level{text-align:center}
 .et-level b{color:var(--ink)}
-.et-caution td{background:#fff8e6;color:#7a4d00;font-size:12px;line-height:1.55;padding:3px 8px;border-bottom:1px solid #b9c2cc}
+.et-caution td{background:#fff8e6;color:#7a4d00;font-size:11px;line-height:1.5;padding:3px 8px;border-bottom:1px solid #b9c2cc;white-space:nowrap;overflow:hidden}
+.et-caution td.cz1{font-size:10px;letter-spacing:-.02em}
+.et-caution td.cz2{font-size:9px;letter-spacing:-.02em}
+.et-caution td.cz3{font-size:8px;letter-spacing:-.02em}
+.et-caution td.cz4{font-size:7.5px;letter-spacing:-.02em}
+.et-caution td.cz5{font-size:9px;letter-spacing:-.02em;line-height:1.45;white-space:normal}
+.et-race.rz1{font-size:10.5px;letter-spacing:-.02em}
+.et-race.rz2{font-size:10px;letter-spacing:-.03em}
 .et-caution-lab{font-weight:900;margin-right:6px}
 .conn-box{border:1px solid var(--line);border-radius:6px;background:var(--sub);padding:9px 11px;margin-bottom:10px}
 .conn-h{font-weight:900;font-size:13px;margin-bottom:4px}
@@ -3132,6 +3139,9 @@ function horseRow(h,i,total){
     var raceHtml=escW(raceTxt);
     var scTxt=shortClass(lr["クラス"]||"");
     if(scTxt) raceHtml+='（<span class="wsub-cls '+l3ClassCls(scTxt,lr["クラス"]||"")+'">'+escW(scTxt)+'</span>）';
+    /* 長いレース名は省略せず、文字サイズを段階的に下げて1行に収める（全角=1・半角=0.5で概算） */
+    var raceUnits=0; (function(){ var s=raceTxt+(scTxt?("（"+scTxt+"）"):""); for(var ci=0;ci<s.length;ci++){ raceUnits+=(s.charCodeAt(ci)>255?1:0.5); } })();
+    var raceCls=raceUnits>15.5?" rz2":(raceUnits>14.5?" rz1":"");
     var dateTxt=fmtDSlash(lr["開催日"]||"");
     var flowVal=String(lr["展開との相性"]||"");
     var flowHtml=flowVal?('<span class="rv-lab">展開</span> <span'+(flowVal==="有利"?' class="fl-yu"':"")+'>'+escW(flowVal)+'</span>'):"―";
@@ -3167,17 +3177,31 @@ function horseRow(h,i,total){
       popfinHtml=(pp?('<span class="pop-lab">'+escW(pp)+'人気</span> '):"")+'<b>'+escW(ff)+'</b>'+(h.prevField?('<span class="pop-field">/'+escW(String(h.prevField))+'</span>'):"");
     })();
     var levelHtml=(h.level!=null&&h.level!=="")?('<span class="rv-lab">レベル</span> <b>'+escW(h.level)+'</b>'):"―";
+    /* 注意文は折り返さず、長さで文字サイズを段階調整して1行に収める。
+       2件重なって極端に長い場合（57字超）だけ、文の切れ目で2行に分ける（無理な縮小で読めなくしないため） */
+    var cautHtml="";
+    if(h.caution){
+      var ct=String(h.caution), L=ct.length;
+      var ccls=L<=30?"":(L<=36?" cz1":(L<=42?" cz2":(L<=48?" cz3":(L<=56?" cz4":" cz5"))));
+      var ce=escW(ct);
+      if(L>56){
+        var mid=L/2, bi=-1, bd=1e9;
+        for(var cj=0;cj<ct.length-1;cj++){ if(ct[cj]==="。"){ var dd2=Math.abs(cj+1-mid); if(dd2<bd){bd=dd2;bi=cj+1;} } }
+        if(bi>0) ce=escW(ct.slice(0,bi))+"<br>"+escW(ct.slice(bi));
+      }
+      cautHtml='<tr class="et-caution et-part" data-wpart="'+i+'"><td colspan="6" class="'+ccls.trim()+'"><span class="et-caution-lab">注意</span>'+ce+'</td></tr>';
+    }
     subRows='<tr class="et-r2 et-part" data-wpart="'+i+'">'
       +'<td class="et-cnt'+wk+'" rowspan="2">回顧'+(hh.reviewCount||hh.reviews.length)+'走</td>'
       +'<td class="et-date">'+escW(dateTxt||"―")+'</td>'
-      +'<td class="et-race" colspan="3">'+raceHtml+'</td>'
+      +'<td class="et-race'+raceCls+'" colspan="3">'+raceHtml+'</td>'
       +'<td class="et-level">'+levelHtml+'</td></tr>'
       +'<tr class="et-r3 et-part" data-wpart="'+i+'">'
       +'<td class="et-popfin'+finRv.c+'">'+popfinHtml+'</td>'
       +'<td class="et-flow" colspan="2">'+flowHtml+'</td>'
       +'<td class="et-idx">'+idxHtml+'</td>'
       +'<td class="et-grd'+grdCls+'">'+grdHtml+'</td></tr>'
-      +(h.caution?'<tr class="et-caution et-part" data-wpart="'+i+'"><td colspan="6"><span class="et-caution-lab">注意</span>'+escW(h.caution)+'</td></tr>':"");
+      +cautHtml;
   }
   var det=histDetail(h,d);
   if(det==null){
