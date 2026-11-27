@@ -1510,6 +1510,17 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 .ana-table th.a-num{text-align:right}
 .ana-table .a-med{font-weight:900;font-size:15px}
 .ana-table tr.is-ref{color:#8a94a3}
+.rc-seg{display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;margin:0 0 8px}
+.rc-seg button{flex:1;padding:7px 0;background:#fff;border:none;font-size:13px;color:var(--ink2);cursor:pointer;font-family:inherit}
+.rc-seg button.on{background:#2456c8;color:#fff;font-weight:700}
+.rc-table{width:100%;border-collapse:collapse;font-size:12.5px;background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.rc-table th{background:#eef1f5;color:var(--ink2);font-size:11.5px;padding:6px 4px;text-align:center}
+.rc-table th:first-child{text-align:left;padding-left:10px}
+.rc-table td{padding:6px 4px;border-top:1px solid var(--line);text-align:center;font-variant-numeric:tabular-nums}
+.rc-table td:first-child{text-align:left;padding-left:10px}
+.rc-table td.sub{padding-left:22px}
+.rc-table tr.tot td{font-weight:700;border-top:2px solid var(--line)}
+.rc-note{font-size:11.5px;color:var(--ink2);margin:6px 0 10px;line-height:1.5}
 .ana-table tr.is-ref .a-med{color:#8a94a3}
 .ana-table-wrap{border:1px solid var(--line);border-radius:6px;overflow:hidden}
 .ana-surf{font-size:11.5px;font-weight:900;border-radius:999px;padding:1px 8px;white-space:nowrap}
@@ -1535,11 +1546,12 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
         <div class="logo"><small>WEEKEND KEIBA NEWS</small>週末出走馬<span>チェック</span></div>
         <div class="hdr-date">11/28(土)・29(日) ― 2日間開催</div>
       </div>
-      <nav class="tabbar catnav" role="tablist" aria-label="ニュース・レース・回顧データ・分析の切り替え">
+      <nav class="tabbar catnav" role="tablist" aria-label="ニュース・レース・回顧データ・分析・結果の切り替え">
         <button class="tabbtn" type="button" role="tab" id="tab-news" data-tab="news" aria-selected="true" aria-controls="panel-news">ニュース</button>
         <button class="tabbtn" type="button" role="tab" id="tab-races" data-tab="races" aria-selected="false" aria-controls="panel-races" tabindex="-1">レース</button>
         <button class="tabbtn" type="button" role="tab" id="tab-data" data-tab="data" aria-selected="false" aria-controls="panel-data" tabindex="-1">回顧データ</button>
         <button class="tabbtn" type="button" role="tab" id="tab-analysis" data-tab="analysis" aria-selected="false" aria-controls="panel-analysis" tabindex="-1">分析</button>
+        <button class="tabbtn" type="button" role="tab" id="tab-results" data-tab="results" aria-selected="false" aria-controls="panel-results" tabindex="-1">結果</button>
       </nav>
     </div>
   </header>
@@ -1936,6 +1948,14 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
     <div id="analysis-root"></div>
   </section>
   </div><!-- /panel-analysis -->
+
+  <div id="panel-results" class="tabpanel hidden" role="tabpanel" aria-labelledby="tab-results" tabindex="0">
+  <section aria-labelledby="h-results">
+    <h2 class="sec" id="h-results">結果確認</h2>
+    <p class="sec-note" id="results-status" role="status">このタブを開くと、結果確認データ（assets/results-check.json）を読み込んで表示します。</p>
+    <div id="results-root"></div>
+  </section>
+  </div><!-- /panel-results -->
 
   <details class="note-box foldbox guide-fold">
     <summary>見方・出典・注意（タップで開く）</summary>
@@ -2601,7 +2621,7 @@ btns.forEach(function(b){
 (function(){
 "use strict";
 var tabs=document.querySelectorAll("[data-tab]");
-var panels={news:document.getElementById("panel-news"),races:document.getElementById("panel-races"),data:document.getElementById("panel-data"),analysis:document.getElementById("panel-analysis")};
+var panels={news:document.getElementById("panel-news"),races:document.getElementById("panel-races"),data:document.getElementById("panel-data"),analysis:document.getElementById("panel-analysis"),results:document.getElementById("panel-results")};
 function activate(name,focus){
   tabs.forEach(function(t){
     var on=t.getAttribute("data-tab")===name;
@@ -4224,6 +4244,96 @@ if(ap&&window.MutationObserver){
     if(!ap.classList.contains("hidden")) loadAnalysis();
   });
   mo.observe(ap,{attributes:true,attributeFilter:["class"]});
+}
+})();
+</script>
+
+<script>
+(function(){
+"use strict";
+/* 結果確認タブ：初めて開いた時にだけ assets/results-check.json を読み込む（遅延読み込み） */
+function escR(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+var MARKNAME={"◎":"◎ 条件一致","○":"○ 一部一致","△":"△ 条件不一致"};
+var rcData=null, rcView=null;
+function aggRows(weekends){
+  var map={}, order=[];
+  weekends.forEach(function(w){
+    (w.rows||[]).forEach(function(r){
+      var k=r.mark+"|"+r.kubun;
+      if(!map[k]){ map[k]={mark:r.mark,kubun:r.kubun,c:[0,0,0,0,0]}; order.push(k); }
+      for(var i=0;i<5;i++) map[k].c[i]+=Number(r.c[i]||0);
+    });
+  });
+  var rows=order.map(function(k){return map[k]});
+  var q=[0,0,0,0,0];
+  weekends.forEach(function(w){ for(var i=0;i<5;i++) q[i]+=Number((w.q||[])[i]||0); });
+  return {rows:rows,q:q};
+}
+function tableHtml(view){
+  var rows=view.rows||[];
+  if(!rows.length) return '<p class="rc-note">結果はまだ出ていません。結果照合が入ると、ここに着順の内訳が出ます。</p>';
+  var h='<table class="rc-table" aria-label="条件別の着順内訳"><thead><tr><th>判定 × 区分</th><th>1着</th><th>2着</th><th>3着</th><th>4着以下</th><th>取消等</th></tr></thead><tbody>';
+  ["◎","○","△"].forEach(function(m){
+    var sub=rows.filter(function(r){return r.mark===m});
+    if(!sub.length) return;
+    var tot=[0,0,0,0,0];
+    sub.forEach(function(r){ for(var i=0;i<5;i++) tot[i]+=Number(r.c[i]||0); });
+    h+='<tr class="tot"><td>'+escR(MARKNAME[m])+'</td>'+tot.map(function(v){return '<td>'+v+'</td>'}).join("")+'</tr>';
+    sub.forEach(function(r){
+      h+='<tr><td class="sub">'+escR(r.kubun)+'</td>'+r.c.map(function(v){return '<td>'+v+'</td>'}).join("")+'</tr>';
+    });
+  });
+  h+='</tbody></table>';
+  var q=view.q||[0,0,0,0,0];
+  h+='<p class="rc-note">？（判定保留・回顧なし）：1着 '+q[0]+'・2着 '+q[1]+'・3着 '+q[2]+'・4着以下 '+q[3]+'・取消等 '+q[4]+'</p>';
+  return h;
+}
+function renderResults(){
+  var root=document.getElementById("results-root");
+  var st=document.getElementById("results-status");
+  if(!root||!rcData) return;
+  var ws=rcData.weekends||[];
+  var views={};
+  if(ws[0]) views.this={label:"今週（"+ws[0].label+"）",rows:ws[0].rows,q:ws[0].q};
+  if(ws[1]) views.prev={label:"先週（"+ws[1].label+"）",rows:ws[1].rows,q:ws[1].q};
+  var all=aggRows(ws);
+  views.all={label:"全体（"+ws.length+"週分）",rows:all.rows,q:all.q};
+  if(!rcView) rcView=(views.this&&views.this.rows&&views.this.rows.length)?"this":(views.prev?"prev":"all");
+  var h='<div class="rc-seg" role="group" aria-label="今週・先週・全体の切り替え">';
+  [["this","今週"],["prev","先週"],["all","全体"]].forEach(function(p){
+    if(views[p[0]]) h+='<button type="button" data-rcview="'+p[0]+'" class="'+(rcView===p[0]?"on":"")+'">'+p[1]+'</button>';
+  });
+  h+='</div>';
+  var v=views[rcView];
+  h+='<p class="rc-note">'+escR(v.label)+'・発走前の条件照合の印と回顧メモ区分で分けた着順の回数です。</p>';
+  h+=tableHtml(v);
+  root.innerHTML=h;
+  root.querySelectorAll("[data-rcview]").forEach(function(b){
+    b.addEventListener("click",function(){ rcView=b.getAttribute("data-rcview"); renderResults(); });
+  });
+  if(st) st.textContent="集計日："+(rcData.generated||"未確認")+"。結果照合は2026年11月21〜23日の週から始めています。";
+}
+var rcLoaded=false, rcLoading=false;
+function loadResults(){
+  if(rcLoaded||rcLoading) return;
+  rcLoading=true;
+  var st=document.getElementById("results-status");
+  if(st) st.textContent="結果確認データを読み込んでいます…";
+  fetch("assets/results-check.json").then(function(r){ if(!r.ok) throw new Error("http "+r.status); return r.json(); })
+  .then(function(data){ rcLoaded=true; rcLoading=false; rcData=data; renderResults(); })
+  .catch(function(e){
+    rcLoading=false;
+    if(st) st.textContent="結果確認データ（assets/results-check.json）を読み込めませんでした："+e.message;
+  });
+}
+var rt=document.querySelector('[data-tab="results"]');
+if(rt) rt.addEventListener("click",loadResults);
+var rp=document.getElementById("panel-results");
+if(rp&&window.MutationObserver){
+  var mo=new MutationObserver(function(){
+    if(!rp.classList.contains("hidden")) loadResults();
+  });
+  mo.observe(rp,{attributes:true,attributeFilter:["class"]});
 }
 })();
 </script>
