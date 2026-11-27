@@ -242,16 +242,16 @@
   {
    "bucket": "G1",
    "surface": "芝",
-   "n": 10,
-   "median": 105.0,
+   "n": 12,
+   "median": 106.5,
    "min": 82,
    "max": 114
   },
   {
    "bucket": "G2",
    "surface": "芝",
-   "n": 12,
-   "median": 106.5,
+   "n": 14,
+   "median": 103.5,
    "min": 74,
    "max": 117
   },
@@ -266,15 +266,15 @@
   {
    "bucket": "G3",
    "surface": "芝",
-   "n": 8,
-   "median": 99.5,
-   "min": 78,
+   "n": 9,
+   "median": 97,
+   "min": 53,
    "max": 108
   },
   {
    "bucket": "L",
    "surface": "芝",
-   "n": 11,
+   "n": 13,
    "median": 99,
    "min": 76,
    "max": 113
@@ -282,9 +282,9 @@
   {
    "bucket": "OP",
    "surface": "ダート",
-   "n": 1,
-   "median": 111,
-   "min": 111,
+   "n": 3,
+   "median": 108,
+   "min": 101,
    "max": 111
   },
   {
@@ -298,125 +298,125 @@
   {
    "bucket": "3勝",
    "surface": "ダート",
-   "n": 1,
-   "median": 88,
+   "n": 6,
+   "median": 96.5,
    "min": 88,
-   "max": 88
+   "max": 113
   },
   {
    "bucket": "3勝",
    "surface": "芝",
-   "n": 10,
-   "median": 95.5,
+   "n": 22,
+   "median": 89.5,
    "min": 53,
    "max": 111
   },
   {
    "bucket": "2勝",
    "surface": "ダート",
-   "n": 3,
-   "median": 95,
+   "n": 7,
+   "median": 92,
    "min": 91,
    "max": 98
   },
   {
    "bucket": "2勝",
    "surface": "芝",
-   "n": 4,
-   "median": 86.0,
-   "min": 59,
-   "max": 91
+   "n": 10,
+   "median": 88.0,
+   "min": 57,
+   "max": 100
   },
   {
    "bucket": "1勝",
    "surface": "ダート",
-   "n": 8,
-   "median": 89.0,
+   "n": 15,
+   "median": 88,
    "min": 67,
    "max": 101
   },
   {
    "bucket": "1勝",
    "surface": "芝",
-   "n": 6,
-   "median": 65.0,
+   "n": 12,
+   "median": 78.0,
    "min": 57,
    "max": 112
   },
   {
    "bucket": "未勝利",
    "surface": "ダート",
-   "n": 20,
-   "median": 75.0,
-   "min": 54,
-   "max": 85
+   "n": 31,
+   "median": 73,
+   "min": 45,
+   "max": 90
   },
   {
    "bucket": "未勝利",
    "surface": "芝",
-   "n": 33,
-   "median": 75,
+   "n": 54,
+   "median": 74.5,
    "min": 43,
-   "max": 94
+   "max": 96
   },
   {
    "bucket": "新馬",
    "surface": "ダート",
-   "n": 15,
-   "median": 72,
-   "min": 53,
+   "n": 19,
+   "median": 73,
+   "min": 42,
    "max": 95
   },
   {
    "bucket": "新馬",
    "surface": "芝",
-   "n": 34,
-   "median": 65.0,
-   "min": 41,
-   "max": 90
+   "n": 47,
+   "median": 67,
+   "min": 38,
+   "max": 94
   }
  ],
- "level_obtained": 183,
+ "level_obtained": 281,
  "level_check": {
   "label": "前走レースのレベル（勝ち馬タイム指数）",
   "high": {
    "label": "クラス帯の中央値以上",
-   "n": 488,
-   "p1": 8,
-   "p2": 9,
-   "p3": 7,
-   "p4over": 76,
-   "board": 24,
+   "n": 563,
+   "p1": 7,
+   "p2": 8,
+   "p3": 8,
+   "p4over": 77,
+   "board": 23,
    "kata": "対抗型"
   },
   "low": {
    "label": "クラス帯の中央値未満",
-   "n": 365,
+   "n": 420,
    "p1": 7,
    "p2": 7,
    "p3": 7,
-   "p4over": 80,
-   "board": 20,
+   "p4over": 79,
+   "board": 21,
    "kata": "対抗型"
   },
   "high_snipe": {
    "label": "中央値以上・狙いのみ",
-   "n": 110,
-   "p1": 11,
-   "p2": 13,
-   "p3": 5,
-   "p4over": 71,
-   "board": 29,
+   "n": 139,
+   "p1": 8,
+   "p2": 11,
+   "p3": 7,
+   "p4over": 74,
+   "board": 26,
    "kata": "対抗型"
   },
   "low_snipe": {
    "label": "中央値未満・狙いのみ",
-   "n": 65,
-   "p1": 11,
-   "p2": 12,
-   "p3": 8,
-   "p4over": 69,
-   "board": 31,
+   "n": 77,
+   "p1": 13,
+   "p2": 14,
+   "p3": 6,
+   "p4over": 66,
+   "board": 34,
    "kata": "対抗型"
   }
  }
