@@ -588,6 +588,7 @@ body{padding-bottom:env(safe-area-inset-bottom)}
 /* --- レース一覧：青いRバッジ＋レース名＋条件（芝=緑／ダ=茶） --- */
 .wrace{border:none;border-bottom:1px solid var(--line);border-radius:0;margin-bottom:0}
 .wrace>summary{align-items:center;gap:10px;padding:10px 2px}
+.wr-badge.gold{background:#e6a817;color:#3a2a00}
 .wr-badge{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;
   background:var(--nk);color:#fff;font-weight:900;font-size:15px;border-radius:6px;min-width:50px;height:50px;padding:0 4px}
 .wr-main{display:flex;flex-direction:column;min-width:0;flex:1}
@@ -1816,7 +1817,7 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
       <div class="ml-foot">※ 一覧の回顧は直近の回顧です（前走とは限りません）</div>
       <div class="ml-h">レース名の前の印</div>
       <table class="ml-table">
-      <tr><td class="k"><span style="color:#e6a817;font-weight:900">★</span></td><td>全頭の前走回顧がそろったレース</td></tr>
+      <tr><td class="k"><span style="background:#e6a817;color:#3a2a00;border-radius:4px;padding:1px 6px;font-weight:900">11R</span></td><td>金色のRバッジ＝全頭の前走回顧がそろったレース</td></tr>
       </table>
       <div class="ml-h">回顧メモ区分（購入推奨ではありません）</div>
       <table class="ml-table">
@@ -3579,11 +3580,11 @@ function renderWeekend(data){
     }
     var surfShort=r.surface==="ダート"?"ダ":(r.surface==="障害"?"障":r.surface);
     var surfCls=r.surface==="芝"?"surf-shiba":(r.surface==="ダート"?"surf-da":"");
-    var starHtml="";
-    (function(){ if(!r.horses||!r.horses.length) return; for(var si=0;si<r.horses.length;si++){ var sv=wVerified[r.horses[si].name]; var sh=(sv&&sv.history3)||[]; if(!sh.length||sh[0].status!=="reviewed") return; } starHtml='<span class="wr-star">★</span>'; })();
+    var goldBadge=false;
+    (function(){ if(!r.horses||!r.horses.length) return; for(var si=0;si<r.horses.length;si++){ var sv=wVerified[r.horses[si].name]; var sh=(sv&&sv.history3)||[]; if(!sh.length||sh[0].status!=="reviewed") return; } goldBadge=true; })();
     html+='<details class="wrace" data-wrace data-rkey="'+escW(r.date+"|"+r.venue+"|"+r.raceNo)+'" data-raceid="'+escW(r.raceId||"")+'"'+(GRADED[r.raceId]?" open":"")+'>'
-      +'<summary><span class="wr-badge">'+r.raceNo+'R</span><span class="wr-main">'
-      +'<span class="wr-line1">'+starHtml+'<span class="wr-title">'+escW(dispName(r))+'</span>'+classBadge(r)+(RACETIME[r.raceId]?'<span class="wr-time">'+RACETIME[r.raceId]+'</span>':"")+'</span>'
+      +'<summary><span class="wr-badge'+(goldBadge?" gold":"")+'">'+r.raceNo+'R</span><span class="wr-main">'
+      +'<span class="wr-line1"><span class="wr-title">'+escW(dispName(r))+'</span>'+classBadge(r)+(RACETIME[r.raceId]?'<span class="wr-time">'+RACETIME[r.raceId]+'</span>':"")+'</span>'
       +'<span class="wr-line2"><span class="wr-dist'+(surfCls?" "+surfCls:"")+'">'+escW(surfShort)+escW(r.distance)+'m</span><span class="wr-heads">'+r.horses.length+'頭</span>'
       +'<span class="wr-counts"><span class="wc m1">◎'+cm["◎"]+'</span><span class="wc m2">○'+cm["○"]+'</span><span class="wc m3">△'+cm["△"]+'</span><span class="wc unk">不明'+(r.horses.length-known)+'</span></span></span>'
       +raceStatusHtml(r)+'</span><span class="wr-toggle"></span></summary>'
@@ -4353,7 +4354,6 @@ if(rp&&window.MutationObserver){
 </script>
 
 <style>
-.wr-star{color:#e6a817;font-size:15px;font-weight:900;margin-right:3px}
 #ptr-bar{position:fixed;top:0;left:0;right:0;height:44px;display:flex;align-items:center;justify-content:center;font-size:13px;color:#2456c8;background:var(--hatch-widget-surface,#fff);border-bottom:1px solid #d8dee5;transform:translateY(-100%);transition:transform .18s ease;z-index:9999;pointer-events:none}
 #ptr-bar.show{transform:translateY(0)}
 </style>
