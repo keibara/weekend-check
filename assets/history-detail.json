@@ -175,7 +175,13 @@
     "fieldSize": 17,
     "finish": "14",
     "status": "unreviewed",
-    "level": null
+    "level": 77.0,
+    "stage": "標準",
+    "pop": 16,
+    "agari": 35.6,
+    "agariRank": 9,
+    "corner4": 17,
+    "marginSec": 2.2
    },
    {
     "date": "2026-11-01",
@@ -279,7 +285,13 @@
     "fieldSize": 11,
     "finish": "2",
     "status": "unreviewed",
-    "level": null
+    "level": 74.0,
+    "stage": "標準",
+    "pop": 2,
+    "agari": 36.7,
+    "agariRank": 2,
+    "corner4": 3,
+    "marginSec": 1.0
    },
    {
     "date": "2026-08-23",
@@ -307,7 +319,13 @@
     "fieldSize": 13,
     "finish": "4",
     "status": "unreviewed",
-    "level": null
+    "level": 61.0,
+    "stage": "低め",
+    "pop": 2,
+    "agari": 36.0,
+    "agariRank": 3,
+    "corner4": 3,
+    "marginSec": 0.1
    }
   ]
  },
@@ -394,7 +412,13 @@
     "fieldSize": 14,
     "finish": "13",
     "status": "unreviewed",
-    "level": null
+    "level": 81.0,
+    "stage": "標準",
+    "pop": 11,
+    "agari": 39.3,
+    "agariRank": 11,
+    "corner4": 13,
+    "marginSec": 3.9
    },
    {
     "date": "2026-10-10",
@@ -557,7 +581,13 @@
     "fieldSize": 16,
     "finish": "3",
     "status": "unreviewed",
-    "level": null
+    "level": 82.0,
+    "stage": "標準",
+    "pop": 7,
+    "agari": 38.7,
+    "agariRank": 8,
+    "corner4": 1,
+    "marginSec": 0.6
    },
    {
     "date": "2026-10-11",
@@ -771,7 +801,13 @@
     "fieldSize": 18,
     "finish": "15",
     "status": "unreviewed",
-    "level": null
+    "level": 76.0,
+    "stage": "標準",
+    "pop": 17,
+    "agari": 35.4,
+    "agariRank": 14,
+    "corner4": 11,
+    "marginSec": 2.7
    }
   ]
  },
@@ -858,7 +894,13 @@
     "fieldSize": 16,
     "finish": "6",
     "status": "unreviewed",
-    "level": null
+    "level": 69.0,
+    "stage": "標準",
+    "pop": 2,
+    "agari": 36.9,
+    "agariRank": 7,
+    "corner4": 6,
+    "marginSec": 0.8
    },
    {
     "date": "2026-10-24",
@@ -1317,7 +1359,13 @@
     "fieldSize": 12,
     "finish": "7",
     "status": "unreviewed",
-    "level": null
+    "level": 63.0,
+    "stage": "標準",
+    "pop": 8,
+    "agari": 33.6,
+    "agariRank": 10,
+    "corner4": 5,
+    "marginSec": 0.7
    }
   ]
  },
@@ -1721,7 +1769,13 @@
     "fieldSize": 11,
     "finish": "3",
     "status": "unreviewed",
-    "level": null
+    "level": 71.0,
+    "stage": "標準",
+    "pop": 7,
+    "agari": 33.4,
+    "agariRank": 2,
+    "corner4": 6,
+    "marginSec": 0.4
    },
    {
     "date": "2026-08-30",
@@ -1892,7 +1946,13 @@
     "fieldSize": 10,
     "finish": "9",
     "status": "unreviewed",
-    "level": null
+    "level": 74.0,
+    "stage": "標準",
+    "pop": 7,
+    "agari": 42.6,
+    "agariRank": 9,
+    "corner4": 6,
+    "marginSec": 2.9
    }
   ]
  },
@@ -1996,7 +2056,13 @@
     "fieldSize": 9,
     "finish": "8",
     "status": "unreviewed",
-    "level": null
+    "level": 80.0,
+    "stage": "標準",
+    "pop": 8,
+    "agari": 35.2,
+    "agariRank": 8,
+    "corner4": 5,
+    "marginSec": 2.4
    },
    {
     "date": "2026-07-26",
@@ -2007,7 +2073,13 @@
     "fieldSize": 11,
     "finish": "8",
     "status": "unreviewed",
-    "level": null
+    "level": 74.0,
+    "stage": "標準",
+    "pop": 11,
+    "agari": 34.8,
+    "agariRank": 2,
+    "corner4": 8,
+    "marginSec": 0.8
    }
   ]
  },
@@ -2111,7 +2183,13 @@
     "fieldSize": 15,
     "finish": "2",
     "status": "unreviewed",
-    "level": null
+    "level": 67.0,
+    "stage": "標準",
+    "pop": 6,
+    "agari": 35.6,
+    "agariRank": 4,
+    "corner4": 1,
+    "marginSec": 0.1
    }
   ]
  },
@@ -2308,7 +2386,13 @@
     "fieldSize": 12,
     "finish": "8",
     "status": "unreviewed",
-    "level": null
+    "level": 63.0,
+    "stage": "標準",
+    "pop": 7,
+    "agari": 33.3,
+    "agariRank": 2,
+    "corner4": 9,
+    "marginSec": 0.8
    }
   ]
  },
@@ -2885,7 +2969,13 @@
     "fieldSize": 12,
     "finish": "11",
     "status": "unreviewed",
-    "level": null
+    "level": 72.0,
+    "stage": "標準",
+    "pop": 9,
+    "agari": 37.2,
+    "agariRank": 11,
+    "corner4": 11,
+    "marginSec": 3.2
    }
   ]
  },
@@ -3082,7 +3172,8 @@
     "fieldSize": 15,
     "finish": "9",
     "status": "unreviewed",
-    "level": null
+    "level": 87.0,
+    "stage": "標準"
    },
    {
     "date": "2026-05-23",
@@ -3093,7 +3184,8 @@
     "fieldSize": 15,
     "finish": "5",
     "status": "unreviewed",
-    "level": null
+    "level": 81.0,
+    "stage": "標準"
    }
   ]
  },
@@ -3209,7 +3301,8 @@
     "fieldSize": 16,
     "finish": "13",
     "status": "unreviewed",
-    "level": null
+    "level": 88.0,
+    "stage": "標準"
    }
   ]
  },
@@ -3329,7 +3422,8 @@
     "fieldSize": 16,
     "finish": "1",
     "status": "unreviewed",
-    "level": null
+    "level": 97.0,
+    "stage": "標準"
    }
   ]
  },
@@ -3433,7 +3527,13 @@
     "fieldSize": 11,
     "finish": "1",
     "status": "unreviewed",
-    "level": null
+    "level": 90.0,
+    "stage": "標準",
+    "pop": 1,
+    "agari": 36.7,
+    "agariRank": 2,
+    "corner4": 6,
+    "marginSec": 0.0
    },
    {
     "date": "2026-07-12",
@@ -3444,7 +3544,13 @@
     "fieldSize": 16,
     "finish": "4",
     "status": "unreviewed",
-    "level": null
+    "level": 81.0,
+    "stage": "低め",
+    "pop": 1,
+    "agari": 36.2,
+    "agariRank": 9,
+    "corner4": 4,
+    "marginSec": 0.8
    }
   ]
  },
@@ -3586,7 +3692,8 @@
     "fieldSize": 18,
     "finish": "17",
     "status": "unreviewed",
-    "level": null
+    "level": 96.0,
+    "stage": "標準"
    },
    {
     "date": "2026-05-31",
@@ -3762,7 +3869,8 @@
     "fieldSize": 13,
     "finish": "6",
     "status": "unreviewed",
-    "level": null
+    "level": 98.0,
+    "stage": "標準"
    }
   ]
  },
@@ -4512,7 +4620,13 @@
     "fieldSize": 14,
     "finish": "5",
     "status": "unreviewed",
-    "level": null
+    "level": 104.0,
+    "stage": "高め",
+    "pop": 3,
+    "agari": 35.2,
+    "agariRank": 1,
+    "corner4": 10,
+    "marginSec": 1.2
    },
    {
     "date": "2026-04-26",
@@ -4633,7 +4747,8 @@
     "fieldSize": 16,
     "finish": "2",
     "status": "unreviewed",
-    "level": null
+    "level": 99.0,
+    "stage": "標準"
    },
    {
     "date": "2026-05-02",
@@ -4644,7 +4759,8 @@
     "fieldSize": 18,
     "finish": "16",
     "status": "unreviewed",
-    "level": null
+    "level": 110.0,
+    "stage": "標準"
    }
   ]
  },
@@ -4989,7 +5105,8 @@
     "fieldSize": 18,
     "finish": "11",
     "status": "unreviewed",
-    "level": null
+    "level": 96.0,
+    "stage": "標準"
    },
    {
     "date": "2026-04-26",
@@ -5110,7 +5227,13 @@
     "fieldSize": 18,
     "finish": "9",
     "status": "unreviewed",
-    "level": null
+    "level": 103.0,
+    "stage": "標準",
+    "pop": 1,
+    "agari": 32.8,
+    "agariRank": 2,
+    "corner4": 17,
+    "marginSec": 0.7
    },
    {
     "date": "2026-05-16",
@@ -5121,7 +5244,8 @@
     "fieldSize": 16,
     "finish": "3",
     "status": "unreviewed",
-    "level": null
+    "level": 112.0,
+    "stage": "高め"
    }
   ]
  },
@@ -5280,7 +5404,8 @@
     "fieldSize": 16,
     "finish": "14",
     "status": "unreviewed",
-    "level": null
+    "level": 101.0,
+    "stage": "標準"
    }
   ]
  },
@@ -5388,7 +5513,8 @@
     "fieldSize": 13,
     "finish": "6",
     "status": "unreviewed",
-    "level": null
+    "level": 110.0,
+    "stage": "高め"
    },
    {
     "date": "2025-12-13",
@@ -5399,7 +5525,8 @@
     "fieldSize": 13,
     "finish": "8",
     "status": "unreviewed",
-    "level": null
+    "level": 106.0,
+    "stage": "高め"
    }
   ]
  },
@@ -5503,7 +5630,8 @@
     "fieldSize": 15,
     "finish": "8",
     "status": "unreviewed",
-    "level": null
+    "level": 93.0,
+    "stage": "標準"
    },
    {
     "date": "2026-03-15",
@@ -5514,7 +5642,8 @@
     "fieldSize": 16,
     "finish": "7",
     "status": "unreviewed",
-    "level": null
+    "level": 102.0,
+    "stage": "標準"
    }
   ]
  },
@@ -5679,7 +5808,8 @@
     "fieldSize": 18,
     "finish": "9",
     "status": "unreviewed",
-    "level": null
+    "level": 110.0,
+    "stage": "標準"
    }
   ]
  },
@@ -5799,7 +5929,8 @@
     "fieldSize": 14,
     "finish": "1",
     "status": "unreviewed",
-    "level": null
+    "level": 107.0,
+    "stage": "標準"
    }
   ]
  },
@@ -5958,7 +6089,8 @@
     "fieldSize": 16,
     "finish": "11",
     "status": "unreviewed",
-    "level": null
+    "level": 112.0,
+    "stage": "高め"
    }
   ]
  },
@@ -6062,7 +6194,13 @@
     "fieldSize": 14,
     "finish": "11",
     "status": "unreviewed",
-    "level": null
+    "level": 104.0,
+    "stage": "高め",
+    "pop": 11,
+    "agari": 37.1,
+    "agariRank": 11,
+    "corner4": 4,
+    "marginSec": 2.4
    },
    {
     "date": "2026-05-30",
@@ -6073,7 +6211,8 @@
     "fieldSize": 16,
     "finish": "9",
     "status": "unreviewed",
-    "level": null
+    "level": 121.0,
+    "stage": "高め"
    }
   ]
  },
@@ -6193,7 +6332,13 @@
     "fieldSize": 17,
     "finish": "3",
     "status": "unreviewed",
-    "level": null
+    "level": 89.0,
+    "stage": "高め",
+    "pop": 9,
+    "agari": 34.1,
+    "agariRank": 8,
+    "corner4": 1,
+    "marginSec": 0.2
    }
   ]
  },
@@ -6297,7 +6442,13 @@
     "fieldSize": 12,
     "finish": "10",
     "status": "unreviewed",
-    "level": null
+    "level": 101.0,
+    "stage": "高め",
+    "pop": 8,
+    "agari": 39.1,
+    "agariRank": 10,
+    "corner4": 10,
+    "marginSec": 2.4
    },
    {
     "date": "2026-08-01",
@@ -6308,7 +6459,13 @@
     "fieldSize": 12,
     "finish": "7",
     "status": "unreviewed",
-    "level": null
+    "level": 80.0,
+    "stage": "標準",
+    "pop": 11,
+    "agari": 34.6,
+    "agariRank": 7,
+    "corner4": 7,
+    "marginSec": 0.6
    }
   ]
  },
@@ -6412,7 +6569,13 @@
     "fieldSize": 12,
     "finish": "2",
     "status": "unreviewed",
-    "level": null
+    "level": 81.0,
+    "stage": "標準",
+    "pop": 4,
+    "agari": 39.9,
+    "agariRank": 4,
+    "corner4": 4,
+    "marginSec": 1.7
    },
    {
     "date": "2026-08-15",
@@ -6423,7 +6586,13 @@
     "fieldSize": 16,
     "finish": "5",
     "status": "unreviewed",
-    "level": null
+    "level": 72.0,
+    "stage": "標準",
+    "pop": 7,
+    "agari": 40.0,
+    "agariRank": 6,
+    "corner4": 11,
+    "marginSec": 1.2
    }
   ]
  },
@@ -6527,7 +6696,13 @@
     "fieldSize": 16,
     "finish": "10",
     "status": "unreviewed",
-    "level": null
+    "level": 76.0,
+    "stage": "標準",
+    "pop": 16,
+    "agari": 41.1,
+    "agariRank": 9,
+    "corner4": 10,
+    "marginSec": 3.3
    }
   ]
  },
@@ -6614,7 +6789,13 @@
     "fieldSize": 16,
     "finish": "7",
     "status": "unreviewed",
-    "level": null
+    "level": 72.0,
+    "stage": "標準",
+    "pop": 7,
+    "agari": 38.0,
+    "agariRank": 13,
+    "corner4": 2,
+    "marginSec": 1.1
    },
    {
     "date": "2026-10-25",
@@ -6642,7 +6823,13 @@
     "fieldSize": 10,
     "finish": "7",
     "status": "unreviewed",
-    "level": null
+    "level": 78.0,
+    "stage": "高め",
+    "pop": 6,
+    "agari": 34.6,
+    "agariRank": 7,
+    "corner4": 3,
+    "marginSec": 0.6
    }
   ]
  },
@@ -6784,7 +6971,13 @@
     "fieldSize": 14,
     "finish": "6",
     "status": "unreviewed",
-    "level": null
+    "level": 53.0,
+    "stage": "低め",
+    "pop": 3,
+    "agari": 37.3,
+    "agariRank": 3,
+    "corner4": 9,
+    "marginSec": 0.3
    },
    {
     "date": "2026-10-10",
@@ -6943,7 +7136,13 @@
     "fieldSize": 11,
     "finish": "4",
     "status": "unreviewed",
-    "level": null
+    "level": 82.0,
+    "stage": "標準",
+    "pop": 3,
+    "agari": 34.0,
+    "agariRank": 2,
+    "corner4": 9,
+    "marginSec": 0.6
    },
    {
     "date": "2026-09-21",
@@ -7300,7 +7499,13 @@
     "fieldSize": 13,
     "finish": "10",
     "status": "unreviewed",
-    "level": null
+    "level": 70.0,
+    "stage": "標準",
+    "pop": 11,
+    "agari": 37.7,
+    "agariRank": 6,
+    "corner4": 13,
+    "marginSec": 2.0
    },
    {
     "date": "2026-10-10",
@@ -7421,7 +7626,13 @@
     "fieldSize": 16,
     "finish": "9",
     "status": "unreviewed",
-    "level": null
+    "level": 80.0,
+    "stage": "標準",
+    "pop": 7,
+    "agari": 35.1,
+    "agariRank": 5,
+    "corner4": 14,
+    "marginSec": 1.9
    },
    {
     "date": "2026-07-05",
@@ -7432,7 +7643,8 @@
     "fieldSize": 12,
     "finish": "7",
     "status": "unreviewed",
-    "level": null
+    "level": 48.0,
+    "stage": "低め"
    }
   ]
  },
@@ -7629,7 +7841,13 @@
     "fieldSize": 11,
     "finish": "4",
     "status": "unreviewed",
-    "level": null
+    "level": 80.0,
+    "stage": "標準",
+    "pop": 6,
+    "agari": 37.7,
+    "agariRank": 4,
+    "corner4": 4,
+    "marginSec": 1.5
    },
    {
     "date": "2026-10-12",
@@ -7640,7 +7858,13 @@
     "fieldSize": 16,
     "finish": "8",
     "status": "unreviewed",
-    "level": null
+    "level": 78.0,
+    "stage": "標準",
+    "pop": 4,
+    "agari": 39.1,
+    "agariRank": 9,
+    "corner4": 5,
+    "marginSec": 1.8
    }
   ]
  },
@@ -7799,7 +8023,13 @@
     "fieldSize": 11,
     "finish": "3",
     "status": "unreviewed",
-    "level": null
+    "level": 89.0,
+    "stage": "高め",
+    "pop": 6,
+    "agari": 34.5,
+    "agariRank": 2,
+    "corner4": 6,
+    "marginSec": 0.2
    }
   ]
  },
@@ -8093,7 +8323,13 @@
     "fieldSize": 12,
     "finish": "7",
     "status": "unreviewed",
-    "level": null
+    "level": 60.0,
+    "stage": "標準",
+    "pop": 1,
+    "agari": 35.9,
+    "agariRank": 6,
+    "corner4": 4,
+    "marginSec": 0.8
    }
   ]
  },
@@ -8197,7 +8433,13 @@
     "fieldSize": 9,
     "finish": "3",
     "status": "unreviewed",
-    "level": null
+    "level": 65.0,
+    "stage": "標準",
+    "pop": 8,
+    "agari": 33.9,
+    "agariRank": 1,
+    "corner4": 9,
+    "marginSec": 0.5
    }
   ]
  },
@@ -8453,7 +8695,13 @@
     "fieldSize": 8,
     "finish": "4",
     "status": "unreviewed",
-    "level": null
+    "level": 62.0,
+    "stage": "標準",
+    "pop": 3,
+    "agari": 34.2,
+    "agariRank": 3,
+    "corner4": 4,
+    "marginSec": 0.3
    }
   ]
  },
@@ -8561,7 +8809,13 @@
     "fieldSize": 11,
     "finish": "7",
     "status": "unreviewed",
-    "level": null
+    "level": 89.0,
+    "stage": "高め",
+    "pop": 3,
+    "agari": 35.6,
+    "agariRank": 7,
+    "corner4": 4,
+    "marginSec": 1.1
    },
    {
     "date": "2026-08-15",
@@ -8572,7 +8826,13 @@
     "fieldSize": 16,
     "finish": "7",
     "status": "unreviewed",
-    "level": null
+    "level": 72.0,
+    "stage": "標準",
+    "pop": 1,
+    "agari": 40.7,
+    "agariRank": 9,
+    "corner4": 7,
+    "marginSec": 1.4
    }
   ]
  },
@@ -8958,7 +9218,13 @@
     "fieldSize": 14,
     "finish": "3",
     "status": "unreviewed",
-    "level": null
+    "level": 74.0,
+    "stage": "標準",
+    "pop": 7,
+    "agari": 35.8,
+    "agariRank": 4,
+    "corner4": 5,
+    "marginSec": 0.4
    }
   ]
  },
@@ -9062,7 +9328,13 @@
     "fieldSize": 13,
     "finish": "7",
     "status": "unreviewed",
-    "level": null
+    "level": 61.0,
+    "stage": "低め",
+    "pop": 5,
+    "agari": 36.2,
+    "agariRank": 6,
+    "corner4": 6,
+    "marginSec": 0.6
    },
    {
     "date": "2026-07-12",
@@ -9073,7 +9345,13 @@
     "fieldSize": 10,
     "finish": "5",
     "status": "unreviewed",
-    "level": null
+    "level": 75.0,
+    "stage": "標準",
+    "pop": 8,
+    "agari": 36.4,
+    "agariRank": 4,
+    "corner4": 4,
+    "marginSec": 0.8
    }
   ]
  },
@@ -9177,7 +9455,8 @@
     "fieldSize": 12,
     "finish": "8",
     "status": "unreviewed",
-    "level": null
+    "level": 65.0,
+    "stage": "標準"
    }
   ]
  },
@@ -9285,7 +9564,13 @@
     "fieldSize": 11,
     "finish": "3",
     "status": "unreviewed",
-    "level": null
+    "level": 84.0,
+    "stage": "高め",
+    "pop": 9,
+    "agari": 38.2,
+    "agariRank": 2,
+    "corner4": 9,
+    "marginSec": 1.8
    },
    {
     "date": "2026-09-05",
@@ -9296,7 +9581,13 @@
     "fieldSize": 11,
     "finish": "8",
     "status": "unreviewed",
-    "level": null
+    "level": 69.0,
+    "stage": "標準",
+    "pop": 4,
+    "agari": 39.3,
+    "agariRank": 6,
+    "corner4": 6,
+    "marginSec": 1.9
    }
   ]
  },
@@ -9406,7 +9697,13 @@
     "fieldSize": 12,
     "finish": "3",
     "status": "unreviewed",
-    "level": null
+    "level": 82.0,
+    "stage": "高め",
+    "pop": 1,
+    "agari": 34.3,
+    "agariRank": 2,
+    "corner4": 4,
+    "marginSec": 0.0
    }
   ]
  },
@@ -9615,7 +9912,13 @@
     "fieldSize": 14,
     "finish": "8",
     "status": "unreviewed",
-    "level": null
+    "level": 97.0,
+    "stage": "高め",
+    "pop": 2,
+    "agari": 36.2,
+    "agariRank": 11,
+    "corner4": 9,
+    "marginSec": 1.4
    }
   ]
  },
@@ -9723,7 +10026,13 @@
     "fieldSize": 12,
     "finish": "1",
     "status": "unreviewed",
-    "level": null
+    "level": 83.0,
+    "stage": "標準",
+    "pop": 8,
+    "agari": 36.0,
+    "agariRank": 1,
+    "corner4": 6,
+    "marginSec": 0.0
    },
    {
     "date": "2026-10-10",
@@ -9734,7 +10043,13 @@
     "fieldSize": 16,
     "finish": "9",
     "status": "unreviewed",
-    "level": null
+    "level": 100.0,
+    "stage": "高め",
+    "pop": 14,
+    "agari": 37.0,
+    "agariRank": 8,
+    "corner4": 8,
+    "marginSec": 0.8
    }
   ]
  },
@@ -9833,7 +10148,13 @@
     "fieldSize": 15,
     "finish": "4",
     "status": "unreviewed",
-    "level": null
+    "level": 84.0,
+    "stage": "標準",
+    "pop": 6,
+    "agari": 37.7,
+    "agariRank": 4,
+    "corner4": 4,
+    "marginSec": 0.9
    },
    {
     "date": "2025-12-28",
@@ -9844,7 +10165,8 @@
     "fieldSize": 13,
     "finish": "5",
     "status": "unreviewed",
-    "level": null
+    "level": 99.0,
+    "stage": "標準"
    }
   ]
  },
@@ -10003,7 +10325,8 @@
     "fieldSize": 14,
     "finish": "14",
     "status": "unreviewed",
-    "level": null
+    "level": 91.0,
+    "stage": "標準"
    }
   ]
  },
@@ -10119,7 +10442,13 @@
     "fieldSize": 16,
     "finish": "11",
     "status": "unreviewed",
-    "level": null
+    "level": 99.0,
+    "stage": "標準",
+    "pop": 12,
+    "agari": 38.0,
+    "agariRank": 13,
+    "corner4": 4,
+    "marginSec": 1.0
    }
   ]
  },
@@ -10235,7 +10564,8 @@
     "fieldSize": 14,
     "finish": "11",
     "status": "unreviewed",
-    "level": null
+    "level": 103.0,
+    "stage": "高め"
    }
   ]
  },
@@ -10351,7 +10681,8 @@
     "fieldSize": 14,
     "finish": "14",
     "status": "unreviewed",
-    "level": null
+    "level": 103.0,
+    "stage": "高め"
    }
   ]
  },
@@ -10583,7 +10914,13 @@
     "fieldSize": 14,
     "finish": "6",
     "status": "unreviewed",
-    "level": null
+    "level": 96.0,
+    "stage": "標準",
+    "pop": 12,
+    "agari": 35.8,
+    "agariRank": 6,
+    "corner4": 6,
+    "marginSec": 1.0
    }
   ]
  },
@@ -10687,7 +11024,13 @@
     "fieldSize": 11,
     "finish": "9",
     "status": "unreviewed",
-    "level": null
+    "level": 87.0,
+    "stage": "標準",
+    "pop": 10,
+    "agari": 32.7,
+    "agariRank": 2,
+    "corner4": 8,
+    "marginSec": 0.5
    },
    {
     "date": "2026-07-18",
@@ -10698,7 +11041,13 @@
     "fieldSize": 12,
     "finish": "2",
     "status": "unreviewed",
-    "level": null
+    "level": 99.0,
+    "stage": "標準",
+    "pop": 7,
+    "agari": 34.5,
+    "agariRank": 2,
+    "corner4": 7,
+    "marginSec": 0.3
    }
   ]
  },
@@ -10895,7 +11244,13 @@
     "fieldSize": 15,
     "finish": "14",
     "status": "unreviewed",
-    "level": null
+    "level": 97.0,
+    "stage": "標準",
+    "pop": 14,
+    "agari": 34.1,
+    "agariRank": 9,
+    "corner4": 10,
+    "marginSec": 0.9
    }
   ]
  },
@@ -11235,7 +11590,13 @@
     "fieldSize": 11,
     "finish": "10",
     "status": "unreviewed",
-    "level": null
+    "level": 87.0,
+    "stage": "標準",
+    "pop": 11,
+    "agari": 33.2,
+    "agariRank": 10,
+    "corner4": 8,
+    "marginSec": 0.9
    },
    {
     "date": "2026-07-25",
@@ -11356,7 +11717,13 @@
     "fieldSize": 15,
     "finish": "6",
     "status": "unreviewed",
-    "level": null
+    "level": 97.0,
+    "stage": "標準",
+    "pop": 10,
+    "agari": 33.6,
+    "agariRank": 5,
+    "corner4": 10,
+    "marginSec": 0.4
    },
    {
     "date": "2026-06-21",
@@ -11631,7 +11998,8 @@
     "fieldSize": 16,
     "finish": "1",
     "status": "unreviewed",
-    "level": null
+    "level": 88.0,
+    "stage": "標準"
    },
    {
     "date": "2026-04-19",
@@ -11642,7 +12010,8 @@
     "fieldSize": 16,
     "finish": "1",
     "status": "unreviewed",
-    "level": null
+    "level": 101.0,
+    "stage": "高め"
    }
   ]
  },
@@ -11746,7 +12115,8 @@
     "fieldSize": 12,
     "finish": "8",
     "status": "unreviewed",
-    "level": null
+    "level": 96.0,
+    "stage": "標準"
    },
    {
     "date": "2026-03-14",
@@ -11757,7 +12127,8 @@
     "fieldSize": 11,
     "finish": "6",
     "status": "unreviewed",
-    "level": null
+    "level": 105.0,
+    "stage": "高め"
    }
   ]
  },
@@ -11861,7 +12232,8 @@
     "fieldSize": 16,
     "finish": "2",
     "status": "unreviewed",
-    "level": null
+    "level": 89.0,
+    "stage": "標準"
    },
    {
     "date": "2026-02-01",
@@ -11872,7 +12244,8 @@
     "fieldSize": 15,
     "finish": "3",
     "status": "unreviewed",
-    "level": null
+    "level": 92.0,
+    "stage": "標準"
    }
   ]
  },
@@ -12081,7 +12454,8 @@
     "fieldSize": 12,
     "finish": "3",
     "status": "unreviewed",
-    "level": null
+    "level": 48.0,
+    "stage": "低め"
    }
   ]
  },
@@ -12189,7 +12563,13 @@
     "fieldSize": 8,
     "finish": "2",
     "status": "unreviewed",
-    "level": null
+    "level": 60.0,
+    "stage": "標準",
+    "pop": 2,
+    "agari": 33.6,
+    "agariRank": 1,
+    "corner4": 4,
+    "marginSec": 0.2
    }
   ]
  },
@@ -12390,7 +12770,13 @@
     "fieldSize": 7,
     "finish": "2",
     "status": "unreviewed",
-    "level": null
+    "level": 82.0,
+    "stage": "標準",
+    "pop": 3,
+    "agari": 36.8,
+    "agariRank": 5,
+    "corner4": 2,
+    "marginSec": 0.4
    },
    {
     "date": "2026-08-23",
@@ -12401,7 +12787,13 @@
     "fieldSize": 8,
     "finish": "2",
     "status": "unreviewed",
-    "level": null
+    "level": 62.0,
+    "stage": "標準",
+    "pop": 4,
+    "agari": 34.3,
+    "agariRank": 4,
+    "corner4": 1,
+    "marginSec": 0.1
    }
   ]
  },
@@ -12618,7 +13010,8 @@
     "fieldSize": 12,
     "finish": "1",
     "status": "unreviewed",
-    "level": null
+    "level": 48.0,
+    "stage": "低め"
    }
   ]
  },
@@ -12912,7 +13305,13 @@
     "fieldSize": 8,
     "finish": "1",
     "status": "unreviewed",
-    "level": null
+    "level": 60.0,
+    "stage": "標準",
+    "pop": 1,
+    "agari": 33.6,
+    "agariRank": 1,
+    "corner4": 3,
+    "marginSec": 0.0
    }
   ]
  },
@@ -13054,7 +13453,13 @@
     "fieldSize": 12,
     "finish": "3",
     "status": "unreviewed",
-    "level": null
+    "level": 79.0,
+    "stage": "標準",
+    "pop": 1,
+    "agari": 33.9,
+    "agariRank": 4,
+    "corner4": 2,
+    "marginSec": 0.2
    },
    {
     "date": "2026-07-18",
@@ -13065,7 +13470,13 @@
     "fieldSize": 9,
     "finish": "3",
     "status": "unreviewed",
-    "level": null
+    "level": 69.0,
+    "stage": "標準",
+    "pop": 2,
+    "agari": 36.8,
+    "agariRank": 4,
+    "corner4": 1,
+    "marginSec": 0.0
    }
   ]
  },
@@ -13169,7 +13580,13 @@
     "fieldSize": 16,
     "finish": "1",
     "status": "unreviewed",
-    "level": null
+    "level": 85.0,
+    "stage": "標準",
+    "pop": 1,
+    "agari": 34.6,
+    "agariRank": 2,
+    "corner4": 9,
+    "marginSec": 0.0
    },
    {
     "date": "2026-06-27",
@@ -13180,7 +13597,8 @@
     "fieldSize": 8,
     "finish": "2",
     "status": "unreviewed",
-    "level": null
+    "level": 85.0,
+    "stage": "標準"
    }
   ]
  },
@@ -13288,7 +13706,13 @@
     "fieldSize": 16,
     "finish": "2",
     "status": "unreviewed",
-    "level": null
+    "level": 96.0,
+    "stage": "高め",
+    "pop": 1,
+    "agari": 33.6,
+    "agariRank": 3,
+    "corner4": 2,
+    "marginSec": 0.0
    },
    {
     "date": "2026-08-09",
@@ -13299,7 +13723,13 @@
     "fieldSize": 17,
     "finish": "2",
     "status": "unreviewed",
-    "level": null
+    "level": 91.0,
+    "stage": "高め",
+    "pop": 1,
+    "agari": 33.6,
+    "agariRank": 9,
+    "corner4": 3,
+    "marginSec": 0.0
    }
   ]
  },
@@ -13403,7 +13833,8 @@
     "fieldSize": 14,
     "finish": "10",
     "status": "unreviewed",
-    "level": null
+    "level": 86.0,
+    "stage": "標準"
    },
    {
     "date": "2026-07-05",
@@ -13414,7 +13845,8 @@
     "fieldSize": 16,
     "finish": "11",
     "status": "unreviewed",
-    "level": null
+    "level": 90.0,
+    "stage": "標準"
    }
   ]
  },
@@ -13573,7 +14005,13 @@
     "fieldSize": 10,
     "finish": "8",
     "status": "unreviewed",
-    "level": null
+    "level": 79.0,
+    "stage": "低め",
+    "pop": 8,
+    "agari": 34.5,
+    "agariRank": 8,
+    "corner4": 9,
+    "marginSec": 2.3
    }
   ]
  },
@@ -14023,7 +14461,13 @@
     "fieldSize": 17,
     "finish": "2",
     "status": "unreviewed",
-    "level": null
+    "level": 77.0,
+    "stage": "標準",
+    "pop": 3,
+    "agari": 34.5,
+    "agariRank": 5,
+    "corner4": 5,
+    "marginSec": 0.1
    },
    {
     "date": "2026-09-13",
@@ -14051,7 +14495,13 @@
     "fieldSize": 9,
     "finish": "2",
     "status": "unreviewed",
-    "level": null
+    "level": 80.0,
+    "stage": "標準",
+    "pop": 4,
+    "agari": 33.4,
+    "agariRank": 1,
+    "corner4": 7,
+    "marginSec": 0.5
    }
   ]
  },
@@ -14155,7 +14605,13 @@
     "fieldSize": 11,
     "finish": "10",
     "status": "unreviewed",
-    "level": null
+    "level": 84.0,
+    "stage": "高め",
+    "pop": 9,
+    "agari": 36.6,
+    "agariRank": 10,
+    "corner4": 4,
+    "marginSec": 3.6
    }
   ]
  },
@@ -14685,7 +15141,13 @@
     "fieldSize": 10,
     "finish": "5",
     "status": "unreviewed",
-    "level": null
+    "level": 74.0,
+    "stage": "標準",
+    "pop": 4,
+    "agari": 33.9,
+    "agariRank": 2,
+    "corner4": 9,
+    "marginSec": 1.2
    },
    {
     "date": "2026-10-11",
@@ -14713,7 +15175,13 @@
     "fieldSize": 12,
     "finish": "6",
     "status": "unreviewed",
-    "level": null
+    "level": 82.0,
+    "stage": "標準",
+    "pop": 4,
+    "agari": 35.4,
+    "agariRank": 5,
+    "corner4": 10,
+    "marginSec": 1.1
    }
   ]
  },
@@ -15450,7 +15918,13 @@
     "fieldSize": 18,
     "finish": "3",
     "status": "unreviewed",
-    "level": null
+    "level": 77.0,
+    "stage": "高め",
+    "pop": 4,
+    "agari": 35.3,
+    "agariRank": 8,
+    "corner4": 2,
+    "marginSec": 0.6
    }
   ]
  },
@@ -15554,7 +16028,13 @@
     "fieldSize": 18,
     "finish": "8",
     "status": "unreviewed",
-    "level": null
+    "level": 69.0,
+    "stage": "標準",
+    "pop": 15,
+    "agari": 36.8,
+    "agariRank": 16,
+    "corner4": 6,
+    "marginSec": 1.6
    }
   ]
  },
@@ -15992,7 +16472,13 @@
     "fieldSize": 15,
     "finish": "10",
     "status": "unreviewed",
-    "level": null
+    "level": 68.0,
+    "stage": "標準",
+    "pop": 6,
+    "agari": 39.5,
+    "agariRank": 8,
+    "corner4": 10,
+    "marginSec": 2.9
    }
   ]
  },
@@ -16079,7 +16565,13 @@
     "fieldSize": 12,
     "finish": "4",
     "status": "unreviewed",
-    "level": null
+    "level": 75.0,
+    "stage": "標準",
+    "pop": 6,
+    "agari": 38.6,
+    "agariRank": 5,
+    "corner4": 4,
+    "marginSec": 0.9
    },
    {
     "date": "2026-10-11",
@@ -16107,7 +16599,13 @@
     "fieldSize": 12,
     "finish": "8",
     "status": "unreviewed",
-    "level": null
+    "level": 72.0,
+    "stage": "標準",
+    "pop": 7,
+    "agari": 36.4,
+    "agariRank": 8,
+    "corner4": 2,
+    "marginSec": 1.8
    }
   ]
  },
@@ -16342,7 +16840,13 @@
     "fieldSize": 16,
     "finish": "4",
     "status": "unreviewed",
-    "level": null
+    "level": 85.0,
+    "stage": "高め",
+    "pop": 11,
+    "agari": 37.6,
+    "agariRank": 7,
+    "corner4": 3,
+    "marginSec": 1.2
    },
    {
     "date": "2026-09-27",
@@ -16560,7 +17064,13 @@
     "fieldSize": 13,
     "finish": "3",
     "status": "unreviewed",
-    "level": null
+    "level": 57.0,
+    "stage": "低め",
+    "pop": 3,
+    "agari": 34.4,
+    "agariRank": 3,
+    "corner4": 11,
+    "marginSec": 0.3
    }
   ]
  },
@@ -17006,7 +17516,13 @@
     "fieldSize": 12,
     "finish": "5",
     "status": "unreviewed",
-    "level": null
+    "level": 78.0,
+    "stage": "標準",
+    "pop": 7,
+    "agari": 34.2,
+    "agariRank": 6,
+    "corner4": 5,
+    "marginSec": 0.7
    },
    {
     "date": "2026-10-04",
@@ -17017,7 +17533,13 @@
     "fieldSize": 16,
     "finish": "14",
     "status": "unreviewed",
-    "level": null
+    "level": 79.0,
+    "stage": "標準",
+    "pop": 3,
+    "agari": 35.3,
+    "agariRank": 12,
+    "corner4": 14,
+    "marginSec": 2.1
    }
   ]
  },
@@ -17197,7 +17719,13 @@
     "fieldSize": 16,
     "finish": "11",
     "status": "unreviewed",
-    "level": null
+    "level": 50.0,
+    "stage": "低め",
+    "pop": 15,
+    "agari": 37.3,
+    "agariRank": 13,
+    "corner4": 7,
+    "marginSec": 1.5
    },
    {
     "date": "2026-06-28",
@@ -17629,7 +18157,13 @@
     "fieldSize": 18,
     "finish": "13",
     "status": "unreviewed",
-    "level": null
+    "level": 63.0,
+    "stage": "標準",
+    "pop": 17,
+    "agari": 35.9,
+    "agariRank": 15,
+    "corner4": 11,
+    "marginSec": 3.3
    }
   ]
  },
@@ -17737,7 +18271,13 @@
     "fieldSize": 16,
     "finish": "14",
     "status": "unreviewed",
-    "level": null
+    "level": 103.0,
+    "stage": "高め",
+    "pop": 8,
+    "agari": 39.3,
+    "agariRank": 14,
+    "corner4": 1,
+    "marginSec": 2.5
    },
    {
     "date": "2026-06-06",
@@ -17748,7 +18288,8 @@
     "fieldSize": 16,
     "finish": "2",
     "status": "unreviewed",
-    "level": null
+    "level": 95.0,
+    "stage": "標準"
    }
   ]
  },
@@ -17835,7 +18376,13 @@
     "fieldSize": 10,
     "finish": "8",
     "status": "unreviewed",
-    "level": null
+    "level": 85.0,
+    "stage": "標準",
+    "pop": 7,
+    "agari": 33.6,
+    "agariRank": 4,
+    "corner4": 8,
+    "marginSec": 0.6
    },
    {
     "date": "2026-10-17",
@@ -17863,7 +18410,8 @@
     "fieldSize": 18,
     "finish": "7",
     "status": "unreviewed",
-    "level": null
+    "level": 104.0,
+    "stage": "標準"
    }
   ]
  },
@@ -17979,7 +18527,13 @@
     "fieldSize": 10,
     "finish": "8",
     "status": "unreviewed",
-    "level": null
+    "level": 89.0,
+    "stage": "標準",
+    "pop": 10,
+    "agari": 33.7,
+    "agariRank": 8,
+    "corner4": 10,
+    "marginSec": 2.1
    }
   ]
  },
@@ -18509,7 +19063,13 @@
     "fieldSize": 16,
     "finish": "1",
     "status": "unreviewed",
-    "level": null
+    "level": 85.0,
+    "stage": "高め",
+    "pop": 1,
+    "agari": 35.7,
+    "agariRank": 1,
+    "corner4": 9,
+    "marginSec": 0.0
    },
    {
     "date": "2026-09-20",
@@ -18520,7 +19080,13 @@
     "fieldSize": 15,
     "finish": "2",
     "status": "unreviewed",
-    "level": null
+    "level": 122.0,
+    "stage": "高め",
+    "pop": 2,
+    "agari": 36.8,
+    "agariRank": 1,
+    "corner4": 6,
+    "marginSec": 0.5
    },
    {
     "date": "2026-07-25",
@@ -18531,7 +19097,13 @@
     "fieldSize": 10,
     "finish": "3",
     "status": "unreviewed",
-    "level": null
+    "level": 68.0,
+    "stage": "標準",
+    "pop": 3,
+    "agari": 33.1,
+    "agariRank": 3,
+    "corner4": 4,
+    "marginSec": 0.4
    }
   ]
  },
@@ -18641,7 +19213,8 @@
     "fieldSize": 10,
     "finish": "6",
     "status": "unreviewed",
-    "level": null
+    "level": 101.0,
+    "stage": "判定保留"
    },
    {
     "date": "2025-11-29",
@@ -18652,7 +19225,8 @@
     "fieldSize": 12,
     "finish": "3",
     "status": "unreviewed",
-    "level": null
+    "level": 96.0,
+    "stage": "低め"
    }
   ]
  },
@@ -18756,7 +19330,13 @@
     "fieldSize": 11,
     "finish": "10",
     "status": "unreviewed",
-    "level": null
+    "level": 78.0,
+    "stage": "低め",
+    "pop": 6,
+    "agari": 38.7,
+    "agariRank": 10,
+    "corner4": 8,
+    "marginSec": 2.9
    },
    {
     "date": "2026-07-18",
@@ -18767,7 +19347,13 @@
     "fieldSize": 14,
     "finish": "9",
     "status": "unreviewed",
-    "level": null
+    "level": 85.0,
+    "stage": "標準",
+    "pop": 10,
+    "agari": 38.8,
+    "agariRank": 6,
+    "corner4": 10,
+    "marginSec": 1.7
    }
   ]
  },
@@ -18887,7 +19473,13 @@
     "fieldSize": 16,
     "finish": "7",
     "status": "unreviewed",
-    "level": null
+    "level": 91.0,
+    "stage": "標準",
+    "pop": 6,
+    "agari": 38.1,
+    "agariRank": 8,
+    "corner4": 7,
+    "marginSec": 1.0
    }
   ]
  },
@@ -18991,7 +19583,8 @@
     "fieldSize": 9,
     "finish": "1",
     "status": "unreviewed",
-    "level": null
+    "level": 100.0,
+    "stage": "高め"
    },
    {
     "date": "2026-04-26",
@@ -19002,7 +19595,8 @@
     "fieldSize": 11,
     "finish": "2",
     "status": "unreviewed",
-    "level": null
+    "level": 96.0,
+    "stage": "標準"
    }
   ]
  },
@@ -19106,7 +19700,13 @@
     "fieldSize": 12,
     "finish": "3",
     "status": "unreviewed",
-    "level": null
+    "level": 80.0,
+    "stage": "標準",
+    "pop": 2,
+    "agari": 34.9,
+    "agariRank": 4,
+    "corner4": 5,
+    "marginSec": 0.5
    },
    {
     "date": "2026-06-14",
@@ -19117,7 +19717,8 @@
     "fieldSize": 14,
     "finish": "2",
     "status": "unreviewed",
-    "level": null
+    "level": 106.0,
+    "stage": "高め"
    }
   ]
  },
@@ -19221,7 +19822,13 @@
     "fieldSize": 13,
     "finish": "2",
     "status": "unreviewed",
-    "level": null
+    "level": 90.0,
+    "stage": "標準",
+    "pop": 2,
+    "agari": 32.5,
+    "agariRank": 1,
+    "corner4": 13,
+    "marginSec": 0.2
    },
    {
     "date": "2026-04-19",
@@ -19232,7 +19839,8 @@
     "fieldSize": 16,
     "finish": "3",
     "status": "unreviewed",
-    "level": null
+    "level": 101.0,
+    "stage": "標準"
    }
   ]
  },
@@ -19336,7 +19944,13 @@
     "fieldSize": 7,
     "finish": "1",
     "status": "unreviewed",
-    "level": null
+    "level": 85.0,
+    "stage": "標準",
+    "pop": 2,
+    "agari": 33.4,
+    "agariRank": 2,
+    "corner4": 3,
+    "marginSec": 0.0
    },
    {
     "date": "2026-06-21",
@@ -19347,7 +19961,8 @@
     "fieldSize": 7,
     "finish": "3",
     "status": "unreviewed",
-    "level": null
+    "level": 84.0,
+    "stage": "標準"
    }
   ]
  },
@@ -19451,7 +20066,8 @@
     "fieldSize": 8,
     "finish": "1",
     "status": "unreviewed",
-    "level": null
+    "level": 103.0,
+    "stage": "高め"
    },
    {
     "date": "2026-04-11",
@@ -19462,7 +20078,8 @@
     "fieldSize": 15,
     "finish": "6",
     "status": "unreviewed",
-    "level": null
+    "level": 95.0,
+    "stage": "低め"
    }
   ]
  },
@@ -19730,7 +20347,13 @@
     "fieldSize": 17,
     "finish": "3",
     "status": "unreviewed",
-    "level": null
+    "level": 97.0,
+    "stage": "標準",
+    "pop": 11,
+    "agari": 33.8,
+    "agariRank": 1,
+    "corner4": 11,
+    "marginSec": 0.4
    },
    {
     "date": "2026-08-01",
@@ -19741,7 +20364,13 @@
     "fieldSize": 12,
     "finish": "4",
     "status": "unreviewed",
-    "level": null
+    "level": 90.0,
+    "stage": "標準",
+    "pop": 10,
+    "agari": 33.9,
+    "agariRank": 5,
+    "corner4": 8,
+    "marginSec": 0.5
    }
   ]
  },
@@ -19845,7 +20474,8 @@
     "fieldSize": 18,
     "finish": "8",
     "status": "unreviewed",
-    "level": null
+    "level": 83.0,
+    "stage": "標準"
    },
    {
     "date": "2026-05-17",
@@ -19856,7 +20486,8 @@
     "fieldSize": 16,
     "finish": "9",
     "status": "unreviewed",
-    "level": null
+    "level": 70.0,
+    "stage": "低め"
    }
   ]
  },
@@ -19972,7 +20603,8 @@
     "fieldSize": 15,
     "finish": "9",
     "status": "unreviewed",
-    "level": null
+    "level": 103.0,
+    "stage": "高め"
    }
   ]
  },
@@ -20286,7 +20918,8 @@
     "fieldSize": 14,
     "finish": "6",
     "status": "unreviewed",
-    "level": null
+    "level": 95.0,
+    "stage": "標準"
    }
   ]
  },
@@ -20390,7 +21023,8 @@
     "fieldSize": 14,
     "finish": "11",
     "status": "unreviewed",
-    "level": null
+    "level": 106.0,
+    "stage": "高め"
    },
    {
     "date": "2026-05-03",
@@ -20544,7 +21178,8 @@
     "fieldSize": 16,
     "finish": "11",
     "status": "unreviewed",
-    "level": null
+    "level": 102.0,
+    "stage": "標準"
    },
    {
     "date": "2026-05-10",
@@ -20677,7 +21312,8 @@
     "fieldSize": 12,
     "finish": "8",
     "status": "unreviewed",
-    "level": null
+    "level": 90.0,
+    "stage": "低め"
    }
   ]
  },
@@ -21630,7 +22266,8 @@
     "fieldSize": 14,
     "finish": "1",
     "status": "unreviewed",
-    "level": null
+    "level": 98.0,
+    "stage": "標準"
    },
    {
     "date": "2026-02-21",
@@ -21641,7 +22278,8 @@
     "fieldSize": 15,
     "finish": "2",
     "status": "unreviewed",
-    "level": null
+    "level": 93.0,
+    "stage": "標準"
    }
   ]
  },
@@ -22278,7 +22916,8 @@
     "fieldSize": 14,
     "finish": "1",
     "status": "unreviewed",
-    "level": null
+    "level": 87.0,
+    "stage": "低め"
    }
   ]
  },
@@ -22677,7 +23316,13 @@
     "fieldSize": 16,
     "finish": "15",
     "status": "unreviewed",
-    "level": null
+    "level": 79.0,
+    "stage": "標準",
+    "pop": 16,
+    "agari": 39.6,
+    "agariRank": 14,
+    "corner4": 15,
+    "marginSec": 4.0
    }
   ]
  },
@@ -22874,7 +23519,13 @@
     "fieldSize": 8,
     "finish": "5",
     "status": "unreviewed",
-    "level": null
+    "level": 53.0,
+    "stage": "低め",
+    "pop": 4,
+    "agari": 43.5,
+    "agariRank": 5,
+    "corner4": 4,
+    "marginSec": 4.1
    }
   ]
  },
@@ -23087,7 +23738,13 @@
     "fieldSize": 11,
     "finish": "5",
     "status": "unreviewed",
-    "level": null
+    "level": 84.0,
+    "stage": "高め",
+    "pop": 4,
+    "agari": 39.2,
+    "agariRank": 7,
+    "corner4": 4,
+    "marginSec": 2.2
    },
    {
     "date": "2026-09-05",
@@ -23098,7 +23755,13 @@
     "fieldSize": 11,
     "finish": "3",
     "status": "unreviewed",
-    "level": null
+    "level": 69.0,
+    "stage": "標準",
+    "pop": 6,
+    "agari": 38.1,
+    "agariRank": 3,
+    "corner4": 6,
+    "marginSec": 0.7
    }
   ]
  },
@@ -23202,7 +23865,13 @@
     "fieldSize": 14,
     "finish": "8",
     "status": "unreviewed",
-    "level": null
+    "level": 69.0,
+    "stage": "標準",
+    "pop": 13,
+    "agari": 34.0,
+    "agariRank": 9,
+    "corner4": 8,
+    "marginSec": 1.2
    }
   ]
  },
@@ -23306,7 +23975,13 @@
     "fieldSize": 16,
     "finish": "3",
     "status": "unreviewed",
-    "level": null
+    "level": 79.0,
+    "stage": "標準",
+    "pop": 4,
+    "agari": 37.0,
+    "agariRank": 2,
+    "corner4": 7,
+    "marginSec": 0.8
    }
   ]
  },
@@ -23414,7 +24089,13 @@
     "fieldSize": 9,
     "finish": "3",
     "status": "unreviewed",
-    "level": null
+    "level": 92.0,
+    "stage": "高め",
+    "pop": 4,
+    "agari": 34.3,
+    "agariRank": 2,
+    "corner4": 4,
+    "marginSec": 0.6
    },
    {
     "date": "2026-08-02",
@@ -23425,7 +24106,13 @@
     "fieldSize": 10,
     "finish": "8",
     "status": "unreviewed",
-    "level": null
+    "level": 78.0,
+    "stage": "高め",
+    "pop": 8,
+    "agari": 34.5,
+    "agariRank": 5,
+    "corner4": 6,
+    "marginSec": 0.8
    }
   ]
  },
@@ -23621,7 +24308,13 @@
     "fieldSize": 11,
     "finish": "10",
     "status": "unreviewed",
-    "level": null
+    "level": 82.0,
+    "stage": "標準",
+    "pop": 10,
+    "agari": 34.3,
+    "agariRank": 7,
+    "corner4": 11,
+    "marginSec": 1.5
    }
   ]
  },
@@ -23725,7 +24418,13 @@
     "fieldSize": 16,
     "finish": "1",
     "status": "unreviewed",
-    "level": null
+    "level": 78.0,
+    "stage": "標準",
+    "pop": 4,
+    "agari": 37.4,
+    "agariRank": 3,
+    "corner4": 3,
+    "marginSec": 0.0
    },
    {
     "date": "2026-08-23",
@@ -23736,7 +24435,13 @@
     "fieldSize": 16,
     "finish": "4",
     "status": "unreviewed",
-    "level": null
+    "level": 83.0,
+    "stage": "高め",
+    "pop": 10,
+    "agari": 37.1,
+    "agariRank": 4,
+    "corner4": 8,
+    "marginSec": 0.7
    }
   ]
  },
@@ -23840,7 +24545,13 @@
     "fieldSize": 16,
     "finish": "2",
     "status": "unreviewed",
-    "level": null
+    "level": 91.0,
+    "stage": "標準",
+    "pop": 9,
+    "agari": 36.1,
+    "agariRank": 1,
+    "corner4": 16,
+    "marginSec": 0.2
    },
    {
     "date": "2026-06-21",
@@ -23851,7 +24562,8 @@
     "fieldSize": 16,
     "finish": "7",
     "status": "unreviewed",
-    "level": null
+    "level": 94.0,
+    "stage": "標準"
    }
   ]
  },
@@ -23955,7 +24667,13 @@
     "fieldSize": 14,
     "finish": "1",
     "status": "unreviewed",
-    "level": null
+    "level": 65.0,
+    "stage": "標準",
+    "pop": 1,
+    "agari": 38.6,
+    "agariRank": 2,
+    "corner4": 2,
+    "marginSec": 0.0
    },
    {
     "date": "2026-08-01",
@@ -23966,7 +24684,13 @@
     "fieldSize": 11,
     "finish": "2",
     "status": "unreviewed",
-    "level": null
+    "level": 71.0,
+    "stage": "標準",
+    "pop": 3,
+    "agari": 38.2,
+    "agariRank": 4,
+    "corner4": 2,
+    "marginSec": 0.2
    }
   ]
  },
@@ -24074,7 +24798,13 @@
     "fieldSize": 16,
     "finish": "16",
     "status": "unreviewed",
-    "level": null
+    "level": 96.0,
+    "stage": "標準",
+    "pop": 4,
+    "agari": 39.1,
+    "agariRank": 15,
+    "corner4": 10,
+    "marginSec": 2.3
    },
    {
     "date": "2026-09-13",
@@ -24085,7 +24815,13 @@
     "fieldSize": 16,
     "finish": "2",
     "status": "unreviewed",
-    "level": null
+    "level": 90.0,
+    "stage": "標準",
+    "pop": 4,
+    "agari": 38.3,
+    "agariRank": 8,
+    "corner4": 2,
+    "marginSec": 1.1
    }
   ]
  },
@@ -24189,7 +24925,13 @@
     "fieldSize": 12,
     "finish": "6",
     "status": "unreviewed",
-    "level": null
+    "level": 94.0,
+    "stage": "標準",
+    "pop": 3,
+    "agari": 37.6,
+    "agariRank": 3,
+    "corner4": 10,
+    "marginSec": 0.8
    },
    {
     "date": "2026-08-30",
@@ -24200,7 +24942,13 @@
     "fieldSize": 11,
     "finish": "3",
     "status": "unreviewed",
-    "level": null
+    "level": 78.0,
+    "stage": "低め",
+    "pop": 8,
+    "agari": 36.2,
+    "agariRank": 1,
+    "corner4": 4,
+    "marginSec": 0.1
    }
   ]
  },
@@ -24315,7 +25063,8 @@
     "fieldSize": 16,
     "finish": "8",
     "status": "unreviewed",
-    "level": null
+    "level": 78.0,
+    "stage": "標準"
    }
   ]
  },
@@ -24413,7 +25162,13 @@
     "fieldSize": 14,
     "finish": "11",
     "status": "unreviewed",
-    "level": null
+    "level": 99.0,
+    "stage": "標準",
+    "pop": 13,
+    "agari": 39.5,
+    "agariRank": 9,
+    "corner4": 11,
+    "marginSec": 2.8
    },
    {
     "date": "2026-07-11",
@@ -24534,7 +25289,13 @@
     "fieldSize": 15,
     "finish": "12",
     "status": "unreviewed",
-    "level": null
+    "level": 97.0,
+    "stage": "標準",
+    "pop": 13,
+    "agari": 34.1,
+    "agariRank": 9,
+    "corner4": 8,
+    "marginSec": 0.7
    },
    {
     "date": "2026-05-31",
@@ -24650,7 +25411,13 @@
     "fieldSize": 12,
     "finish": "9",
     "status": "unreviewed",
-    "level": null
+    "level": 90.0,
+    "stage": "標準",
+    "pop": 9,
+    "agari": 38.4,
+    "agariRank": 10,
+    "corner4": 4,
+    "marginSec": 1.0
    },
    {
     "date": "2026-08-15",
@@ -24661,7 +25428,13 @@
     "fieldSize": 16,
     "finish": "11",
     "status": "unreviewed",
-    "level": null
+    "level": 91.0,
+    "stage": "標準",
+    "pop": 7,
+    "agari": 38.4,
+    "agariRank": 10,
+    "corner4": 8,
+    "marginSec": 1.6
    }
   ]
  },
@@ -24765,7 +25538,13 @@
     "fieldSize": 15,
     "finish": "2",
     "status": "unreviewed",
-    "level": null
+    "level": 83.0,
+    "stage": "標準",
+    "pop": 1,
+    "agari": 37.1,
+    "agariRank": 9,
+    "corner4": 1,
+    "marginSec": 0.1
    },
    {
     "date": "2026-09-05",
@@ -24776,7 +25555,13 @@
     "fieldSize": 12,
     "finish": "2",
     "status": "unreviewed",
-    "level": null
+    "level": 90.0,
+    "stage": "標準",
+    "pop": 2,
+    "agari": 37.8,
+    "agariRank": 5,
+    "corner4": 3,
+    "marginSec": 0.2
    }
   ]
  },
@@ -24880,7 +25665,13 @@
     "fieldSize": 16,
     "finish": "7",
     "status": "unreviewed",
-    "level": null
+    "level": 83.0,
+    "stage": "標準",
+    "pop": 13,
+    "agari": 38.2,
+    "agariRank": 3,
+    "corner4": 10,
+    "marginSec": 0.9
    },
    {
     "date": "2026-08-23",
@@ -24891,7 +25682,13 @@
     "fieldSize": 11,
     "finish": "11",
     "status": "unreviewed",
-    "level": null
+    "level": 84.0,
+    "stage": "標準",
+    "pop": 9,
+    "agari": 43.7,
+    "agariRank": 11,
+    "corner4": 11,
+    "marginSec": 6.8
    }
   ]
  },
@@ -24995,7 +25792,13 @@
     "fieldSize": 14,
     "finish": "9",
     "status": "unreviewed",
-    "level": null
+    "level": 81.0,
+    "stage": "低め",
+    "pop": 6,
+    "agari": 35.6,
+    "agariRank": 6,
+    "corner4": 11,
+    "marginSec": 0.8
    },
    {
     "date": "2026-08-08",
@@ -25006,7 +25809,13 @@
     "fieldSize": 13,
     "finish": "1",
     "status": "unreviewed",
-    "level": null
+    "level": 61.0,
+    "stage": "低め",
+    "pop": 1,
+    "agari": 36.1,
+    "agariRank": 5,
+    "corner4": 2,
+    "marginSec": 0.0
    }
   ]
  },
@@ -25097,7 +25906,13 @@
     "fieldSize": 10,
     "finish": "1",
     "status": "unreviewed",
-    "level": null
+    "level": 67.0,
+    "stage": "標準",
+    "pop": 1,
+    "agari": 34.8,
+    "agariRank": 2,
+    "corner4": 3,
+    "marginSec": 0.0
    },
    {
     "date": "2026-08-23",
@@ -25125,7 +25940,13 @@
     "fieldSize": 12,
     "finish": "2",
     "status": "unreviewed",
-    "level": null
+    "level": 73.0,
+    "stage": "標準",
+    "pop": 2,
+    "agari": 35.7,
+    "agariRank": 2,
+    "corner4": 4,
+    "marginSec": 0.5
    }
   ]
  },
@@ -25431,7 +26252,13 @@
     "fieldSize": 15,
     "finish": "9",
     "status": "unreviewed",
-    "level": null
+    "level": 91.0,
+    "stage": "標準",
+    "pop": 11,
+    "agari": 37.5,
+    "agariRank": 3,
+    "corner4": 12,
+    "marginSec": 0.7
    },
    {
     "date": "2026-06-21",
@@ -25442,7 +26269,8 @@
     "fieldSize": 16,
     "finish": "13",
     "status": "unreviewed",
-    "level": null
+    "level": 103.0,
+    "stage": "標準"
    }
   ]
  },
@@ -25546,7 +26374,8 @@
     "fieldSize": 16,
     "finish": "11",
     "status": "unreviewed",
-    "level": null
+    "level": 100.0,
+    "stage": "標準"
    },
    {
     "date": "2026-02-01",
@@ -25557,7 +26386,8 @@
     "fieldSize": 11,
     "finish": "1",
     "status": "unreviewed",
-    "level": null
+    "level": 95.0,
+    "stage": "標準"
    }
   ]
  },
@@ -25789,7 +26619,8 @@
     "fieldSize": 16,
     "finish": "9",
     "status": "unreviewed",
-    "level": null
+    "level": 100.0,
+    "stage": "標準"
    }
   ]
  },
@@ -25905,7 +26736,13 @@
     "fieldSize": 14,
     "finish": "10",
     "status": "unreviewed",
-    "level": null
+    "level": 99.0,
+    "stage": "標準",
+    "pop": 5,
+    "agari": 40.0,
+    "agariRank": 11,
+    "corner4": 4,
+    "marginSec": 2.5
    }
   ]
  },
@@ -26009,7 +26846,13 @@
     "fieldSize": 11,
     "finish": "11",
     "status": "unreviewed",
-    "level": null
+    "level": 104.0,
+    "stage": "高め",
+    "pop": 10,
+    "agari": 36.1,
+    "agariRank": 11,
+    "corner4": 7,
+    "marginSec": 2.6
    },
    {
     "date": "2026-06-20",
@@ -26020,7 +26863,8 @@
     "fieldSize": 18,
     "finish": "15",
     "status": "unreviewed",
-    "level": null
+    "level": 83.0,
+    "stage": "標準"
    }
   ]
  },
@@ -26253,7 +27097,8 @@
     "fieldSize": 15,
     "finish": "4",
     "status": "unreviewed",
-    "level": null
+    "level": 96.0,
+    "stage": "低め"
    }
   ]
  },
@@ -26395,7 +27240,8 @@
     "fieldSize": 18,
     "finish": "13",
     "status": "unreviewed",
-    "level": null
+    "level": 96.0,
+    "stage": "標準"
    },
    {
     "date": "2026-05-31",
@@ -26537,7 +27383,13 @@
     "fieldSize": 16,
     "finish": "9",
     "status": "unreviewed",
-    "level": null
+    "level": 111.0,
+    "stage": "高め",
+    "pop": 11,
+    "agari": 33.7,
+    "agariRank": 6,
+    "corner4": 10,
+    "marginSec": 0.9
    },
    {
     "date": "2026-08-22",
@@ -26675,7 +27527,8 @@
     "fieldSize": 13,
     "finish": "11",
     "status": "unreviewed",
-    "level": null
+    "level": 96.0,
+    "stage": "標準"
    },
    {
     "date": "2026-05-16",
@@ -26686,7 +27539,8 @@
     "fieldSize": 16,
     "finish": "6",
     "status": "unreviewed",
-    "level": null
+    "level": 112.0,
+    "stage": "高め"
    }
   ]
  },
@@ -26790,7 +27644,13 @@
     "fieldSize": 18,
     "finish": "2",
     "status": "unreviewed",
-    "level": null
+    "level": 103.0,
+    "stage": "標準",
+    "pop": 2,
+    "agari": 33.4,
+    "agariRank": 6,
+    "corner4": 8,
+    "marginSec": 0.4
    },
    {
     "date": "2026-06-13",
@@ -26801,7 +27661,8 @@
     "fieldSize": 12,
     "finish": "3",
     "status": "unreviewed",
-    "level": null
+    "level": 106.0,
+    "stage": "高め"
    }
   ]
  },
@@ -27022,7 +27883,13 @@
     "fieldSize": 16,
     "finish": "11",
     "status": "unreviewed",
-    "level": null
+    "level": 109.0,
+    "stage": "高め",
+    "pop": 7,
+    "agari": 34.4,
+    "agariRank": 13,
+    "corner4": 3,
+    "marginSec": 1.0
    },
    {
     "date": "2026-08-09",
@@ -27033,7 +27900,13 @@
     "fieldSize": 16,
     "finish": "2",
     "status": "unreviewed",
-    "level": null
+    "level": 95.0,
+    "stage": "標準",
+    "pop": 3,
+    "agari": 34.2,
+    "agariRank": 4,
+    "corner4": 10,
+    "marginSec": 0.1
    }
   ]
  },
@@ -27175,7 +28048,13 @@
     "fieldSize": 16,
     "finish": "11",
     "status": "unreviewed",
-    "level": null
+    "level": 111.0,
+    "stage": "高め",
+    "pop": 6,
+    "agari": 34.2,
+    "agariRank": 12,
+    "corner4": 6,
+    "marginSec": 1.2
    },
    {
     "date": "2026-07-05",
@@ -27186,7 +28065,8 @@
     "fieldSize": 13,
     "finish": "3",
     "status": "unreviewed",
-    "level": null
+    "level": 96.0,
+    "stage": "標準"
    }
   ]
  },
@@ -27290,7 +28170,13 @@
     "fieldSize": 16,
     "finish": "4",
     "status": "unreviewed",
-    "level": null
+    "level": 111.0,
+    "stage": "高め",
+    "pop": 13,
+    "agari": 33.7,
+    "agariRank": 6,
+    "corner4": 4,
+    "marginSec": 0.4
    },
    {
     "date": "2026-08-09",
@@ -27301,7 +28187,13 @@
     "fieldSize": 18,
     "finish": "11",
     "status": "unreviewed",
-    "level": null
+    "level": 103.0,
+    "stage": "標準",
+    "pop": 10,
+    "agari": 34.5,
+    "agariRank": 16,
+    "corner4": 2,
+    "marginSec": 0.7
    }
   ]
  },
@@ -27409,7 +28301,13 @@
     "fieldSize": 11,
     "finish": "1",
     "status": "unreviewed",
-    "level": null
+    "level": 102.0,
+    "stage": "高め",
+    "pop": 2,
+    "agari": 33.0,
+    "agariRank": 1,
+    "corner4": 5,
+    "marginSec": 0.0
    },
    {
     "date": "2026-05-30",
@@ -27420,7 +28318,8 @@
     "fieldSize": 16,
     "finish": "11",
     "status": "unreviewed",
-    "level": null
+    "level": 98.0,
+    "stage": "標準"
    }
   ]
  },
@@ -27524,7 +28423,13 @@
     "fieldSize": 16,
     "finish": "13",
     "status": "unreviewed",
-    "level": null
+    "level": 111.0,
+    "stage": "高め",
+    "pop": 8,
+    "agari": 34.8,
+    "agariRank": 15,
+    "corner4": 8,
+    "marginSec": 1.8
    },
    {
     "date": "2026-08-02",
@@ -27535,7 +28440,13 @@
     "fieldSize": 17,
     "finish": "4",
     "status": "unreviewed",
-    "level": null
+    "level": 114.0,
+    "stage": "高め",
+    "pop": 4,
+    "agari": 32.0,
+    "agariRank": 3,
+    "corner4": 6,
+    "marginSec": 0.7
    }
   ]
  },
@@ -27639,7 +28550,13 @@
     "fieldSize": 16,
     "finish": "4",
     "status": "unreviewed",
-    "level": null
+    "level": 109.0,
+    "stage": "高め",
+    "pop": 4,
+    "agari": 33.6,
+    "agariRank": 4,
+    "corner4": 6,
+    "marginSec": 0.3
    },
    {
     "date": "2026-06-13",
@@ -27650,7 +28567,8 @@
     "fieldSize": 12,
     "finish": "2",
     "status": "unreviewed",
-    "level": null
+    "level": 106.0,
+    "stage": "高め"
    }
   ]
  },
@@ -27738,7 +28656,12 @@
     "finish": "13",
     "status": "unreviewed",
     "level": 59,
-    "stage": "低め"
+    "stage": "低め",
+    "pop": 6,
+    "agari": 42.1,
+    "agariRank": 14,
+    "corner4": 10,
+    "marginSec": 5.9
    },
    {
     "date": "2026-08-29",
@@ -27749,7 +28672,13 @@
     "fieldSize": 18,
     "finish": "9",
     "status": "unreviewed",
-    "level": null
+    "level": 69.0,
+    "stage": "標準",
+    "pop": 9,
+    "agari": 36.6,
+    "agariRank": 14,
+    "corner4": 7,
+    "marginSec": 1.6
    }
   ]
  },
@@ -27908,7 +28837,13 @@
     "fieldSize": 12,
     "finish": "12",
     "status": "unreviewed",
-    "level": null
+    "level": 77.0,
+    "stage": "標準",
+    "pop": 11,
+    "agari": 44.6,
+    "agariRank": 12,
+    "corner4": 10,
+    "marginSec": 6.2
    }
   ]
  },
@@ -28071,7 +29006,13 @@
     "fieldSize": 15,
     "finish": "5",
     "status": "unreviewed",
-    "level": null
+    "level": 66.0,
+    "stage": "標準",
+    "pop": 4,
+    "agari": 35.4,
+    "agariRank": 5,
+    "corner4": 3,
+    "marginSec": 0.4
    }
   ]
  },
@@ -28268,7 +29209,13 @@
     "fieldSize": 12,
     "finish": "9",
     "status": "unreviewed",
-    "level": null
+    "level": 51.0,
+    "stage": "低め",
+    "pop": 11,
+    "agari": 39.8,
+    "agariRank": 12,
+    "corner4": 7,
+    "marginSec": 2.7
    }
   ]
  },
@@ -28503,7 +29450,13 @@
     "fieldSize": 16,
     "finish": "5",
     "status": "unreviewed",
-    "level": null
+    "level": 69.0,
+    "stage": "標準",
+    "pop": 10,
+    "agari": 36.7,
+    "agariRank": 4,
+    "corner4": 7,
+    "marginSec": 0.7
    },
    {
     "date": "2026-10-10",
@@ -28623,7 +29576,13 @@
     "fieldSize": 12,
     "finish": "11",
     "status": "unreviewed",
-    "level": null
+    "level": 78.0,
+    "stage": "標準",
+    "pop": 6,
+    "agari": 35.0,
+    "agariRank": 10,
+    "corner4": 8,
+    "marginSec": 1.7
    },
    {
     "date": "2026-09-20",
@@ -28635,7 +29594,12 @@
     "finish": "11",
     "status": "unreviewed",
     "level": 59,
-    "stage": "低め"
+    "stage": "低め",
+    "pop": 2,
+    "agari": 39.1,
+    "agariRank": 12,
+    "corner4": 7,
+    "marginSec": 3.4
    }
   ]
  },
@@ -28739,7 +29703,13 @@
     "fieldSize": 12,
     "finish": "7",
     "status": "unreviewed",
-    "level": null
+    "level": 80.0,
+    "stage": "標準",
+    "pop": 11,
+    "agari": 38.2,
+    "agariRank": 5,
+    "corner4": 11,
+    "marginSec": 3.6
    }
   ]
  },
@@ -28826,7 +29796,13 @@
     "fieldSize": 14,
     "finish": "8",
     "status": "unreviewed",
-    "level": null
+    "level": 81.0,
+    "stage": "標準",
+    "pop": 9,
+    "agari": 38.0,
+    "agariRank": 6,
+    "corner4": 12,
+    "marginSec": 2.2
    },
    {
     "date": "2026-10-10",
@@ -28854,7 +29830,13 @@
     "fieldSize": 13,
     "finish": "8",
     "status": "unreviewed",
-    "level": null
+    "level": 74.0,
+    "stage": "標準",
+    "pop": 12,
+    "agari": 35.9,
+    "agariRank": 11,
+    "corner4": 5,
+    "marginSec": 1.0
    }
   ]
  },
@@ -29045,7 +30027,13 @@
     "fieldSize": 16,
     "finish": "3",
     "status": "unreviewed",
-    "level": null
+    "level": 72.0,
+    "stage": "標準",
+    "pop": 16,
+    "agari": 37.0,
+    "agariRank": 5,
+    "corner4": 8,
+    "marginSec": 0.8
    },
    {
     "date": "2026-08-29",
@@ -29073,7 +30061,13 @@
     "fieldSize": 8,
     "finish": "8",
     "status": "unreviewed",
-    "level": null
+    "level": 71.0,
+    "stage": "標準",
+    "pop": 8,
+    "agari": 36.0,
+    "agariRank": 3,
+    "corner4": 8,
+    "marginSec": 1.7
    }
   ]
  },
@@ -29641,7 +30635,13 @@
     "fieldSize": 11,
     "finish": "5",
     "status": "unreviewed",
-    "level": null
+    "level": 84.0,
+    "stage": "高め",
+    "pop": 7,
+    "agari": 33.7,
+    "agariRank": 2,
+    "corner4": 11,
+    "marginSec": 2.0
    }
   ]
  },
@@ -29745,7 +30745,13 @@
     "fieldSize": 13,
     "finish": "8",
     "status": "unreviewed",
-    "level": null
+    "level": 48.0,
+    "stage": "低め",
+    "pop": 10,
+    "agari": 38.8,
+    "agariRank": 9,
+    "corner4": 2,
+    "marginSec": 1.2
    },
    {
     "date": "2026-09-05",
@@ -29756,7 +30762,13 @@
     "fieldSize": 11,
     "finish": "6",
     "status": "unreviewed",
-    "level": null
+    "level": 67.0,
+    "stage": "標準",
+    "pop": 10,
+    "agari": 35.1,
+    "agariRank": 5,
+    "corner4": 5,
+    "marginSec": 1.3
    }
   ]
  },
@@ -30053,7 +31065,13 @@
     "fieldSize": 13,
     "finish": "7",
     "status": "unreviewed",
-    "level": null
+    "level": 82.0,
+    "stage": "標準",
+    "pop": 7,
+    "agari": 40.2,
+    "agariRank": 9,
+    "corner4": 9,
+    "marginSec": 3.3
    }
   ]
  },
@@ -30146,7 +31164,13 @@
     "fieldSize": 12,
     "finish": "2",
     "status": "unreviewed",
-    "level": null
+    "level": 92.0,
+    "stage": "高め",
+    "pop": 1,
+    "agari": 39.4,
+    "agariRank": 5,
+    "corner4": 2,
+    "marginSec": 1.0
    },
    {
     "date": "2026-07-26",
@@ -30322,7 +31346,8 @@
     "fieldSize": 11,
     "finish": "4",
     "status": "unreviewed",
-    "level": null
+    "level": 75.0,
+    "stage": "標準"
    }
   ]
  },
@@ -30459,7 +31484,13 @@
     "fieldSize": 14,
     "finish": "9",
     "status": "unreviewed",
-    "level": null
+    "level": 56.0,
+    "stage": "低め",
+    "pop": 13,
+    "agari": 36.9,
+    "agariRank": 11,
+    "corner4": 5,
+    "marginSec": 1.5
    },
    {
     "date": "2026-09-06",
@@ -30579,7 +31610,8 @@
     "fieldSize": 14,
     "finish": "9",
     "status": "unreviewed",
-    "level": null
+    "level": 85.0,
+    "stage": "高め"
    },
    {
     "date": "2026-06-14",
@@ -30704,7 +31736,13 @@
     "fieldSize": 14,
     "finish": "6",
     "status": "unreviewed",
-    "level": null
+    "level": 64.0,
+    "stage": "標準",
+    "pop": 10,
+    "agari": 38.8,
+    "agariRank": 5,
+    "corner4": 8,
+    "marginSec": 0.8
    }
   ]
  },
@@ -30901,7 +31939,13 @@
     "fieldSize": 16,
     "finish": "9",
     "status": "unreviewed",
-    "level": null
+    "level": 88.0,
+    "stage": "高め",
+    "pop": 7,
+    "agari": 40.4,
+    "agariRank": 9,
+    "corner4": 2,
+    "marginSec": 3.8
    }
   ]
  },
@@ -30989,7 +32033,12 @@
     "finish": "8",
     "status": "unreviewed",
     "level": 95,
-    "stage": "高め"
+    "stage": "高め",
+    "pop": 4,
+    "agari": 36.8,
+    "agariRank": 6,
+    "corner4": 12,
+    "marginSec": 2.6
    }
   ]
  },
@@ -31093,7 +32142,13 @@
     "fieldSize": 16,
     "finish": "10",
     "status": "unreviewed",
-    "level": null
+    "level": 96.0,
+    "stage": "標準",
+    "pop": 4,
+    "agari": 38.5,
+    "agariRank": 10,
+    "corner4": 4,
+    "marginSec": 1.8
    },
    {
     "date": "2026-05-31",
@@ -31104,7 +32159,8 @@
     "fieldSize": 16,
     "finish": "10",
     "status": "unreviewed",
-    "level": null
+    "level": 88.0,
+    "stage": "標準"
    }
   ]
  },
@@ -31208,7 +32264,13 @@
     "fieldSize": 16,
     "finish": "6",
     "status": "unreviewed",
-    "level": null
+    "level": 81.0,
+    "stage": "標準",
+    "pop": 11,
+    "agari": 36.9,
+    "agariRank": 6,
+    "corner4": 9,
+    "marginSec": 0.5
    },
    {
     "date": "2026-07-19",
@@ -31219,7 +32281,13 @@
     "fieldSize": 10,
     "finish": "10",
     "status": "unreviewed",
-    "level": null
+    "level": 86.0,
+    "stage": "標準",
+    "pop": 7,
+    "agari": 35.2,
+    "agariRank": 8,
+    "corner4": 7,
+    "marginSec": 1.1
    }
   ]
  },
@@ -31330,7 +32398,13 @@
     "fieldSize": 16,
     "finish": "8",
     "status": "unreviewed",
-    "level": null
+    "level": 86.0,
+    "stage": "標準",
+    "pop": 9,
+    "agari": 36.2,
+    "agariRank": 5,
+    "corner4": 12,
+    "marginSec": 0.8
    }
   ]
  },
@@ -31434,7 +32508,13 @@
     "fieldSize": 16,
     "finish": "11",
     "status": "unreviewed",
-    "level": null
+    "level": 81.0,
+    "stage": "標準",
+    "pop": 7,
+    "agari": 39.3,
+    "agariRank": 14,
+    "corner4": 1,
+    "marginSec": 1.8
    },
    {
     "date": "2026-04-26",
@@ -31712,7 +32792,13 @@
     "fieldSize": 11,
     "finish": "5",
     "status": "unreviewed",
-    "level": null
+    "level": 83.0,
+    "stage": "低め",
+    "pop": 2,
+    "agari": 34.3,
+    "agariRank": 6,
+    "corner4": 5,
+    "marginSec": 0.4
    },
    {
     "date": "2026-06-14",
@@ -31854,7 +32940,13 @@
     "fieldSize": 16,
     "finish": "11",
     "status": "unreviewed",
-    "level": null
+    "level": 54.0,
+    "stage": "低め",
+    "pop": 5,
+    "agari": 36.6,
+    "agariRank": 3,
+    "corner4": 15,
+    "marginSec": 1.5
    },
    {
     "date": "2026-10-18",
@@ -31987,7 +33079,13 @@
     "fieldSize": 16,
     "finish": "1",
     "status": "unreviewed",
-    "level": null
+    "level": 71.0,
+    "stage": "低め",
+    "pop": 3,
+    "agari": 37.3,
+    "agariRank": 3,
+    "corner4": 7,
+    "marginSec": 0.0
    },
    {
     "date": "2026-08-28",
@@ -32097,7 +33195,13 @@
     "fieldSize": 15,
     "finish": "3",
     "status": "unreviewed",
-    "level": null
+    "level": 104.0,
+    "stage": "高め",
+    "pop": 6,
+    "agari": 36.1,
+    "agariRank": 5,
+    "corner4": 7,
+    "marginSec": 1.2
    },
    {
     "date": "2026-06-21",
@@ -32108,7 +33212,8 @@
     "fieldSize": 16,
     "finish": "1",
     "status": "unreviewed",
-    "level": null
+    "level": 94.0,
+    "stage": "標準"
    }
   ]
  },
@@ -32218,7 +33323,13 @@
     "fieldSize": 9,
     "finish": "3",
     "status": "unreviewed",
-    "level": null
+    "level": 96.0,
+    "stage": "標準",
+    "pop": 3,
+    "agari": 35.7,
+    "agariRank": 3,
+    "corner4": 5,
+    "marginSec": 0.6
    },
    {
     "date": "2026-08-16",
@@ -32229,7 +33340,13 @@
     "fieldSize": 16,
     "finish": "2",
     "status": "unreviewed",
-    "level": null
+    "level": 95.0,
+    "stage": "標準",
+    "pop": 1,
+    "agari": 36.1,
+    "agariRank": 1,
+    "corner4": 11,
+    "marginSec": 0.2
    }
   ]
  },
@@ -32316,7 +33433,13 @@
     "fieldSize": 16,
     "finish": "16",
     "status": "unreviewed",
-    "level": null
+    "level": 85.0,
+    "stage": "標準",
+    "pop": 16,
+    "agari": 36.1,
+    "agariRank": 8,
+    "corner4": 15,
+    "marginSec": 1.7
    },
    {
     "date": "2026-09-06",
@@ -32327,7 +33450,13 @@
     "fieldSize": 12,
     "finish": "12",
     "status": "unreviewed",
-    "level": null
+    "level": 94.0,
+    "stage": "標準",
+    "pop": 12,
+    "agari": 40.8,
+    "agariRank": 12,
+    "corner4": 12,
+    "marginSec": 4.0
    },
    {
     "date": "2026-08-30",
@@ -32338,7 +33467,13 @@
     "fieldSize": 12,
     "finish": "9",
     "status": "unreviewed",
-    "level": null
+    "level": 79.0,
+    "stage": "標準",
+    "pop": 12,
+    "agari": 35.8,
+    "agariRank": 8,
+    "corner4": 7,
+    "marginSec": 1.2
    }
   ]
  },
@@ -32437,7 +33572,13 @@
     "fieldSize": 14,
     "finish": "2",
     "status": "unreviewed",
-    "level": null
+    "level": 76.0,
+    "stage": "標準",
+    "pop": 3,
+    "agari": 34.3,
+    "agariRank": 1,
+    "corner4": 3,
+    "marginSec": 0.1
    },
    {
     "date": "2026-08-23",
