@@ -1085,6 +1085,11 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 .finp.f1{background:#ffe600;color:#111827}
 .finp.f2{background:#2456c8;color:#fff}
 .finp.f3{background:#d92b2b;color:#fff}
+/* 近3走の一覧の着順：バッジを使わず色文字だけ（1着=#b45309・2着=#2563eb・3着=#b85454、いずれも太字。4着以下は通常の文字） */
+.l3fin{font-weight:700}
+.l3fin.f1{color:#b45309}
+.l3fin.f2{color:#2563eb}
+.l3fin.f3{color:#b85454}
 /* 結果と照合のカード内では、3着の赤だけ彩度を一段落とす（目立つ順が1着→2着→3着の序列どおりになるように） */
 .res-horse .finp.f3{background:#b85454;color:#fff}
 /* レース一覧の状態バッジ：2列目（レース情報）の中に「結果」「回顧」を上下2行に積んで表示。
@@ -3121,6 +3126,17 @@ function finChipW(fin){
   }
   return escW(f);
 }
+/* 近3走の一覧の着順：バッジを使わず文字だけ（1着=#b45309・2着=#2563eb・3着=#b85454の太字。4着以下は通常の文字） */
+function finTxtW(fin){
+  var f=String(fin==null?"":fin).trim();
+  if(!f) return "―";
+  if(/^\d+$/.test(f)){
+    var n=parseInt(f,10);
+    if(n>=1&&n<=3) return '<span class="l3fin f'+n+'">'+n+'着</span>';
+    return escW(f+"着");
+  }
+  return escW(f);
+}
 /* 回顧表の着順：地色付きチップは使わず、太字の色文字だけにする
    （1着=#c9a400の黄色系・2着=青・3着=赤。4着以下は表のグレー文字のまま） */
 function finTxtRv(fin){
@@ -3283,7 +3299,7 @@ function last3Table(hh,horseName){
           d2V='<span class="l3f unrev">未回顧</span>';
         }
         rowsV+='<tr><td class="l3-d"><div class="l3-d1">'+escW(fmtDSlash(it.date||""))+'</div><div class="l3-d2">'+d2V+'</div></td>'
-          +'<td class="l3-s"><div class="l3-s1">'+escW(courseV)+(clsV?"（"+escW(l3ClassShort(clsV))+"）":"")+'・'+finChipW(it.finish)+'</div>'
+          +'<td class="l3-s"><div class="l3-s1">'+escW(courseV)+(clsV?"（"+escW(l3ClassShort(clsV))+"）":"")+'・'+finTxtW(it.finish)+'</div>'
           +'<div class="l3-s2">'+l3Stats(it)+'</div></td>'
           +'<td class="l3-lv">'+rlvShort(it.level,it.stage)+'</td></tr>';
       }else{
@@ -3306,7 +3322,7 @@ function last3Table(hh,horseName){
       var agF=parseFloat(rv["推定上り"]); if(isNaN(agF)) agF=null;
       var agrF=parseInt(rv["上がり順位"],10); if(isNaN(agrF)) agrF=null;
       rows+='<tr><td class="l3-d"><div class="l3-d1">'+escW(fmtDSlash(rv["開催日"]||""))+'</div><div class="l3-d2">'+gradeChip(rv["総合評価"]||"")+'・<span class="l3f '+(L3FLOW[fl]||"ho")+'">'+escW(l3FlowLbl(fl))+'</span></div></td>'
-        +'<td class="l3-s"><div class="l3-s1">'+escW(courseF)+(clsF?"（"+escW(l3ClassShort(clsF))+"）":"")+'・'+finChipW(rv["着順"])+'</div>'
+        +'<td class="l3-s"><div class="l3-s1">'+escW(courseF)+(clsF?"（"+escW(l3ClassShort(clsF))+"）":"")+'・'+finTxtW(rv["着順"])+'</div>'
         +'<div class="l3-s2">'+l3Stats({fieldSize:rv["出走頭数"]||null,finish:rv["着順"],agari:agF,agariRank:agrF})+'</div></td>'
         +'<td class="l3-lv">―</td></tr>';
     }else if(isDebut){
