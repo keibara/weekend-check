@@ -1279,7 +1279,7 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 .last3 .l3-d2{font-size:10px;letter-spacing:-.02em;white-space:nowrap;line-height:1.55;margin-top:1px}
 .last3 .l3-d2 .eg{font-size:10px;padding:0 4px;line-height:1.45}
 .last3 .l3-s1{font-size:11.5px;line-height:1.4}
-.last3 .l3-s2{font-size:10px;color:var(--ink2);line-height:1.45;margin-top:1px;letter-spacing:-.02em}
+.last3 .l3-s2{font-size:10px;color:var(--ink2);line-height:1.45;margin-top:1px;letter-spacing:-.02em;white-space:nowrap}
 .last3 td.l3-lv{font-size:11.5px;letter-spacing:0;text-align:center;font-weight:700;vertical-align:middle}
 </style>
 <style>
@@ -3212,7 +3212,7 @@ function l3CourseShort(venue,surface,distance){
   var sf=s.indexOf("ダート")>=0?"ダ":(s.indexOf("障害")>=0?"障":"芝");
   return String(venue||"")+sf+(distance!=null&&distance!==""?distance:"");
 }
-/* 近3走表の成績2行目：人気/頭数／着差／上り（順位）／4角→着順。
+/* 近3走表の成績2行目：人気/頭数/着差/上り(順位)/4角→着順。区切りと上り順位の括弧は半角で統一する。
    フィールドが無い項目はその項目だけ「―」にする（項目自体は消さない）。
    着差は小数1桁で統一する（勝ち馬＝marginSec 0 の時も「着差0.0」）。上りの順位は agariRank がある時だけ付ける */
 function l3Stats(o){
@@ -3220,13 +3220,28 @@ function l3Stats(o){
   var fs=(o.fieldSize!=null&&o.fieldSize!=="")?escW(o.fieldSize)+"頭":"―";
   var mgN=Number(o.marginSec), mg=(o.marginSec!=null&&o.marginSec!==""&&!isNaN(mgN))?"着差"+mgN.toFixed(1):"着差―";
   var agN=Number(o.agari), ag="上り―";
-  if(o.agari!=null&&o.agari!==""&&!isNaN(agN)) ag="上り"+agN.toFixed(1)+((o.agariRank!=null&&o.agariRank!=="")?"（"+escW(o.agariRank)+"位）":"");
+  if(o.agari!=null&&o.agari!==""&&!isNaN(agN)) ag="上り"+agN.toFixed(1)+((o.agariRank!=null&&o.agariRank!=="")?"("+escW(o.agariRank)+"位)":"");
   var c4="4角―";
   if(o.corner4!=null&&o.corner4!==""){
     var f=String(o.finish==null?"":o.finish).trim();
     c4="4角"+escW(o.corner4)+"→"+(f?escW(f):"―");
   }
-  return pop+"/"+fs+"／"+mg+"／"+ag+"／"+c4;
+  return pop+"/"+fs+"/"+mg+"/"+ag+"/"+c4;
+}
+/* 近3走表の日付セル2行目だけの展開ラベル：判定保留は「保留」と短く出す（他の場所の「判定保留」表記は変えない） */
+function l3FlowLbl(fl){ return fl==="判定保留"?"保留":(fl||"―"); }
+/* 近3走表の成績1行目用クラス略称：未勝利→未（2歳未勝利→2歳未／3歳未勝利→3歳未）／新馬→新（2歳新馬→2歳新）／
+   ◯勝クラス→◯勝（年齢は限定戦のみ残す＝従来の shortClass と同じ扱い）。レース名入りの表記（括弧つき）は今の表記のまま変えない */
+function l3ClassShort(cls){
+  var s=String(cls||"");
+  if(!s||/[（(]/.test(s)) return s;
+  var ageM=s.match(/^([23])歳(以上)?/);
+  var ageLim=(ageM&&!ageM[2])?ageM[1]+"歳":"";
+  if(s.indexOf("未勝利")>=0) return (s.indexOf("障害")===0?"障害":"")+ageLim+"未";
+  if(s.indexOf("新馬")>=0) return ageLim+"新";
+  var w=s.match(/([1-9])勝クラス/);
+  if(w) return ageLim+w[1]+"勝";
+  return s;
 }
 /* 直近3走を3部構成（日付／成績／RLV.）・各走2行で示す要約表。並びと出走の有無は、出走記録で確認した実際の直近3走（統合履歴 assets/history-detail.json の確認済み記録）を使う。
    日付セルの2行目：回顧のある走は評価（従来の評価色つき）・展開評価、回顧のない走は「未回顧」。
@@ -3252,13 +3267,13 @@ function last3Table(hh,horseName){
         if(it.status==="reviewed"){
           var dkV=String(it.date||"").replace(/-/g,"");
           var flV=flowByDate[dkV]||"";
-          d2V=gradeChip(gradeByDate[dkV]||"")+'・<span class="l3f '+(L3FLOW[flV]||"ho")+'">'+escW(flV||"―")+'</span>';
+          d2V=gradeChip(gradeByDate[dkV]||"")+'・<span class="l3f '+(L3FLOW[flV]||"ho")+'">'+escW(l3FlowLbl(flV))+'</span>';
         }else{
           hasUnrev=true;
           d2V='<span class="l3f unrev">未回顧</span>';
         }
         rowsV+='<tr><td class="l3-d"><div class="l3-d1">'+escW(fmtDSlash(it.date||""))+'</div><div class="l3-d2">'+d2V+'</div></td>'
-          +'<td class="l3-s"><div class="l3-s1">'+escW(courseV)+(clsV?"（"+escW(clsV)+"）":"")+'・'+finChipW(it.finish)+'</div>'
+          +'<td class="l3-s"><div class="l3-s1">'+escW(courseV)+(clsV?"（"+escW(l3ClassShort(clsV))+"）":"")+'・'+finChipW(it.finish)+'</div>'
           +'<div class="l3-s2">'+l3Stats(it)+'</div></td>'
           +'<td class="l3-lv">'+rlvShort(it.level,it.stage)+'</td></tr>';
       }else{
@@ -3280,8 +3295,8 @@ function last3Table(hh,horseName){
       var clsF=String(rv["クラス"]||"");
       var agF=parseFloat(rv["推定上り"]); if(isNaN(agF)) agF=null;
       var agrF=parseInt(rv["上がり順位"],10); if(isNaN(agrF)) agrF=null;
-      rows+='<tr><td class="l3-d"><div class="l3-d1">'+escW(fmtDSlash(rv["開催日"]||""))+'</div><div class="l3-d2">'+gradeChip(rv["総合評価"]||"")+'・<span class="l3f '+(L3FLOW[fl]||"ho")+'">'+escW(fl||"―")+'</span></div></td>'
-        +'<td class="l3-s"><div class="l3-s1">'+escW(courseF)+(clsF?"（"+escW(clsF)+"）":"")+'・'+finChipW(rv["着順"])+'</div>'
+      rows+='<tr><td class="l3-d"><div class="l3-d1">'+escW(fmtDSlash(rv["開催日"]||""))+'</div><div class="l3-d2">'+gradeChip(rv["総合評価"]||"")+'・<span class="l3f '+(L3FLOW[fl]||"ho")+'">'+escW(l3FlowLbl(fl))+'</span></div></td>'
+        +'<td class="l3-s"><div class="l3-s1">'+escW(courseF)+(clsF?"（"+escW(l3ClassShort(clsF))+"）":"")+'・'+finChipW(rv["着順"])+'</div>'
         +'<div class="l3-s2">'+l3Stats({fieldSize:rv["出走頭数"]||null,finish:rv["着順"],agari:agF,agariRank:agrF})+'</div></td>'
         +'<td class="l3-lv">―</td></tr>';
     }else if(isDebut){
