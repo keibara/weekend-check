@@ -4440,6 +4440,7 @@ if(rp&&window.MutationObserver){
   var lu=document.getElementById('last-updated');
   if(lu){ lu.style.cursor='pointer'; lu.title='タップで更新';
     lu.addEventListener('click',function(){ location.reload(); });
+    fetch("assets/site-updated.json",{cache:"no-store"}).then(function(r){ return r.json(); }).then(function(d){ if(d&&d.updated){ lu.textContent='最終更新：'+d.updated; } }).catch(function(){});
   }
 })();
 </script>
