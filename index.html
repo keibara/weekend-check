@@ -1014,7 +1014,7 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 .res-sum td{padding:4px 5px;border:1px solid var(--line);vertical-align:top;text-align:center;font-weight:700}
 .res-name{font-weight:700;white-space:nowrap}
 .res-special{display:inline-block;font-weight:900;color:#92400e;background:#fffbeb;border:1px solid #f59e0b;border-radius:999px;padding:0 8px;font-size:11.5px;white-space:nowrap}
-.res-horse{background:#fff;border:1px solid var(--line);border-radius:6px;padding:8px 10px;margin-bottom:8px}
+.res-horse{background:#fff;border:1px solid var(--line);border-radius:6px;padding:8px 10px 3px;margin-bottom:8px}
 .res-h-head{display:flex;align-items:baseline;gap:8px;margin-bottom:3px}
 .res-h-num{font-weight:900;color:var(--ink2);min-width:1.6em;text-align:center;border-radius:4px;padding:0 3px}
 /* 見出し行の馬番には、出馬表の一覧と同じ枠番カラー（通常の濃さ）を付ける。
@@ -1045,6 +1045,10 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
   .res-h-name .wname.nl12{font-size:9.5px}
 }
 .res-h-line{display:flex;gap:8px;font-size:12.5px;line-height:1.55;padding:1px 0}
+/* 「今回の結果」は着順・人気の区画を固定幅にして、着差の開始位置を全カードで揃える
+   （1〜3着のバッジ有無・人気の桁数・人気なしでずれない） */
+.res-fin-pos{display:inline-block;width:42px;vertical-align:middle}
+.res-fin-pop{display:inline-block;width:78px;vertical-align:middle;font-variant-numeric:tabular-nums}
 .res-h-lab{flex:0 0 5.8em;font-weight:900;color:var(--ink2);font-size:11.5px;padding-top:2px;white-space:nowrap}
 /* 馬名の見出し行のバッジ群は、出馬表の一覧の右セル（.et-side-in）とまったく同じ作りにする。
    並びは 馬名・条件（「条件」ラベル＋印）・回顧メモ区分チップ・型チップ。
@@ -1068,8 +1072,8 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 .res-head-badges .wmemo-hold{margin:0;border:1px solid #94a3b8;border-radius:999px;padding:1px 8px;background:#fff;line-height:1.5;font-size:11.5px;flex:none;white-space:nowrap}
 .res-head-badges .wkata{margin:0;vertical-align:0;flex:none;white-space:nowrap}
 .res-norev{font-weight:900;color:#92400e}
-.res-det{margin-top:6px;border-top:1px dashed var(--line);padding-top:4px}
-.res-det>summary{font-size:12.5px;font-weight:700;color:var(--nk);cursor:pointer;min-height:34px;display:flex;align-items:center}
+.res-det{margin-top:3px;border-top:1px dashed var(--line);padding-top:1px}
+.res-det>summary{font-size:12.5px;font-weight:700;color:var(--nk);cursor:pointer;min-height:29px;display:flex;align-items:center}
 .res-dsec{margin:8px 0}
 .res-dh{display:block;font-size:12px;color:var(--nk);margin-bottom:2px}
 .res-dline{font-size:12.5px;line-height:1.6;margin:2px 0;color:var(--ink)}
@@ -3714,7 +3718,31 @@ function resHorseHtml(r,it){
       +'</span>';
   }
   var finShort;
-  if(typeof x.finish==="number"){ finShort=finChipW(x.finish)+(x.margin?("（着差 "+escW(x.margin)+"）"):""); }
+  if(typeof x.finish==="number"){
+    /* 並びは 着順 → 人気/頭数 → 着差。人気は race-results の pop（数値）を使い、頭数はそのレースの
+       出走頭数（results のうち取消を除いた件数）。pop が無い馬は人気の区画を空のままにする。
+       着順と人気の区画は固定幅（.res-fin-pos／.res-fin-pop）で、着差の開始位置を全カードで揃える */
+    var popN=parseInt(x.pop,10), popTxt="";
+    if(isNaN(popN)||popN<=0){
+      /* 行オブジェクト（it.x）に pop が乗っていない場合は、結果データ（wResults）から
+         この馬の行を馬番・馬名で引き直して pop を補う（受け渡しの途中で落ちても人気が届くように） */
+      var rrP=(wResults&&wResults.races&&r.raceId)?wResults.races[r.raceId]:null;
+      if(rrP&&rrP.results){
+        for(var pi=0;pi<rrP.results.length;pi++){
+          var y0=rrP.results[pi];
+          if((x.num&&String(y0.num)===String(x.num))||y0.name===x.name){ popN=parseInt(y0.pop,10); break; }
+        }
+      }
+    }
+    if(!isNaN(popN)&&popN>0){
+      var rrF=(wResults&&wResults.races&&r.raceId)?wResults.races[r.raceId]:null, fieldN=0;
+      if(rrF&&rrF.results) rrF.results.forEach(function(y){ if(y.finish!=="取消") fieldN++; });
+      popTxt=popN+"人気"+(fieldN?("/"+fieldN+"頭"):"");
+    }
+    finShort='<span class="res-fin-pos">'+finChipW(x.finish)+'</span>'
+      +'<span class="res-fin-pop">'+escW(popTxt)+'</span>'
+      +(x.margin?('<span class="res-fin-margin">（着差 '+escW(x.margin)+'）</span>'):"");
+  }
   else{ finShort='<span class="res-special">'+escW(x.finish)+'</span>'; }
   var curShort="";
   if(cur){ curShort="評価 "+(cur.grade?gradeChip(cur.grade):"―")+"（実績指数 "+fmtNumW(cur.jisseki)+"・内容補正後 "+fmtNumW(cur.nouryoku)+"・展開 "+flowTxtW(cur.paceFit)+"）"; }
