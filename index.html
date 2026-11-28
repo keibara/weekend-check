@@ -1198,13 +1198,15 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 .last3{width:100%;min-width:100%;table-layout:fixed;border-collapse:collapse;line-height:1.35}
 .last3 th,.last3 td{border:1px solid #94a3b8;padding:2px 3px;line-height:1.35;
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis;overflow-wrap:normal;vertical-align:middle}
-.last3 th:nth-child(1),.last3 td:nth-child(1){width:19%}
-.last3 th:nth-child(2),.last3 td:nth-child(2){width:24%}
-.last3 th:nth-child(3),.last3 td:nth-child(3){width:15%}
-.last3 th:nth-child(4),.last3 td:nth-child(4){width:10%}
-.last3 th:nth-child(5),.last3 td:nth-child(5){width:10%}
-.last3 th:nth-child(6),.last3 td:nth-child(6){width:10%}
-.last3 th:nth-child(7),.last3 td:nth-child(7){width:12%}
+.last3 th:nth-child(1),.last3 td:nth-child(1){width:18%}
+.last3 th:nth-child(2),.last3 td:nth-child(2){width:14%}
+.last3 th:nth-child(3),.last3 td:nth-child(3){width:14%}
+.last3 th:nth-child(4),.last3 td:nth-child(4){width:8%}
+.last3 th:nth-child(5),.last3 td:nth-child(5){width:8%}
+.last3 th:nth-child(6),.last3 td:nth-child(6){width:7%}
+.last3 th:nth-child(7),.last3 td:nth-child(7){width:14%}
+.last3 th:nth-child(8),.last3 td:nth-child(8){width:17%}
+.last3 td.l3-lv{font-size:9.5px;letter-spacing:-.06em;padding-left:2px;padding-right:2px}
 /* 空行（出走歴なし）は colspan=7 のため割合の対象外：高さだけ詰める */
 .last3 tr.l3-empty td{height:12px;padding-top:2px;padding-bottom:2px}
 .last3 tr.l3-none td{white-space:nowrap}
@@ -1234,11 +1236,11 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
    罫線：セル内はかなり薄く（#e6e9ec）、馬ごとの境目は少しだけ分かる濃さ（#b9c2cc） */
 .etable{table-layout:fixed;width:100%;border-collapse:collapse}
 .etable col.et-col1{width:3.6em}
-.etable col.et-col2{width:80px}
-.etable col.et-col3{width:30px}
-.etable col.et-col4{width:59px}
-.etable col.et-col5{width:80px}
-.etable col.et-col6{width:auto}
+.etable col.et-col2{width:84px}
+.etable col.et-col3{width:auto}
+.etable col.et-col4{width:46px} /* 幅の入れ替え：馬名側（2〜4列目）を10px狭め、右側（5・6列目）へ回す */
+.etable col.et-col5{width:83px}
+.etable col.et-col6{width:87px}
 .etable td{border:1px solid #e6e9ec;padding:0 3px;vertical-align:middle}
 .etable tr.et-r1{height:36px}
 .etable tr.et-r1>td{border-top:1px solid #b9c2cc}
@@ -1327,11 +1329,13 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 .et-idx .et-idx-mark{font-size:9px;font-weight:700;color:#6b7280;margin-left:1px;letter-spacing:0}
 </style>
 <style>
-/* ===== 1列目：馬番セルと回顧ラベルセルの間の横線を消す =====
-   枠色の列が1頭分を通して1つの色のブロックに見えるようにする。
-   対象は1列目だけ：馬名行（et-r1）の馬番セル下辺と、その下の回顧ラベルセル（et-cnt）上辺。
+/* ===== 1列目：馬番セルと回顧ラベルセルの間に薄いグレーの横線を入れる =====
+   枠色の地の上でも見えるよう、半透明のグレーで薄く引く（白・黄・ピンクの明るい枠色でも、
+   黒・赤・青などの濃い枠色でも、うっすら見える濃さ）。
+   対象は1列目だけ：馬名行（et-r1）の馬番セル下辺に出し、回顧ラベルセル（et-cnt）上辺はなしのまま
+   （border-collapse では none より実線が優先されるので、この1本だけが残る）。
    他の列の罫線・馬ごとの境目（et-r1上辺／et-r3・et-cnt下辺）はそのまま残す */
-.etable td.c-num{border-bottom:none}
+.etable td.c-num{border-bottom:1px solid rgba(100,116,139,.45)}
 .etable td.et-cnt{border-top:none}
 </style>
 <style>
@@ -1497,12 +1501,12 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 .tb-box{border:2px solid var(--blue);border-radius:10px;padding:10px 12px;margin:0 0 14px;background:var(--card)}
 .tb-title{font-weight:900;font-size:14.5px;margin-bottom:5px}
 .tb-title span{font-weight:400;font-size:11px;color:var(--muted);margin-left:6px}
-.tb-table{border-collapse:collapse;width:100%}
-.tb-table td{padding:3px 0;vertical-align:top;font-size:13px;line-height:1.5}
-.tb-table td.tb-one{white-space:nowrap;font-size:12.5px}
-.tb-table td.tb-v{font-weight:700;white-space:nowrap;padding-right:8px}
-.tb-cond{display:inline-block;border:1px solid var(--line);border-radius:9px;padding:0 7px;font-size:11.5px;font-weight:700;margin-right:5px}
-.tb-basis{color:var(--muted);font-size:12px}
+.tb-venue{font-weight:900;font-size:14px;margin:10px 0 3px}
+.tb-venue:first-of-type{margin-top:2px}
+.tb-head{display:flex;align-items:center;gap:6px;white-space:nowrap;font-size:13px;line-height:1.5;margin-top:6px}
+.tb-surf{font-weight:700}
+.tb-cond{display:inline-block;border:1px solid var(--line);border-radius:9px;padding:0 7px;font-size:11.5px;font-weight:700}
+.tb-basis{color:var(--muted);font-size:12.5px;line-height:1.65;margin:2px 0 4px}
 .tb-note{font-size:11px;color:var(--muted);margin-top:5px}
 .ml-h{font-size:13px;font-weight:900;margin:12px 0 4px;color:var(--ink)}
 .ml-h:first-child{margin-top:2px}
@@ -1549,6 +1553,72 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
   .ana-table .a-med{font-size:14px}
   .ana-p1{font-size:12.5px}
 }
+</style>
+<style>
+/* ===== 試行：出馬表1行目を2列構成に揃える（スペース側のみ） =====
+   左＝馬名（行高18px）＋脚質バー（14px）、右＝条件・区分・型の結合セル。
+   1行目の高さ36px＝馬名18px＋バー14px＋上下余白4px（上下2pxずつ）。馬全体は72px（36＋18＋18）のまま。
+   列幅：右エリア（5列目83px＋6列目87px）＝170px固定で全組み合わせでも折り返さない。
+   左エリア（2列目84px＋3列目＝残り＋4列目46px）はスマホ幅で約160pxになり、広い画面では3列目だけが伸びる。
+   （幅の入れ替え済み：試行当初の左約170px・右160pxから、左を10px狭めて右を10px広げた） */
+.etable tr.et-r1{height:36px}
+.etable tr.et-r1>td{padding-top:2px;padding-bottom:2px}
+.etable .et-name{vertical-align:top}
+.etable .et-name .wname{display:block;height:18px;line-height:18px;overflow:hidden;font-size:13px}
+.etable .et-name .wname.nl7{font-size:12.5px}
+.etable .et-name .wname.nl8{font-size:12px}
+.etable .et-name .wname.nl9{font-size:11px}
+.etable .et-name .wname.nl10{font-size:10.5px}
+.etable .et-name .wname.nl11{font-size:10px}
+.etable .et-name .wname.nl12{font-size:10px}
+/* 脚質バー：14pxの帯に割合セグメント（色は脚質ごと）。データがない馬も同じ14pxの空きを確保して高さを揃える */
+.et-pace{display:flex;align-items:center;gap:4px;height:14px}
+.et-pace-none{height:14px}
+.et-pace-bar{display:flex;flex:1 1 auto;min-width:0;height:14px;border-radius:2px;overflow:hidden}
+.et-pace-seg{display:flex;align-items:center;justify-content:center;height:14px;font-size:10px;font-weight:700;line-height:14px;color:#fff;white-space:nowrap;overflow:hidden}
+/* バーの地は無色（グレーの濃淡：前ほど薄く後ろほど濃い）。色は文字だけに信号色を使う */
+.et-pace-seg.ps-nige{background:#f2f5f7;color:#d92b2b}
+.et-pace-seg.ps-senko{background:#e6ebef;color:#b45309}
+.et-pace-seg.ps-sashi{background:#d3dce3;color:#16a34a}
+.et-pace-seg.ps-oi{background:#bcc9d4;color:#2456c8}
+/* 一番割合の大きい脚質だけ文字を太字にする */
+.et-pace-seg{font-weight:600}
+.et-pace-seg.ps-max{font-weight:900}
+.et-pace-n{flex:0 0 auto;font-size:10px;color:var(--ink2);white-space:nowrap}
+/* 右の結合セル：条件・区分・型を1行に並べ、最大の組み合わせ（条件◎＋狙い＋型チップ）でも折り返さない */
+.et-side{white-space:nowrap;vertical-align:middle}
+.et-side-in{display:flex;align-items:center;gap:6px;flex-wrap:nowrap;overflow:hidden}
+.et-side .wflag{margin-left:0;vertical-align:0}
+.et-side .wkata{margin:0}
+.et-side .wl-memo-none{color:var(--ink2)}
+/* レースLVは1行に収める */
+.et-level{white-space:nowrap;font-size:10.5px;letter-spacing:-.03em}
+/* ===== 罫線の復旧：試行前の見え方に戻す =====
+   セル内の罫線はかなり薄く（#e6e9ec）、馬ごとの境目はそれより濃い通常より薄い線（#b9c2cc）。
+   境目は「1行目の上辺」「3行目の下辺」「回顧ラベル／データなしセルの下辺」「注意行の下辺」で出す。
+   1列目の枠色ブロックを通して1つに見せる例外（馬番セルの下辺なし／回顧ラベルセルの上辺なし）は維持する */
+.etable tbody td{border:1px solid #e6e9ec}
+.etable tbody tr.et-r1>td{border-top:1px solid #b9c2cc}
+.etable tbody tr.et-r3>td{border-bottom:1px solid #b9c2cc}
+.etable tbody td.et-cnt{border-bottom:1px solid #b9c2cc}
+.etable tbody td.et-nodata{border-bottom:1px solid #b9c2cc}
+.etable tbody tr.et-caution>td{border-bottom:1px solid #b9c2cc}
+/* ===== 1行目右セル内の架線：条件／保留（区分）／型チップの区切り線とチップの枠線 =====
+   結合セルの中は flex で並ぶだけなので、要素間の縦線と保留チップの枠が消えて見える。
+   セルいっぱいに広げた各要素に左辺の区切り線（セル内の薄いグレー #e6e9ec）を付け、
+   保留・狙い・危険のチップにも枠線を付けて、表の架線として読めるようにする */
+.et-side-in{height:100%;padding:0;align-items:stretch;gap:0}
+.et-side-in>*{display:flex;align-items:center;justify-content:center;min-width:0}
+.et-side-in>*+*{border-left:1px solid #e6e9ec}
+/* 区画ラッパー：線がそのまま境目になるよう、余白は持たせず要素を線に寄せる。
+   チップ自体を直接の子にするとチップの枠線指定が区切り線を上書きして左の線だけ消えるため、
+   区切り線はこのラッパー側に付け、チップはその内側に置く */
+.et-seg{padding:0;margin:0}
+.et-seg-cond{padding-left:3px}
+.et-side .wmemo-hold{border:1px solid #94a3b8;border-radius:999px;padding:1px 9px;background:#fff;line-height:1.5}
+.et-side .wflag{border:1px solid #94a3b8}
+.et-side .wflag.hi{border-color:#93c5fd}
+.et-side .wflag.danger{border-color:#fca5a5}
 </style>
 </head>
 <body>
@@ -1844,18 +1914,26 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
       <tr><td class="k"><span class="ana-kata k-ihen">ヒモ型</span></td><td>ヒモ型・一変。前走の大敗から一変（濃い緑）</td></tr>
       </table>
       <div class="ml-foot">※ 型の根拠は分析タブにあります</div>
+      <div class="ml-h">脚質バー（馬名の下）</div>
+      <table class="ml-table">
+      <tr><td class="k"><span style="background:#f2f5f7;color:#d92b2b;border-radius:3px;padding:1px 7px;font-weight:700">逃</span></td><td>逃げ</td></tr>
+      <tr><td class="k"><span style="background:#e6ebef;color:#b45309;border-radius:3px;padding:1px 7px;font-weight:700">先</span></td><td>先行</td></tr>
+      <tr><td class="k"><span style="background:#d3dce3;color:#16a34a;border-radius:3px;padding:1px 7px;font-weight:700">差</span></td><td>差し</td></tr>
+      <tr><td class="k"><span style="background:#bcc9d4;color:#2456c8;border-radius:3px;padding:1px 7px;font-weight:700">追</span></td><td>追込</td></tr>
+      </table>
+      <div class="ml-foot">※ バーの数字は直近の走数での割合（％）。バー右の「近N走」が集計した走数です</div>
       <div class="ml-h">数字</div>
       <table class="ml-table">
       <tr><td class="k">回顧指数</td><td>勝ち馬を100とした指数</td></tr>
       <tr><td class="k">（補正）</td><td>補正後の値で表示した印</td></tr>
-      <tr><td class="k">レースLV</td><td>勝ち馬のタイム指数と段階（高め／標準／低め）</td></tr>
+      <tr><td class="k">レースLV.95 高</td><td>勝ち馬のタイム指数と段階（高・中・低）</td></tr>
       </table>
-      <div class="ml-h">レースレベル（レースLV）</div>
+      <div class="ml-h">レースレベル</div>
       <table class="ml-table">
-      <tr><td class="k">レースLV</td><td>前走レースの勝ち馬のタイム指数（netkeiba）</td></tr>
-      <tr><td class="k">高め</td><td>同じクラス帯の中央値より高い（重賞+7〜／条件戦+10〜）</td></tr>
-      <tr><td class="k">標準</td><td>中央値の前後</td></tr>
-      <tr><td class="k">低め</td><td>中央値より低い（重賞−7〜／条件戦−10〜）</td></tr>
+      <tr><td class="k">レースLV.95 高</td><td>前走レースの勝ち馬のタイム指数（netkeiba）と段階を1文字で表示</td></tr>
+      <tr><td class="k">高</td><td>高め：同じクラス帯の中央値より高い（重賞+7〜／条件戦+10〜）</td></tr>
+      <tr><td class="k">中</td><td>標準：中央値の前後</td></tr>
+      <tr><td class="k">低</td><td>低め：中央値より低い（重賞−7〜／条件戦−10〜）</td></tr>
       <tr><td class="k">中央値の目安</td><td>G1 107／G2 104／G3・L 97〜99／3勝 90〜97／2勝 88〜92／1勝 78〜88／未勝利・新馬 67〜75</td></tr>
       </table>
       <div class="ml-h">注意文（行の下に1行）</div>
@@ -1878,7 +1956,7 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
       <tr><td class="k"><span class="lg-bdg ok">回顧</span></td><td>青字＝回顧済み／黒字＝未回顧</td></tr>
       <tr><td class="k"><span class="eg gS">S</span><span class="eg gA">A</span><span class="eg gB">B</span><span class="eg gC">C</span><span class="eg gD">D</span></td><td>回顧の総合評価</td></tr>
       </table>
-      <div class="ml-h">詳細の直近3走表</div>
+      <div class="ml-h">詳細の近3走表</div>
       <table class="ml-table">
       <tr><td class="k">未回顧</td><td>出走したが回顧なし</td></tr>
       <tr><td class="k">空欄</td><td>出走歴なし</td></tr>
@@ -3010,6 +3088,14 @@ function l3ClassCell(orig){
   return '<td class="'+cls+'" title="'+escW(o)+'">'+escW(s)+'</td>';
 }
 var L3FLOW={"有利":"yu","不利":"fu","中立":"chu","判定保留":"ho"};
+/* レースレベルは「レースLV.95 高」の形で1行に収める（段階は1文字：高め=高／標準=中／低め=低） */
+var STAGE1={"高め":"高","標準":"中","低め":"低"};
+function stage1(s){ if(!s) return ""; return STAGE1[s]||String(s).charAt(0); }
+function rlvHtml(level,stage){
+  var num=String(level).replace(/\.0$/,"");
+  var s1=stage1(stage);
+  return 'レースLV.<b>'+escW(num)+'</b>'+(s1?' '+escW(s1):'');
+}
 /* 直近3走を1走1行で示す要約表。並びと出走の有無は、出走記録で確認した実際の直近3走（統合履歴 assets/history-detail.json の確認済み記録）を使う。
    回顧のある走は展開評価（回顧の4値）を出し、回顧のない走は事実だけを並べて展開評価の欄に「未回顧」と出す。
    実際の出走が3走に満たない行は空欄（出走歴なし＝出走記録で確認済み）。
@@ -3048,12 +3134,12 @@ function last3Table(hh,horseName){
           +'<td class="l3-f">'+finChipW(finV)+'</td>'
           +'<td class="l3-g">'+grCell+'</td>'
           +'<td class="l3-e">'+evCell+'</td>'
-          +'<td class="l3-lv">'+(it.level!=null?escW(String(it.level).replace(/\.0$/,""))+(it.stage?'・'+escW(it.stage):''):"―")+'</td></tr>';
+          +'<td class="l3-lv">'+(it.level!=null?rlvHtml(it.level,it.stage):"―")+'</td></tr>';
       }else{
         rowsV+='<tr class="l3-empty"><td colspan="8"></td></tr>';
       }
     }
-    var hv='<div class="last3-wrap"><table class="last3" aria-label="直近3走の一覧"><thead><tr><th>日付</th><th>コース</th><th>クラス</th><th>頭数</th><th>着順</th><th>評価</th><th>展開</th><th>レースLV</th></tr></thead><tbody>'+rowsV+'</tbody></table></div>';
+    var hv='<div class="last3-wrap"><table class="last3" aria-label="近3走の一覧"><thead><tr><th>日付</th><th>コース</th><th>クラス</th><th>頭数</th><th>着順</th><th>評価</th><th>展開</th><th>レースLV</th></tr></thead><tbody>'+rowsV+'</tbody></table></div>';
     if(hasUnrev) hv+='<p class="l3-note">未回顧＝出走記録で確認できたが回顧のないレース。空欄＝出走歴なし（出走記録で確認済み）</p>';
     return hv;
   }
@@ -3079,7 +3165,7 @@ function last3Table(hh,horseName){
       rows+='<tr class="l3-none"><td colspan="8">未回顧</td></tr>';
     }
   }
-  var h='<div class="last3-wrap"><table class="last3" aria-label="直近3走の一覧"><thead><tr><th>日付</th><th>コース</th><th>クラス</th><th>頭数</th><th>着順</th><th>評価</th><th>展開</th><th>レースLV</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
+  var h='<div class="last3-wrap"><table class="last3" aria-label="近3走の一覧"><thead><tr><th>日付</th><th>コース</th><th>クラス</th><th>頭数</th><th>着順</th><th>評価</th><th>展開</th><th>レースLV</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
   if(hasNone) h+='<p class="l3-note">未回顧＝出走記録で確認できたが回顧のないレース。空欄＝出走歴なし（出走記録で確認済み）</p>';
   return h;
 }
@@ -3134,7 +3220,7 @@ function histDetail(h,d){
   var cnt=hh.reviewCount||revs.length, tot=hh.totalReviews||cnt;
   var out="";
   /* ==== 通常表示：直近3走の一覧表（要約） ==== */
-  out+='<p class="hsec">直近3走の一覧</p>';
+  out+='<p class="hsec">近3走の一覧</p>';
   var verC=h.name?wVerified[h.name]:null;
   if(verC&&verC.history3){
     var rcN=0, ucN=0;
@@ -3214,6 +3300,39 @@ function raceFrameTotal(r){
   return t||null;
 }
 var KATACLS={"本命型":"k-honmei","対抗型":"k-taikou","ヒモ型":"k-himo"};
+/* 脚質バーの試行データ（スペース側のみ・対象は東京1Rエプリダルジャンの1頭だけ）。
+   segs は [脚質名, 割合(%), 色クラス] の並び、n は集計した直近の走数 */
+var PACE_TRIAL={"エプリダルジャン":{n:1,segs:[["追込",100,"oi"]]}};
+/* 脚質バーの本データ（assets/style.json・全頭分）。ページ読み込み時に no-store で取得し、
+   取得できた馬は試行データより優先する。取得失敗・未掲載の馬は試行データ→バーなしの順に落とす。
+   style.json の色クラスは短縮コード（ni/se/sa/oi）で届くため、CSSのクラス名（nige/senko/sashi/oi）へ読み替える */
+var PACE_STYLE=null;
+var PACE_CLSMAP={"ni":"nige","se":"senko","sa":"sashi","oi":"oi"};
+var PACE_STYLE_P=fetch("assets/style.json",{cache:"no-store"}).then(function(r){ if(!r.ok) throw new Error("http "+r.status); return r.json(); }).then(function(d){
+  if(d&&d.styles){
+    var out={};
+    Object.keys(d.styles).forEach(function(k){
+      var v=d.styles[k]; if(!v||!v.segs) return;
+      out[k]={n:v.n,segs:v.segs.map(function(s){ return [s[0],s[1],PACE_CLSMAP[s[2]]||s[2]]; })};
+    });
+    PACE_STYLE=out;
+  }
+  return PACE_STYLE;
+}).catch(function(){ return null; });
+/* バーの区切りラベルは脚質名を1文字＋割合の数字（例「先45」）。狭い区切りは数字のみ／無地に落とす */
+var PACE1={"逃げ":"逃","先行":"先","差し":"差","追込":"追"};
+function paceBarHtml(h){
+  var p=(PACE_STYLE&&PACE_STYLE[h.name])||PACE_TRIAL[h.name];
+  if(!p) return '<div class="et-pace-none"></div>';
+  var maxPct=0; p.segs.forEach(function(s){ if(s[1]>maxPct) maxPct=s[1]; });
+  var segs=p.segs.map(function(s){
+    var pct=s[1], lbl="";
+    if(pct>=18) lbl=(PACE1[s[0]]||String(s[0]).charAt(0))+pct;
+    else if(pct>=10) lbl=String(pct);
+    return '<span class="et-pace-seg ps-'+s[2]+(pct===maxPct&&maxPct>0?' ps-max':'')+'" style="width:'+pct+'%">'+escW(lbl)+'</span>';
+  }).join("");
+  return '<div class="et-pace"><span class="et-pace-bar">'+segs+'</span><span class="et-pace-n">近'+p.n+'走</span></div>';
+}
 function horseRow(h,i,total){
   var numCell=h.num?escW(h.num):"―";
   var fr=frameNo(h.num,total);
@@ -3225,8 +3344,8 @@ function horseRow(h,i,total){
        残りの列を結合して「回顧データなし」。意味のない「―」の並びは出さない */
     return '<tr class="wrow unknown et-r1" data-wmark="不明" data-wname="'+escW(h.name)+'" data-wab=""'+idxAttr+'>'
       +'<td class="c-num'+wk+'">'+numCell+'</td>'
-      +'<td class="c-name et-name" colspan="2">'+wnameHtml(h.name)+'</td>'
-      +'<td class="et-unk" colspan="3"><span class="eg none">不明</span></td></tr>'
+      +'<td class="c-name et-name" colspan="3">'+wnameHtml(h.name)+paceBarHtml(h)+'</td>'
+      +'<td class="et-side" colspan="2"><span class="eg none">不明</span></td></tr>'
       +'<tr class="et-r2 et-part unknown" data-wpart="'+i+'"><td class="et-cnt'+wk+'" rowspan="2">回顧なし</td>'
       +'<td class="et-nodata" colspan="5" rowspan="2">回顧データなし</td></tr>'
       +'<tr class="et-r3 et-part unknown" data-wpart="'+i+'"></tr>';
@@ -3295,7 +3414,7 @@ function horseRow(h,i,total){
       if(!ff) return;
       popfinHtml=(pp?('<span class="pop-lab">'+escW(pp)+'人気</span> '):"")+'<b>'+escW(ff)+'</b>'+(h.prevField?('<span class="pop-field">/'+escW(String(h.prevField))+'</span>'):"");
     })();
-    var levelHtml=(h.level!=null&&h.level!=="")?('<span class="rv-lab">レースLV</span> <b>'+escW(h.level)+'</b>'+(h.levelStage?'・'+escW(h.levelStage):'')):"―";
+    var levelHtml=(h.level!=null&&h.level!=="")?rlvHtml(h.level,h.levelStage):"―";
     /* 注意文は折り返さず、長さで文字サイズを段階調整して1行に収める。
        2件重なって極端に長い場合（57字超）だけ、文の切れ目で2行に分ける（無理な縮小で読めなくしないため） */
     var cautHtml="";
@@ -3368,13 +3487,13 @@ function horseRow(h,i,total){
      詳細は従来どおり、その馬の下に全列結合の行として開く */
   var memoCell=(memo==="―"?'<span class="wl-memo-none">―</span>':memo);
   /* 型は区分の横（6列目）に出す。1行目の縦伸びを避けるため、区分セルの中には入れない */
-  var kataCell=h.kata?('<span class="ana-kata wkata '+(h.kataSub==="一変"?"k-ihen":(KATACLS[h.kata]||"k-taikou"))+'">'+escW(h.kata)+'</span>'):"";
+  /* 型がない馬も空の受け要素を置き、区分チップの右側にも区切り線（.et-side-in の border-left）が常に出るようにする */
+  var kataCell=h.kata?('<span class="ana-kata wkata '+(h.kataSub==="一変"?"k-ihen":(KATACLS[h.kata]||"k-taikou"))+'">'+escW(h.kata)+'</span>'):'<span class="et-kata-none" aria-hidden="true"></span>';
   var row1='<tr class="wrow et-r1" data-wmark="'+escW(h.mark)+'" data-wname="'+escW(h.name)+'" data-wab="'+escW(h.ab||"")+'" data-hasdet="1" tabindex="0" aria-expanded="false"'+idxAttr+'>'
     +'<td class="c-num'+wk+'">'+numCell+'</td>'
-    +'<td class="c-name et-name" colspan="2">'+wnameHtml(h.name)+'</td>'
-    +'<td class="et-cond"><span class="et-cond-lab">条件</span><span class="et-mark '+(MARKCLS[h.mark]||"")+'" title="'+escW(MARKLBL[h.mark]||h.mark)+'">'+escW(h.mark)+'</span></td>'
-    +'<td class="et-memo">'+memoCell+'</td>'
-    +'<td class="et-tags">'+kataCell+'</td></tr>';
+    +'<td class="c-name et-name" colspan="3">'+wnameHtml(h.name)+paceBarHtml(h)+'</td>'
+    +'<td class="et-side" colspan="2"><div class="et-side-in"><span class="et-seg et-seg-cond"><span class="et-cond"><span class="et-cond-lab">条件</span><span class="et-mark '+(MARKCLS[h.mark]||"")+'" title="'+escW(MARKLBL[h.mark]||h.mark)+'">'+escW(h.mark)+'</span></span></span>'
+    +'<span class="et-seg et-seg-memo">'+memoCell+'</span><span class="et-seg et-seg-kata">'+kataCell+'</span></div></td></tr>';
   if(hasRev){
     return row1+subRows
       +'<tr class="wdet" data-wdet="'+i+'" style="display:none"><td colspan="6">'+det+'</td></tr>';
@@ -3783,7 +3902,7 @@ function loadWeekend(bust){
   var wHistP=fetch("assets/history-detail.json"+sfx,opts).then(function(r){ if(!r.ok) throw new Error("http "+r.status); return r.json(); }).catch(function(){ return null; });
   var wResP=fetch("assets/race-results.json"+sfx,opts).then(function(r){ if(!r.ok) throw new Error("http "+r.status); return r.json(); }).catch(function(){ return null; });
   var wCurP=fetch("assets/race-current-reviews.json"+sfx,opts).then(function(r){ if(!r.ok) throw new Error("http "+r.status); return r.json(); }).catch(function(){ return null; });
-  Promise.all([wMainP,wHistP,wResP,wCurP]).then(function(res){
+  Promise.all([wMainP,wHistP,wResP,wCurP,PACE_STYLE_P]).then(function(res){
     var detErr=null;
     /* 回顧履歴は統合ファイル（history-detail.json）だけを読む。
        出走歴の確認記録（直近3走）も同じ統合ファイルの各馬レコードに含まれている */
@@ -4380,26 +4499,28 @@ if(rp&&window.MutationObserver){
     var tstr=today.getFullYear()+"-"+pad(today.getMonth()+1)+"-"+pad(today.getDate());
     if(!d||d.date!==tstr||!d.venues||!d.venues.length) return;
     var rows="";
-    var shortBasis=function(s){
-      if(s.short) return s.short;
-      var b=s.basis||""; var m=b.match(/3着内(\d+)頭中、4角4番手以内\s*(\d+)頭/);
-      if(m) return "4角内 "+m[2]+"/"+m[1];
-      var m2=b.match(/(\d+)レース/); return m2? m2[1]+"R分":"";
-    };
     var shortBias=function(s){
       var t=s.bias||"";
       if(t.indexOf("傾向はまだ弱い")===0) return "傾向弱い";
       return t;
     };
+    var trimBasis=function(b){
+      if(!b) return "";
+      var parts=b.split("。").filter(function(p){return p;});
+      if(parts.length<=2) return b;
+      return parts.slice(0,2).join("。")+"。";
+    };
     d.venues.forEach(function(v){
+      var vhtml="";
       [["芝","turf"],["ダ","dirt"]].forEach(function(pair){
         var s=v[pair[1]]; if(!s) return;
-        var sb=shortBasis(s);
-        rows+='<tr><td class="tb-v">'+v.name+" "+pair[0]+'</td><td class="tb-one"><span class="tb-cond">'+(s.cond||"")+'</span><b>'+shortBias(s)+'</b>'+(sb?' <span class="tb-basis">'+sb+'</span>':"")+'</td></tr>';
+        var basis=trimBasis(s.basis||"");
+        vhtml+='<div class="tb-head"><span class="tb-surf">'+pair[0]+'</span>'+(v.weather?'<span class="tb-wea">'+v.weather+'</span>':"")+'<span class="tb-cond">'+(s.cond||"")+'</span><b>'+shortBias(s)+'</b></div>'+(basis?'<p class="tb-basis">'+basis+'</p>':"");
       });
+      if(vhtml) rows+='<div class="tb-venue">'+v.name+'</div>'+vhtml;
     });
     if(!rows) return;
-    box.innerHTML='<div class="tb-box"><div class="tb-title">本日の馬場傾向<span>'+(d.asOf||"")+'</span></div><table class="tb-table">'+rows+'</table><div class="tb-note">※ 終了レースの3着内・4角位置から集計</div></div>';
+    box.innerHTML='<div class="tb-box"><div class="tb-title">本日の馬場傾向<span>'+(d.asOf||"")+'</span></div>'+rows+'<div class="tb-note">※ 終了レースの3着内・4角位置から集計</div></div>';
   }).catch(function(){});
 })();
 })();
@@ -4440,7 +4561,14 @@ if(rp&&window.MutationObserver){
   var lu=document.getElementById('last-updated');
   if(lu){ lu.style.cursor='pointer'; lu.title='タップで更新';
     lu.addEventListener('click',function(){ location.reload(); });
-    fetch("assets/site-updated.json",{cache:"no-store"}).then(function(r){ return r.json(); }).then(function(d){ if(d&&d.updated){ lu.textContent='最終更新：'+d.updated; } }).catch(function(){});
+    fetch('assets/site-updated.json',{cache:'no-store'}).then(function(r){
+      if(!r.ok) throw new Error('fetch failed');
+      return r.json();
+    }).then(function(d){
+      if(d && typeof d.updated==='string' && d.updated){
+        lu.textContent='最終更新：'+d.updated;
+      }
+    }).catch(function(){ /* 読めない場合は固定文のまま */ });
   }
 })();
 </script>
