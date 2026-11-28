@@ -1683,6 +1683,16 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 .et-seg-kata{width:66px}
 .et-side .wflag,.et-side .wmemo-hold,.et-side .wkata{flex:none;white-space:nowrap}
 </style>
+<style>
+/* ===== 分析：型の成績＋監視メモ／結果：型別の内訳＋ガードメモ ===== */
+.ana-watch{font-size:12px;color:var(--ink2);margin:8px 2px 0;line-height:1.55}
+.rc-kata-h{font-size:14.5px;font-weight:900;margin:18px 0 6px}
+.rc-guard{margin-top:12px;font-size:12.5px}
+.rc-guard-h{font-weight:700;font-size:12.5px;color:var(--ink2)}
+.rc-guard-list{margin:4px 0 0;padding-left:1.2em;line-height:1.6}
+.rc-guard-list li{margin:2px 0}
+.rc-table td .ana-kata{font-size:10.5px;padding:0 7px}
+</style>
 </head>
 <body>
 <div class="wrap">
@@ -1966,7 +1976,7 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
       <div class="ml-h">回顧メモ区分（購入推奨ではありません）</div>
       <table class="ml-table">
       <tr><td class="k">狙い</td><td>着順以上の内容があった</td></tr>
-      <tr><td class="k">危険</td><td>着順ほど中身がなく、次走は割引</td></tr>
+      <tr><td class="k">危険</td><td>危険な人気馬。前走の着順ほど中身が伴っていない。次走で人気になるほど危ない（人気薄なら意味は弱い）</td></tr>
       <tr><td class="k">保留</td><td>材料不足などで保留</td></tr>
       </table>
       <div class="ml-h">型（1行目の右端）</div>
@@ -4350,7 +4360,33 @@ function anaDanger(d){
     +'<div class="ana-lsub">3着内 '+escA(d.board)+'%・1着 '+escA(d.p1)+'%（人気の割に低く、オッズ妙味が薄い）</div>'
     +'</div>';
 }
-function renderAnalysis(data){
+function kataCls(kata){
+  if(kata==="ヒモ型・一変") return "k-ihen";
+  return KATACLS[kata]||"k-taikou";
+}
+/* 週末チェック側（results-check.json）の型別実績：取消等を除いた3着内率と頭数 */
+function wkKata(rc,kata){
+  if(!rc||!rc.kata_rows) return null;
+  var row=null;
+  rc.kata_rows.forEach(function(r){ if(r.kata===kata) row=r; });
+  if(!row) return null;
+  var c=row.c||[];
+  var tot=(Number(c[0])||0)+(Number(c[1])||0)+(Number(c[2])||0)+(Number(c[3])||0);
+  if(!tot) return null;
+  var b=(Number(c[0])||0)+(Number(c[1])||0)+(Number(c[2])||0);
+  return {rate:Math.round(100*b/tot),n:tot};
+}
+function anaKataRow(d, rc){
+  var wk=wkKata(rc,d.kata);
+  var sub='1着 '+escA(d.p1)+'%';
+  if(wk) sub+='　／　週末 3着内 '+wk.rate+'%（'+wk.n+'頭）';
+  return '<div class="ana-lrow">'
+    +'<div class="ana-lrow-top"><span class="ana-kata '+kataCls(d.kata)+'">'+escA(d.kata)+'</span>'
+    +(d.src?'<span class="ana-def">'+escA(d.src)+'</span>':"")
+    +'<span class="ana-lnum"><span>次走 3着内</span><b>'+escA(d.board)+'%</b><span>（n='+escA(d.n)+'）</span></span></div>'
+    +'<div class="ana-lsub">'+sub+'</div></div>';
+}
+function renderAnalysis(data, rc){
   var root=document.getElementById("analysis-root");
   var st=document.getElementById("analysis-status");
   if(!root) return;
@@ -4375,7 +4411,19 @@ function renderAnalysis(data){
   if(pops[3]) html+=anaRank({label:"狙い × 前走10番人気以下",n:pops[3].n,board:pops[3].board,p1:pops[3].p1},{color:"#d92b2b",sub:"対象外（"+(cats["対象外"]?cats["対象外"].board:"―")+"%）と変わらない"});
   if(grades[4]) html+=anaRank({label:"評価D",n:grades[4].n,board:grades[4].board,p1:grades[4].p1},{color:"#d92b2b",sub:"回顧の評価が最低。3着内は1割未満"});
   if(ibands[2]) html+=anaRank({label:"回顧指数 80未満",n:ibands[2].n,board:ibands[2].board,p1:ibands[2].p1},{color:"#d92b2b",sub:"指数が低い馬は次走も苦戦する"});
+  var kn=data.keshi_next;
+  if(kn) html+=anaRank({label:kn.label||"消し型",n:kn.n,board:kn.board,p1:kn.p1},{color:"#d92b2b",sub:kn.reason||""});
   html+='</div>';
+  /* 型の成績 */
+  var ks=data.kata_summary||[];
+  if(ks.length){
+    html+='<div class="ana-sec">型の成績</div><div class="ana-list">';
+    ks.forEach(function(d){ html+=anaKataRow(d, rc); });
+    html+='</div>';
+  }
+  (data.watch||[]).forEach(function(w){
+    html+='<p class="ana-watch">監視：'+escA(w.label)+' '+escA(w.text)+'</p>';
+  });
   /* 内訳（折りたたみ） */
   html+='<details class="ana-details"><summary>内訳（区分・人気・評価・指数・層別）</summary>';
   html+='<div class="ana-block"><h3 class="ana-block-h">評価</h3>'
@@ -4443,7 +4491,7 @@ function renderAnalysis(data){
     +'<li><b>次走</b>：次に回顧対象になったレース（全出走ではない）</li>'
     +'<li><b>3着内率・1着率</b>：次走での割合。率は検証用</li>'
     +'<li><b>n</b>：検証できた件数。30未満は参考値</li>'
-    +'<li><b>狙い／危険／対象外</b>：回顧メモの区分</li>'
+    +'<li><b>狙い／危険／対象外</b>：回顧メモの区分。危険＝危険な人気馬。前走の着順ほど中身が伴わず、次走で人気になるほど危ない（人気薄なら意味は弱い）</li>'
     +'<li><b>本命型／対抗型／一発型／ヒモ型／消し型</b>：型は5つ。3着内率と、来た時に勝つ割合で分類。本命型＝よく来て勝ち切る、一発型＝来れば勝つ、ヒモ型＝2・3着中心、対抗型＝中間、消し型＝ほぼ来ない。本命型〜ヒモ型は狙いの馬に、消し型は狙い以外の馬に付く（直近の回顧が評価D・回顧指数80未満・大敗×人気薄の対象外のいずれか。度外視に当たるレースが根拠の時は付けない）</li>'
     +'<li><b>ヒモ型・一変</b>：前走8着以下×7番人気以下で、狙いメモが付いた馬。一覧では濃い緑の「ヒモ型」チップで表示</li>'
     +'<li><b>回顧指数</b>：回顧の内容補正後の能力評価</li>'
@@ -4462,7 +4510,11 @@ function loadAnalysis(){
   var st=document.getElementById("analysis-status");
   if(st) st.textContent="分析データを読み込んでいます…";
   fetch("assets/analysis.json").then(function(r){ if(!r.ok) throw new Error("http "+r.status); return r.json(); })
-  .then(function(data){ anaLoaded=true; anaLoading=false; renderAnalysis(data); })
+  .then(function(data){
+    /* 型の成績に週末チェック側の実績を併記するため、結果確認データも読む（失敗時は併記なし） */
+    return fetch("assets/results-check.json").then(function(r){ return r.ok? r.json(): null; }).catch(function(){ return null; })
+    .then(function(rc){ anaLoaded=true; anaLoading=false; renderAnalysis(data, rc); });
+  })
   .catch(function(e){
     anaLoading=false;
     if(st) st.textContent="分析データ（assets/analysis.json）を読み込めませんでした："+e.message;
@@ -4487,6 +4539,8 @@ if(ap&&window.MutationObserver){
 /* 結果確認タブ：初めて開いた時にだけ assets/results-check.json を読み込む（遅延読み込み） */
 function escR(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
 var MARKNAME={"◎":"◎ 条件一致","○":"○ 一部一致","△":"△ 条件不一致"};
+var RCKATACLS={"本命型":"k-honmei","対抗型":"k-taikou","一発型":"k-ippatsu","ヒモ型":"k-himo","ヒモ型・一変":"k-ihen","消し型":"k-keshi"};
+function rcKataCls(k){ return RCKATACLS[k]||"k-taikou"; }
 var rcData=null, rcView=null;
 function aggRows(weekends){
   var map={}, order=[];
@@ -4540,9 +4594,32 @@ function renderResults(){
   var v=views[rcView];
   h+='<p class="rc-note">'+escR(v.label)+'・発走前の条件照合の印と回顧メモ区分で分けた着順の回数です。</p>';
   h+=tableHtml(v);
-  var com=(rcData&&rcData.commentary)||[];
+  /* 寸評・型別・ガードも週切り替えに連動：全体ビューはトップレベル、今週／先週ビューは選択中の weekend の値を使う */
+  var isAll=(rcView==="all");
+  var wk=isAll?null:(rcView==="this"?ws[0]:ws[1]);
+  var com=isAll?((rcData&&rcData.commentary)||[]):((wk&&wk.commentary)||[]);
   if(com.length){
-    h+='<div class="rc-com"><div class="rc-com-h">寸評（全体の数字から自動生成）</div><div class="rc-com-b">'+com.map(function(l){return '・'+escR(l)}).join('<br>')+'</div></div>';
+    h+='<div class="rc-com"><div class="rc-com-h">'+(isAll?"寸評（全体の数字から自動生成）":"寸評（その週の数字から自動生成）")+'</div><div class="rc-com-b">'+com.map(function(l){return '・'+escR(l)}).join('<br>')+'</div></div>';
+  }
+  var kr=isAll?(rcData.kata_rows||[]):((wk&&wk.kata_rows)||[]);
+  if(kr.length){
+    h+='<h3 class="rc-kata-h">'+(isAll?"型別の内訳（全体）":"型別の内訳")+'</h3>';
+    h+='<table class="rc-table" aria-label="型別の着順内訳"><thead><tr><th>型</th><th>1着</th><th>2着</th><th>3着</th><th>4着以下</th><th>取消等</th></tr></thead><tbody>';
+    kr.forEach(function(r){
+      h+='<tr><td><span class="ana-kata '+rcKataCls(r.kata)+'">'+escR(r.kata)+'</span></td>'
+        +(r.c||[]).map(function(v){return '<td>'+v+'</td>'}).join("")+'</tr>';
+    });
+    h+='</tbody></table>';
+    var kc=isAll?(rcData.kata_commentary||[]):((wk&&wk.kata_commentary)||[]);
+    if(kc.length){
+      h+='<div class="rc-com"><div class="rc-com-h">寸評</div><div class="rc-com-b">'+kc.map(function(l){return '・'+escR(l)}).join('<br>')+'</div></div>';
+    }
+    var gd=isAll?(rcData.guarded||[]):((wk&&wk.guarded)||[]);
+    if(gd.length){
+      h+='<div class="rc-guard"><div class="rc-guard-h">度外視ガードで消しを外した馬</div><ul class="rc-guard-list">'
+        +gd.map(function(g){ return '<li>'+escR(g.name)+'（'+escR(g.reason)+'）'+(g.finish!=null?escR(g.finish)+'着':"")+'</li>'; }).join("")
+        +'</ul></div>';
+    }
   }
   root.innerHTML=h;
   root.querySelectorAll("[data-rcview]").forEach(function(b){
