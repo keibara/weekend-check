@@ -1494,6 +1494,15 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 .ana-terms{margin:6px 0;padding-left:18px}
 .ana-terms li{font-size:13px;line-height:1.65;margin-bottom:2px}
 .mark-legend.tbl{display:block}
+.tb-box{border:2px solid var(--blue);border-radius:10px;padding:10px 12px;margin:0 0 14px;background:var(--card)}
+.tb-title{font-weight:900;font-size:14.5px;margin-bottom:5px}
+.tb-title span{font-weight:400;font-size:11px;color:var(--muted);margin-left:6px}
+.tb-table{border-collapse:collapse;width:100%}
+.tb-table td{padding:3px 0;vertical-align:top;font-size:13px;line-height:1.5}
+.tb-table td.tb-v{font-weight:700;white-space:nowrap;padding-right:8px}
+.tb-cond{display:inline-block;border:1px solid var(--line);border-radius:9px;padding:0 7px;font-size:11.5px;font-weight:700;margin-right:5px}
+.tb-basis{color:var(--muted);font-size:12px}
+.tb-note{font-size:11px;color:var(--muted);margin-top:5px}
 .ml-h{font-size:13px;font-weight:900;margin:12px 0 4px;color:var(--ink)}
 .ml-h:first-child{margin-top:2px}
 .ml-table{width:100%;border-collapse:collapse;font-size:12.5px;margin:0 0 6px}
@@ -1581,6 +1590,7 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
   <div class="main-col">
   <!-- ============ 競馬ニュース（次の週末の重賞3鞍・火曜枠） ============ -->
   <section aria-labelledby="h-news">
+    <div id="track-bias"></div>
     <h2 class="sec" id="h-news">競馬ニュース・調教・厩舎コメント</h2>
     <p class="sec-note">週末（11月28日・29日）の重賞3鞍について、見出しと出典リンクを掲載しています。</p>
     <details class="note-box foldbox guide-fold">
@@ -4358,6 +4368,27 @@ if(rp&&window.MutationObserver){
   });
   mo.observe(rp,{attributes:true,attributeFilter:["class"]});
 }
+
+/* 馬場傾向ボックス：ニュースタブ最上部。当日分だけ表示する */
+(function(){
+  var box=document.getElementById("track-bias");
+  if(!box) return;
+  fetch("assets/track-bias.json",{cache:"no-store"}).then(function(r){ if(!r.ok) throw new Error("http "+r.status); return r.json(); })
+  .then(function(d){
+    var today=new Date(); var pad=function(n){return (n<10?"0":"")+n;};
+    var tstr=today.getFullYear()+"-"+pad(today.getMonth()+1)+"-"+pad(today.getDate());
+    if(!d||d.date!==tstr||!d.venues||!d.venues.length) return;
+    var rows="";
+    d.venues.forEach(function(v){
+      [["芝","turf"],["ダート","dirt"]].forEach(function(pair){
+        var s=v[pair[1]]; if(!s) return;
+        rows+='<tr><td class="tb-v">'+v.name+" "+pair[0]+'</td><td><span class="tb-cond">'+(s.cond||"")+'</span><b>'+(s.bias||"")+'</b>'+(s.basis?' <span class="tb-basis">（'+s.basis+'）</span>':"")+'</td></tr>';
+      });
+    });
+    if(!rows) return;
+    box.innerHTML='<div class="tb-box"><div class="tb-title">本日の馬場傾向<span>'+(d.asOf||"")+'</span></div><table class="tb-table">'+rows+'</table><div class="tb-note">※ 終了したレースの着順・通過順位からの集計です。レース数が少ない時点では「傾向はまだ弱い」と書きます。</div></div>';
+  }).catch(function(){});
+})();
 })();
 </script>
 
