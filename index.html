@@ -1016,10 +1016,57 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 .res-special{display:inline-block;font-weight:900;color:#92400e;background:#fffbeb;border:1px solid #f59e0b;border-radius:999px;padding:0 8px;font-size:11.5px;white-space:nowrap}
 .res-horse{background:#fff;border:1px solid var(--line);border-radius:6px;padding:8px 10px;margin-bottom:8px}
 .res-h-head{display:flex;align-items:baseline;gap:8px;margin-bottom:3px}
-.res-h-num{font-weight:900;color:var(--ink2);min-width:1.6em}
-.res-h-name{font-weight:900;font-size:14.5px}
+.res-h-num{font-weight:900;color:var(--ink2);min-width:1.6em;text-align:center;border-radius:4px;padding:0 3px}
+/* 見出し行の馬番には、出馬表の一覧と同じ枠番カラー（通常の濃さ）を付ける。
+   枠番は出走頭数と馬番から決まるJRAの割り当てで判定し、判定できない馬には色を付けない */
+.res-h-num.wk1{background:#ffffff;color:#111827;box-shadow:inset 0 0 0 1px var(--line)}
+.res-h-num.wk2{background:#1f2937;color:#fff}
+.res-h-num.wk3{background:#dc2626;color:#fff}
+.res-h-num.wk4{background:#1d4ed8;color:#fff}
+.res-h-num.wk5{background:#facc15;color:#111827}
+.res-h-num.wk6{background:#16a34a;color:#fff}
+.res-h-num.wk7{background:#f97316;color:#fff}
+.res-h-num.wk8{background:#f9a8d4;color:#111827}
+.res-h-name{font-weight:900;font-size:14.5px;flex:1 1 auto;min-width:0;white-space:nowrap}
+/* 長い馬名は出馬表の一覧と同じ段階縮小（nl7〜nl12）で1行に収める。バッジ群の幅は固定で縮めない */
+.res-h-name .wname{white-space:nowrap;letter-spacing:-.01em}
+.res-h-name .wname.nl7{font-size:14px;letter-spacing:-.03em}
+.res-h-name .wname.nl8{font-size:13px;letter-spacing:-.03em}
+.res-h-name .wname.nl9{font-size:12px;letter-spacing:-.03em}
+.res-h-name .wname.nl10{font-size:11px;letter-spacing:-.03em}
+.res-h-name .wname.nl11{font-size:10.5px;letter-spacing:-.03em}
+.res-h-name .wname.nl12{font-size:10px;letter-spacing:-.03em}
+@media (max-width:560px){
+  .res-h-name .wname.nl7{font-size:13px}
+  .res-h-name .wname.nl8{font-size:12px}
+  .res-h-name .wname.nl9{font-size:10.5px}
+  .res-h-name .wname.nl10{font-size:10px}
+  .res-h-name .wname.nl11{font-size:9.5px}
+  .res-h-name .wname.nl12{font-size:9.5px}
+}
 .res-h-line{display:flex;gap:8px;font-size:12.5px;line-height:1.55;padding:1px 0}
 .res-h-lab{flex:0 0 5.8em;font-weight:900;color:var(--ink2);font-size:11.5px;padding-top:2px;white-space:nowrap}
+/* 馬名の見出し行のバッジ群は、出馬表の一覧の右セル（.et-side-in）とまったく同じ作りにする。
+   並びは 馬名・条件（「条件」ラベル＋印）・回顧メモ区分チップ・型チップ。
+   見出し行は折り返し禁止（flex-wrap:nowrap）で、必ず1行に収める */
+.res-h-head{align-items:center;flex-wrap:nowrap}
+/* バッジ群：条件・区分・型の3区画を固定幅（一覧の右セルと同じ48px／46px／66px）で並べ、
+   区画の間に薄いグレーの縦線（#e6e9ec・余白なし）を入れる。中身は各区画の中央に置く。
+   型チップがない馬も型の区画の幅は空けたまま確保するので、位置が全カードで縦に揃う。
+   バッジ群全体は固定幅で縮めず、収まりの調整は馬名側の段階縮小だけで行う */
+.res-head-badges{margin-left:auto;display:flex;align-items:stretch;flex-wrap:nowrap;flex:0 0 auto;align-self:stretch}
+.res-col{display:flex;align-items:center;justify-content:center;flex:0 0 auto;min-width:0}
+.res-col + .res-col{border-left:1px solid #e6e9ec}
+.res-col-cond{width:48px;padding-left:3px}
+.res-col-memo{width:46px}
+.res-col-kata{width:66px}
+/* チップのサイズ・文字の大きさも一覧の右セルに合わせる
+   （条件ラベル11.5px＋印15pxは .et-cond-lab／.et-mark の既定、区分11px、保留11.5px、型は .ana-kata の11.5px） */
+.res-head-badges .wflag{margin:0;vertical-align:0;font-size:11px;padding:1px 7px;border:1px solid #94a3b8;flex:none;white-space:nowrap}
+.res-head-badges .wflag.hi{border-color:#93c5fd}
+.res-head-badges .wflag.danger{border-color:#fca5a5}
+.res-head-badges .wmemo-hold{margin:0;border:1px solid #94a3b8;border-radius:999px;padding:1px 8px;background:#fff;line-height:1.5;font-size:11.5px;flex:none;white-space:nowrap}
+.res-head-badges .wkata{margin:0;vertical-align:0;flex:none;white-space:nowrap}
 .res-norev{font-weight:900;color:#92400e}
 .res-det{margin-top:6px;border-top:1px dashed var(--line);padding-top:4px}
 .res-det>summary{font-size:12.5px;font-weight:700;color:var(--nk);cursor:pointer;min-height:34px;display:flex;align-items:center}
@@ -1034,6 +1081,8 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 .finp.f1{background:#ffe600;color:#111827}
 .finp.f2{background:#2456c8;color:#fff}
 .finp.f3{background:#d92b2b;color:#fff}
+/* 結果と照合のカード内では、3着の赤だけ彩度を一段落とす（目立つ順が1着→2着→3着の序列どおりになるように） */
+.res-horse .finp.f3{background:#b85454;color:#fff}
 /* レース一覧の状態バッジ：2列目（レース情報）の中に「結果」「回顧」を上下2行に積んで表示。
    色分けは文字色のみ：済（結果反映済み・回顧済み）=青文字／未（未反映・未回顧）=黒文字 */
 .wr-badges{display:flex;flex-direction:column;align-items:flex-start;gap:4px;margin-top:4px}
@@ -1389,7 +1438,7 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 </style>
 <style>
 /* ===== 分析タブ ===== */
-.wkata{font-size:10px;padding:0 6px;line-height:1.5;margin-top:2px}
+.wkata{font-size:9.5px;padding:0 5px;line-height:1.5;margin-top:2px}
 .et-popfin{text-align:center}
 .et-popfin .pop-lab{font-size:10px}
 .et-popfin.f1 b{color:#c9a400}
@@ -1449,6 +1498,10 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 .ana-kata.k-honmei{color:#92400e;background:#fffbeb;border-color:#f59e0b}
 .ana-kata.k-taikou{color:#1e40af;background:#eff6ff;border-color:#93c5fd}
 .ana-kata.k-himo{color:#065f46;background:#ecfdf5;border-color:#6ee7b7}
+.k-ippatsu{color:#b91c1c;background:#fef2f2;border-color:#fca5a5}
+.k-keshi{color:#6b7280;background:#f3f4f6;border-color:#d1d5db}
+.ana-kata.k-ippatsu{color:#b91c1c;background:#fef2f2;border-color:#fca5a5}
+.ana-kata.k-keshi{color:#4b5563;background:#e5e7eb;border-color:#9ca3af}
 .ana-kata.k-ihen{color:#fff;background:#047857;border-color:#047857}
 .ana-row.is-ref .ana-kata{opacity:.55}
 .ana-boardline{display:flex;align-items:baseline;gap:8px;margin-top:7px}
@@ -1588,7 +1641,7 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 /* 右の結合セル：条件・区分・型を1行に並べ、最大の組み合わせ（条件◎＋狙い＋型チップ）でも折り返さない */
 .et-side{white-space:nowrap;vertical-align:middle}
 .et-side-in{display:flex;align-items:center;gap:6px;flex-wrap:nowrap;overflow:hidden}
-.et-side .wflag{margin-left:0;vertical-align:0}
+.et-side .wflag{margin-left:0;vertical-align:0;font-size:11px;padding:1px 7px}
 .et-side .wkata{margin:0}
 .et-side .wl-memo-none{color:var(--ink2)}
 /* レースLVは1行に収める */
@@ -1615,10 +1668,20 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
    区切り線はこのラッパー側に付け、チップはその内側に置く */
 .et-seg{padding:0;margin:0}
 .et-seg-cond{padding-left:3px}
-.et-side .wmemo-hold{border:1px solid #94a3b8;border-radius:999px;padding:1px 9px;background:#fff;line-height:1.5}
+.et-side .wmemo-hold{border:1px solid #94a3b8;border-radius:999px;padding:1px 8px;background:#fff;line-height:1.5;font-size:11.5px}
 .et-side .wflag{border:1px solid #94a3b8}
 .et-side .wflag.hi{border-color:#93c5fd}
 .et-side .wflag.danger{border-color:#fca5a5}
+/* ===== 右セルの3区画を固定幅＋中央揃えにする =====
+   従来は中身の幅で並ぶフレックスだったため、型チップが長い行では区分チップ（狙い・保留など）が
+   flex の縮小で押し潰され、行ごとにチップの位置もずれていた。
+   条件／区分／型の各区画を固定幅（合計160px＝右セル内側の幅）にし、中身は各区画の中央に置く。
+   チップ自体は flex:none＋nowrap で縮小させず、収まりの調整は区画側の余白で吸収する */
+.et-side-in>.et-seg{flex:0 0 auto}
+.et-seg-cond{width:48px}
+.et-seg-memo{width:46px}
+.et-seg-kata{width:66px}
+.et-side .wflag,.et-side .wmemo-hold,.et-side .wkata{flex:none;white-space:nowrap}
 </style>
 </head>
 <body>
@@ -1906,14 +1969,16 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
       <tr><td class="k">危険</td><td>着順ほど中身がなく、次走は割引</td></tr>
       <tr><td class="k">保留</td><td>材料不足などで保留</td></tr>
       </table>
-      <div class="ml-h">型（狙いの馬だけ・1行目の右端）</div>
+      <div class="ml-h">型（1行目の右端）</div>
       <table class="ml-table">
-      <tr><td class="k"><span class="ana-kata k-honmei">本命型</span></td><td>勝ち切る型</td></tr>
+      <tr><td class="k"><span class="ana-kata k-honmei">本命型</span></td><td>来るうえに勝ち切る。軸で使う形</td></tr>
       <tr><td class="k"><span class="ana-kata k-taikou">対抗型</span></td><td>軸・ヒモ両にらみ</td></tr>
+      <tr><td class="k"><span class="ana-kata k-ippatsu">一発型</span></td><td>来れば勝つ。単勝・頭で使う形</td></tr>
       <tr><td class="k"><span class="ana-kata k-himo">ヒモ型</span></td><td>2・3着が中心（薄い緑）</td></tr>
       <tr><td class="k"><span class="ana-kata k-ihen">ヒモ型</span></td><td>ヒモ型・一変。前走の大敗から一変（濃い緑）</td></tr>
+      <tr><td class="k"><span class="ana-kata k-keshi">消し型</span></td><td>ほぼ来ない。消しで使う形<br><span style="font-size:11.5px;color:var(--ink2)">付く条件：直近の回顧が評価D・回顧指数80未満・大敗×人気薄の対象外のいずれか。度外視に当たるレースが根拠の時は付けない</span></td></tr>
       </table>
-      <div class="ml-foot">※ 型の根拠は分析タブにあります</div>
+      <div class="ml-foot">※ 本命型〜ヒモ型は狙いの馬に、消し型は狙い以外の馬に付きます。型の根拠は分析タブにあります</div>
       <div class="ml-h">脚質バー（馬名の下）</div>
       <table class="ml-table">
       <tr><td class="k"><span style="background:#f2f5f7;color:#d92b2b;border-radius:3px;padding:1px 7px;font-weight:700">逃</span></td><td>逃げ</td></tr>
@@ -2080,7 +2145,7 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
       <li><strong>事実と推測の区別</strong>：着順・着差・通過順位・上がり・馬場状態は「事実（公式記録）」として表示します。展開の解釈や狙える条件は分析上の推測で、「推定・仮説」と明記しています。映像や公式情報で確認できない不利は、あったものとして扱いません。</li>
       <li><strong>条件照合の項目別表示</strong>：距離／芝ダート／コース形態（コース・競馬場）／クラス／馬場状態に分けて、一致・不一致・判定材料不足をチップで表示します。判定理由は「詳細を見る」の中に置いています。馬場状態は推奨馬場状態の記録がないため、全頭「判定材料不足」です。条件が変わること自体を自動的にプラス評価はしていません。想定展開は予想要素のため項目に入れていません。</li>
       <li><strong>注意文</strong>：注意がある馬は、一覧の行の下に1行の文章で注意を表示します（今回のレースへの留保）。内容は、穴馬候補として記録された馬への人気の条件と、過剰人気注意／展開依存／距離不安の注意メモです。狙い・危険は直近の回顧の内容に対する回顧メモであり、今回のレースの予想評価（本命候補など）はこのページでは付けていません。</li>
-      <li><strong>型タグと「分析との接続」</strong>：狙いメモの馬には、区分の下に型タグ（本命型／対抗型／ヒモ型）を付けています。検証データ（分析タブ）で、その区分の馬が次走でどう来たか（3着内に占める1着の割合）から決めた「使い方」の目安です。詳細には「分析との接続」として、前走（事実）＝前走の人気・着順と当てはまる検証の層、今回（扱い）＝条件照合と注意文、を分けて表示します。</li>
+      <li><strong>型タグと「分析との接続」</strong>：型タグは、狙いメモの馬には本命型／対抗型／一発型／ヒモ型を、狙い以外の馬には消し型を付けています。検証データ（分析タブ）で、その区分の馬が次走でどう来たか（3着内率と、3着内に占める1着の割合）から決めた「使い方」の目安です。詳細には「分析との接続」として、前走（事実）＝前走の人気・着順と当てはまる検証の層、今回（扱い）＝条件照合と注意文、を分けて表示します。</li>
       <li><strong>評価と回顧指数の役割</strong>：検証では、総合評価（S〜D）の方が回顧指数より次走成績をよく分けました（評価S・Aは次走3着内43%・35%、回顧指数90以上は28%）。最終判断は評価で見て、回顧指数は「測った値」の確認用という位置づけです。一覧の「レースLV」は前走レースの勝ち馬のタイム指数（netkeiba）で、レースレベルの物差しです。段階（高め／標準／低め）はクラス帯ごとの中央値からの差で判定します（重賞は±7、条件戦は±10）。</li>
       <li><strong>能力評価の2本立て</strong>：実績指数（直近の回顧の結果そのものの評価）と内容補正後能力評価（展開の有利不利を考慮した評価）を区別して併記しています。補正の理由は各走の展開評価と結果への影響に示します。根拠が弱い場合や判定材料不足の場合は、点数を機械的に加減していません。</li>
       <li><strong>並び順</strong>：既定は「枠番順」（枠番の昇順、同枠内は馬番の昇順）で、開いた直後は全レースが枠番順で表示されます。「馬番順」と「能力評価順（直近の回顧・補正後が高い順）」にも切り替えられます。能力評価順では評価のない馬は末尾に並びます。枠番順・馬番順では、馬番順に並びます。</li>
@@ -3299,7 +3364,7 @@ function raceFrameTotal(r){
   (r.horses||[]).forEach(function(h){ var n=parseInt(h.num,10); if(!isNaN(n)&&n>t) t=n; });
   return t||null;
 }
-var KATACLS={"本命型":"k-honmei","対抗型":"k-taikou","ヒモ型":"k-himo"};
+var KATACLS={"本命型":"k-honmei","対抗型":"k-taikou","一発型":"k-ippatsu","ヒモ型":"k-himo","消し型":"k-keshi"};
 /* 脚質バーの試行データ（スペース側のみ・対象は東京1Rエプリダルジャンの1頭だけ）。
    segs は [脚質名, 割合(%), 色クラス] の並び、n は集計した直近の走数 */
 var PACE_TRIAL={"エプリダルジャン":{n:1,segs:[["追込",100,"oi"]]}};
@@ -3610,30 +3675,49 @@ function resDetailHtml(h,hh,cur){
   s+='</div>';
   return s;
 }
-/* 馬ごとの照合ブロック：発走前の判定／今回の結果／今回の回顧を短く並べ、詳細はタップで開く */
+/* 馬ごとの照合ブロック：今回の結果／今回の回顧を短く並べ、詳細はタップで開く。
+   発走前の情報は見出し行（馬番・馬名・条件（ラベル＋印）・区分チップ・型チップ）だけに出し、「発走前の判定」の行は置かない */
 function resHorseHtml(r,it){
   var h=it.h, x=it.x;
   var cur=curRevOf(r.raceId,x.name);
   var hh=wHist?wHist[x.name]:null;
-  var preShort;
-  if(!h){ preShort="出走馬データに記録なし"; }
-  else if(!h.mark||h.mark==="不明"){ preShort="不明（回顧なし）"; }
-  else{
-    preShort=escW(h.mark)+" "+escW(String(MARKLBL[h.mark]||"").replace(/^[◎○△？]\s*/,""));
-    if(h.memo) preShort+="｜回顧メモ区分 "+escW(h.memo);
+  var preMark="", memoChip="", kataChip="";
+  if(h&&h.mark&&h.mark!=="不明"){
+    /* 見出し行の並び：馬番・馬名・条件（「条件」ラベル＋印）・回顧メモ区分チップ・型チップ。
+       条件は出馬表の一覧の右セルと同じくラベルと印のセット（.et-cond）で出し、区分チップの前に置く。
+       バッジ群の作り（3区画の固定幅・間の縦線・チップのサイズ）は一覧の右セルと同一にしている */
+    if(MARKCLS[h.mark]) preMark='<span class="et-cond"><span class="et-cond-lab">条件</span><span class="et-mark '+(MARKCLS[h.mark]||"")+'" title="'+escW(MARKLBL[h.mark]||h.mark)+'">'+escW(h.mark)+'</span></span>';
+    /* 区分チップは狙い・危険・保留、型チップは kata がある馬のみ（一覧と同じ色クラス、ヒモ型・一変は濃い緑） */
+    if(h.memo==="狙い") memoChip='<span class="wflag hi">狙い</span>';
+    else if(h.memo==="危険") memoChip='<span class="wflag danger">危険</span>';
+    else if(h.memo==="判定保留") memoChip='<span class="wmemo-hold">保留</span>';
+    if(h.kata) kataChip='<span class="ana-kata wkata '+(h.kataSub==="一変"?"k-ihen":(KATACLS[h.kata]||"k-taikou"))+'">'+escW(h.kata)+'</span>';
+  }
+  /* バッジ群（条件・区分・型）は一覧の右セルと同じ3区画の固定幅＋間の縦線で行の右端に寄せる。馬番と馬名は左のまま。
+     型チップがない馬は型の区画を空けたまま幅を確保し、条件・区分の位置を全カードで揃える */
+  var headBadges="";
+  if(h&&h.mark&&h.mark!=="不明"){
+    headBadges='<span class="res-head-badges">'
+      +'<span class="res-col res-col-cond">'+preMark+'</span>'
+      +'<span class="res-col res-col-memo">'+memoChip+'</span>'
+      +'<span class="res-col res-col-kata">'+kataChip+'</span>'
+      +'</span>';
   }
   var finShort;
   if(typeof x.finish==="number"){ finShort=finChipW(x.finish)+(x.margin?("（着差 "+escW(x.margin)+"）"):""); }
   else{ finShort='<span class="res-special">'+escW(x.finish)+'</span>'; }
-  var curShort;
+  var curShort="";
   if(cur){ curShort="評価 "+(cur.grade?gradeChip(cur.grade):"―")+"（実績指数 "+fmtNumW(cur.jisseki)+"・内容補正後 "+fmtNumW(cur.nouryoku)+"・展開 "+flowTxtW(cur.paceFit)+"）"; }
-  else{ curShort='<span class="res-norev">未回顧</span>'; }
+  /* 馬番には出馬表の一覧と同じ枠番カラーを付ける（枠番は出走頭数と馬番から決まるJRAの割り当てで判定） */
+  var numVal=x.num||(h?h.num:"")||"―";
+  var wkNo=frameNo(numVal,raceFrameTotal(r));
+  var numHtml='<span class="res-h-num'+(wkNo?(" wk"+wkNo):"")+'">'+escW(numVal)+'</span>';
   return '<div class="res-horse">'
-    +'<div class="res-h-head"><span class="res-h-num">'+escW(x.num||(h?h.num:"")||"―")+'</span><span class="res-h-name">'+escW(x.name)+'</span></div>'
-    +'<div class="res-h-line"><span class="res-h-lab">発走前の判定</span><span>'+preShort+'</span></div>'
+    +'<div class="res-h-head">'+numHtml+'<span class="res-h-name">'+wnameHtml(x.name)+'</span>'+headBadges+'</div>'
     +'<div class="res-h-line"><span class="res-h-lab">今回の結果</span><span>'+finShort+'</span></div>'
-    +'<div class="res-h-line"><span class="res-h-lab">今回の回顧</span><span>'+curShort+'</span></div>'
-    +'<details class="res-det"><summary>根拠・詳細を見る（発走前の根拠／過去の回顧／今回の回顧）</summary>'
+    /* 「今回の回顧」の行は、今回の回顧が付いた馬だけ出す（未回顧の間は行自体を出さず、カードの縦幅を縮める） */
+    +(cur?'<div class="res-h-line"><span class="res-h-lab">今回の回顧</span><span>'+curShort+'</span></div>':"")
+    +'<details class="res-det"><summary>詳細を見る</summary>'
     +resDetailHtml(h,hh,cur)
     +'</details></div>';
 }
@@ -4199,7 +4283,7 @@ function fmtNum(v){
   if(isNaN(n)) return escA(v);
   return (n%1===0)?String(n):String(n);
 }
-var KATACLS={"本命型":"k-honmei","対抗型":"k-taikou","ヒモ型":"k-himo"};
+var KATACLS={"本命型":"k-honmei","対抗型":"k-taikou","一発型":"k-ippatsu","ヒモ型":"k-himo","消し型":"k-keshi"};
 function kataTag(kata){
   if(!kata) return "";
   return '<span class="ana-kata '+(KATACLS[kata]||"k-taikou")+'">'+escA(kata)+'</span>';
@@ -4360,7 +4444,7 @@ function renderAnalysis(data){
     +'<li><b>3着内率・1着率</b>：次走での割合。率は検証用</li>'
     +'<li><b>n</b>：検証できた件数。30未満は参考値</li>'
     +'<li><b>狙い／危険／対象外</b>：回顧メモの区分</li>'
-    +'<li><b>本命型／対抗型／ヒモ型</b>：3着内に占める1着の割合で分類（40%以上＝本命型、20〜40%＝対抗型、20%未満＝ヒモ型）</li>'
+    +'<li><b>本命型／対抗型／一発型／ヒモ型／消し型</b>：型は5つ。3着内率と、来た時に勝つ割合で分類。本命型＝よく来て勝ち切る、一発型＝来れば勝つ、ヒモ型＝2・3着中心、対抗型＝中間、消し型＝ほぼ来ない。本命型〜ヒモ型は狙いの馬に、消し型は狙い以外の馬に付く（直近の回顧が評価D・回顧指数80未満・大敗×人気薄の対象外のいずれか。度外視に当たるレースが根拠の時は付けない）</li>'
     +'<li><b>ヒモ型・一変</b>：前走8着以下×7番人気以下で、狙いメモが付いた馬。一覧では濃い緑の「ヒモ型」チップで表示</li>'
     +'<li><b>回顧指数</b>：回顧の内容補正後の能力評価</li>'
     +'<li><b>レースLV</b>：前走レースの勝ち馬のタイム指数（netkeiba）と段階（高め／標準／低め）</li>'
