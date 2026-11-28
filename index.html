@@ -1499,6 +1499,7 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 .tb-title span{font-weight:400;font-size:11px;color:var(--muted);margin-left:6px}
 .tb-table{border-collapse:collapse;width:100%}
 .tb-table td{padding:3px 0;vertical-align:top;font-size:13px;line-height:1.5}
+.tb-table td.tb-one{white-space:nowrap;font-size:12.5px}
 .tb-table td.tb-v{font-weight:700;white-space:nowrap;padding-right:8px}
 .tb-cond{display:inline-block;border:1px solid var(--line);border-radius:9px;padding:0 7px;font-size:11.5px;font-weight:700;margin-right:5px}
 .tb-basis{color:var(--muted);font-size:12px}
@@ -4379,14 +4380,26 @@ if(rp&&window.MutationObserver){
     var tstr=today.getFullYear()+"-"+pad(today.getMonth()+1)+"-"+pad(today.getDate());
     if(!d||d.date!==tstr||!d.venues||!d.venues.length) return;
     var rows="";
+    var shortBasis=function(s){
+      if(s.short) return s.short;
+      var b=s.basis||""; var m=b.match(/3着内(\d+)頭中、4角4番手以内\s*(\d+)頭/);
+      if(m) return "4角内 "+m[2]+"/"+m[1];
+      var m2=b.match(/(\d+)レース/); return m2? m2[1]+"R分":"";
+    };
+    var shortBias=function(s){
+      var t=s.bias||"";
+      if(t.indexOf("傾向はまだ弱い")===0) return "傾向弱い";
+      return t;
+    };
     d.venues.forEach(function(v){
-      [["芝","turf"],["ダート","dirt"]].forEach(function(pair){
+      [["芝","turf"],["ダ","dirt"]].forEach(function(pair){
         var s=v[pair[1]]; if(!s) return;
-        rows+='<tr><td class="tb-v">'+v.name+" "+pair[0]+'</td><td><span class="tb-cond">'+(s.cond||"")+'</span><b>'+(s.bias||"")+'</b>'+(s.basis?' <span class="tb-basis">（'+s.basis+'）</span>':"")+'</td></tr>';
+        var sb=shortBasis(s);
+        rows+='<tr><td class="tb-v">'+v.name+" "+pair[0]+'</td><td class="tb-one"><span class="tb-cond">'+(s.cond||"")+'</span><b>'+shortBias(s)+'</b>'+(sb?' <span class="tb-basis">'+sb+'</span>':"")+'</td></tr>';
       });
     });
     if(!rows) return;
-    box.innerHTML='<div class="tb-box"><div class="tb-title">本日の馬場傾向<span>'+(d.asOf||"")+'</span></div><table class="tb-table">'+rows+'</table><div class="tb-note">※ 終了したレースの着順・通過順位からの集計です。レース数が少ない時点では「傾向はまだ弱い」と書きます。</div></div>';
+    box.innerHTML='<div class="tb-box"><div class="tb-title">本日の馬場傾向<span>'+(d.asOf||"")+'</span></div><table class="tb-table">'+rows+'</table><div class="tb-note">※ 終了レースの3着内・4角位置から集計</div></div>';
   }).catch(function(){});
 })();
 })();
