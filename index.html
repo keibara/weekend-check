@@ -1260,11 +1260,10 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 .last3 th:nth-child(7),.last3 td:nth-child(7){width:14%}
 .last3 th:nth-child(8),.last3 td:nth-child(8){width:17%}
 .last3 td.l3-lv{font-size:9.5px;letter-spacing:-.06em;padding-left:2px;padding-right:2px}
-/* 空行（出走歴なし）は colspan=7 のため割合の対象外：高さだけ詰める */
+/* 空行（出走歴なし）は1行分の高さにする：日付セルの1行目（16.8px）と同じ高さの空divを1つだけ置き、
+   2行分のデータ行とは別に、空行1つ＝1行で数えられるようにする */
 .last3 tr.l3-empty td{height:auto}
-/* 空行もデータ行と同じ高さにする：日付セルの2行分（1行目16.8px＋間隔1px＋2行目15.5px）と同じ行ボックスを空のdivで確保する */
 .last3 tr.l3-empty .l3-d1{height:16.8px}
-.last3 tr.l3-empty .l3-d2{height:15.5px}
 .last3 tr.l3-none td{white-space:nowrap}
 @media (max-width:560px){
   .last3 th,.last3 td{padding:2px 2px}
@@ -1285,6 +1284,10 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 .last3 .l3-s1{font-size:11.5px;line-height:1.4}
 .last3 .l3-s2{font-size:10px;color:var(--ink2);line-height:1.45;margin-top:1px;letter-spacing:-.02em;white-space:nowrap}
 .last3 td.l3-lv{font-size:11.5px;letter-spacing:0;text-align:center;font-weight:700;vertical-align:middle}
+/* 表の下端は表自身にも罫線を持たせ、最終行（空行の場合を含む）の下罫線を確実に描く */
+.last3{border-bottom:1px solid #94a3b8}
+/* 詳細の中では外側テーブルのセル罫線ルールが詳細度で勝ちやすいため、この表の罫線は専用の詳細度で確定させる */
+.etable .wdet .last3 th,.etable .wdet .last3 td{border:1px solid #94a3b8}
 </style>
 <style>
 /* ===== 回顧ブロック全幅化＋セルラベル：入れ子テーブルはWebKitで幅100%が効かず縮むため、
@@ -1368,7 +1371,10 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 .etable .wsub-cls.cc-w1{color:#64748b}
 .etable .wsub-cls.cc-low{color:#6b7280;font-weight:600}
 .etable tr.et-part.open td{background:var(--blue-bg)}
-.etable .wdet td{border:1px solid #b9c2cc;border-top:none}
+/* 詳細セルの罫線は直下の td だけに効かせる。子孫セレクタのままだと詳細度（0,2,1）で
+   近3走表（.last3）のセル罫線（0,1,1）に勝ち、内側の表まで border-top:none になって
+   最終行の下罫線が描かれず、表が下へ伸びたように見えるため */
+.etable .wdet>td{border:1px solid #b9c2cc;border-top:none}
 @media (max-width:560px){
   .etable td{padding:0 2px}
   .et-r2 td,.et-r3 td{font-size:11px;padding:0 2px}
@@ -3281,7 +3287,7 @@ function last3Table(hh,horseName){
           +'<div class="l3-s2">'+l3Stats(it)+'</div></td>'
           +'<td class="l3-lv">'+rlvShort(it.level,it.stage)+'</td></tr>';
       }else{
-        rowsV+='<tr class="l3-empty"><td class="l3-d"><div class="l3-d1"></div><div class="l3-d2"></div></td><td class="l3-s"></td><td class="l3-lv"></td></tr>';
+        rowsV+='<tr class="l3-empty"><td class="l3-d"><div class="l3-d1"></div></td><td class="l3-s"></td><td class="l3-lv"></td></tr>';
       }
     }
     var hv='<div class="last3-wrap"><table class="last3" aria-label="近3走の一覧"><thead><tr><th>日付</th><th>成績</th><th>RLV.</th></tr></thead><tbody>'+rowsV+'</tbody></table></div>';
@@ -3304,7 +3310,7 @@ function last3Table(hh,horseName){
         +'<div class="l3-s2">'+l3Stats({fieldSize:rv["出走頭数"]||null,finish:rv["着順"],agari:agF,agariRank:agrF})+'</div></td>'
         +'<td class="l3-lv">―</td></tr>';
     }else if(isDebut){
-      rows+='<tr class="l3-empty"><td class="l3-d"><div class="l3-d1"></div><div class="l3-d2"></div></td><td class="l3-s"></td><td class="l3-lv"></td></tr>';
+      rows+='<tr class="l3-empty"><td class="l3-d"><div class="l3-d1"></div></td><td class="l3-s"></td><td class="l3-lv"></td></tr>';
     }else{
       hasNone=true;
       rows+='<tr class="l3-none"><td colspan="3">未回顧</td></tr>';
