@@ -1261,7 +1261,10 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 .last3 th:nth-child(8),.last3 td:nth-child(8){width:17%}
 .last3 td.l3-lv{font-size:9.5px;letter-spacing:-.06em;padding-left:2px;padding-right:2px}
 /* 空行（出走歴なし）は colspan=7 のため割合の対象外：高さだけ詰める */
-.last3 tr.l3-empty td{height:12px;padding-top:2px;padding-bottom:2px}
+.last3 tr.l3-empty td{height:auto}
+/* 空行もデータ行と同じ高さにする：日付セルの2行分（1行目16.8px＋間隔1px＋2行目15.5px）と同じ行ボックスを空のdivで確保する */
+.last3 tr.l3-empty .l3-d1{height:16.8px}
+.last3 tr.l3-empty .l3-d2{height:15.5px}
 .last3 tr.l3-none td{white-space:nowrap}
 @media (max-width:560px){
   .last3 th,.last3 td{padding:2px 2px}
@@ -1274,6 +1277,7 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 .last3 th:nth-child(2),.last3 td:nth-child(2){width:auto}
 .last3 th:nth-child(3),.last3 td:nth-child(3){width:46px;padding-left:2px;padding-right:2px}
 .last3 td{white-space:normal;overflow:visible;text-overflow:clip;vertical-align:top}
+.last3 td.l3-d{text-align:center}
 .last3 th:nth-child(3){text-align:center}
 .last3 .l3-d1{font-size:12px;font-weight:700;letter-spacing:-.02em;white-space:nowrap;line-height:1.4}
 .last3 .l3-d2{font-size:10px;letter-spacing:-.02em;white-space:nowrap;line-height:1.55;margin-top:1px}
@@ -3277,7 +3281,7 @@ function last3Table(hh,horseName){
           +'<div class="l3-s2">'+l3Stats(it)+'</div></td>'
           +'<td class="l3-lv">'+rlvShort(it.level,it.stage)+'</td></tr>';
       }else{
-        rowsV+='<tr class="l3-empty"><td colspan="3"></td></tr>';
+        rowsV+='<tr class="l3-empty"><td class="l3-d"><div class="l3-d1"></div><div class="l3-d2"></div></td><td class="l3-s"></td><td class="l3-lv"></td></tr>';
       }
     }
     var hv='<div class="last3-wrap"><table class="last3" aria-label="近3走の一覧"><thead><tr><th>日付</th><th>成績</th><th>RLV.</th></tr></thead><tbody>'+rowsV+'</tbody></table></div>';
@@ -3300,7 +3304,7 @@ function last3Table(hh,horseName){
         +'<div class="l3-s2">'+l3Stats({fieldSize:rv["出走頭数"]||null,finish:rv["着順"],agari:agF,agariRank:agrF})+'</div></td>'
         +'<td class="l3-lv">―</td></tr>';
     }else if(isDebut){
-      rows+='<tr class="l3-empty"><td colspan="3"></td></tr>';
+      rows+='<tr class="l3-empty"><td class="l3-d"><div class="l3-d1"></div><div class="l3-d2"></div></td><td class="l3-s"></td><td class="l3-lv"></td></tr>';
     }else{
       hasNone=true;
       rows+='<tr class="l3-none"><td colspan="3">未回顧</td></tr>';
