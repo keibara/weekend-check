@@ -1268,6 +1268,21 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 }
 </style>
 <style>
+/* ===== 近3走表：3部構成（日付／成績／RLV.）・各走2行 ===== */
+/* 列は3つだけ：日付（1行目=日付／2行目=評価・展開 or 未回顧）／成績（1行目=コース（クラス）・着順／2行目=人気・着差・上り・4角）／RLV. */
+.last3 th:nth-child(1),.last3 td:nth-child(1){width:22%}
+.last3 th:nth-child(2),.last3 td:nth-child(2){width:60%}
+.last3 th:nth-child(3),.last3 td:nth-child(3){width:18%}
+.last3 td{white-space:normal;overflow:visible;text-overflow:clip;vertical-align:top}
+.last3 th:nth-child(3){text-align:center}
+.last3 .l3-d1{font-size:11px;font-weight:700;letter-spacing:-.02em;white-space:nowrap;line-height:1.4}
+.last3 .l3-d2{font-size:10px;letter-spacing:-.02em;white-space:nowrap;line-height:1.55;margin-top:1px}
+.last3 .l3-d2 .eg{font-size:10px;padding:0 4px;line-height:1.45}
+.last3 .l3-s1{font-size:11.5px;line-height:1.4}
+.last3 .l3-s2{font-size:10px;color:var(--ink2);line-height:1.45;margin-top:1px;letter-spacing:-.02em}
+.last3 td.l3-lv{font-size:11.5px;letter-spacing:0;text-align:center;font-weight:700;vertical-align:middle}
+</style>
+<style>
 /* ===== 回顧ブロック全幅化＋セルラベル：入れ子テーブルはWebKitで幅100%が効かず縮むため、
    同じ列幅固定（4.2em／7.4em／3.6em／4.8em／残り）のグリッドで描き、指数列が残り幅を全て使う。
    罫線・余白・中央揃え・折り返しなしは従来の表と同じ。ラベル（展開／評価／指数）はグレーで添える ===== */
@@ -3184,10 +3199,41 @@ function rlvHtml(level,stage){
   var s1=stage1(stage);
   return 'レースLV.<b>'+escW(num)+'</b>'+(s1?' '+escW(s1):'');
 }
-/* 直近3走を1走1行で示す要約表。並びと出走の有無は、出走記録で確認した実際の直近3走（統合履歴 assets/history-detail.json の確認済み記録）を使う。
-   回顧のある走は展開評価（回顧の4値）を出し、回顧のない走は事実だけを並べて展開評価の欄に「未回顧」と出す。
+/* 近3走表（3部構成）用：RLV.は「指数.段階1文字」の短縮形（例：72.中／89.高）。level が無い走は「―」 */
+function rlvShort(level,stage){
+  if(level==null||level==="") return "―";
+  var num=String(level).replace(/\.0$/,"");
+  var s1=stage1(stage);
+  return escW(num)+(s1?"."+escW(s1):"");
+}
+/* 近3走表用：競馬場＋芝ダ＋距離（例：東京ダ1600／東京芝1600） */
+function l3CourseShort(venue,surface,distance){
+  var s=String(surface||"");
+  var sf=s.indexOf("ダート")>=0?"ダ":(s.indexOf("障害")>=0?"障":"芝");
+  return String(venue||"")+sf+(distance!=null&&distance!==""?distance:"");
+}
+/* 近3走表の成績2行目：人気/頭数／着差／上り（順位）／4角→着順。
+   フィールドが無い項目はその項目だけ「―」にする（項目自体は消さない）。
+   着差は小数1桁で統一する（勝ち馬＝marginSec 0 の時も「着差0.0」）。上りの順位は agariRank がある時だけ付ける */
+function l3Stats(o){
+  var pop=(o.pop!=null&&o.pop!=="")?escW(o.pop)+"人気":"―";
+  var fs=(o.fieldSize!=null&&o.fieldSize!=="")?escW(o.fieldSize)+"頭":"―";
+  var mgN=Number(o.marginSec), mg=(o.marginSec!=null&&o.marginSec!==""&&!isNaN(mgN))?"着差"+mgN.toFixed(1):"着差―";
+  var agN=Number(o.agari), ag="上り―";
+  if(o.agari!=null&&o.agari!==""&&!isNaN(agN)) ag="上り"+agN.toFixed(1)+((o.agariRank!=null&&o.agariRank!=="")?"（"+escW(o.agariRank)+"位）":"");
+  var c4="4角―";
+  if(o.corner4!=null&&o.corner4!==""){
+    var f=String(o.finish==null?"":o.finish).trim();
+    c4="4角"+escW(o.corner4)+"→"+(f?escW(f):"―");
+  }
+  return pop+"/"+fs+"／"+mg+"／"+ag+"／"+c4;
+}
+/* 直近3走を3部構成（日付／成績／RLV.）・各走2行で示す要約表。並びと出走の有無は、出走記録で確認した実際の直近3走（統合履歴 assets/history-detail.json の確認済み記録）を使う。
+   日付セルの2行目：回顧のある走は評価（従来の評価色つき）・展開評価、回顧のない走は「未回顧」。
+   成績セルの1行目：競馬場＋芝ダ＋距離（クラス/レース名は history3 の class をそのまま）・着順（3着以内は従来どおり色つき）。
+   成績セルの2行目：人気/頭数／着差／上り（順位）／4角→着順。RLV.は1行目に「指数.段階1文字」、無い走は「―」。
    実際の出走が3走に満たない行は空欄（出走歴なし＝出走記録で確認済み）。
-   確認データが読み込めなかった場合だけ、従来の回顧ベース表示にフォールバックする */
+   確認データが読み込めなかった場合だけ、回顧ベース表示にフォールバックする（同じ3部構成で出す） */
 function last3Table(hh,horseName){
   var ver=horseName?wVerified[horseName]:null;
   if(ver&&ver.history3){
@@ -3200,34 +3246,26 @@ function last3Table(hh,horseName){
     for(var j=0;j<3;j++){
       if(j<ver.history3.length){
         var it=ver.history3[j];
-        var surfV=String(it.surface||"").indexOf("ダート")>=0?"ダート":"芝";
-        var courseV=String(it.venue||"")+surfV+(it.distance?it.distance+"m":"");
-        var finV=String(it.finish==null?"":it.finish);
-        var finDisp=finV?(/^\d+$/.test(finV)?finV+"着":finV):"―";
-        var evCell, grCell;
+        var courseV=l3CourseShort(it.venue,it.surface,it.distance);
+        var clsV=String(it["class"]||"");
+        var d2V;
         if(it.status==="reviewed"){
           var dkV=String(it.date||"").replace(/-/g,"");
           var flV=flowByDate[dkV]||"";
-          evCell='<span class="l3f '+(L3FLOW[flV]||"ho")+'">'+escW(flV||"―")+'</span>';
-          grCell=gradeChip(gradeByDate[dkV]||"");
+          d2V=gradeChip(gradeByDate[dkV]||"")+'・<span class="l3f '+(L3FLOW[flV]||"ho")+'">'+escW(flV||"―")+'</span>';
         }else{
           hasUnrev=true;
-          evCell='<span class="l3f unrev">未回顧</span>';
-          grCell="―";
+          d2V='<span class="l3f unrev">未回顧</span>';
         }
-        rowsV+='<tr><td class="l3-d">'+escW(fmtDSlash(it.date||""))+'</td>'
-          +'<td class="l3-c">'+escW(courseV)+'</td>'
-          +l3ClassCell(it["class"]||"")
-          +'<td class="l3-n">'+escW(it.fieldSize?it.fieldSize+"頭":"―")+'</td>'
-          +'<td class="l3-f">'+finChipW(finV)+'</td>'
-          +'<td class="l3-g">'+grCell+'</td>'
-          +'<td class="l3-e">'+evCell+'</td>'
-          +'<td class="l3-lv">'+(it.level!=null?rlvHtml(it.level,it.stage):"―")+'</td></tr>';
+        rowsV+='<tr><td class="l3-d"><div class="l3-d1">'+escW(fmtDSlash(it.date||""))+'</div><div class="l3-d2">'+d2V+'</div></td>'
+          +'<td class="l3-s"><div class="l3-s1">'+escW(courseV)+(clsV?"（"+escW(clsV)+"）":"")+'・'+finChipW(it.finish)+'</div>'
+          +'<div class="l3-s2">'+l3Stats(it)+'</div></td>'
+          +'<td class="l3-lv">'+rlvShort(it.level,it.stage)+'</td></tr>';
       }else{
-        rowsV+='<tr class="l3-empty"><td colspan="8"></td></tr>';
+        rowsV+='<tr class="l3-empty"><td colspan="3"></td></tr>';
       }
     }
-    var hv='<div class="last3-wrap"><table class="last3" aria-label="近3走の一覧"><thead><tr><th>日付</th><th>コース</th><th>クラス</th><th>頭数</th><th>着順</th><th>評価</th><th>展開</th><th>レースLV</th></tr></thead><tbody>'+rowsV+'</tbody></table></div>';
+    var hv='<div class="last3-wrap"><table class="last3" aria-label="近3走の一覧"><thead><tr><th>日付</th><th>成績</th><th>RLV.</th></tr></thead><tbody>'+rowsV+'</tbody></table></div>';
     if(hasUnrev) hv+='<p class="l3-note">未回顧＝出走記録で確認できたが回顧のないレース。空欄＝出走歴なし（出走記録で確認済み）</p>';
     return hv;
   }
@@ -3238,22 +3276,22 @@ function last3Table(hh,horseName){
   for(var i=0;i<3;i++){
     if(i<revs.length){
       var rv=revs[i], fl=rv["展開との相性"]||"";
-      rows+='<tr><td class="l3-d">'+escW(fmtDSlash(rv["開催日"]||""))+'</td>'
-        +'<td class="l3-c">'+escW(l3Course(rv))+'</td>'
-        +l3ClassCell(rv["クラス"]||"")
-        +'<td class="l3-n">'+escW(rv["出走頭数"]?rv["出走頭数"]+"頭":"―")+'</td>'
-        +'<td class="l3-f">'+finChipW(rv["着順"])+'</td>'
-        +'<td class="l3-g">'+gradeChip(rv["総合評価"]||"")+'</td>'
-        +'<td class="l3-e"><span class="l3f '+(L3FLOW[fl]||"ho")+'">'+escW(fl||"―")+'</span></td>'
+      var courseF=l3CourseShort(rv["競馬場"],rv["コース"],rv["距離"]);
+      var clsF=String(rv["クラス"]||"");
+      var agF=parseFloat(rv["推定上り"]); if(isNaN(agF)) agF=null;
+      var agrF=parseInt(rv["上がり順位"],10); if(isNaN(agrF)) agrF=null;
+      rows+='<tr><td class="l3-d"><div class="l3-d1">'+escW(fmtDSlash(rv["開催日"]||""))+'</div><div class="l3-d2">'+gradeChip(rv["総合評価"]||"")+'・<span class="l3f '+(L3FLOW[fl]||"ho")+'">'+escW(fl||"―")+'</span></div></td>'
+        +'<td class="l3-s"><div class="l3-s1">'+escW(courseF)+(clsF?"（"+escW(clsF)+"）":"")+'・'+finChipW(rv["着順"])+'</div>'
+        +'<div class="l3-s2">'+l3Stats({fieldSize:rv["出走頭数"]||null,finish:rv["着順"],agari:agF,agariRank:agrF})+'</div></td>'
         +'<td class="l3-lv">―</td></tr>';
     }else if(isDebut){
-      rows+='<tr class="l3-empty"><td colspan="8"></td></tr>';
+      rows+='<tr class="l3-empty"><td colspan="3"></td></tr>';
     }else{
       hasNone=true;
-      rows+='<tr class="l3-none"><td colspan="8">未回顧</td></tr>';
+      rows+='<tr class="l3-none"><td colspan="3">未回顧</td></tr>';
     }
   }
-  var h='<div class="last3-wrap"><table class="last3" aria-label="近3走の一覧"><thead><tr><th>日付</th><th>コース</th><th>クラス</th><th>頭数</th><th>着順</th><th>評価</th><th>展開</th><th>レースLV</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
+  var h='<div class="last3-wrap"><table class="last3" aria-label="近3走の一覧"><thead><tr><th>日付</th><th>成績</th><th>RLV.</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
   if(hasNone) h+='<p class="l3-note">未回顧＝出走記録で確認できたが回顧のないレース。空欄＝出走歴なし（出走記録で確認済み）</p>';
   return h;
 }
