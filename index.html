@@ -1564,6 +1564,15 @@ html{scroll-padding-top:calc(var(--stickh) + 8px)}
 .tb-surf{font-weight:700}
 .tb-cond{display:inline-block;border:1px solid var(--line);border-radius:9px;padding:0 7px;font-size:11.5px;font-weight:700}
 .tb-basis{color:var(--muted);font-size:12.5px;line-height:1.65;margin:2px 0 4px}
+.tb-bullets{list-style:none;margin:1px 0 5px;padding:0}
+.tb-bullets li{font-size:12.5px;line-height:1.6;padding-left:1em;text-indent:-1em}
+.tb-bullets li::before{content:"・"}
+.tb-past-h{font-weight:900;font-size:13.5px;margin:12px 0 2px;border-top:1px solid var(--line);padding-top:9px}
+.tb-det{margin:0}
+.tb-det summary{cursor:pointer;list-style:none}
+.tb-det summary::-webkit-details-marker{display:none}
+.tb-det summary::after{content:"▸";margin-left:auto;color:var(--muted);font-size:11px}
+.tb-det[open ] summary::after{content:"▾"}
 .tb-note{font-size:11px;color:var(--muted);margin-top:5px}
 .ml-h{font-size:13px;font-weight:900;margin:12px 0 4px;color:var(--ink)}
 .ml-h:first-child{margin-top:2px}
@@ -4678,7 +4687,7 @@ if(rp&&window.MutationObserver){
   mo.observe(rp,{attributes:true,attributeFilter:["class"]});
 }
 
-/* 馬場傾向ボックス：ニュースタブ最上部。当日分だけ表示する */
+/* 馬場傾向ボックス：ニュースタブ最上部。当日分は箇条書き、過去日分は見出し行のみ＋タップで開閉 */
 (function(){
   var box=document.getElementById("track-bias");
   if(!box) return;
@@ -4686,8 +4695,8 @@ if(rp&&window.MutationObserver){
   .then(function(d){
     var today=new Date(); var pad=function(n){return (n<10?"0":"")+n;};
     var tstr=today.getFullYear()+"-"+pad(today.getMonth()+1)+"-"+pad(today.getDate());
-    if(!d||d.date!==tstr||!d.venues||!d.venues.length) return;
-    var rows="";
+    var days=(d&&d.days)||[];
+    if(!days.length) return;
     var shortBias=function(s){
       var t=s.bias||"";
       if(t.indexOf("傾向はまだ弱い")===0) return "傾向弱い";
@@ -4699,17 +4708,57 @@ if(rp&&window.MutationObserver){
       if(parts.length<=2) return b;
       return parts.slice(0,2).join("。")+"。";
     };
-    d.venues.forEach(function(v){
-      var vhtml="";
-      [["芝","turf"],["ダ","dirt"]].forEach(function(pair){
-        var s=v[pair[1]]; if(!s) return;
+    var headHtml=function(v,s,surf){
+      var bias=shortBias(s);
+      var strong=(bias&&bias!=="偏りなし"&&bias!=="傾向弱い");
+      return '<span class="tb-surf">'+surf+'</span><span>（'+(v.weather?v.weather+"・":"")+'</span><span class="tb-cond">'+(s.cond||"")+'</span><span>）</span>'+(strong?'<b>'+bias+'</b>':'<span>'+bias+'</span>');
+    };
+    var bulletsHtml=function(s){
+      if(s.winnersAvg==null||s.board==null||s.front==null){
         var basis=trimBasis(s.basis||"");
-        vhtml+='<div class="tb-head"><span class="tb-surf">'+pair[0]+'</span>'+(v.weather?'<span class="tb-wea">'+v.weather+'</span>':"")+'<span class="tb-cond">'+(s.cond||"")+'</span><b>'+shortBias(s)+'</b></div>'+(basis?'<p class="tb-basis">'+basis+'</p>':"");
+        return basis?'<p class="tb-basis">'+basis+'</p>':"";
+      }
+      return '<ul class="tb-bullets">'
+        +'<li>勝ち馬の平均4角：'+Number(s.winnersAvg).toFixed(1)+'番手</li>'
+        +'<li>3着内'+s.board+'頭中、4角4番手以内 '+s.front+'頭</li>'
+        +(s.frameNote?'<li>'+s.frameNote+'</li>':"")
+        +'</ul>';
+    };
+    var surfaces=[["芝","turf"],["ダ","dirt"]];
+    var html="";
+    var idx=0;
+    var first=days[0];
+    if(first&&first.date===tstr&&first.venues&&first.venues.length){
+      var rows="";
+      first.venues.forEach(function(v){
+        var vhtml="";
+        surfaces.forEach(function(pair){
+          var s=v[pair[1]]; if(!s) return;
+          vhtml+='<div class="tb-head">'+headHtml(v,s,pair[0])+'</div>'+bulletsHtml(s);
+        });
+        if(vhtml) rows+='<div class="tb-venue">'+v.name+'</div>'+vhtml;
       });
-      if(vhtml) rows+='<div class="tb-venue">'+v.name+'</div>'+vhtml;
-    });
-    if(!rows) return;
-    box.innerHTML='<div class="tb-box"><div class="tb-title">本日の馬場傾向<span>'+(d.asOf||"")+'</span></div>'+rows+'<div class="tb-note">※ 終了レースの3着内・4角位置から集計</div></div>';
+      if(rows) html+='<div class="tb-title">本日の馬場傾向<span>'+(first.asOf||"")+'</span></div>'+rows;
+      idx=1;
+    }
+    for(;idx<days.length;idx++){
+      var day=days[idx];
+      if(!day||!day.venues||!day.venues.length) continue;
+      var m=(""+(day.date||"")).match(/^(\d{4})-(\d{2})-(\d{2})/);
+      var label=m?(parseInt(m[2],10)+"月"+parseInt(m[3],10)+"日（確定）"):((day.date||"")+"（確定）");
+      var ph="";
+      day.venues.forEach(function(v){
+        var vhtml="";
+        surfaces.forEach(function(pair){
+          var s=v[pair[1]]; if(!s) return;
+          vhtml+='<details class="tb-det"><summary class="tb-head">'+headHtml(v,s,pair[0])+'</summary>'+bulletsHtml(s)+'</details>';
+        });
+        if(vhtml) ph+='<div class="tb-venue">'+v.name+'</div>'+vhtml;
+      });
+      if(ph) html+='<div class="tb-past-h">'+label+'</div>'+ph;
+    }
+    if(!html) return;
+    box.innerHTML='<div class="tb-box">'+html+'<div class="tb-note">※ 終了レースの3着内・4角位置から集計</div></div>';
   }).catch(function(){});
 })();
 })();
